@@ -1,0 +1,53 @@
+C:\Users\User\source\Repos\MvvmCross Application1\MvvmCross Application1\MvvmCross_Application1.Core\bin\x86\Debug\MvvmCross_Application1.Core.dll
+C:\Users\User\source\Repos\MvvmCross Application1\MvvmCross Application1\MvvmCross_Application1.Core\bin\x86\Debug\MvvmCross_Application1.Core.pdb
+C:\Users\User\source\Repos\MvvmCross Application1\MvvmCross Application1\MvvmCross_Application1.Core\bin\x86\Debug\MvvmCross.Binding.dll
+C:\Users\User\source\Repos\MvvmCross Application1\MvvmCross Application1\MvvmCross_Application1.Core\bin\x86\Debug\MvvmCross.Core.dll
+C:\Users\User\source\Repos\MvvmCross Application1\MvvmCross Application1\MvvmCross_Application1.Core\bin\x86\Debug\MvvmCross.Localization.dll
+C:\Users\User\source\Repos\MvvmCross Application1\MvvmCross Application1\MvvmCross_Application1.Core\bin\x86\Debug\MvvmCross.Platform.dll
+C:\Users\User\source\Repos\MvvmCross Application1\MvvmCross Application1\MvvmCross_Application1.Core\bin\x86\Debug\MvvmCross.Plugins.Messenger.dll
+C:\Users\User\source\Repos\MvvmCross Application1\MvvmCross Application1\MvvmCross_Application1.Core\bin\x86\Debug\SQLite-net.dll
+C:\Users\User\source\Repos\MvvmCross Application1\MvvmCross Application1\MvvmCross_Application1.Core\bin\x86\Debug\SQLitePCLRaw.batteries_green.dll
+C:\Users\User\source\Repos\MvvmCross Application1\MvvmCross Application1\MvvmCross_Application1.Core\bin\x86\Debug\SQLitePCLRaw.batteries_v2.dll
+C:\Users\User\source\Repos\MvvmCross Application1\MvvmCross Application1\MvvmCross_Application1.Core\bin\x86\Debug\SQLitePCLRaw.core.dll
+C:\Users\User\source\Repos\MvvmCross Application1\MvvmCross Application1\MvvmCross_Application1.Core\bin\x86\Debug\MvvmCross.Binding.pdb
+C:\Users\User\source\Repos\MvvmCross Application1\MvvmCross Application1\MvvmCross_Application1.Core\bin\x86\Debug\MvvmCross.Core.pdb
+C:\Users\User\source\Repos\MvvmCross Application1\MvvmCross Application1\MvvmCross_Application1.Core\bin\x86\Debug\MvvmCross.Localization.pdb
+C:\Users\User\source\Repos\MvvmCross Application1\MvvmCross Application1\MvvmCross_Application1.Core\bin\x86\Debug\MvvmCross.Platform.pdb
+C:\Users\User\source\Repos\MvvmCross Application1\MvvmCross Application1\MvvmCross_Application1.Core\bin\x86\Debug\MvvmCross.Plugins.Messenger.pdb
+C:\Users\User\source\Repos\MvvmCross Application1\MvvmCross Application1\MvvmCross_Application1.Core\bin\x86\Debug\SQLite-net.pdb
+C:\Users\User\source\Repos\MvvmCross Application1\MvvmCross Application1\MvvmCross_Application1.Core\bin\x86\Debug\SQLite-net.xml
+C:\Users\User\source\Repos\MvvmCross Application1\MvvmCross Application1\MvvmCross_Application1.Core\obj\x86\Debug\MvvmCross_Application1.Core.csprojResolveAssemblyReference.cache
+C:\Users\User\source\Repos\MvvmCross Application1\MvvmCross Application1\MvvmCross_Application1.Core\obj\x86\Debug\MvvmCross_Application1.Core.csproj.CoreCompileInputs.cache
+C:\Users\User\source\Repos\MvvmCross Application1\MvvmCross Application1\MvvmCross_Application1.Core\obj\x86\Debug\MvvmCross_Application1.Core.csproj.CopyComplete
+C:\Users\User\source\Repos\MvvmCross Application1\MvvmCross Application1\MvvmCross_Application1.Core\obj\x86\Debug\MvvmCross_Application1.Core.dll
+C:\Users\User\source\Repos\MvvmCross Application1\MvvmCross Application1\MvvmCross_Application1.Core\obj\x86\Debug\MvvmCross_Application1.Core.pdb
+C:\Users\User\mvvm\mvvm\MvvmCross Application1\MvvmCross_Application1.Core\bin\x86\Debug\MvvmCross_Application1.Core.dll.config
+C:\Users\User\mvvm\mvvm\MvvmCross Application1\MvvmCross_Application1.Core\bin\x86\Debug\MvvmCross_Application1.Core.dll
+C:\Users\User\mvvm\mvvm\MvvmCross Application1\MvvmCross_Application1.Core\bin\x86\Debug\MvvmCross_Application1.Core.pdb
+C:\Users\User\mvvm\mvvm\MvvmCross Application1\MvvmCross_Application1.Core\bin\x86\Debug\MvvmCross.Binding.dll
+C:\Users\User\mvvm\mvvm\MvvmCross Application1\MvvmCross_Application1.Core\bin\x86\Debug\MvvmCross.Core.dll
+C:\Users\User\mvvm\mvvm\MvvmCross Application1\MvvmCross_Application1.Core\bin\x86\Debug\MvvmCross.Localization.dll
+C:\Users\User\mvvm\mvvm\MvvmCross Application1\MvvmCross_Application1.Core\bin\x86\Debug\MvvmCross.Platform.dll
+C:\Users\User\mvvm\mvvm\MvvmCross Application1\MvvmCross_Application1.Core\bin\x86\Debug\MvvmCross.Plugins.Messenger.dll
+C:\Users\User\mvvm\mvvm\MvvmCross Application1\MvvmCross_Application1.Core\bin\x86\Debug\Newtonsoft.Json.dll
+C:\Users\User\mvvm\mvvm\MvvmCross Application1\MvvmCross_Application1.Core\bin\x86\Debug\SQLite-net.dll
+C:\Users\User\mvvm\mvvm\MvvmCross Application1\MvvmCross_Application1.Core\bin\x86\Debug\SQLitePCLRaw.batteries_green.dll
+C:\Users\User\mvvm\mvvm\MvvmCross Application1\MvvmCross_Application1.Core\bin\x86\Debug\SQLitePCLRaw.batteries_v2.dll
+C:\Users\User\mvvm\mvvm\MvvmCross Application1\MvvmCross_Application1.Core\bin\x86\Debug\SQLitePCLRaw.core.dll
+C:\Users\User\mvvm\mvvm\MvvmCross Application1\MvvmCross_Application1.Core\bin\x86\Debug\System.Net.Http.Extensions.dll
+C:\Users\User\mvvm\mvvm\MvvmCross Application1\MvvmCross_Application1.Core\bin\x86\Debug\System.Net.Http.Primitives.dll
+C:\Users\User\mvvm\mvvm\MvvmCross Application1\MvvmCross_Application1.Core\bin\x86\Debug\MvvmCross.Binding.pdb
+C:\Users\User\mvvm\mvvm\MvvmCross Application1\MvvmCross_Application1.Core\bin\x86\Debug\MvvmCross.Core.pdb
+C:\Users\User\mvvm\mvvm\MvvmCross Application1\MvvmCross_Application1.Core\bin\x86\Debug\MvvmCross.Localization.pdb
+C:\Users\User\mvvm\mvvm\MvvmCross Application1\MvvmCross_Application1.Core\bin\x86\Debug\MvvmCross.Platform.pdb
+C:\Users\User\mvvm\mvvm\MvvmCross Application1\MvvmCross_Application1.Core\bin\x86\Debug\MvvmCross.Plugins.Messenger.pdb
+C:\Users\User\mvvm\mvvm\MvvmCross Application1\MvvmCross_Application1.Core\bin\x86\Debug\Newtonsoft.Json.xml
+C:\Users\User\mvvm\mvvm\MvvmCross Application1\MvvmCross_Application1.Core\bin\x86\Debug\SQLite-net.pdb
+C:\Users\User\mvvm\mvvm\MvvmCross Application1\MvvmCross_Application1.Core\bin\x86\Debug\SQLite-net.xml
+C:\Users\User\mvvm\mvvm\MvvmCross Application1\MvvmCross_Application1.Core\bin\x86\Debug\System.Net.Http.Extensions.xml
+C:\Users\User\mvvm\mvvm\MvvmCross Application1\MvvmCross_Application1.Core\bin\x86\Debug\System.Net.Http.Primitives.xml
+C:\Users\User\mvvm\mvvm\MvvmCross Application1\MvvmCross_Application1.Core\obj\x86\Debug\MvvmCross_Application1.Core.csproj.App.config
+C:\Users\User\mvvm\mvvm\MvvmCross Application1\MvvmCross_Application1.Core\obj\x86\Debug\MvvmCross_Application1.Core.csproj.CoreCompileInputs.cache
+C:\Users\User\mvvm\mvvm\MvvmCross Application1\MvvmCross_Application1.Core\obj\x86\Debug\MvvmCross_Application1.Core.csproj.CopyComplete
+C:\Users\User\mvvm\mvvm\MvvmCross Application1\MvvmCross_Application1.Core\obj\x86\Debug\MvvmCross_Application1.Core.dll
+C:\Users\User\mvvm\mvvm\MvvmCross Application1\MvvmCross_Application1.Core\obj\x86\Debug\MvvmCross_Application1.Core.pdb
