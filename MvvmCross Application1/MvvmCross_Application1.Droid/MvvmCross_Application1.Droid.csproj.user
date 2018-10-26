@@ -4,7 +4,7 @@
     <SelectedDevice>Nexus_5X_API_27</SelectedDevice>
     <DefaultDevice>Nexus_5X_API_27</DefaultDevice>
     <AndroidDesignerPreferredTheme>MyTheme</AndroidDesignerPreferredTheme>
-    <AndroidDesignerPreferredDevice>Nexus 4</AndroidDesignerPreferredDevice>
+    <AndroidDesignerPreferredDevice>Nexus 5</AndroidDesignerPreferredDevice>
     <ProjectView>ProjectFiles</ProjectView>
   </PropertyGroup>
 </Project>

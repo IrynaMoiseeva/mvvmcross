@@ -1,4 +1,5 @@
 C:\Users\User\mvvm\mvvm\MvvmCross Application1\MvvmCross_Application1.Droid\obj\Debug\MonoAndroid81\android\assets\MvvmCross_Application1.Droid.dll
+C:\Users\User\mvvm\mvvm\MvvmCross Application1\MvvmCross_Application1.Droid\obj\Debug\MonoAndroid81\android\assets\CircleImageView.dll
 C:\Users\User\mvvm\mvvm\MvvmCross Application1\MvvmCross_Application1.Droid\obj\Debug\MonoAndroid81\android\assets\ExoPlayer.Core.dll
 C:\Users\User\mvvm\mvvm\MvvmCross Application1\MvvmCross_Application1.Droid\obj\Debug\MonoAndroid81\android\assets\ExoPlayer.Dash.dll
 C:\Users\User\mvvm\mvvm\MvvmCross Application1\MvvmCross_Application1.Droid\obj\Debug\MonoAndroid81\android\assets\ExoPlayer.dll

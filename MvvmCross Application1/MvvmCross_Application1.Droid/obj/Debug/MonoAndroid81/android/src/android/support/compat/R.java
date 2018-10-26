@@ -622,6 +622,53 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static int checkedTextViewStyle=0x7f0100a5;
+        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static int civ_border_color=0x7f010182;
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static int civ_border_overlay=0x7f010183;
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static int civ_border_width=0x7f010181;
+        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static int civ_circle_background_color=0x7f010185;
+        /**  {@deprecated Use civ_circlebackground_color instead.} 
+         <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        @Deprecated
+        public static int civ_fill_color=0x7f010184;
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
@@ -3292,13 +3339,13 @@ containing a value of this type.
         public static int abc_vector_test=0x7f020052;
         public static int apple=0x7f020053;
         public static int avd_hide_password=0x7f020054;
-        public static int avd_hide_password_1=0x7f020098;
-        public static int avd_hide_password_2=0x7f020099;
-        public static int avd_hide_password_3=0x7f02009a;
+        public static int avd_hide_password_1=0x7f02009a;
+        public static int avd_hide_password_2=0x7f02009b;
+        public static int avd_hide_password_3=0x7f02009c;
         public static int avd_show_password=0x7f020055;
-        public static int avd_show_password_1=0x7f02009b;
-        public static int avd_show_password_2=0x7f02009c;
-        public static int avd_show_password_3=0x7f02009d;
+        public static int avd_show_password_1=0x7f02009d;
+        public static int avd_show_password_2=0x7f02009e;
+        public static int avd_show_password_3=0x7f02009f;
         public static int badge_item_count=0x7f020056;
         public static int cart1=0x7f020057;
         public static int cookies=0x7f020058;
@@ -3308,17 +3355,17 @@ containing a value of this type.
         public static int design_ic_visibility_off=0x7f02005c;
         public static int design_password_eye=0x7f02005d;
         public static int design_snackbar_background=0x7f02005e;
-        public static int exo_controls_fastforward=0x7f02008b;
+        public static int exo_controls_fastforward=0x7f02008d;
         public static int exo_controls_fullscreen_enter=0x7f02005f;
         public static int exo_controls_fullscreen_exit=0x7f020060;
-        public static int exo_controls_next=0x7f02008c;
-        public static int exo_controls_pause=0x7f02008d;
-        public static int exo_controls_play=0x7f02008e;
-        public static int exo_controls_previous=0x7f02008f;
+        public static int exo_controls_next=0x7f02008e;
+        public static int exo_controls_pause=0x7f02008f;
+        public static int exo_controls_play=0x7f020090;
+        public static int exo_controls_previous=0x7f020091;
         public static int exo_controls_repeat_all=0x7f020061;
         public static int exo_controls_repeat_off=0x7f020062;
         public static int exo_controls_repeat_one=0x7f020063;
-        public static int exo_controls_rewind=0x7f020090;
+        public static int exo_controls_rewind=0x7f020092;
         public static int exo_controls_shuffle=0x7f020064;
         public static int exo_edit_mode_logo=0x7f020065;
         public static int exo_icon_fastforward=0x7f020066;
@@ -3328,14 +3375,14 @@ containing a value of this type.
         public static int exo_icon_previous=0x7f02006a;
         public static int exo_icon_rewind=0x7f02006b;
         public static int exo_icon_stop=0x7f02006c;
-        public static int exo_notification_fastforward=0x7f020091;
-        public static int exo_notification_next=0x7f020092;
-        public static int exo_notification_pause=0x7f020093;
-        public static int exo_notification_play=0x7f020094;
-        public static int exo_notification_previous=0x7f020095;
-        public static int exo_notification_rewind=0x7f020096;
+        public static int exo_notification_fastforward=0x7f020093;
+        public static int exo_notification_next=0x7f020094;
+        public static int exo_notification_pause=0x7f020095;
+        public static int exo_notification_play=0x7f020096;
+        public static int exo_notification_previous=0x7f020097;
+        public static int exo_notification_rewind=0x7f020098;
         public static int exo_notification_small_icon=0x7f02006d;
-        public static int exo_notification_stop=0x7f020097;
+        public static int exo_notification_stop=0x7f020099;
         public static int ic_basket=0x7f02006e;
         public static int ic_drawer=0x7f02006f;
         public static int ic_menu=0x7f020070;
@@ -3343,28 +3390,30 @@ containing a value of this type.
         public static int ic_plus=0x7f020072;
         public static int ic_trash=0x7f020073;
         public static int image_border=0x7f020074;
-        public static int milk=0x7f020075;
-        public static int navigation_empty_icon=0x7f020076;
-        public static int notification_action_background=0x7f020077;
-        public static int notification_bg=0x7f020078;
-        public static int notification_bg_low=0x7f020079;
-        public static int notification_bg_low_normal=0x7f02007a;
-        public static int notification_bg_low_pressed=0x7f02007b;
-        public static int notification_bg_normal=0x7f02007c;
-        public static int notification_bg_normal_pressed=0x7f02007d;
-        public static int notification_icon_background=0x7f02007e;
-        public static int notification_template_icon_bg=0x7f020089;
-        public static int notification_template_icon_low_bg=0x7f02008a;
-        public static int notification_tile_bg=0x7f02007f;
-        public static int notify_panel_notification_icon_bg=0x7f020080;
-        public static int pear=0x7f020081;
-        public static int round_button=0x7f020082;
-        public static int rounded_corner=0x7f020083;
-        public static int separator_line=0x7f020084;
-        public static int splash=0x7f020085;
-        public static int tomatoes=0x7f020086;
-        public static int tooltip_frame_dark=0x7f020087;
-        public static int tooltip_frame_light=0x7f020088;
+        public static int mikky=0x7f020075;
+        public static int milk=0x7f020076;
+        public static int navigation_empty_icon=0x7f020077;
+        public static int notification_action_background=0x7f020078;
+        public static int notification_bg=0x7f020079;
+        public static int notification_bg_low=0x7f02007a;
+        public static int notification_bg_low_normal=0x7f02007b;
+        public static int notification_bg_low_pressed=0x7f02007c;
+        public static int notification_bg_normal=0x7f02007d;
+        public static int notification_bg_normal_pressed=0x7f02007e;
+        public static int notification_icon_background=0x7f02007f;
+        public static int notification_template_icon_bg=0x7f02008b;
+        public static int notification_template_icon_low_bg=0x7f02008c;
+        public static int notification_tile_bg=0x7f020080;
+        public static int notify_panel_notification_icon_bg=0x7f020081;
+        public static int pear=0x7f020082;
+        public static int peppa=0x7f020083;
+        public static int round_button=0x7f020084;
+        public static int rounded_corner=0x7f020085;
+        public static int separator_line=0x7f020086;
+        public static int splash=0x7f020087;
+        public static int tomatoes=0x7f020088;
+        public static int tooltip_frame_dark=0x7f020089;
+        public static int tooltip_frame_light=0x7f02008a;
     }
     public static final class id {
         public static int ALT=0x7f090048;
@@ -3375,8 +3424,8 @@ containing a value of this type.
         public static int MvxBindingTagUnique=0x7f09001e;
         public static int SHIFT=0x7f09004c;
         public static int SYM=0x7f09004d;
-        public static int VideoItems=0x7f0900e3;
-        public static int action0=0x7f0900d1;
+        public static int VideoItems=0x7f0900e5;
+        public static int action0=0x7f0900d3;
         public static int action_bar=0x7f090099;
         public static int action_bar_activity_content=0x7f090001;
         public static int action_bar_container=0x7f090098;
@@ -3384,17 +3433,17 @@ containing a value of this type.
         public static int action_bar_spinner=0x7f090002;
         public static int action_bar_subtitle=0x7f090078;
         public static int action_bar_title=0x7f090077;
-        public static int action_container=0x7f0900ce;
+        public static int action_container=0x7f0900d0;
         public static int action_context_bar=0x7f09009a;
-        public static int action_divider=0x7f0900d5;
-        public static int action_image=0x7f0900cf;
+        public static int action_divider=0x7f0900d7;
+        public static int action_image=0x7f0900d1;
         public static int action_menu_divider=0x7f090003;
         public static int action_menu_presenter=0x7f090004;
         public static int action_mode_bar=0x7f090096;
         public static int action_mode_bar_stub=0x7f090095;
         public static int action_mode_close_button=0x7f090079;
-        public static int action_text=0x7f0900d0;
-        public static int actions=0x7f0900de;
+        public static int action_text=0x7f0900d2;
+        public static int actions=0x7f0900e0;
         public static int activity_chooser_view_content=0x7f09007a;
         public static int add=0x7f09003d;
         public static int alertTitle=0x7f09008d;
@@ -3408,7 +3457,7 @@ containing a value of this type.
         public static int blocking=0x7f09006d;
         public static int bottom=0x7f090053;
         public static int buttonPanel=0x7f090080;
-        public static int cancel_action=0x7f0900d2;
+        public static int cancel_action=0x7f0900d4;
         public static int cart_item=0x7f0900ef;
         public static int cart_plus_minus_layout=0x7f0900c5;
         public static int cart_product_quantity=0x7f0900c9;
@@ -3416,15 +3465,15 @@ containing a value of this type.
         public static int center_horizontal=0x7f09005c;
         public static int center_vertical=0x7f09005d;
         public static int checkbox=0x7f090090;
-        public static int chronometer=0x7f0900da;
+        public static int chronometer=0x7f0900dc;
         public static int clip_horizontal=0x7f090064;
         public static int clip_vertical=0x7f090065;
-        public static int close_button=0x7f0900e5;
+        public static int close_button=0x7f0900e7;
         public static int collapseActionView=0x7f09004f;
         public static int container=0x7f0900b3;
         public static int contentPanel=0x7f090083;
         public static int content_frame=0x7f0900b0;
-        public static int content_frame1=0x7f0900e6;
+        public static int content_frame1=0x7f0900e8;
         public static int coordinator=0x7f0900b4;
         public static int custom=0x7f09008a;
         public static int customPanel=0x7f090089;
@@ -3439,7 +3488,7 @@ containing a value of this type.
         public static int drawer_layout=0x7f0900cb;
         public static int edit_query=0x7f09009b;
         public static int end=0x7f090046;
-        public static int end_padder=0x7f0900e0;
+        public static int end_padder=0x7f0900e2;
         public static int enterAlways=0x7f090055;
         public static int enterAlwaysCollapsed=0x7f090056;
         public static int exitUntilCollapsed=0x7f090057;
@@ -3479,10 +3528,10 @@ containing a value of this type.
         public static int homeAsUp=0x7f090037;
         public static int icon=0x7f09007f;
         public static int icon_badge=0x7f0900ae;
-        public static int icon_group=0x7f0900df;
+        public static int icon_group=0x7f0900e1;
         public static int ifRoom=0x7f090050;
         public static int image=0x7f09007c;
-        public static int info=0x7f0900db;
+        public static int info=0x7f0900dd;
         public static int italic=0x7f09006f;
         public static int item_touch_helper_previous_elevation=0x7f090000;
         public static int largeLabel=0x7f0900b2;
@@ -3490,12 +3539,13 @@ containing a value of this type.
         public static int line1=0x7f090017;
         public static int line3=0x7f090018;
         public static int listMode=0x7f090033;
-        public static int list_fragment=0x7f0900e7;
+        public static int list_fragment=0x7f0900e9;
         public static int list_item=0x7f09007e;
         public static int mNavigationView=0x7f0900cc;
-        public static int masked=0x7f0900ec;
-        public static int media_actions=0x7f0900d4;
-        public static int message=0x7f0900e1;
+        public static int masked=0x7f0900ee;
+        public static int media_actions=0x7f0900d6;
+        public static int menuitems=0x7f0900cd;
+        public static int message=0x7f0900e3;
         public static int middle=0x7f090047;
         public static int mini=0x7f090069;
         public static int minus_button=0x7f0900c8;
@@ -3503,16 +3553,14 @@ containing a value of this type.
         public static int name1=0x7f0900bf;
         public static int name3=0x7f0900c0;
         public static int name31=0x7f0900c1;
-        public static int nav_header=0x7f0900cd;
+        public static int nav_header1=0x7f0900cf;
         public static int navigation_header_container=0x7f0900b9;
-        public static int navigation_item_1=0x7f0900ed;
-        public static int navigation_item_2=0x7f0900ee;
         public static int never=0x7f090051;
         public static int none=0x7f090038;
         public static int normal=0x7f090034;
-        public static int notification_background=0x7f0900dd;
-        public static int notification_main_column=0x7f0900d7;
-        public static int notification_main_column_container=0x7f0900d6;
+        public static int notification_background=0x7f0900df;
+        public static int notification_main_column=0x7f0900d9;
+        public static int notification_main_column_container=0x7f0900d8;
         public static int one=0x7f090070;
         public static int parallax=0x7f090062;
         public static int parentPanel=0x7f090082;
@@ -3523,12 +3571,12 @@ containing a value of this type.
         public static int price=0x7f0900c6;
         public static int progress_circular=0x7f090006;
         public static int progress_horizontal=0x7f090007;
-        public static int published_date=0x7f0900ea;
+        public static int published_date=0x7f0900ec;
         public static int radio=0x7f090092;
         public static int relative_layout=0x7f0900ad;
         public static int right=0x7f090060;
-        public static int right_icon=0x7f0900dc;
-        public static int right_side=0x7f0900d8;
+        public static int right_icon=0x7f0900de;
+        public static int right_side=0x7f0900da;
         public static int rvItems=0x7f0900c3;
         public static int save_image_matrix=0x7f09000c;
         public static int save_non_transition_alpha=0x7f09000d;
@@ -3566,7 +3614,7 @@ containing a value of this type.
         public static int src_over=0x7f090042;
         public static int start=0x7f090061;
         public static int start_video_button=0x7f0900a9;
-        public static int status_bar_latest_event_content=0x7f0900d3;
+        public static int status_bar_latest_event_content=0x7f0900d5;
         public static int submenuarrow=0x7f090093;
         public static int submit_area=0x7f0900a4;
         public static int surface_view=0x7f090075;
@@ -3580,13 +3628,14 @@ containing a value of this type.
         public static int textinput_counter=0x7f090014;
         public static int textinput_error=0x7f090015;
         public static int texture_view=0x7f090076;
+        public static int textview=0x7f0900ce;
         public static int thumbnail=0x7f0900c4;
-        public static int thumbnail_channel=0x7f0900e2;
-        public static int time=0x7f0900d9;
+        public static int thumbnail_channel=0x7f0900e4;
+        public static int time=0x7f0900db;
         public static int title=0x7f09001c;
         public static int titleDividerNoCustom=0x7f09008e;
         public static int title_template=0x7f09008c;
-        public static int titletext=0x7f0900e9;
+        public static int titletext=0x7f0900eb;
         public static int toolbar=0x7f0900ab;
         public static int top=0x7f090054;
         public static int topPanel=0x7f09008b;
@@ -3599,10 +3648,10 @@ containing a value of this type.
         public static int uniform=0x7f090043;
         public static int up=0x7f090009;
         public static int useLogo=0x7f09003c;
-        public static int video_box=0x7f0900e4;
-        public static int video_fragment_container=0x7f0900e8;
+        public static int video_box=0x7f0900e6;
+        public static int video_fragment_container=0x7f0900ea;
         public static int view_offset_helper=0x7f090016;
-        public static int visible=0x7f0900eb;
+        public static int visible=0x7f0900ed;
         public static int withText=0x7f090052;
         public static int wrap_content=0x7f090044;
         public static int youtube_view=0x7f0900aa;
@@ -3678,33 +3727,34 @@ containing a value of this type.
         public static int itemview=0x7f040035;
         public static int list_row2=0x7f040036;
         public static int mainview=0x7f040037;
-        public static int nav_header=0x7f040038;
-        public static int notification_action=0x7f040039;
-        public static int notification_action_tombstone=0x7f04003a;
-        public static int notification_media_action=0x7f04003b;
-        public static int notification_media_cancel_action=0x7f04003c;
-        public static int notification_template_big_media=0x7f04003d;
-        public static int notification_template_big_media_custom=0x7f04003e;
-        public static int notification_template_big_media_narrow=0x7f04003f;
-        public static int notification_template_big_media_narrow_custom=0x7f040040;
-        public static int notification_template_custom_big=0x7f040041;
-        public static int notification_template_icon_group=0x7f040042;
-        public static int notification_template_lines_media=0x7f040043;
-        public static int notification_template_media=0x7f040044;
-        public static int notification_template_media_custom=0x7f040045;
-        public static int notification_template_part_chronometer=0x7f040046;
-        public static int notification_template_part_time=0x7f040047;
-        public static int select_dialog_item_material=0x7f040048;
-        public static int select_dialog_multichoice_material=0x7f040049;
-        public static int select_dialog_singlechoice_material=0x7f04004a;
-        public static int support_simple_spinner_dropdown_item=0x7f04004b;
-        public static int toolbar=0x7f04004c;
-        public static int tooltip=0x7f04004d;
-        public static int video_list_demo=0x7f04004e;
-        public static int video_list_demo1=0x7f04004f;
-        public static int video_list_demo2=0x7f040050;
-        public static int video_list_item=0x7f040051;
-        public static int youtube_fragment=0x7f040052;
+        public static int menuitemview=0x7f040038;
+        public static int nav_header=0x7f040039;
+        public static int notification_action=0x7f04003a;
+        public static int notification_action_tombstone=0x7f04003b;
+        public static int notification_media_action=0x7f04003c;
+        public static int notification_media_cancel_action=0x7f04003d;
+        public static int notification_template_big_media=0x7f04003e;
+        public static int notification_template_big_media_custom=0x7f04003f;
+        public static int notification_template_big_media_narrow=0x7f040040;
+        public static int notification_template_big_media_narrow_custom=0x7f040041;
+        public static int notification_template_custom_big=0x7f040042;
+        public static int notification_template_icon_group=0x7f040043;
+        public static int notification_template_lines_media=0x7f040044;
+        public static int notification_template_media=0x7f040045;
+        public static int notification_template_media_custom=0x7f040046;
+        public static int notification_template_part_chronometer=0x7f040047;
+        public static int notification_template_part_time=0x7f040048;
+        public static int select_dialog_item_material=0x7f040049;
+        public static int select_dialog_multichoice_material=0x7f04004a;
+        public static int select_dialog_singlechoice_material=0x7f04004b;
+        public static int support_simple_spinner_dropdown_item=0x7f04004c;
+        public static int toolbar=0x7f04004d;
+        public static int tooltip=0x7f04004e;
+        public static int video_list_demo=0x7f04004f;
+        public static int video_list_demo1=0x7f040050;
+        public static int video_list_demo2=0x7f040051;
+        public static int video_list_item=0x7f040052;
+        public static int youtube_fragment=0x7f040053;
     }
     public static final class menu {
         public static int activity_main_drawer=0x7f100000;
@@ -7302,6 +7352,106 @@ containing a value of this type.
           @attr name android.support.compat:allowStacking
         */
         public static int ButtonBarLayout_allowStacking = 0;
+        /** Attributes that can be used with a CircleImageView.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #CircleImageView_civ_border_color android.support.compat:civ_border_color}</code></td><td></td></tr>
+           <tr><td><code>{@link #CircleImageView_civ_border_overlay android.support.compat:civ_border_overlay}</code></td><td></td></tr>
+           <tr><td><code>{@link #CircleImageView_civ_border_width android.support.compat:civ_border_width}</code></td><td></td></tr>
+           <tr><td><code>{@link #CircleImageView_civ_circle_background_color android.support.compat:civ_circle_background_color}</code></td><td></td></tr>
+           <tr><td><code>{@link #CircleImageView_civ_fill_color android.support.compat:civ_fill_color}</code></td><td> {@deprecated Use civ_circlebackground_color instead.} </td></tr>
+           </table>
+           @see #CircleImageView_civ_border_color
+           @see #CircleImageView_civ_border_overlay
+           @see #CircleImageView_civ_border_width
+           @see #CircleImageView_civ_circle_background_color
+           @see #CircleImageView_civ_fill_color
+         */
+        public static final int[] CircleImageView = {
+            0x7f010181, 0x7f010182, 0x7f010183, 0x7f010184,
+            0x7f010185
+        };
+        /**
+          <p>This symbol is the offset where the {@link android.support.compat.R.attr#civ_border_color}
+          attribute's value can be found in the {@link #CircleImageView} array.
+
+
+          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name android.support.compat:civ_border_color
+        */
+        public static int CircleImageView_civ_border_color = 1;
+        /**
+          <p>This symbol is the offset where the {@link android.support.compat.R.attr#civ_border_overlay}
+          attribute's value can be found in the {@link #CircleImageView} array.
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name android.support.compat:civ_border_overlay
+        */
+        public static int CircleImageView_civ_border_overlay = 2;
+        /**
+          <p>This symbol is the offset where the {@link android.support.compat.R.attr#civ_border_width}
+          attribute's value can be found in the {@link #CircleImageView} array.
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name android.support.compat:civ_border_width
+        */
+        public static int CircleImageView_civ_border_width = 0;
+        /**
+          <p>This symbol is the offset where the {@link android.support.compat.R.attr#civ_circle_background_color}
+          attribute's value can be found in the {@link #CircleImageView} array.
+
+
+          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name android.support.compat:civ_circle_background_color
+        */
+        public static int CircleImageView_civ_circle_background_color = 4;
+        /**
+          <p>
+          @attr description
+           {@deprecated Use civ_circlebackground_color instead.} 
+
+
+          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          <p>This is a private symbol.
+          @attr name android.support.compat:civ_fill_color
+        */
+        @Deprecated
+        public static int CircleImageView_civ_fill_color = 3;
         /** Attributes that can be used with a CollapsingToolbarLayout.
            <p>Includes the following attributes:</p>
            <table>

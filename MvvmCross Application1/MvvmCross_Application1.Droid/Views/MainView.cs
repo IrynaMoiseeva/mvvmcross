@@ -1,30 +1,21 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
 using Android.App;
 using Android.Content;
 using Android.Graphics;
 using Android.Graphics.Drawables;
 using Android.OS;
-using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.Support.Design.Widget;
-using MvvmCross.Binding.BindingContext;
-using MvvmCross.Binding.Droid.BindingContext;
-using MvvmCross.Binding.Droid.Views;
 using MvvmCross.Droid.Support.V7.AppCompat;
-using MvvmCross.Droid.Support.V7.RecyclerView;
-using MvvmCross.Droid.Support.V7.RecyclerView.ItemTemplates;
-using MvvmCross.Droid.Views.Fragments;
-using MvvmCross.Droid.Views;
 using MvvmCross_Application1.Core.ViewModels;
 using Android.Support.V4.Widget;
 using Android.Support.V7.App;
-using Android.Support.V4.View;
-using MvvmCross.Droid.Support.V4;
+using Android.Support.V7.Widget;
+
 
 namespace MvvmCross_Application1.Droid.Views
 
@@ -38,6 +29,10 @@ namespace MvvmCross_Application1.Droid.Views
         private DrawerLayout mDrawerlayout;
         private NavigationView navigationView;
         ActionBarDrawerToggle mtoogle;
+        Core.Model.Channel channel;
+        RecyclerView mRecycleView;
+        RecyclerView.LayoutManager mLayoutManager;
+        ChannelAdapter mAdapter;
 
         public new MainViewModel ViewModel
         {
@@ -61,25 +56,34 @@ namespace MvvmCross_Application1.Droid.Views
 
             mDrawerlayout = FindViewById<DrawerLayout>(Resource.Id.drawer_layout);
             mtoogle = new ActionBarDrawerToggle(this, mDrawerlayout, toolbar1, Resource.String.open, Resource.String.close);
-
+            
             mDrawerlayout.AddDrawerListener(mtoogle);
             mtoogle.SyncState();
+            //int[] ids = new int[3] {Resource.Drawable.peppa, Resource.Drawable.peppa, Resource.Drawable.peppa };
             string[] ids = new string[] { "Resource.Drawable.peppa", "Resource.Drawable.peppa", "Resource.Drawable.peppa" };
-
+            // GetDrawable(Resource.Drawable.peppa);
+            int id = Resources.GetIdentifier("peppa", "drawable", PackageName);
             navigationView = FindViewById<NavigationView>(Resource.Id.mNavigationView);
             var chan = ViewModel.Channels.ToList();
-            for (int i = 0; i < chan.Count(); i++)
+            
+        /*    for (int i = 0; i < chan.Count(); i++)
             {
                 var t=chan[i].Id;
-                var u = Int32.Parse(ids[i]);
-                navigationView.Menu.Add(1, t,t, chan[i].Title.ToString()).SetIcon(u);
-                //GetDrawable
-                    
-               
+               // var u = Int32.Parse(ids[i]);
+                //navigationView.Menu.Add(1, t, t, chan[i].Title.ToString()).SetIcon(Resource.Drawable.peppa);
+              //  navigationView.Menu.Add(1, t, t, chan[i].Title.ToString()).SetIcon(id).SetShowAsAction(ShowAsAction.Always);
+              }
+            */
 
 
-            }
-
+            
+            mRecycleView = FindViewById<RecyclerView>(Resource.Id.menuitems);
+            mLayoutManager = new LinearLayoutManager(this);
+            mRecycleView.SetLayoutManager(mLayoutManager);
+            mAdapter = new ChannelAdapter(chan);
+            mAdapter.ItemClick += MAdapter_ItemClick;
+            //mAdapter.ItemClick += MAdapter_ItemClick;
+            mRecycleView.SetAdapter(mAdapter);
 
 
             // navigationView.InflateMenu(Resource.Menu.activity_main_drawer);
@@ -96,12 +100,17 @@ namespace MvvmCross_Application1.Droid.Views
 
 
         }
-
+        private void MAdapter_ItemClick(object sender, int e)
+        {
+            int photoNum= e ;
+            ViewModel.ChooseChannel(photoNum);
+           // Toast.MakeText(this, "This is photo number " + photoNum, ToastLength.Short).Show();
+        }
 
         public override bool OnCreateOptionsMenu(IMenu menu)
         {
 
-            // navigationView.InflateMenu(Resource.Menu.nav_menu); //Navigation Drawer Layout Menu Creation  
+          // navigationView.InflateMenu(Resource.Menu.options_menu); //Navigation Drawer Layout Menu Creation  
             // MenuInflater.Inflate(Resource.Menu.popUp_menu, menu);
             return base.OnCreateOptionsMenu(menu);
         }
@@ -134,7 +143,70 @@ namespace MvvmCross_Application1.Droid.Views
             return true;
         }
     }
-    public class Converter
+    public class NavMenu
+    {
+        public int Menu { get; set; }
+        public string MenuTitle { get; set; }
+     //   public string MenuImage { get; set; }
+    }
+    public class PhotoAlbum
+    {
+       /* static NavMenu[] menuitem =
+        {
+            new NavMenu() {mPhotoID = Resource.Drawable.Android1, mCaption = "Ahsan 1"},
+            new NavMenu() {mPhotoID = Resource.Drawable.Android2, mCaption = "Ahsan 2"},
+            new NavMenu() {mPhotoID = Resource.Drawable.Android3, mCaption = "Ahsan 3"},
+          */ 
+        };
+    public class ChannelAdapter : RecyclerView.Adapter
+    {
+        public event EventHandler<int> ItemClick;
+        public List<Core.Model.Channel> mchannel; 
+        public ChannelAdapter(List<Core.Model.Channel> channel)
+        {
+            mchannel = channel;
+        }
+        public override int ItemCount => mchannel.Count();
+
+        public override void OnBindViewHolder(RecyclerView.ViewHolder holder, int position)
+        {
+            MenuItemViewHolder vh = holder as MenuItemViewHolder;
+             var packageName=Application.Context.PackageName.ToString();
+
+           var  id = (int)typeof(Resource.Drawable).GetField(mchannel[position].Image.ToString()).GetValue(null);
+            // int id = Resources.GetIdentifier("peppa", "drawable", PackageName);
+
+            vh.Image.SetImageResource(id) ;//Resource.Drawable.peppa);//(mchannel[position].Id);
+            
+            vh.Caption.Text = mchannel[position].Title.ToString();
+        }
+        public override RecyclerView.ViewHolder OnCreateViewHolder(ViewGroup parent, int viewType)
+        {
+            View itemView = LayoutInflater.From(parent.Context).Inflate(Resource.Layout.menuitemview, parent, false);
+            MenuItemViewHolder vh = new MenuItemViewHolder(itemView, OnClick);
+            return vh;
+        }
+        private void OnClick(int row)
+        {
+            if (ItemClick != null)
+
+                ItemClick(this, row);
+        }
+    }
+
+public class MenuItemViewHolder : RecyclerView.ViewHolder
+    {
+        public ImageView Image { get; set; }
+        public TextView Caption { get; set; }
+        public MenuItemViewHolder(View itemview, Action<int> listener) : base(itemview)
+        {
+            Image = itemview.FindViewById<ImageView>(Resource.Id.image);
+            Caption = itemview.FindViewById<TextView>(Resource.Id.textview);
+            itemview.Click += (sender, e) => listener(base.Position);
+        }
+    }
+
+public class Converter
     {
 
 

@@ -107,6 +107,7 @@ class MonoPackageManager_Resources {
 	public static final String[] Assemblies = new String[]{
 		/* We need to ensure that "MvvmCross_Application1.Droid.dll" comes first in this list. */
 		"MvvmCross_Application1.Droid.dll",
+		"CircleImageView.dll",
 		"ExoPlayer.Core.dll",
 		"ExoPlayer.Dash.dll",
 		"ExoPlayer.dll",

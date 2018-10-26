@@ -28,6 +28,8 @@ namespace MvvmCross_Application1.Core.Model
         public int Id { get; set; }
         public string PlayListId { get; set; }
         public string Title { get; set; }
+        public string Image { get; set; }
+
         private int quantity;
         public int Quantity
         {
@@ -38,11 +40,12 @@ namespace MvvmCross_Application1.Core.Model
                 RaisePropertyChanged(() => Quantity);
             }
         }
-        public Channel(int id,string playlistid, string title)
+        public Channel(int id,string playlistid, string title, string image)
         {
             Id = id;
             Title = title;
             PlayListId = playlistid;
+            Image = image;
 
         }
     }

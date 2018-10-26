@@ -35,9 +35,9 @@ namespace MvvmCross_Application1.Core.ViewModels
             _navigationService = navigationService ?? throw new ArgumentNullException(nameof(navigationService));
 
             Channels = new List<Channel> {
-                new Channel(0,"PLyxLqRfXH_eOMYvGsYRYkrjaoZ8DG3Sxu", "Little Angel: Nursery Rhymes & Kids Songs " ),
-                new Channel(1,"PLKtBoDIM5r2XqS3iqLrcySCqtSNSFjM7j" ,"Peppa Pig"),
-                new Channel(2,"PL8XvIF6dDmUt8MuEVKuv86uO96qMk0dk6" ,"Caillou")
+                new Channel(0,"PLyxLqRfXH_eOMYvGsYRYkrjaoZ8DG3Sxu", "Little Angel", "angel" ),
+                new Channel(1,"PLKtBoDIM5r2XqS3iqLrcySCqtSNSFjM7j" ,"Peppa Pig","peppa"),
+                new Channel(2,"PL8XvIF6dDmUt8MuEVKuv86uO96qMk0dk6" ,"Caillou","calilou")
             };
         }
         private IMvxAsyncCommand _navigateCommand;
