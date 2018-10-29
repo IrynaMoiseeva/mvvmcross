@@ -348,8 +348,8 @@ namespace MvvmCross_Application1.Droid.Views
                 var video = (YoutubeItem)GetRawItem(position);
 
                 // There are three cases here
-                if (view == null)
-                {
+                //if (view == null)
+               // {
 
                     // 1) The view has not yet been created - we need to initialize the YouTubeThumbnailView.
                     view = inflater.Inflate(Resource.Layout.video_list_item, parent, false);
@@ -371,12 +371,13 @@ namespace MvvmCross_Application1.Droid.Views
                         intent.AddFlags(ActivityFlags.NewTask);
 
                         intent.PutExtra(PlayVideoActivity.ExtraUrlKey, video.VideoId);
+                        
                         mcon.StartActivity(intent);
 
                         //listview = view.FindViewById<MvxListView>(Resource.Id.VideoItems);
                         //listview.PerformItemClick(view, position, GetItemId(position));
                     };
-                }
+              /*  }
                 else
                 {
                     var thumbnail = view.FindViewById<YouTubeThumbnailView>(Resource.Id.thumbnail);
@@ -393,8 +394,8 @@ namespace MvvmCross_Application1.Droid.Views
                         //    on the loader.
                         thumbnail.SetImageResource(Resource.Drawable.cart1);//loading_thumbnail
                                                                             // loader.SetVideo(entry.VideoId);
-                    }
-                }
+                    }*/
+                
 
 
 

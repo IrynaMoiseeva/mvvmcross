@@ -15,12 +15,12 @@ using MvvmCross_Application1.Core.ViewModels;
 using Android.Support.V4.Widget;
 using Android.Support.V7.App;
 using Android.Support.V7.Widget;
-
+using Android.Support.V4.View;
 
 namespace MvvmCross_Application1.Droid.Views
 
 {// @style/MyTheme
-    [Activity(Label = "Activity1", MainLauncher = true, Theme = "@style/MyTheme.Base")]
+    [Activity(Label = "Baby Channel", MainLauncher = true, Theme = "@style/MyTheme.Base")]
     public class MainView : MvxAppCompatActivity<MainViewModel>, NavigationView.IOnNavigationItemSelectedListener
 
     {
@@ -58,6 +58,7 @@ namespace MvvmCross_Application1.Droid.Views
             mtoogle = new ActionBarDrawerToggle(this, mDrawerlayout, toolbar1, Resource.String.open, Resource.String.close);
             
             mDrawerlayout.AddDrawerListener(mtoogle);
+            
             mtoogle.SyncState();
             //int[] ids = new int[3] {Resource.Drawable.peppa, Resource.Drawable.peppa, Resource.Drawable.peppa };
             string[] ids = new string[] { "Resource.Drawable.peppa", "Resource.Drawable.peppa", "Resource.Drawable.peppa" };
@@ -104,7 +105,8 @@ namespace MvvmCross_Application1.Droid.Views
         {
             int photoNum= e ;
             ViewModel.ChooseChannel(photoNum);
-           // Toast.MakeText(this, "This is photo number " + photoNum, ToastLength.Short).Show();
+            mDrawerlayout.CloseDrawer(GravityCompat.Start);
+
         }
 
         public override bool OnCreateOptionsMenu(IMenu menu)

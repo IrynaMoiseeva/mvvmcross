@@ -29,7 +29,7 @@ namespace MvvmCross_Application1.Droid.Views
 
     [Activity(Label = "Menu3")]
     //      Label = "videolist_demo_name")]
-    class PlayVideoActivity : YouTubeBaseActivity
+    class PlayVideoActivity : YouTubeBaseActivity, IYouTubePlayerOnInitializedListener
     {
 
         
@@ -63,6 +63,16 @@ namespace MvvmCross_Application1.Droid.Views
 
             }
         }
+
+
+
+        public override bool OnKeyDown(Keycode keyCode, KeyEvent e)
+        {
+            var i = 1;
+            FinishActivity(0);
+       // Finish();
+            return true;
+        }
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -71,9 +81,13 @@ namespace MvvmCross_Application1.Droid.Views
             VideoId  = intent?.GetStringExtra(ExtraUrlKey);
 
             SetContentView(Resource.Layout.activity_video_fullscreen);
-
-            playVideoButton = FindViewById<Button>(Resource.Id.start_video_button);
-
+             var player= FindViewById<YouTubePlayerView>(Resource.Id.youtube_view);
+            player.Initialize(DeveloperKey.Key,this);
+            
+//playVideoButton = FindViewById<Button>(Resource.Id.start_video_button);
+           // intent = YouTubeStandalonePlayer.CreateVideoIntent(this, DeveloperKey.Key, VideoId);
+            // StartActivityForResult(intent, StartStandalonePlayerRequest);
+           // StartActivity(intent);
             //   var set = this.CreateBindingSet<PlayVideoActivity, PlayVideoViewModel>();
 
             //  set.Bind(this).For(v => v.VideoUrl).To(vm => vm.VideoUrl).OneWay();
@@ -86,7 +100,7 @@ namespace MvvmCross_Application1.Droid.Views
               autoplayCheckBox = FindViewById<CheckBox>(Resource.Id.autoplay_checkbox);
               lightboxModeCheckBox = FindViewById<CheckBox>(Resource.Id.lightbox_checkbox);*/
 
-            playVideoButton.Click += OnClick;
+            //playVideoButton.Click += OnClick;
             //playPlaylistButton.Click += OnClick;
             //playVideoListButton.Click += OnClick;
         }
@@ -101,7 +115,7 @@ namespace MvvmCross_Application1.Droid.Views
             Intent intent = null;
             if (sender == playVideoButton)
             {
-                intent = YouTubeStandalonePlayer.CreateVideoIntent(this, DeveloperKey.Key, VideoId);// startTimeMillis, autoplay, lightboxMode);
+                intent = YouTubeStandalonePlayer.CreateVideoIntent(this, DeveloperKey.Key, VideoId,0,false,false);// startTimeMillis, autoplay, lightboxMode);
             }
             else if (sender == playPlaylistButton)
             {
@@ -116,7 +130,8 @@ namespace MvvmCross_Application1.Droid.Views
             {
                 if (CanResolveIntent(intent))
                 {
-                    StartActivityForResult(intent, StartStandalonePlayerRequest);
+                   // StartActivityForResult(intent, StartStandalonePlayerRequest);
+                  
                 }
                 else
                 {
@@ -128,7 +143,7 @@ namespace MvvmCross_Application1.Droid.Views
 
         protected override void OnActivityResult(int requestCode, Result resultCode, Intent data)
         {
-            base.OnActivityResult(requestCode, resultCode, data);
+         //   base.OnActivityResult(requestCode, resultCode, data);
 
             if (requestCode == StartStandalonePlayerRequest && resultCode != Result.Ok)
             {
@@ -143,6 +158,9 @@ namespace MvvmCross_Application1.Droid.Views
                     //Toast.MakeText(this, errorMessage, ToastLength.Long).Show();
                 }
             }
+           FinishActivity(0);
+            Finish();
+            
         }
 
         private bool CanResolveIntent(Intent intent)
@@ -158,6 +176,17 @@ namespace MvvmCross_Application1.Droid.Views
                 return result;
             }
             return defaultValue;
+        }
+
+        public void OnInitializationFailure(IYouTubePlayerProvider p0, YouTubeInitializationResult p1)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void OnInitializationSuccess(IYouTubePlayerProvider p0, IYouTubePlayer player, bool p2)
+        {
+            player.CueVideo(VideoId);
+                
         }
     }
 }

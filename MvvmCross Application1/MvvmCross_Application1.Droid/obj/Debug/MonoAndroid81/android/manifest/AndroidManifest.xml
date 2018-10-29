@@ -4,7 +4,7 @@
   <uses-permission android:name="android.permission.INTERNET" />
   <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
   <application android:label="@string/app_name" android:icon="@mipmap/ic_launcher" android:theme="@style/MyTheme" android:name="android.app.Application" android:allowBackup="true" android:debuggable="true">
-    <activity android:label="Activity1" android:theme="@style/MyTheme.Base" android:name="md5e6f47812bd88bd79806b14c2d7f29aa7.MainView">
+    <activity android:label="Baby Channel" android:theme="@style/MyTheme.Base" android:name="md5e6f47812bd88bd79806b14c2d7f29aa7.MainView">
       <intent-filter>
         <action android:name="android.intent.action.MAIN" />
         <category android:name="android.intent.category.LAUNCHER" />

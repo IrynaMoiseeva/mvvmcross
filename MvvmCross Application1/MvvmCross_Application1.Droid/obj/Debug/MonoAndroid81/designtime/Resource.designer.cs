@@ -6835,11 +6835,11 @@ namespace MvvmCross_Application1.Droid
 			// aapt resource value: 0x7F0C0018
 			public const int auto = 2131492888;
 			
-			// aapt resource value: 0x7F020006
-			public const int badge_layout1 = 2130837510;
+			// aapt resource value: 0x7F020005
+			public const int badge_layout1 = 2130837509;
 			
-			// aapt resource value: 0x7F020009
-			public const int badge_notification_1 = 2130837513;
+			// aapt resource value: 0x7F020008
+			public const int badge_notification_1 = 2130837512;
 			
 			// aapt resource value: 0x7F0C0008
 			public const int blocking = 2131492872;
@@ -6853,14 +6853,14 @@ namespace MvvmCross_Application1.Droid
 			// aapt resource value: 0x7F0C0009
 			public const int cancel_action = 2131492873;
 			
-			// aapt resource value: 0x7F020039
-			public const int cart_item = 2130837561;
+			// aapt resource value: 0x7F020038
+			public const int cart_item = 2130837560;
 			
-			// aapt resource value: 0x7F020018
-			public const int cart_plus_minus_layout = 2130837528;
+			// aapt resource value: 0x7F020017
+			public const int cart_plus_minus_layout = 2130837527;
 			
-			// aapt resource value: 0x7F020022
-			public const int cart_product_quantity = 2130837538;
+			// aapt resource value: 0x7F020021
+			public const int cart_product_quantity = 2130837537;
 			
 			// aapt resource value: 0x7F0C001D
 			public const int center = 2131492893;
@@ -6871,20 +6871,20 @@ namespace MvvmCross_Application1.Droid
 			// aapt resource value: 0x7F0C000A
 			public const int chronometer = 2131492874;
 			
-			// aapt resource value: 0x7F020033
-			public const int close_button = 2130837555;
+			// aapt resource value: 0x7F020032
+			public const int close_button = 2130837554;
 			
-			// aapt resource value: 0x7F020029
-			public const int container = 2130837545;
+			// aapt resource value: 0x7F020028
+			public const int container = 2130837544;
 			
 			// aapt resource value: 0x7F0C0021
 			public const int contentPanel = 2131492897;
 			
-			// aapt resource value: 0x7F020010
-			public const int content_frame = 2130837520;
+			// aapt resource value: 0x7F020009
+			public const int content_frame = 2130837513;
 			
-			// aapt resource value: 0x7F020034
-			public const int content_frame1 = 2130837556;
+			// aapt resource value: 0x7F020033
+			public const int content_frame1 = 2130837555;
 			
 			// aapt resource value: 0x7F0C0022
 			public const int coordinator = 2131492898;
@@ -6916,8 +6916,8 @@ namespace MvvmCross_Application1.Droid
 			// aapt resource value: 0x7F0C002B
 			public const int design_navigation_view = 2131492907;
 			
-			// aapt resource value: 0x7F020024
-			public const int drawer_layout = 2130837540;
+			// aapt resource value: 0x7F020023
+			public const int drawer_layout = 2130837539;
 			
 			// aapt resource value: 0x7F0C002C
 			public const int edit_query = 2131492908;
@@ -7024,14 +7024,14 @@ namespace MvvmCross_Application1.Droid
 			// aapt resource value: 0x7F0C0026
 			public const int icon = 2131492902;
 			
-			// aapt resource value: 0x7F020008
-			public const int icon_badge = 2130837512;
+			// aapt resource value: 0x7F020007
+			public const int icon_badge = 2130837511;
 			
 			// aapt resource value: 0x7F0C0027
 			public const int icon_group = 2131492903;
 			
-			// aapt resource value: 0x7F020016
-			public const int image = 2130837526;
+			// aapt resource value: 0x7F020015
+			public const int image = 2130837525;
 			
 			// aapt resource value: 0x7F0C0028
 			public const int info = 2131492904;
@@ -7057,8 +7057,8 @@ namespace MvvmCross_Application1.Droid
 			// aapt resource value: 0x7F0C0040
 			public const int listMode = 2131492928;
 			
-			// aapt resource value: 0x7F020035
-			public const int list_fragment = 2130837557;
+			// aapt resource value: 0x7F020034
+			public const int list_fragment = 2130837556;
 			
 			// aapt resource value: 0x7F0C0041
 			public const int list_item = 2131492929;
@@ -7069,8 +7069,8 @@ namespace MvvmCross_Application1.Droid
 			// aapt resource value: 0x7F0C002C
 			public const int media_actions = 2131492908;
 			
-			// aapt resource value: 0x7F020026
-			public const int menuitems = 2130837542;
+			// aapt resource value: 0x7F020025
+			public const int menuitems = 2130837541;
 			
 			// aapt resource value: 0x7F0C0044
 			public const int message = 2131492932;
@@ -7078,35 +7078,35 @@ namespace MvvmCross_Application1.Droid
 			// aapt resource value: 0x7F0C0045
 			public const int mini = 2131492933;
 			
-			// aapt resource value: 0x7F020021
-			public const int minus_button = 2130837537;
+			// aapt resource value: 0x7F020020
+			public const int minus_button = 2130837536;
 			
-			// aapt resource value: 0x7F020025
-			public const int mNavigationView = 2130837541;
+			// aapt resource value: 0x7F020024
+			public const int mNavigationView = 2130837540;
 			
 			// aapt resource value: 0x7F0C0046
 			public const int multiply = 2131492934;
 			
-			// aapt resource value: 0x7F020099
-			public const int MvvmCrossTagId = 2130837657;
+			// aapt resource value: 0x7F020098
+			public const int MvvmCrossTagId = 2130837656;
 			
-			// aapt resource value: 0x7F020100
-			public const int MvxBindingTagUnique = 2130837760;
+			// aapt resource value: 0x7F020099
+			public const int MvxBindingTagUnique = 2130837657;
+			
+			// aapt resource value: 0x7F020010
+			public const int name1 = 2130837520;
 			
 			// aapt resource value: 0x7F020011
-			public const int name1 = 2130837521;
+			public const int name3 = 2130837521;
 			
 			// aapt resource value: 0x7F020012
-			public const int name3 = 2130837522;
-			
-			// aapt resource value: 0x7F020013
-			public const int name31 = 2130837523;
+			public const int name31 = 2130837522;
 			
 			// aapt resource value: 0x7F0C0047
 			public const int navigation_header_container = 2131492935;
 			
-			// aapt resource value: 0x7F020028
-			public const int nav_header1 = 2130837544;
+			// aapt resource value: 0x7F020027
+			public const int nav_header1 = 2130837543;
 			
 			// aapt resource value: 0x7F0C002D
 			public const int none = 2131492909;
@@ -7135,14 +7135,14 @@ namespace MvvmCross_Application1.Droid
 			// aapt resource value: 0x7F0C0050
 			public const int pin = 2131492944;
 			
-			// aapt resource value: 0x7F020020
-			public const int plist_weight_text = 2130837536;
-			
-			// aapt resource value: 0x7F020023
-			public const int plus_button = 2130837539;
-			
 			// aapt resource value: 0x7F020019
-			public const int price = 2130837529;
+			public const int plist_weight_text = 2130837529;
+			
+			// aapt resource value: 0x7F020022
+			public const int plus_button = 2130837538;
+			
+			// aapt resource value: 0x7F020018
+			public const int price = 2130837528;
 			
 			// aapt resource value: 0x7F0C0051
 			public const int progress_circular = 2131492945;
@@ -7150,14 +7150,14 @@ namespace MvvmCross_Application1.Droid
 			// aapt resource value: 0x7F0C0052
 			public const int progress_horizontal = 2131492946;
 			
-			// aapt resource value: 0x7F020038
-			public const int published_date = 2130837560;
+			// aapt resource value: 0x7F020037
+			public const int published_date = 2130837559;
 			
 			// aapt resource value: 0x7F0C0053
 			public const int radio = 2131492947;
 			
-			// aapt resource value: 0x7F020007
-			public const int relative_layout = 2130837511;
+			// aapt resource value: 0x7F020006
+			public const int relative_layout = 2130837510;
 			
 			// aapt resource value: 0x7F0C0054
 			public const int right = 2131492948;
@@ -7168,8 +7168,8 @@ namespace MvvmCross_Application1.Droid
 			// aapt resource value: 0x7F0C0033
 			public const int right_side = 2131492915;
 			
-			// aapt resource value: 0x7F020014
-			public const int rvItems = 2130837524;
+			// aapt resource value: 0x7F020013
+			public const int rvItems = 2130837523;
 			
 			// aapt resource value: 0x7F0C0057
 			public const int save_image_matrix = 2131492951;
@@ -7261,9 +7261,6 @@ namespace MvvmCross_Application1.Droid
 			// aapt resource value: 0x7F0C0073
 			public const int start = 2131492979;
 			
-			// aapt resource value: 0x7F020003
-			public const int start_video_button = 2130837507;
-			
 			// aapt resource value: 0x7F0C0034
 			public const int status_bar_latest_event_content = 2131492916;
 			
@@ -7303,35 +7300,35 @@ namespace MvvmCross_Application1.Droid
 			// aapt resource value: 0x7F0C0039
 			public const int texture_view = 2131492921;
 			
-			// aapt resource value: 0x7F020027
-			public const int textview = 2130837543;
+			// aapt resource value: 0x7F020026
+			public const int textview = 2130837542;
 			
 			// aapt resource value: 0x7F0C007D
 			public const int text_input_password_toggle = 2131492989;
 			
-			// aapt resource value: 0x7F020015
-			public const int thumbnail = 2130837525;
+			// aapt resource value: 0x7F020014
+			public const int thumbnail = 2130837524;
 			
-			// aapt resource value: 0x7F020030
-			public const int thumbnail_channel = 2130837552;
+			// aapt resource value: 0x7F020029
+			public const int thumbnail_channel = 2130837545;
 			
 			// aapt resource value: 0x7F0C003A
 			public const int time = 2131492922;
 			
-			// aapt resource value: 0x7F020017
-			public const int title = 2130837527;
+			// aapt resource value: 0x7F020016
+			public const int title = 2130837526;
 			
 			// aapt resource value: 0x7F0C0082
 			public const int titleDividerNoCustom = 2131492994;
 			
-			// aapt resource value: 0x7F020037
-			public const int titletext = 2130837559;
+			// aapt resource value: 0x7F020036
+			public const int titletext = 2130837558;
 			
 			// aapt resource value: 0x7F0C0083
 			public const int title_template = 2131492995;
 			
-			// aapt resource value: 0x7F020005
-			public const int toolbar = 2130837509;
+			// aapt resource value: 0x7F020004
+			public const int toolbar = 2130837508;
 			
 			// aapt resource value: 0x7F0C0084
 			public const int top = 2131492996;
@@ -7363,14 +7360,14 @@ namespace MvvmCross_Application1.Droid
 			// aapt resource value: 0x7F0C008D
 			public const int up = 2131493005;
 			
+			// aapt resource value: 0x7F020030
+			public const int VideoItems = 2130837552;
+			
 			// aapt resource value: 0x7F020031
-			public const int VideoItems = 2130837553;
+			public const int video_box = 2130837553;
 			
-			// aapt resource value: 0x7F020032
-			public const int video_box = 2130837554;
-			
-			// aapt resource value: 0x7F020036
-			public const int video_fragment_container = 2130837558;
+			// aapt resource value: 0x7F020035
+			public const int video_fragment_container = 2130837557;
 			
 			// aapt resource value: 0x7F0C008E
 			public const int view_offset_helper = 2131493006;
@@ -7381,8 +7378,8 @@ namespace MvvmCross_Application1.Droid
 			// aapt resource value: 0x7F0C0090
 			public const int wrap_content = 2131493008;
 			
-			// aapt resource value: 0x7F020004
-			public const int youtube_view = 2130837508;
+			// aapt resource value: 0x7F020003
+			public const int youtube_view = 2130837507;
 			
 			// aapt resource value: 0x7F0C003C
 			public const int zoom = 2131492924;
