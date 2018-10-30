@@ -101,7 +101,7 @@ namespace MvvmCross_Application1.Droid.Views
             public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
             {
                 base.OnCreateView(inflater, container, savedInstanceState);
-
+                
                 var view = this.BindingInflate(Resource.Layout.video_list_demo, null);
 
 
@@ -128,7 +128,7 @@ namespace MvvmCross_Application1.Droid.Views
                    navigationView = FindViewById<NavigationView>(Resource.Id.mNavigationView);*/
                 //  var chan = ViewModel.Channels.ToList();
                 //   navigationView.Menu.Add("vvv");*/
-
+                
                 listView = view.FindViewById<MvxListView>(Resource.Id.VideoItems);
 
                 videoBox = view.FindViewById(Resource.Id.video_box);

@@ -39,7 +39,7 @@ namespace MvvmCross_Application1.Droid.Views
         private string VideoId;//="cdgQpa1pUUE";
         private const string PlaylistId = "7E952A67F31C58A3";
         private static readonly string[] VideoIds = { "cdgQpa1pUUE", "8aCYZ3gXfy8", "zMabEyrtPRg" };
-
+        YouTubePlayerView player;
         private Button playVideoButton;
         private Button playPlaylistButton;
         private Button playVideoListButton;
@@ -48,7 +48,7 @@ namespace MvvmCross_Application1.Droid.Views
         private EditText startTimeEditText;
         private CheckBox autoplayCheckBox;
         private CheckBox lightboxModeCheckBox;
-
+        IYouTubePlayer player1;
         string videoUrl;
         public string VideoUrl
         {
@@ -68,9 +68,12 @@ namespace MvvmCross_Application1.Droid.Views
 
         public override bool OnKeyDown(Keycode keyCode, KeyEvent e)
         {
+            
             var i = 1;
+            player1.SetFullscreen(false);
+           
             FinishActivity(0);
-       // Finish();
+        Finish();
             return true;
         }
         protected override void OnCreate(Bundle savedInstanceState)
@@ -81,7 +84,7 @@ namespace MvvmCross_Application1.Droid.Views
             VideoId  = intent?.GetStringExtra(ExtraUrlKey);
 
             SetContentView(Resource.Layout.activity_video_fullscreen);
-             var player= FindViewById<YouTubePlayerView>(Resource.Id.youtube_view);
+             player= FindViewById<YouTubePlayerView>(Resource.Id.youtube_view);
             player.Initialize(DeveloperKey.Key,this);
             
 //playVideoButton = FindViewById<Button>(Resource.Id.start_video_button);
@@ -158,8 +161,8 @@ namespace MvvmCross_Application1.Droid.Views
                     //Toast.MakeText(this, errorMessage, ToastLength.Long).Show();
                 }
             }
-           FinishActivity(0);
-            Finish();
+          // FinishActivity(0);
+//Finish();
             
         }
 
@@ -186,6 +189,7 @@ namespace MvvmCross_Application1.Droid.Views
         public void OnInitializationSuccess(IYouTubePlayerProvider p0, IYouTubePlayer player, bool p2)
         {
             player.CueVideo(VideoId);
+            player1 = player;
                 
         }
     }
