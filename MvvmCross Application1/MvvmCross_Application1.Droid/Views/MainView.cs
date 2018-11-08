@@ -190,8 +190,6 @@ namespace MvvmCross_Application1.Droid.Views
         }
         private void OnClick(int row)
         {
-            if (ItemClick != null)
-
                 ItemClick(this, row);
         }
     }

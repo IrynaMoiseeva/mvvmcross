@@ -1,14 +1,22 @@
-﻿using System;
+﻿using MvvmCross.Core.ViewModels;
+using MvvmCross_Application1.Core.Data;
+
+using MvvmCross_Application1.Core.Services;
+using MvvmCross_Application1.Core.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace MvvmCross_Application1.Core.Model
 {
-    public class YoutubeItem
-    {
 
+   
+    public class YoutubeItem:MvxViewModel
+    {
+      
         public string VideoId { get; set; }
 
         public string Title { get; set; }
@@ -40,5 +48,37 @@ namespace MvvmCross_Application1.Core.Model
         public int? CommentCount { get; set; }
 
         public List<string> Tags { get; set; }
+
+        public YoutubeItem()
+        {
+            
+            SubCommand = new MvxCommand(Sub);
+        }
+
+        public IPlatformService platformservice;
+        public MvxCommand SubCommand { get; }
+
+        public void Sub()
+        {
+            
+            var v = VideoId;
+            var f = MainViewModel._platformService;
+            var t = f.GetPlatform();
+            f.GetConnection();
+           // f.InsertIntoTableFavourities(new Favorite(VideoId));
+
+          
+            
+
+        }
+
+        public MvxCommand AddCommand { get; }
+
+        public void Add()
+        {
+            var f = MainViewModel._platformService;
+           
+            var v = VideoId;
+        }
     }
 }

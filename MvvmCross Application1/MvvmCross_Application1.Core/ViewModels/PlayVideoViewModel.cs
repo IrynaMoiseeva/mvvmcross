@@ -1,5 +1,6 @@
 ﻿using MvvmCross.Core.ViewModels;
 using MvvmCross_Application1.Core.Model;
+using MvvmCross_Application1.Core.Services;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System;
@@ -72,7 +73,7 @@ namespace MvvmCross_Application1.Core.ViewModels
             }
         }
 
-
+       
         public string VideoUrl { get; private set; }
         public string PlayListUrl
         {
@@ -80,6 +81,10 @@ namespace MvvmCross_Application1.Core.ViewModels
             private set { RaisePropertyChanged(() => PlayListUrl); }
         }
 
+        public void SomeMethod1()
+        {
+            var r = 1; //remove it
+        }
         public override void Prepare(string param)
         { 
             
@@ -134,7 +139,7 @@ namespace MvvmCross_Application1.Core.ViewModels
 
         private async Task<List<YoutubeItem>> GetVideosDetailsAsync(List<string> videoIds)
         {
-
+            IPlatformService platformservice = null;
             var videoIdsString = "";
             foreach (var s in videoIds)
             {
@@ -157,8 +162,8 @@ namespace MvvmCross_Application1.Core.ViewModels
                 {
                     var snippet = item.Value<JObject>("snippet");
                     var statistics = item.Value<JObject>("statistics");
-
-                    var youtubeItem = new YoutubeItem
+                    
+                    var youtubeItem = new YoutubeItem ()
                     {
                         Title = snippet.Value<string>("title"),
                         Description = snippet.Value<string>("description"),

@@ -1,4 +1,4 @@
-﻿using SQLite;
+﻿
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,7 +9,7 @@ namespace MvvmCross_Application1.Core.Services
 {
     class DataService
     {
-       /* public class DataService: IDataService
+      /* public class DataService: IDataService
         {
             private readonly SQLiteConnection _connection;
 

@@ -1,5 +1,5 @@
 ﻿using MvvmCross.Core.ViewModels;
-using SQLite;
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,10 +8,10 @@ using System.Threading.Tasks;
 
 namespace MvvmCross_Application1.Core.Model
 {
-    [Table(nameof(Video))]
-    public class Video
+  
+    public class Video : MvxViewModel
     {
-        [PrimaryKey, AutoIncrement]
+       
         public string VideoId { get; set; }
         public string Title { get; set; }
         public Video(string id, string title)
@@ -19,6 +19,17 @@ namespace MvvmCross_Application1.Core.Model
             Title = title;
             VideoId = id;
 
+
+            SubCommand = new MvxCommand(Sub);
+
+        }
+
+
+        public MvxCommand SubCommand { get; }
+
+        private void Sub()
+        {
+            var r = 1; ;
         }
     }
 

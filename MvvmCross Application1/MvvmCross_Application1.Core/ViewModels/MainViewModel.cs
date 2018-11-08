@@ -2,11 +2,13 @@
 using MvvmCross.Core.ViewModels;
 using MvvmCross.Platform;
 using MvvmCross_Application1.Core.Model;
+using MvvmCross_Application1.Core.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static MvvmCross_Application1.Core.Model.Video;
 
 namespace MvvmCross_Application1.Core.ViewModels
 {
@@ -14,6 +16,7 @@ namespace MvvmCross_Application1.Core.ViewModels
     {
         private readonly Lazy<PlayVideoViewModel> playvideoViewModel;
 
+        public static IPlatformService _platformService;
 
         public PlayVideoViewModel PlayVideoViewModel => playvideoViewModel.Value;
 
@@ -29,8 +32,11 @@ namespace MvvmCross_Application1.Core.ViewModels
         }
 
 
-        public MainViewModel(IMvxNavigationService navigationService)
+        public MainViewModel(IMvxNavigationService navigationService, IPlatformService platformService)
         {
+            _platformService = platformService;
+         platformService.GetConnection();
+           
             //  _foodrecyclerViewModel = new Lazy<FoodRecyclerViewModel>(Mvx.IocConstruct<FoodRecyclerViewModel>);
             _navigationService = navigationService ?? throw new ArgumentNullException(nameof(navigationService));
 
@@ -60,16 +66,8 @@ namespace MvvmCross_Application1.Core.ViewModels
 
            
         }
-        public void ShowFoodList(int y)
-        {
-            // var presentationBundle = new(new { First = "Hello", Second = "World", Answer = 42 });
-            //  ShowViewModel<FoodCartViewModel>();
-            //RequestNavigate<FoodRecyclerViewModel>(new { First = "Hello", Second = "World", Answer = 42 }); 
-        }
+        
 
-        public void ShowCartList()
-        {
-            ShowViewModel<FoodCartViewModel>();
-        }
+        
     }
 }

@@ -1,5 +1,5 @@
 ﻿using MvvmCross_Application1.Core.Model;
-using SQLite;
+
 using System;
 using System.Collections.Generic;
 using System.Linq;

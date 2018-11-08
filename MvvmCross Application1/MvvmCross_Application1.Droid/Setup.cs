@@ -7,11 +7,18 @@ using MvvmCross.Droid.Platform;
 using MvvmCross.Droid.Support.V7.AppCompat;
 using MvvmCross.Droid.Views;
 using MvvmCross.Platform;
+using MvvmCross.Platform.IoC;
 using MvvmCross.Platform.Core;
 using MvvmCross_Application1.Core;
 using MvvmCross_Application1.Droid.Views;
 using System.Collections.Generic;
 using System.Reflection;
+using Autofac;
+using MvvmCross_Application1.Core.Data;
+using Autofac.Extras.MvvmCross;
+using System;
+using MvvmCross_Application1.Droid.Properties;
+using MvvmCross_Application1.Core.Services;
 
 namespace MvvmCross_Application1.Droid
 {
@@ -54,6 +61,14 @@ namespace MvvmCross_Application1.Droid
                 new MvxAndroidViewPresenter(AndroidViewAssemblies);
             Mvx.RegisterSingleton<IMvxAndroidViewPresenter>(mvxFragmentsPresenter);
             return mvxFragmentsPresenter;
+        }
+        protected override IMvxIoCProvider CreateIocProvider()
+        {
+            Dictionary<Type, Type> mappedtypes = new Dictionary<Type, Type>();
+            mappedtypes.Add(typeof(PlatformService_Android), typeof(IPlatformService));
+            Bootstarpper bootstarpper = new Bootstarpper();
+            var container = bootstarpper.Build(mappedtypes);
+            return new AutofacMvxIocProvider(container);
         }
     }
 }

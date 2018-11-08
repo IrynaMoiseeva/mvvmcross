@@ -16,15 +16,20 @@ namespace MvvmCross_Application1.Core
                  .EndingWith("Repository")
                  .AsInterfaces()
                  .RegisterAsLazySingleton();
+            /*CreatableTypes()
+                .EndingWith("Sqlite")
+                .AsInterfaces()
+                .RegisterAsLazySingleton();
 
             CreatableTypes()
                 .EndingWith("Service")
                 .AsInterfaces()
                 .RegisterAsLazySingleton();
-           
+                */
+            
             // RegisterAppStart<MvvmCross.Core.ViewModels.FoodsViewModel>();
-           // Mvx.RegisterType<IFoodRepository, FoodRepository>();
-           // Mvx.RegisterType<IFoodDataService, FoodDataService>();
+            // Mvx.RegisterType<IFoodRepository, FoodRepository>();
+            
             RegisterAppStart<ViewModels.FoodRecyclerViewModel>();
         }
     }

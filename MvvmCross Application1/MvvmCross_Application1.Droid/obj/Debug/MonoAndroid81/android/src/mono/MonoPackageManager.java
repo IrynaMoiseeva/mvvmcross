@@ -107,6 +107,8 @@ class MonoPackageManager_Resources {
 	public static final String[] Assemblies = new String[]{
 		/* We need to ensure that "MvvmCross_Application1.Droid.dll" comes first in this list. */
 		"MvvmCross_Application1.Droid.dll",
+		"Autofac.dll",
+		"Autofac.Extras.MvvmCross.dll",
 		"CircleImageView.dll",
 		"ExoPlayer.Core.dll",
 		"ExoPlayer.Dash.dll",
@@ -136,6 +138,13 @@ class MonoPackageManager_Resources {
 		"MvvmCross_Application1.Core.dll",
 		"Naxam.YoutubePlayerApi.Droid.dll",
 		"Newtonsoft.Json.dll",
+		"SQLite-net.dll",
+		"SQLite.Net.dll",
+		"SQLitePCLRaw.batteries_green.dll",
+		"SQLitePCLRaw.batteries_v2.dll",
+		"SQLitePCLRaw.core.dll",
+		"SQLitePCLRaw.lib.e_sqlite3.dll",
+		"SQLitePCLRaw.provider.e_sqlite3.dll",
 		"Xamarin.Android.Arch.Core.Common.dll",
 		"Xamarin.Android.Arch.Lifecycle.Common.dll",
 		"Xamarin.Android.Arch.Lifecycle.Runtime.dll",
@@ -152,9 +161,6 @@ class MonoPackageManager_Resources {
 		"Xamarin.Android.Support.v7.AppCompat.dll",
 		"Xamarin.Android.Support.v7.RecyclerView.dll",
 		"Xamarin.Android.Support.Vector.Drawable.dll",
-		"SQLite-net.dll",
-		"SQLitePCLRaw.core.dll",
-		"SQLitePCLRaw.batteries_v2.dll",
 	};
 	public static final String[] Dependencies = new String[]{
 	};

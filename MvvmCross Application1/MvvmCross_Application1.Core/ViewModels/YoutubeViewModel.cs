@@ -5,6 +5,7 @@ using System.Linq;
 using System.Net.Http;
 using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
+using System.Windows.Input;
 using MvvmCross.Core.ViewModels;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
@@ -13,7 +14,7 @@ using XamarinForms.Models;
 namespace XamarinForms.ViewModels
 {
     public class YoutubeViewModel : INotifyPropertyChanged
-   // public class PlayVideoViewModel : MvxViewModel
+   // public class PlayVideoViewModel : 
     {
 
         // use this link to get an api_key : https://console.developers.google.com/apis/api/youtube/
@@ -53,6 +54,16 @@ namespace XamarinForms.ViewModels
             }
         }
 
+        public ICommand SelectCommand
+        {
+            get { return new MvxCommand(Select); }
+        }
+
+        public void Select()
+        {
+          //  this.Selected = !Selected;
+
+        }
         public YoutubeViewModel()
         {
             InitDataAsync();

@@ -103,8 +103,8 @@ namespace MvvmCross_Application1.Droid.Views
                 base.OnCreateView(inflater, container, savedInstanceState);
                 
                 var view = this.BindingInflate(Resource.Layout.video_list_demo, null);
-
-
+                ToggleButton togglebutton = view.FindViewById<ToggleButton>(Resource.Id.FavoriteButton);
+               
                 //  base.OnCreate(savedInstanceState);
 
                 //  SetContentView(Resource.Layout.video_list_demo);
@@ -128,7 +128,7 @@ namespace MvvmCross_Application1.Droid.Views
                    navigationView = FindViewById<NavigationView>(Resource.Id.mNavigationView);*/
                 //  var chan = ViewModel.Channels.ToList();
                 //   navigationView.Menu.Add("vvv");*/
-                
+
                 listView = view.FindViewById<MvxListView>(Resource.Id.VideoItems);
 
                 videoBox = view.FindViewById(Resource.Id.video_box);
@@ -141,6 +141,8 @@ namespace MvvmCross_Application1.Droid.Views
                 thumbnail_channel = view.FindViewById<YouTubeThumbnailView>(Resource.Id.thumbnail_channel);
                 thumbnail_channel.Initialize(DeveloperKey.Key, this);
 
+                listadapter = new MyAdapter(view.Context, (IMvxAndroidBindingContext)BindingContext); ;
+                listView.Adapter = listadapter;
 
                 var set = this.CreateBindingSet<PlayVideoFragment, PlayVideoViewModel>();
 
@@ -148,13 +150,24 @@ namespace MvvmCross_Application1.Droid.Views
 
                 set.Apply();
 
-                listadapter = new MyAdapter(view.Context, (IMvxAndroidBindingContext)BindingContext); ;
-                listView.Adapter = listadapter;
+                
+              
+
+
+               
 
 
 
                 return view;
             }
+
+            private void listView_ItemClick(object sender, int e)
+            {
+                int photoNum = e;
+               // ViewModel.ChooseChannel(photoNum);
+                    }
+
+
             void YouTubeThumbnailView.IOnInitializedListener.OnInitializationFailure(YouTubeThumbnailView view, YouTubeInitializationResult result)
             {
                 view.SetImageResource(Resource.Drawable.cart1);// no_thumbnail
@@ -199,12 +212,9 @@ namespace MvvmCross_Application1.Droid.Views
             }
             private void MaybeStartDemo()
             {
-                //  if ( thumbnailLoader != null)
-                //{
+                
                 thumbnailLoader.SetPlaylist(PlaylistId); // loading the first thumbnail will kick off demo
-
-                //state = State.LoadingThumbnails;
-                // }
+                
             }
 
 
@@ -216,14 +226,12 @@ namespace MvvmCross_Application1.Droid.Views
 
 
 
-            void listView_ItemClick(object sender, AdapterView.ItemClickEventArgs e)
+            /*void listView_ItemClick(object sender, AdapterView.ItemClickEventArgs e)
             {
                 //Get our item from the list adapter
                 var item = this.listadapter.GetRawItem(e.Position);
             }
-
-
-
+            */
 
             public override void OnConfigurationChanged(Android.Content.Res.Configuration newConfig)
             {
@@ -239,82 +247,7 @@ namespace MvvmCross_Application1.Droid.Views
             }
 
 
-            /* private void Layout()
-             {
-                 var isPortrait = Resources.Configuration.Orientation == Android.Content.Res.Orientation.Portrait;
-
-                 //listFragment.View.Visibility = isFullscreen ? ViewStates.Gone : ViewStates.Visible;
-                 //listFragment.SetLabelVisibility(isPortrait);
-                 closeButton.Visibility = isPortrait ? ViewStates.Visible : ViewStates.Gone;
-
-                 if (isFullscreen)
-                 {
-                     videoBox.TranslationY = 0; // Reset any translation that was applied in portrait.
-                                                //  SetLayoutSize(videoFragment.View, ViewGroup.LayoutParams.MatchParent, ViewGroup.LayoutParams.MatchParent);
-                     SetLayoutSizeAndGravity(videoBox, ViewGroup.LayoutParams.MatchParent, ViewGroup.LayoutParams.MatchParent, GravityFlags.Top | GravityFlags.Left);
-                 }
-                 else if (isPortrait)
-                 {
-                     //    SetLayoutSize(listFragment.View, ViewGroup.LayoutParams.MatchParent, ViewGroup.LayoutParams.MatchParent);
-                     SetLayoutSize(videoFragment.View, ViewGroup.LayoutParams.MatchParent, ViewGroup.LayoutParams.WrapContent);
-                     SetLayoutSizeAndGravity(videoBox, ViewGroup.LayoutParams.MatchParent, ViewGroup.LayoutParams.WrapContent, GravityFlags.Bottom);
-                 }
-                 else
-                 {
-                     videoBox.TranslationY = 0; // Reset any translation that was applied in portrait.
-                     int screenWidth = DpToPx(Resources.Configuration.ScreenWidthDp);
-                     //  SetLayoutSize(listFragment.View, screenWidth / 4, ViewGroup.LayoutParams.MatchParent);
-                     int videoWidth = screenWidth - screenWidth / 4 - DpToPx(LandscapeVideoPadding);
-                     SetLayoutSize(videoFragment.View, videoWidth, ViewGroup.LayoutParams.WrapContent);
-                     SetLayoutSizeAndGravity(videoBox, videoWidth, ViewGroup.LayoutParams.WrapContent, GravityFlags.Right | GravityFlags.CenterVertical);
-                 }
-             }
-             */
-            /*   private void OnClickClose(object sender, EventArgs e)
-               {
-                   //listFragment.ListView.ClearChoices();
-                   //listFragment.ListView.RequestLayout();
-                   videoFragment.Pause();
-
-                   var animator = videoBox
-                       .Animate()
-                       .TranslationYBy(videoBox.Height)
-                       .SetDuration(AnimationDuration);
-                   RunOnAnimationEnd(animator, () => videoBox.Visibility = ViewStates.Invisible);
-               }
-               */
-            private void RunOnAnimationEnd(ViewPropertyAnimator animator, Action runnable)
-            {
-                if (Build.VERSION.SdkInt >= BuildVersionCodes.JellyBean)
-                {
-                    animator.WithEndAction(new Java.Lang.Runnable(runnable));
-                }
-                else
-                {
-                    animator.SetListener(new Listener(runnable));
-                }
-            }
-
-            private class Listener : Java.Lang.Object, Animator.IAnimatorListener
-            {
-                private Action runnable;
-
-                public Listener(Action runnable)
-                {
-                    this.runnable = runnable;
-                }
-
-                public void OnAnimationCancel(Animator animation) { }
-
-                public void OnAnimationEnd(Animator animation)
-                {
-                    runnable?.Invoke();
-                }
-
-                public void OnAnimationRepeat(Animator animation) { }
-
-                public void OnAnimationStart(Animator animation) { }
-            }
+           
 
         }
 
@@ -322,6 +255,7 @@ namespace MvvmCross_Application1.Droid.Views
         YouTubeThumbnailView.IOnInitializedListener,
         IYouTubeThumbnailLoaderOnThumbnailLoadedListener
         {
+            public event EventHandler<int> ItemClick;
             private Context mcon;
             private readonly List<View> entryViews;
             private readonly Dictionary<YouTubeThumbnailView, IYouTubeThumbnailLoader> thumbnailViewToLoaderMap;
@@ -337,12 +271,12 @@ namespace MvvmCross_Application1.Droid.Views
                 inflater = LayoutInflater.From(context);
                 labelsVisible = true;
 
-                //  FragmentManager fm = ((VideoListDemoFragment)Context).FragmentManager;
-
+                
 
             }
+           
 
-            public override View GetView(int position, View convertView, ViewGroup parent)
+         /*   public override View GetView(int position, View convertView, ViewGroup parent)
             {
                 var view = convertView;
                 var video = (YoutubeItem)GetRawItem(position);
@@ -374,28 +308,11 @@ namespace MvvmCross_Application1.Droid.Views
                         
                         mcon.StartActivity(intent);
 
-                        //listview = view.FindViewById<MvxListView>(Resource.Id.VideoItems);
-                        //listview.PerformItemClick(view, position, GetItemId(position));
+                        
                     };
-              /*  }
-                else
-                {
-                    var thumbnail = view.FindViewById<YouTubeThumbnailView>(Resource.Id.thumbnail);
-                    var loader = thumbnailViewToLoaderMap[thumbnail];
-                    if (loader == null)
-                    {
-                        // 2) The view is already created, and is currently being initialized. We store the
-                        //    current videoId in the tag.
-                        //  thumbnail.Tag = entry.VideoId;
-                    }
-                    else
-                    {
-                        // 3) The view is already created and already initialized. Simply set the right videoId
-                        //    on the loader.
-                        thumbnail.SetImageResource(Resource.Drawable.cart1);//loading_thumbnail
-                                                                            // loader.SetVideo(entry.VideoId);
-                    }*/
-                
+                   ToggleButton togglebutton = view.FindViewById<ToggleButton>(Resource.Id.FavoriteButton);
+              
+
 
 
 
@@ -405,7 +322,41 @@ namespace MvvmCross_Application1.Droid.Views
                 view.Click += openvideo;
 
                 return view;
-            }
+            }*/
+
+            protected override View GetBindableView(View convertView, object source, ViewGroup parent, int templateId)
+            {
+                var item = source as YoutubeItem;
+                
+               View convertview = inflater.Inflate(Resource.Layout.video_list_item, parent, false);
+                var imagebutton = convertview.FindViewById<ImageButton>(Resource.Id.mbutton);
+                var  togglebutton = convertview.FindViewById<ToggleButton>(Resource.Id.FavoriteButton);
+            
+                togglebutton.Click += (sender, args) => {
+                    if (togglebutton.Checked)
+                        item.Sub();
+                    else
+                        item.Add();
+                       
+                    };
+                imagebutton.Click += (sender, args) => {
+                    var t = 1;
+                    item.Sub();
+                    };
+                
+                    return convertview;
+                    }
+           /* public override View GetBindableView(View convertView, object source, int templateId)
+            {
+                ;
+               // var weight = item.IsCurrentUser ? (float)20.0 : (float)5.0;
+
+                var ll = (LinearLayout)convertView;
+                var layoutParams = new LinearLayout.LayoutParams(0, ViewGroup.LayoutParams.WrapContent, weight);
+                ll.LayoutParameters = layoutParams;
+
+                return base.GetBindableView(convertView, source, templateId);
+            }*/
             private void openvideo(object sender, EventArgs e)
             {
                 // var videoId = VideoList[position].VideoId;
