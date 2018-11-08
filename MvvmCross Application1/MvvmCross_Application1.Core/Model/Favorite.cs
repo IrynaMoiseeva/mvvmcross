@@ -10,13 +10,10 @@ using System.Threading.Tasks;
 
 namespace MvvmCross_Application1.Core.Model
 {
-   [Table("FavoriteData")]
-    public class FavoriteData
+   [Table("Favor1")]
+    public class Favor1
     {
-       
-
-       [PrimaryKey, AutoIncrement]
-        public int Id { get; set; }
+        public int? Id { get; set; }
 
         public string VideoId { get; set; }
        

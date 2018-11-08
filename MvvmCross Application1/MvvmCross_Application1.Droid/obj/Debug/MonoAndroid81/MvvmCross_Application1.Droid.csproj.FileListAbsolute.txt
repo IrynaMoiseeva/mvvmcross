@@ -1,6 +1,3 @@
-C:\Users\User\mvvm\mvvm\MvvmCross Application1\MvvmCross_Application1.Droid\obj\Debug\MonoAndroid81\res.flag
-C:\Users\User\mvvm\mvvm\MvvmCross Application1\MvvmCross_Application1.Droid\obj\Debug\MonoAndroid81\MvvmCross_Application1.Droid.csproj.CoreCompileInputs.cache
-C:\Users\User\mvvm\mvvm\MvvmCross Application1\MvvmCross_Application1.Droid\obj\Debug\MonoAndroid81\MvvmCross_Application1.Droid.csprojAssemblyReference.cache
 C:\Users\User\mvvm\mvvm\MvvmCross Application1\MvvmCross_Application1.Droid\bin\Debug\MvvmCross_Application1.Droid.dll.config
 C:\Users\User\mvvm\mvvm\MvvmCross Application1\MvvmCross_Application1.Droid\bin\Debug\MvvmCross_Application1.Droid.dll
 C:\Users\User\mvvm\mvvm\MvvmCross Application1\MvvmCross_Application1.Droid\bin\Debug\MvvmCross_Application1.Droid.pdb
@@ -62,7 +59,6 @@ C:\Users\User\mvvm\mvvm\MvvmCross Application1\MvvmCross_Application1.Droid\bin\
 C:\Users\User\mvvm\mvvm\MvvmCross Application1\MvvmCross_Application1.Droid\bin\Debug\Xamarin.Android.Support.Vector.Drawable.dll
 C:\Users\User\mvvm\mvvm\MvvmCross Application1\MvvmCross_Application1.Droid\bin\Debug\MvvmCross_Application1.Core.pdb
 C:\Users\User\mvvm\mvvm\MvvmCross Application1\MvvmCross_Application1.Droid\bin\Debug\MvvmCross_Application1.Core.dll.config
-C:\Users\User\mvvm\mvvm\MvvmCross Application1\MvvmCross_Application1.Droid\bin\Debug\MvvmCross_Application1.Core.dll.mdb
 C:\Users\User\mvvm\mvvm\MvvmCross Application1\MvvmCross_Application1.Droid\bin\Debug\Autofac.xml
 C:\Users\User\mvvm\mvvm\MvvmCross Application1\MvvmCross_Application1.Droid\bin\Debug\Autofac.Extras.MvvmCross.xml
 C:\Users\User\mvvm\mvvm\MvvmCross Application1\MvvmCross_Application1.Droid\bin\Debug\ExoPlayer.xml
@@ -111,6 +107,9 @@ C:\Users\User\mvvm\mvvm\MvvmCross Application1\MvvmCross_Application1.Droid\bin\
 C:\Users\User\mvvm\mvvm\MvvmCross Application1\MvvmCross_Application1.Droid\bin\Debug\MvvmCross.Plugins.Messenger.dll.mdb
 C:\Users\User\mvvm\mvvm\MvvmCross Application1\MvvmCross_Application1.Droid\bin\Debug\Newtonsoft.Json.xml
 C:\Users\User\mvvm\mvvm\MvvmCross Application1\MvvmCross_Application1.Droid\bin\Debug\SQLite-net.xml
+C:\Users\User\mvvm\mvvm\MvvmCross Application1\MvvmCross_Application1.Droid\obj\Debug\MonoAndroid81\MvvmCross_Application1.Droid.csprojAssemblyReference.cache
+C:\Users\User\mvvm\mvvm\MvvmCross Application1\MvvmCross_Application1.Droid\obj\Debug\MonoAndroid81\res.flag
+C:\Users\User\mvvm\mvvm\MvvmCross Application1\MvvmCross_Application1.Droid\obj\Debug\MonoAndroid81\MvvmCross_Application1.Droid.csproj.CoreCompileInputs.cache
 C:\Users\User\mvvm\mvvm\MvvmCross Application1\MvvmCross_Application1.Droid\obj\Debug\MonoAndroid81\MvvmCross_Application1.Droid.csproj.CopyComplete
 C:\Users\User\mvvm\mvvm\MvvmCross Application1\MvvmCross_Application1.Droid\obj\Debug\MonoAndroid81\MvvmCross_Application1.Droid.dll
 C:\Users\User\mvvm\mvvm\MvvmCross Application1\MvvmCross_Application1.Droid\obj\Debug\MonoAndroid81\MvvmCross_Application1.Droid.pdb
@@ -199,6 +198,7 @@ C:\Users\User\mvvm\mvvm\MvvmCross Application1\MvvmCross_Application1.Droid\bin\
 C:\Users\User\mvvm\mvvm\MvvmCross Application1\MvvmCross_Application1.Droid\bin\Debug\System.Xml.pdb
 C:\Users\User\mvvm\mvvm\MvvmCross Application1\MvvmCross_Application1.Droid\bin\Debug\SQLite.Net.Platform.XamarinAndroid.dll
 C:\Users\User\mvvm\mvvm\MvvmCross Application1\MvvmCross_Application1.Droid\bin\Debug\SQLitePCLPlugin_esqlite3.dll
+C:\Users\User\mvvm\mvvm\MvvmCross Application1\MvvmCross_Application1.Droid\bin\Debug\MvvmCross_Application1.Core.dll.mdb
 C:\Users\User\mvvm\mvvm\MvvmCross Application1\MvvmCross_Application1.Droid\obj\Debug\MonoAndroid81\linksrc\Google.Apis.Auth.pdb
 C:\Users\User\mvvm\mvvm\MvvmCross Application1\MvvmCross_Application1.Droid\obj\Debug\MonoAndroid81\linksrc\Google.Apis.Core.pdb
 C:\Users\User\mvvm\mvvm\MvvmCross Application1\MvvmCross_Application1.Droid\obj\Debug\MonoAndroid81\linksrc\Google.Apis.pdb
