@@ -49,22 +49,36 @@ namespace MvvmCross_Application1.Core.Model
 
         public List<string> Tags { get; set; }
 
+        
         public YoutubeItem()
         {
             
             SubCommand = new MvxCommand(Sub);
+            
+           // var t = f.GetPlatform();
+           // f.GetConnection();
         }
 
         public IPlatformService platformservice;
         public MvxCommand SubCommand { get; }
+        public Db Db
+        {
+            get
+            {
+                return (Db.Instance);
+            }
+        }
+
 
         public void Sub()
         {
             
             var v = VideoId;
-            var f = MainViewModel._platformService;
+            
+            Db.platform.GetConnection();
+           /* var f = MainViewModel._platformService;
             var t = f.GetPlatform();
-            f.GetConnection();
+            f.GetConnection();*/
            // f.InsertIntoTableFavourities(new Favorite(VideoId));
 
           
@@ -80,5 +94,16 @@ namespace MvvmCross_Application1.Core.Model
            
             var v = VideoId;
         }
+    }
+    public class Db
+
+    {
+        public static Db Instance = new Db();
+        public IPlatformService platform;
+        public Db()
+        {
+            platform = MainViewModel._platformService;
+        }
+
     }
 }
