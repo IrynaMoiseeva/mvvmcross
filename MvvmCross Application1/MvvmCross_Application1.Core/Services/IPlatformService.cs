@@ -11,15 +11,20 @@ namespace MvvmCross_Application1.Core.Services
     {
      string GetPlatform();
         void GetConnection();
+        void Insert(string VidId);
+        void Remove(string VidId);
         //bool InsertIntoTableFavourities(Favorite fav);
 
     }
 
-    public class PlatformService: IPlatformService
+    public  class PlatformService: IPlatformService
     {
         public string GetPlatform() { return "dddd"; }
+         void IPlatformService.Insert(string VidId) { }
+        void IPlatformService.Remove(string VidId) { }
 
-        
+
+
 
         void IPlatformService.GetConnection()
         {

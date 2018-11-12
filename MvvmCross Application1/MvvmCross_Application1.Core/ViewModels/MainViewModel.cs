@@ -35,7 +35,6 @@ namespace MvvmCross_Application1.Core.ViewModels
         public MainViewModel(IMvxNavigationService navigationService, IPlatformService platformService)
         {
             _platformService = platformService;
-         platformService.GetConnection();
            
             //  _foodrecyclerViewModel = new Lazy<FoodRecyclerViewModel>(Mvx.IocConstruct<FoodRecyclerViewModel>);
             _navigationService = navigationService ?? throw new ArgumentNullException(nameof(navigationService));
@@ -66,8 +65,19 @@ namespace MvvmCross_Application1.Core.ViewModels
 
            
         }
-        
 
-        
+        public async Task ChooseFavourites()
+        {
+        //    MyObject MyObject1 = new MyObject();
+
+           // await _navigationService.Navigate<PlayVideoViewModel, string>(Channels[i].PlayListId);
+            // _navigationService.Navigate<PlayVideoViewModel>();
+
+
+        }
+
+
+
+
     }
 }

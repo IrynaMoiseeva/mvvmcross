@@ -52,6 +52,7 @@ namespace MvvmCross_Application1.Droid.Views
             var toolbar1 = FindViewById<Android.Support.V7.Widget.Toolbar>(Resource.Id.toolbar);
             SetSupportActionBar(toolbar1);
             SupportActionBar.SetDisplayHomeAsUpEnabled(true);
+           // SupportActionBar.menu
             SupportActionBar.SetHomeAsUpIndicator(Resource.Drawable.ic_plus);
 
             mDrawerlayout = FindViewById<DrawerLayout>(Resource.Id.drawer_layout);
@@ -112,7 +113,7 @@ namespace MvvmCross_Application1.Droid.Views
         public override bool OnCreateOptionsMenu(IMenu menu)
         {
 
-          // navigationView.InflateMenu(Resource.Menu.options_menu); //Navigation Drawer Layout Menu Creation  
+           //navigationView.InflateMenu(Resource.Menu.options_menu); //Navigation Drawer Layout Menu Creation  
             // MenuInflater.Inflate(Resource.Menu.popUp_menu, menu);
             return base.OnCreateOptionsMenu(menu);
         }
@@ -120,7 +121,8 @@ namespace MvvmCross_Application1.Droid.Views
 
         public override bool OnPrepareOptionsMenu(IMenu menu)
         {
-
+            MenuInflater.Inflate(Resource.Menu.options_menu, menu);
+          //  //return base.OnPrepareOptionsMenu(menu);
             var chan = ViewModel.Channels.ToList();
 
             //    navigationView.Menu.Add(chan[1].PlayListId.ToString());
@@ -130,13 +132,16 @@ namespace MvvmCross_Application1.Droid.Views
             // menuItem.SetIcon(Converter.ConvertLayoutToImage(this, cart_count, Resource.Drawable.cart1));*/
             return true;
         }
+
         public override bool OnOptionsItemSelected(IMenuItem item)
         {
+            if (item.ItemId== Resource.Id.favourites)
+                    {
+                        ViewModel.ChooseFavourites();
+                    }
             
-            return false;
+            return base.OnOptionsItemSelected(item);
         }
-
-       
 
         public bool OnNavigationItemSelected(IMenuItem menuItem)
         {

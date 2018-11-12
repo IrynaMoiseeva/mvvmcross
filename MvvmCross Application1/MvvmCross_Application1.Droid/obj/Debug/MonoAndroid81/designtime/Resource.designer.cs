@@ -6691,10 +6691,13 @@ namespace MvvmCross_Application1.Droid
 			public const int image_border = 2130771991;
 			
 			// aapt resource value: 0x7F010018
-			public const int mikky = 2130771992;
+			public const int menu_options = 2130771992;
 			
 			// aapt resource value: 0x7F010019
-			public const int Milk = 2130771993;
+			public const int mikky = 2130771993;
+			
+			// aapt resource value: 0x7F010020
+			public const int Milk = 2130772000;
 			
 			// aapt resource value: 0x7F09005C
 			public const int navigation_empty_icon = 2131296348;
@@ -6735,26 +6738,29 @@ namespace MvvmCross_Application1.Droid
 			// aapt resource value: 0x7F090028
 			public const int notify_panel_notification_icon_bg = 2131296296;
 			
-			// aapt resource value: 0x7F010020
-			public const int pear = 2130772000;
-			
 			// aapt resource value: 0x7F010021
-			public const int peppa = 2130772001;
+			public const int options = 2130772001;
 			
 			// aapt resource value: 0x7F010022
-			public const int rounded_corner = 2130772002;
+			public const int pear = 2130772002;
 			
 			// aapt resource value: 0x7F010023
-			public const int round_button = 2130772003;
+			public const int peppa = 2130772003;
 			
 			// aapt resource value: 0x7F010024
-			public const int separator_line = 2130772004;
+			public const int rounded_corner = 2130772004;
 			
 			// aapt resource value: 0x7F010025
-			public const int splash = 2130772005;
+			public const int round_button = 2130772005;
 			
 			// aapt resource value: 0x7F010026
-			public const int tomatoes = 2130772006;
+			public const int separator_line = 2130772006;
+			
+			// aapt resource value: 0x7F010027
+			public const int splash = 2130772007;
+			
+			// aapt resource value: 0x7F010028
+			public const int tomatoes = 2130772008;
 			
 			// aapt resource value: 0x7F090069
 			public const int tooltip_frame_dark = 2131296361;
@@ -6864,9 +6870,6 @@ namespace MvvmCross_Application1.Droid
 			
 			// aapt resource value: 0x7F0C0009
 			public const int cancel_action = 2131492873;
-			
-			// aapt resource value: 0x7F020040
-			public const int cart_item = 2130837568;
 			
 			// aapt resource value: 0x7F020017
 			public const int cart_plus_minus_layout = 2130837527;
@@ -7009,8 +7012,11 @@ namespace MvvmCross_Application1.Droid
 			// aapt resource value: 0x7F0C002F
 			public const int expand_activities_button = 2131492911;
 			
+			// aapt resource value: 0x7F020038
+			public const int FavoriteButton = 2130837560;
+			
 			// aapt resource value: 0x7F020039
-			public const int FavoriteButton = 2130837561;
+			public const int favourites = 2130837561;
 			
 			// aapt resource value: 0x7F0C0021
 			public const int fill = 2131492897;
@@ -7080,9 +7086,6 @@ namespace MvvmCross_Application1.Droid
 			
 			// aapt resource value: 0x7F0C0042
 			public const int masked = 2131492930;
-			
-			// aapt resource value: 0x7F020038
-			public const int mbutton = 2130837560;
 			
 			// aapt resource value: 0x7F0C002C
 			public const int media_actions = 2131492908;
@@ -7245,6 +7248,9 @@ namespace MvvmCross_Application1.Droid
 			
 			// aapt resource value: 0x7F0C0069
 			public const int select_dialog_listview = 2131492969;
+			
+			// aapt resource value: 0x7F020040
+			public const int settings = 2130837568;
 			
 			// aapt resource value: 0x7F0C006A
 			public const int shortcut = 2131492970;

@@ -116,8 +116,8 @@ C:\Users\User\mvvm\mvvm\MvvmCross Application1\MvvmCross_Application1.Core\bin\D
 C:\Users\User\mvvm\mvvm\MvvmCross Application1\MvvmCross_Application1.Core\bin\Debug\System.Net.Http.Extensions.xml
 C:\Users\User\mvvm\mvvm\MvvmCross Application1\MvvmCross_Application1.Core\bin\Debug\System.Net.Http.Primitives.xml
 C:\Users\User\mvvm\mvvm\MvvmCross Application1\MvvmCross_Application1.Core\obj\Debug\MvvmCross_Application1.Core.csproj.App.config
+C:\Users\User\mvvm\mvvm\MvvmCross Application1\MvvmCross_Application1.Core\obj\Debug\MvvmCross_Application1.Core.csprojAssemblyReference.cache
 C:\Users\User\mvvm\mvvm\MvvmCross Application1\MvvmCross_Application1.Core\obj\Debug\MvvmCross_Application1.Core.csproj.CoreCompileInputs.cache
 C:\Users\User\mvvm\mvvm\MvvmCross Application1\MvvmCross_Application1.Core\obj\Debug\MvvmCross_Application1.Core.csproj.CopyComplete
 C:\Users\User\mvvm\mvvm\MvvmCross Application1\MvvmCross_Application1.Core\obj\Debug\MvvmCross_Application1.Core.dll
 C:\Users\User\mvvm\mvvm\MvvmCross Application1\MvvmCross_Application1.Core\obj\Debug\MvvmCross_Application1.Core.pdb
-C:\Users\User\mvvm\mvvm\MvvmCross Application1\MvvmCross_Application1.Core\obj\Debug\MvvmCross_Application1.Core.csprojAssemblyReference.cache

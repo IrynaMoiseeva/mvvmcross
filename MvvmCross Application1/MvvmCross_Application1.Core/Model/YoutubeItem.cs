@@ -53,14 +53,15 @@ namespace MvvmCross_Application1.Core.Model
         public YoutubeItem()
         {
             
-            SubCommand = new MvxCommand(Sub);
+            CheckCommand = new MvxCommand(Check);
+            UnCheckCommand = new MvxCommand(UnCheck);
             
            // var t = f.GetPlatform();
            // f.GetConnection();
         }
 
         public IPlatformService platformservice;
-        public MvxCommand SubCommand { get; }
+        public MvxCommand CheckCommand { get; }
         public Db Db
         {
             get
@@ -70,12 +71,13 @@ namespace MvvmCross_Application1.Core.Model
         }
 
 
-        public void Sub()
+        public void Check()
         {
             
             var v = VideoId;
             
             Db.platform.GetConnection();
+            Db.platform.Insert(VideoId);
            /* var f = MainViewModel._platformService;
             var t = f.GetPlatform();
             f.GetConnection();*/
@@ -86,13 +88,15 @@ namespace MvvmCross_Application1.Core.Model
 
         }
 
-        public MvxCommand AddCommand { get; }
+        public MvxCommand UnCheckCommand { get; }
 
-        public void Add()
+        public void UnCheck()
         {
-            var f = MainViewModel._platformService;
+           // var f = MainViewModel._platformService;
            
             var v = VideoId;
+            Db.platform.GetConnection();
+            Db.platform.Remove(VideoId);
         }
     }
     public class Db
