@@ -13,8 +13,8 @@ using XamarinForms.Models;
 
 namespace XamarinForms.ViewModels
 {
-    public class YoutubeViewModel : INotifyPropertyChanged
-   // public class PlayVideoViewModel : 
+    public class YoutubeViewModel : MvxNotifyPropertyChanged
+    // public class PlayVideoViewModel : 
     {
 
         // use this link to get an api_key : https://console.developers.google.com/apis/api/youtube/
@@ -50,7 +50,7 @@ namespace XamarinForms.ViewModels
             set
             {
                 _youtubeItems = value;
-                OnPropertyChanged();
+                RaisePropertyChanged();
             }
         }
 

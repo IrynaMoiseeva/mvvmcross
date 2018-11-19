@@ -64,7 +64,7 @@
                 android:layout_centerVertical="true"
                 android:textOff=""
                 android:textOn=""
-				local:MvxBind="Click SubCommand"
+				
 			/>
 </RelativeLayout>
 </RelativeLayout>

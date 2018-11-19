@@ -6,29 +6,25 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace MvvmCross_Application1.Core.Services
-{ 
-   public interface IPlatformService
+{
+    public interface IPlatformService
     {
-     string GetPlatform();
+        string GetPlatform();
         void GetConnection();
         void Insert(string VidId);
         void Remove(string VidId);
+         List<Favor12> Select();
         //bool InsertIntoTableFavourities(Favorite fav);
 
     }
 
-    public  class PlatformService: IPlatformService
+    public abstract class PlatformService : IPlatformService
     {
-        public string GetPlatform() { return "dddd"; }
-         void IPlatformService.Insert(string VidId) { }
+        public abstract string GetPlatform();// { return "dddd"; }
+        void IPlatformService.Insert(string VidId) { }
         void IPlatformService.Remove(string VidId) { }
-
-
-
-
-        void IPlatformService.GetConnection()
-        {
-            
-        }
+        void IPlatformService.GetConnection() { }
+        public abstract List<Favor12> Select();
+        
     }
 }

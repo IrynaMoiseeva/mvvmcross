@@ -38,15 +38,11 @@ namespace MvvmCross_Application1.Core.ViewModels
             _foodDataService = foodDataService;
         }
         
-        /*public  override async Task Initialize()
-        {
-            SelectedFood = await _foodDataService.GetFoodDetails(_foodId);
-            SelectedFood.Id = 5;
-        }*/
+        
         public   void Initialize1()
         {
             SelectedFood =  _foodDataService.GetFoodDetails(_foodId);
-           // SelectedFood.Id = 5;
+          
         }
     }
 }

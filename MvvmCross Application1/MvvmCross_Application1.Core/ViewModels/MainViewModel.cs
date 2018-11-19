@@ -68,11 +68,8 @@ namespace MvvmCross_Application1.Core.ViewModels
 
         public async Task ChooseFavourites()
         {
-        //    MyObject MyObject1 = new MyObject();
 
-           // await _navigationService.Navigate<PlayVideoViewModel, string>(Channels[i].PlayListId);
-            // _navigationService.Navigate<PlayVideoViewModel>();
-
+            await _navigationService.Navigate<FavouritesViewModel>();
 
         }
 

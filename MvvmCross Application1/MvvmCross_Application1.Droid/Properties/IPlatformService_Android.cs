@@ -18,31 +18,56 @@ namespace MvvmCross_Application1.Droid.Properties
     {
         public string GetPlatform() { return "android"; }
         public SQLiteConnection con;
-      //  public SQLiteOpenHelper openhelper;
         public SQLiteDatabase db;
 
         public void Insert(string VidId)
         {
-            var f = con.GetTableInfo("Favor1");
-            con.Insert(new Favor1() { VideoId = VidId });
-            con.Commit();
+            var f = con.GetTableInfo("Favor12");
+            var before = con.Table<Favor12>().ToArray();
 
-            var t = con.GetMapping<Favor1>().HasAutoIncPK.ToString();
-            var before = con.Table<Favor1>().ToArray();
+            var data1 = before.Where(x => x.VideoId == VidId).FirstOrDefault();
+
+            /* if table is empty */
+            if (before == null) 
+            {
+                con.Insert(new Favor12() { VideoId = VidId });
+                con.Commit();
+            }
+
+            /* check wether videoid is already added */
+            else if (data1 == null)
+            {
+                con.Insert(new Favor12() { VideoId = VidId });
+                con.Commit();
+            }
+
+            var t = con.GetMapping<Favor12>().HasAutoIncPK.ToString();
+             before = con.Table<Favor12>().ToArray();
 
         }
 
+        public List<Favor12> Select()
+        {
+
+            var data = con.Table<Favor12>().ToList();
+            return data;
+
+        }
+
+
         public void Remove(string VidId)
         {
-            var before = con.Table<Favor1>().ToArray();
+            var before = con.Table<Favor12>().ToArray();
 
             var data1 = before.Where(x => x.VideoId == VidId).FirstOrDefault();
-            
-            if (data1.VideoId != null)
 
-                con.Delete<Favor1>(data1.Id);
+            if (data1 != null)
 
-            con.Commit(); 
+            {
+                con.Delete<Favor12>(data1.Id);
+
+                con.Commit();
+            }
         }
 
 
@@ -64,7 +89,7 @@ namespace MvvmCross_Application1.Droid.Properties
                  con = new SQLiteConnection(destinationPath);
 
 
-                con.CreateTable<Favor1>(SQLite.CreateFlags.ImplicitPK | SQLite.CreateFlags.AutoIncPK);
+                con.CreateTable<Favor12>(SQLite.CreateFlags.ImplicitPK | SQLite.CreateFlags.AutoIncPK);
 
             }
             catch (Exception ex)

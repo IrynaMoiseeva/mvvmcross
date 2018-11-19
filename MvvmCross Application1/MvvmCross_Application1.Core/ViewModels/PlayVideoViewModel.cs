@@ -21,19 +21,19 @@ namespace MvvmCross_Application1.Core.ViewModels
             this.channel = channel;
         }
     }
-    public class PlayVideoViewModel : MvxViewModel<string>
+    public class PlayVideoViewModel : MvxViewModel<string>,IMvxNotifyPropertyChanged
     {
         private MyObject myObject;
         private List<Video> videos;
         private List<Channel> channels;
         public const string ApiKey = "AIzaSyAn95XgsxmK2c3fwrtyV0-pxOm6RhIr-cI";
         public const string Key = "AIzaSyAqB61v3YI6H7Q-jhx3HVSPNBDvX-dr_yY";
-        private string apiUrlForContent = "https://www.googleapis.com/youtube/v3/playlistItems?part=contentDetails&maxResults=10&playlistId="
+        private string apiUrlForContent = "https://www.googleapis.com/youtube/v3/playlistItems?part=contentDetails&maxResults=5&playlistId="
             + Key + "&key=" + ApiKey;
 
         //+""+"&key="+Deleliper.key
         private string listid = "PL8XvIF6dDmUs4bjs3qMbX7coPsqCCcGHu";
-        private string apiUrlForPlaylist = "https://www.googleapis.com/youtube/v3/playlistItems?part=contentDetails&maxResults=10&playlistId="
+        private string apiUrlForPlaylist = "https://www.googleapis.com/youtube/v3/playlistItems?part=contentDetails&maxResults=5&playlistId="
        + "{0}"
        //+ "Your_PlaylistId"
        + "&key="
@@ -51,9 +51,9 @@ namespace MvvmCross_Application1.Core.ViewModels
 
          //   apiUrlForPlaylist = string.Format(apiUrlForPlaylist, listid);
         }
-        private List<YoutubeItem> youtubeItems;
+        private IEnumerable <YoutubeItem> youtubeItems;
 
-        public List<YoutubeItem> YoutubeItems
+        public IEnumerable<YoutubeItem> YoutubeItems
         {
             get { return youtubeItems; }
             set
@@ -108,12 +108,12 @@ namespace MvvmCross_Application1.Core.ViewModels
 
         public async Task<List<string>> GetVideosIdsFromPlayListAsync()
         {
-            var api_key = "03e8168ffbb8cafb6b8b6679c528ec97";
+            //var api_key = "03e8168ffbb8cafb6b8b6679c528ec97";
 
             var httpClient = new HttpClient();
 
             var json = await httpClient.GetStringAsync(apiUrlForPlaylist);
-            var f = new List<string>();
+           // var f = new List<string>();
             var videoIds = new List<string>();
 
             try
@@ -139,7 +139,7 @@ namespace MvvmCross_Application1.Core.ViewModels
 
         private async Task<List<YoutubeItem>> GetVideosDetailsAsync(List<string> videoIds)
         {
-            IPlatformService platformservice = null;
+           // IPlatformService platformservice = null;
             var videoIdsString = "";
             foreach (var s in videoIds)
             {

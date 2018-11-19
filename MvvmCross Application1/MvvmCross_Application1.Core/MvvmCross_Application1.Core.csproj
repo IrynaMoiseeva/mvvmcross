@@ -71,9 +71,11 @@
     <Compile Include="Services\FoodDataService.cs" />
     <Compile Include="Services\IFoodDataService.cs" />
     <Compile Include="Services\IPlatformService.cs" />
+    <Compile Include="ViewModels\FavouritesViewModel.cs" />
     <Compile Include="ViewModels\FoodCartViewModel.cs" />
     <Compile Include="ViewModels\FoodDetailsViewModel.cs" />
     <Compile Include="ViewModels\FoodRecyclerViewModel.cs" />
+    <Compile Include="ViewModels\InfoFromYoutube.cs" />
     <Compile Include="ViewModels\Item.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
     <Compile Include="ViewModels\PlayVideoViewModel.cs" />

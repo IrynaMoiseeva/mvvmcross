@@ -5,6 +5,8 @@ using MvvmCross_Application1.Core.Services;
 using MvvmCross_Application1.Core.ViewModels;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Collections.Specialized;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,7 +16,7 @@ namespace MvvmCross_Application1.Core.Model
 {
 
    
-    public class YoutubeItem:MvxViewModel
+    public class YoutubeItem: MvxNotifyPropertyChanged
     {
       
         public string VideoId { get; set; }
@@ -97,7 +99,22 @@ namespace MvvmCross_Application1.Core.Model
             var v = VideoId;
             Db.platform.GetConnection();
             Db.platform.Remove(VideoId);
+            var dd=Db.platform.Select();
+            var favvideos = FavouritesViewModel.Instance.FavoritesVideos.ToArray();
+            var FavvideosExcludeDel = favvideos.Where(x => x.VideoId != v).ToList();
+            FavouritesViewModel.Instance.FavoritesVideos = new ObservableCollection<YoutubeItem> (FavvideosExcludeDel);
+            //RaiseCollectionChanged(new NotifyCollectionChangedEventArgs(NotifyCollectionChangedAction.Reset));
+
         }
+      /*  public event NotifyCollectionChangedEventHandler CollectionChanged;
+        private void RaiseCollectionChanged(NotifyCollectionChangedEventArgs args)
+        {
+            var handler = CollectionChanged;
+            if (handler == null)
+                return;
+
+            handler(this, args);
+        }*/
     }
     public class Db
 

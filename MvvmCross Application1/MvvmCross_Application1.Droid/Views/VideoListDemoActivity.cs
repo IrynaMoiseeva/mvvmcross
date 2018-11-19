@@ -19,6 +19,8 @@ using Android.Support.Design.Widget;
 using MvvmCross.Droid.Views.Attributes;
 using Android.Support.V4.App;
 using MvvmCross.Droid.Views.Fragments;
+using MvvmCross.Core.ViewModels;
+using MvvmCross.Droid.Support.V7.RecyclerView;
 
 namespace MvvmCross_Application1.Droid.Views
 {
@@ -85,7 +87,7 @@ namespace MvvmCross_Application1.Droid.Views
             private YouTubeThumbnailView thumbnail_channel;
             private IYouTubeThumbnailLoader thumbnailLoader;
 
-           
+
             public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
             {
                 base.OnCreateView(inflater, container, savedInstanceState);
@@ -93,31 +95,7 @@ namespace MvvmCross_Application1.Droid.Views
                 var view = this.BindingInflate(Resource.Layout.video_list_demo, null);
                 ToggleButton togglebutton = view.FindViewById<ToggleButton>(Resource.Id.FavoriteButton);
 
-                //  base.OnCreate(savedInstanceState);
-
-                //  SetContentView(Resource.Layout.video_list_demo);
-
-                /*  var toolbar1 = FindViewById<Android.Support.V7.Widget.Toolbar>(Resource.Id.toolbar);
-                  SetSupportActionBar(toolbar1);
-                  SupportActionBar.SetDisplayHomeAsUpEnabled(true);
-                  SupportActionBar.SetHomeAsUpIndicator(Resource.Drawable.menu_home);
-
-                  mDrawerlayout = FindViewById<DrawerLayout>(Resource.Id.drawer_layout);
-                  mtoogle = new ActionBarDrawerToggle(this, mDrawerlayout, toolbar1, Resource.String.open, Resource.String.close);
-
-                  mDrawerlayout.AddDrawerListener(mtoogle);
-                  mtoogle.SyncState();
-
-                  NavigationView navigationView = FindViewById<NavigationView>(Resource.Id.mNavigationView);
-
-                  navigationView.InflateMenu(Resource.Menu.activity_main_drawer);
-                  navigationView.SetNavigationItemSelectedListener(this);
-
-                   navigationView = FindViewById<NavigationView>(Resource.Id.mNavigationView);*/
-                //  var chan = ViewModel.Channels.ToList();
-                //   navigationView.Menu.Add("vvv");*/
-
-                listView = view.FindViewById<MvxListView>(Resource.Id.VideoItems);
+               // listView = view.FindViewById<MvxListView>(Resource.Id.VideoItems);
 
                 videoBox = view.FindViewById(Resource.Id.video_box);
                 closeButton = view.FindViewById(Resource.Id.close_button);
@@ -129,8 +107,25 @@ namespace MvvmCross_Application1.Droid.Views
                 thumbnail_channel = view.FindViewById<YouTubeThumbnailView>(Resource.Id.thumbnail_channel);
                 thumbnail_channel.Initialize(DeveloperKey.Key, this);
 
-                listadapter = new MyAdapter(view.Context, (IMvxAndroidBindingContext)BindingContext); ;
-                listView.Adapter = listadapter;
+                listadapter = new MyAdapter(view.Context, (IMvxAndroidBindingContext)BindingContext);
+                listadapter.ToogleIcon = Resource.Drawable.button_favorite;
+               // listView.Adapter = listadapter;
+                //--------------------------------------------
+                
+                var adapter=new recycleradapter((IMvxAndroidBindingContext)this.BindingContext);
+                
+                MvxRecyclerView m = view.FindViewById<MvxRecyclerView>(Resource.Id.rvItems);
+                m.Adapter = adapter;
+               
+                adapter.ViewModel = ViewModel;
+                adapter.mcon = Context;
+                adapter.ToogleIcon = Resource.Drawable.button_favorite;
+                var set1 = this.CreateBindingSet<PlayVideoFragment, PlayVideoViewModel>();
+                set1.Bind(adapter).For(x => x.ItemsSource).To(x => x.YoutubeItems);
+                set1.Apply();
+
+
+                //-------------------------------------------------------
 
                 var set = this.CreateBindingSet<PlayVideoFragment, PlayVideoViewModel>();
 
@@ -140,7 +135,7 @@ namespace MvvmCross_Application1.Droid.Views
 
                 return view;
             }
-
+            
             private void listView_ItemClick(object sender, int e)
             {
                 int photoNum = e;
@@ -174,7 +169,7 @@ namespace MvvmCross_Application1.Droid.Views
             }
             void IYouTubeThumbnailLoaderOnThumbnailLoadedListener.OnThumbnailLoaded(YouTubeThumbnailView thumbnail, string videoId)
             {
-                
+
             }
             private void MaybeStartDemo()
             {
@@ -200,105 +195,127 @@ namespace MvvmCross_Application1.Droid.Views
                 this.isFullscreen = isFullscreen;
                 //Layout();
             }
+        }
+    }
 
 
+    public class MyAdapter : MvxAdapter,
+    YouTubeThumbnailView.IOnInitializedListener,
+    IYouTubeThumbnailLoaderOnThumbnailLoadedListener
+    {
+        private Context mcon;
+        public MvxViewModel ViewModel { get; set; }
+        public Boolean AllChecked { get; set; } // for removed tooglebutton
+        public int ToogleIcon { get; set; }
 
+        private EventHandler _saveButtonClickedHandler;
+        private readonly List<View> entryViews;
+        private readonly Dictionary<YouTubeThumbnailView, IYouTubeThumbnailLoader> thumbnailViewToLoaderMap;
+        private readonly LayoutInflater inflater;
+        public MyAdapter(Context context, IMvxAndroidBindingContext bindingContext) : base(context, bindingContext)
+        {
+            mcon = context;
+            entryViews = new List<View>();
+            thumbnailViewToLoaderMap = new Dictionary<YouTubeThumbnailView, IYouTubeThumbnailLoader>();
+            inflater = LayoutInflater.From(context);
 
         }
 
-        public class MyAdapter : MvxAdapter,
-        YouTubeThumbnailView.IOnInitializedListener,
-        IYouTubeThumbnailLoaderOnThumbnailLoadedListener
+
+
+
+        protected override View GetBindableView(View convertView, object source, ViewGroup parent, int templateId)
         {
-            private Context mcon;
-            private readonly List<View> entryViews;
-            private readonly Dictionary<YouTubeThumbnailView, IYouTubeThumbnailLoader> thumbnailViewToLoaderMap;
-            private readonly LayoutInflater inflater;
-            public MyAdapter(Context context, IMvxAndroidBindingContext bindingContext) : base(context, bindingContext)
+            if (convertView == null)
             {
-                mcon = context;
-                entryViews = new List<View>();
-                thumbnailViewToLoaderMap = new Dictionary<YouTubeThumbnailView, IYouTubeThumbnailLoader>();
-                inflater = LayoutInflater.From(context);
-
+                convertView = inflater.Inflate(Resource.Layout.video_list_item, parent, false);
             }
+            var video = source as YoutubeItem;
+
+            var title = convertView.FindViewById<TextView>(Resource.Id.titletext);
+            var published_date = convertView.FindViewById<TextView>(Resource.Id.published_date);
+            title.Text = video.Title.ToString();
+            published_date.Text = video.PublishedAt.ToString();
+
+            var thumbnail = convertView.FindViewById<YouTubeThumbnailView>(Resource.Id.thumbnail);
+            thumbnail.Tag = video.VideoId;
+            thumbnail.Initialize(DeveloperKey.Key, this);
+            thumbnail.Click += (sender, args) =>
+            {
+                var intent = new Intent(mcon, typeof(PlayVideoActivity));
+                intent.AddFlags(ActivityFlags.NewTask);
+
+                intent.PutExtra(PlayVideoActivity.ExtraUrlKey, video.VideoId);
+
+                mcon.StartActivity(intent);
+            };
+
+            //var imagebutton = convertView.FindViewById<ImageButton>(Resource.Id.mbutton);
+            var togglebutton = convertView.FindViewById<ToggleButton>(Resource.Id.FavoriteButton);
+            //togglebutton.SetOnClickListener();
+           // togglebutton.CheckedChange
+            togglebutton.SetBackgroundResource(ToogleIcon);
+            if (AllChecked)
+                togglebutton.Checked = true;
+            _saveButtonClickedHandler = (s, e) =>
+            {
+                if (togglebutton.Checked)
+
+                    video.Check();
+
+                else
+
+                    video.UnCheck();
+
+                if (ViewModel != null)
+                    ViewModel.Initialize(); // to refresh page 
+                                            //NotifyDataSetChanged();};
+            };
+
+                togglebutton.Click += _saveButtonClickedHandler;
 
 
+
+
+            return convertView;
+        }
+
+        public void Dispose()
+        {
             
+        }
 
-            protected override View GetBindableView(View convertView, object source, ViewGroup parent, int templateId)
+        public void ReleaseLoaders()
+        {
+            foreach (IYouTubeThumbnailLoader loader in thumbnailViewToLoaderMap.Values)
             {
-                if (convertView == null)
-                {
-                     convertView = inflater.Inflate(Resource.Layout.video_list_item, parent, false);
-                }
-                var video = source as YoutubeItem;
-
-                var title = convertView.FindViewById<TextView>(Resource.Id.titletext);
-                var published_date = convertView.FindViewById<TextView>(Resource.Id.published_date);
-                title.Text = video.Title.ToString();
-                published_date.Text = video.PublishedAt.ToString();
-
-                var thumbnail = convertView.FindViewById<YouTubeThumbnailView>(Resource.Id.thumbnail);
-                thumbnail.Tag = video.VideoId;
-                thumbnail.Initialize(DeveloperKey.Key, this);
-                thumbnail.Click += (sender, args) =>
-                {
-                    var intent = new Intent(mcon, typeof(PlayVideoActivity));
-                    intent.AddFlags(ActivityFlags.NewTask);
-
-                    intent.PutExtra(PlayVideoActivity.ExtraUrlKey, video.VideoId);
-
-                    mcon.StartActivity(intent);
-                };
-
-                //var imagebutton = convertView.FindViewById<ImageButton>(Resource.Id.mbutton);
-                var togglebutton = convertView.FindViewById<ToggleButton>(Resource.Id.FavoriteButton);
-
-                togglebutton.Click += (sender, args) =>
-                {
-                    if (togglebutton.Checked)
-                        video.Check();
-                    else
-                        video.UnCheck();
-
-                };
-
-              
-                return convertView;
+                loader.Release();
             }
-           
+        }
+        void YouTubeThumbnailView.IOnInitializedListener.OnInitializationFailure(YouTubeThumbnailView view, YouTubeInitializationResult result)
+        {
+            view.SetImageResource(Resource.Drawable.cart1);// no_thumbnail
+        }
+
+        void YouTubeThumbnailView.IOnInitializedListener.OnInitializationSuccess(YouTubeThumbnailView view, IYouTubeThumbnailLoader loader)
+        {
+            loader.SetOnThumbnailLoadedListener(this);
+
+            if (!thumbnailViewToLoaderMap.ContainsKey(view))
+            thumbnailViewToLoaderMap.Add(view, loader);
             
+            view.SetImageResource(Resource.Drawable.cart1);//loading_thumbnail
+            var videoId = (string)view.Tag;
+            loader.SetVideo(videoId);
+        }
 
-            public void ReleaseLoaders()
-            {
-                foreach (IYouTubeThumbnailLoader loader in thumbnailViewToLoaderMap.Values)
-                {
-                    loader.Release();
-                }
-            }
-            void YouTubeThumbnailView.IOnInitializedListener.OnInitializationFailure(YouTubeThumbnailView view, YouTubeInitializationResult result)
-            {
-                view.SetImageResource(Resource.Drawable.cart1);// no_thumbnail
-            }
+        void IYouTubeThumbnailLoaderOnThumbnailLoadedListener.OnThumbnailError(YouTubeThumbnailView view, YouTubeThumbnailLoaderErrorReason errorReason)
+        {
+            view.SetImageResource(Resource.Drawable.cart1);//no_thumbnail
+        }
 
-            void YouTubeThumbnailView.IOnInitializedListener.OnInitializationSuccess(YouTubeThumbnailView view, IYouTubeThumbnailLoader loader)
-            {
-                loader.SetOnThumbnailLoadedListener(this);
-                thumbnailViewToLoaderMap.Add(view, loader);
-                view.SetImageResource(Resource.Drawable.cart1);//loading_thumbnail
-                var videoId = (string)view.Tag;
-                loader.SetVideo(videoId);
-            }
-
-            void IYouTubeThumbnailLoaderOnThumbnailLoadedListener.OnThumbnailError(YouTubeThumbnailView view, YouTubeThumbnailLoaderErrorReason errorReason)
-            {
-                view.SetImageResource(Resource.Drawable.cart1);//no_thumbnail
-            }
-
-            void IYouTubeThumbnailLoaderOnThumbnailLoadedListener.OnThumbnailLoaded(YouTubeThumbnailView view, string videoId)
-            {
-            }
+        void IYouTubeThumbnailLoaderOnThumbnailLoadedListener.OnThumbnailLoaded(YouTubeThumbnailView view, string videoId)
+        {
         }
     }
 }

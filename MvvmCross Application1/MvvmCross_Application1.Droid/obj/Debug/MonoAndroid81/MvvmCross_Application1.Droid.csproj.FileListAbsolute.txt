@@ -160,10 +160,7 @@ C:\Users\User\mvvm\mvvm\MvvmCross Application1\MvvmCross_Application1.Droid\obj\
 C:\Users\User\mvvm\mvvm\MvvmCross Application1\MvvmCross_Application1.Droid\obj\Debug\MonoAndroid81\res\layout\nav_header.xml
 C:\Users\User\mvvm\mvvm\MvvmCross Application1\MvvmCross_Application1.Droid\obj\Debug\MonoAndroid81\res\layout\toolbar.xml
 C:\Users\User\mvvm\mvvm\MvvmCross Application1\MvvmCross_Application1.Droid\obj\Debug\MonoAndroid81\res\layout\video_list_demo.xml
-C:\Users\User\mvvm\mvvm\MvvmCross Application1\MvvmCross_Application1.Droid\obj\Debug\MonoAndroid81\res\layout\video_list_demo1.xml
-C:\Users\User\mvvm\mvvm\MvvmCross Application1\MvvmCross_Application1.Droid\obj\Debug\MonoAndroid81\res\layout\video_list_demo2.xml
 C:\Users\User\mvvm\mvvm\MvvmCross Application1\MvvmCross_Application1.Droid\obj\Debug\MonoAndroid81\res\layout\video_list_item.xml
-C:\Users\User\mvvm\mvvm\MvvmCross Application1\MvvmCross_Application1.Droid\obj\Debug\MonoAndroid81\res\layout\youtube_fragment.xml
 C:\Users\User\mvvm\mvvm\MvvmCross Application1\MvvmCross_Application1.Droid\obj\Debug\MonoAndroid81\res\drawable\mikky.jpeg
 C:\Users\User\mvvm\mvvm\MvvmCross Application1\MvvmCross_Application1.Droid\obj\Debug\MonoAndroid81\res\drawable\peppa.png
 C:\Users\User\mvvm\mvvm\MvvmCross Application1\MvvmCross_Application1.Droid\obj\Debug\MonoAndroid81\res\layout\menuitemview.xml
@@ -172,6 +169,9 @@ C:\Users\User\mvvm\mvvm\MvvmCross Application1\MvvmCross_Application1.Droid\obj\
 C:\Users\User\mvvm\mvvm\MvvmCross Application1\MvvmCross_Application1.Droid\obj\Debug\MonoAndroid81\res\drawable\button_favorite.xml
 C:\Users\User\mvvm\mvvm\MvvmCross Application1\MvvmCross_Application1.Droid\obj\Debug\MonoAndroid81\res\drawable\ic_favorite.xml
 C:\Users\User\mvvm\mvvm\MvvmCross Application1\MvvmCross_Application1.Droid\obj\Debug\MonoAndroid81\res\drawable\ic_favorite_border.xml
+C:\Users\User\mvvm\mvvm\MvvmCross Application1\MvvmCross_Application1.Droid\obj\Debug\MonoAndroid81\res\drawable\options.png
+C:\Users\User\mvvm\mvvm\MvvmCross Application1\MvvmCross_Application1.Droid\obj\Debug\MonoAndroid81\res\drawable\menu_options.png
+C:\Users\User\mvvm\mvvm\MvvmCross Application1\MvvmCross_Application1.Droid\obj\Debug\MonoAndroid81\res\layout\favourite_list.xml
 C:\Users\User\mvvm\mvvm\MvvmCross Application1\MvvmCross_Application1.Droid\obj\Debug\MonoAndroid81\R.cs.flag
 C:\Users\User\mvvm\mvvm\MvvmCross Application1\MvvmCross_Application1.Droid\obj\Debug\MonoAndroid81\R.txt
 C:\Users\User\mvvm\mvvm\MvvmCross Application1\MvvmCross_Application1.Droid\obj\Debug\MonoAndroid81\uploadflags.txt
@@ -278,11 +278,8 @@ C:\Users\User\mvvm\mvvm\MvvmCross Application1\MvvmCross_Application1.Droid\obj\
 C:\Users\User\mvvm\mvvm\MvvmCross Application1\MvvmCross_Application1.Droid\obj\Debug\MonoAndroid81\android\assets\System.Web.Services.pdb
 C:\Users\User\mvvm\mvvm\MvvmCross Application1\MvvmCross_Application1.Droid\obj\Debug\MonoAndroid81\android\assets\System.Xml.Linq.pdb
 C:\Users\User\mvvm\mvvm\MvvmCross Application1\MvvmCross_Application1.Droid\obj\Debug\MonoAndroid81\android\assets\System.Xml.pdb
-C:\Users\User\mvvm\mvvm\MvvmCross Application1\MvvmCross_Application1.Droid\obj\Debug\MonoAndroid81\res\drawable\options.png
-C:\Users\User\mvvm\mvvm\MvvmCross Application1\MvvmCross_Application1.Droid\obj\Debug\MonoAndroid81\res\drawable\menu_options.png
+C:\Users\User\mvvm\mvvm\MvvmCross Application1\MvvmCross_Application1.Droid\obj\Debug\MonoAndroid81\res\drawable\icons8_trash_50.png
 C:\Users\User\mvvm\mvvm\MvvmCross Application1\MvvmCross_Application1.Droid\bin\Debug\MvvmCross_Application1.Droid.dll
-C:\Users\User\mvvm\mvvm\MvvmCross Application1\MvvmCross_Application1.Core\bin\Debug\MvvmCross_Application1.Core.dll
-C:\Users\User\mvvm\mvvm\MvvmCross Application1\MvvmCross_Application1.Droid\bin\Debug\MvvmCross_Application1.Core.dll.mdb
 C:\Users\User\mvvm\mvvm\MvvmCross Application1\MvvmCross_Application1.Droid\obj\Debug\MonoAndroid81\linksrc\MvvmCross_Application1.Droid.dll.mdb
 C:\Users\User\mvvm\mvvm\MvvmCross Application1\MvvmCross_Application1.Droid\obj\Debug\MonoAndroid81\linksrc\MvvmCross.Binding.dll.mdb
 C:\Users\User\mvvm\mvvm\MvvmCross Application1\MvvmCross_Application1.Droid\obj\Debug\MonoAndroid81\linksrc\MvvmCross.Binding.Droid.dll.mdb

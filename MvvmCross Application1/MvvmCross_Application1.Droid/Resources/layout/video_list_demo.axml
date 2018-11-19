@@ -24,15 +24,21 @@
        
       />
 
+<MvvmCross.Droid.Support.V7.RecyclerView.MvxRecyclerView
+      android:id="@+id/rvItems"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+	  local:MvxBind="ItemsSource YoutubeItems"
+      local:MvxItemTemplate="@layout/video_list_item"/>
 
-    <MvxListView
+    <!--<MvxListView
        android:id="@+id/VideoItems"
        android:layout_width="match_parent"
        android:layout_height="match_parent"
        style="@style/dividedListStyle"
        local:MvxBind="ItemsSource YoutubeItems"
        local:MvxItemTemplate="@layout/video_list_item"
-      />
+      />-->
 
     <LinearLayout
         android:id="@+id/video_box"

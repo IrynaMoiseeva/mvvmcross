@@ -84,7 +84,6 @@ namespace MvvmCross_Application1.Droid.Views
             mRecycleView.SetLayoutManager(mLayoutManager);
             mAdapter = new ChannelAdapter(chan);
             mAdapter.ItemClick += MAdapter_ItemClick;
-            //mAdapter.ItemClick += MAdapter_ItemClick;
             mRecycleView.SetAdapter(mAdapter);
 
 
@@ -113,13 +112,13 @@ namespace MvvmCross_Application1.Droid.Views
         public override bool OnCreateOptionsMenu(IMenu menu)
         {
 
-           //navigationView.InflateMenu(Resource.Menu.options_menu); //Navigation Drawer Layout Menu Creation  
-            // MenuInflater.Inflate(Resource.Menu.popUp_menu, menu);
+            //navigationView.InflateMenu(Resource.Menu.options_menu); //Navigation Drawer Layout Menu Creation  
+             MenuInflater.Inflate(Resource.Menu.options_menu, menu);
             return base.OnCreateOptionsMenu(menu);
         }
 
 
-        public override bool OnPrepareOptionsMenu(IMenu menu)
+       /* public override bool OnPrepareOptionsMenu(IMenu menu)
         {
             MenuInflater.Inflate(Resource.Menu.options_menu, menu);
           //  //return base.OnPrepareOptionsMenu(menu);
@@ -130,8 +129,8 @@ namespace MvvmCross_Application1.Droid.Views
             //   IMenuItem menuItem = menu.FindItem(Resource.Id.cart_item);
             int cart_count = 10;
             // menuItem.SetIcon(Converter.ConvertLayoutToImage(this, cart_count, Resource.Drawable.cart1));*/
-            return true;
-        }
+          //  return base.OnPrepareOptionsMenu(menu);
+       // }
 
         public override bool OnOptionsItemSelected(IMenuItem item)
         {
