@@ -6760,10 +6760,13 @@ namespace MvvmCross_Application1.Droid
 			public const int separator_line = 2130772007;
 			
 			// aapt resource value: 0x7F010028
-			public const int splash = 2130772008;
+			public const int shark = 2130772008;
 			
 			// aapt resource value: 0x7F010029
-			public const int tomatoes = 2130772009;
+			public const int splash = 2130772009;
+			
+			// aapt resource value: 0x7F010030
+			public const int tomatoes = 2130772016;
 			
 			// aapt resource value: 0x7F090069
 			public const int tooltip_frame_dark = 2131296361;

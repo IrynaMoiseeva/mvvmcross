@@ -20,6 +20,11 @@ using MvvmCross_Application1.Droid.Views;
 using Com.Google.Android.Youtube.Player;
 using MvvmCross.Core.ViewModels;
 using System.Collections.Specialized;
+using Android.Graphics;
+using Android.Media;
+using System.IO;
+using static Android.Provider.MediaStore.Video;
+using System.Net;
 
 namespace MvvmCross_Application1.Droid
 {
@@ -35,6 +40,7 @@ namespace MvvmCross_Application1.Droid
         private readonly Dictionary<YouTubeThumbnailView, IYouTubeThumbnailLoader> thumbnailViewToLoaderMap;
         public View View;
         public int ToogleIcon { get; set; }
+        private ImageView imageView;
         public recycleradapter(IMvxAndroidBindingContext bindingContext)
              : base(bindingContext)
         {
@@ -55,7 +61,18 @@ namespace MvvmCross_Application1.Droid
             return new MyViewHolder(View, itemBindingContext);
         }
 
-
+        public static Bitmap GetBitmapFromUrl(string url)
+        {
+            using (WebClient webClient = new WebClient())
+            {
+                byte[] bytes = webClient.DownloadData(url);
+                if (bytes != null && bytes.Length > 0)
+                {
+                    return Android.Graphics.BitmapFactory.DecodeByteArray(bytes, 0, bytes.Length);
+                }
+            }
+            return null;
+        }
         public override void OnBindViewHolder(Android.Support.V7.Widget.RecyclerView.ViewHolder holder, int position)
         {
             var n = ItemsSource;
@@ -65,10 +82,12 @@ namespace MvvmCross_Application1.Droid
             title.Text = video.Title.ToString();
             published_date.Text = video.PublishedAt.ToString();
 
-            var thumbnail = View.FindViewById<YouTubeThumbnailView>(Resource.Id.thumbnail);
-            thumbnail.Tag = video.VideoId;
-            thumbnail.Initialize(DeveloperKey.Key, this);
-            thumbnail.Click += (sender, args) =>
+           
+            Bitmap bbb = GetBitmapFromUrl(video.MediumThumbnailUrl);
+            imageView= View.FindViewById<ImageView>(Resource.Id.thumbnail);
+            imageView.SetImageBitmap(bbb);
+
+            imageView.Click += (sender, args) =>
             {
                 var intent = new Intent(mcon, typeof(PlayVideoActivity));
                 intent.AddFlags(ActivityFlags.NewTask);
@@ -77,6 +96,7 @@ namespace MvvmCross_Application1.Droid
 
                 mcon.StartActivity(intent);
             };
+            
             var togglebutton = View.FindViewById<ToggleButton>(Resource.Id.FavoriteButton);
 
             togglebutton.SetBackgroundResource(ToogleIcon);
@@ -90,11 +110,14 @@ namespace MvvmCross_Application1.Droid
 
                 else
                 { int wi=0;
+                   // thumbnailViewToLoaderMap.Clear();
                     YouTubeThumbnailView Key;int b=0;
                     foreach (var item in thumbnailViewToLoaderMap)
                     {
                         if (position == wi) {
                             thumbnailViewToLoaderMap.Remove(item.Key);
+                            
+                           
                             break; }
 
                         wi = wi + 1;
@@ -102,9 +125,9 @@ namespace MvvmCross_Application1.Droid
 
                     }
                     //if (b==1)
-                    
-                video.UnCheck();
 
+                    video.UnCheck();
+                    
                     if (AllChecked)
                     { //NotifyDataSetChanged(); 
                         if (ViewModel != null)
@@ -133,6 +156,7 @@ namespace MvvmCross_Application1.Droid
         public class MyViewHolder : MvxRecyclerViewHolder
         {
             private readonly TextView textView;
+            private ImageView imageView;
 
             public MyViewHolder(View itemView, IMvxAndroidBindingContext context)
              : base(itemView, context)
@@ -197,7 +221,8 @@ namespace MvvmCross_Application1.Droid
                    */
             }
         }
-
+        
+        
         protected override View InflateViewForHolder(ViewGroup parent, int viewType, IMvxAndroidBindingContext bindingContext)
         {
             var view = base.InflateViewForHolder(parent, viewType, bindingContext);
@@ -231,7 +256,7 @@ namespace MvvmCross_Application1.Droid
 
             view.SetImageResource(Resource.Drawable.cart1);//loading_thumbnail
             var videoId = (string)view.Tag;
-            loader.SetVideo(videoId);
+            //loader.SetVideo(videoId);
         }
 
         void IYouTubeThumbnailLoaderOnThumbnailLoadedListener.OnThumbnailError(YouTubeThumbnailView view, YouTubeThumbnailLoaderErrorReason errorReason)
@@ -241,7 +266,9 @@ namespace MvvmCross_Application1.Droid
 
         void IYouTubeThumbnailLoaderOnThumbnailLoadedListener.OnThumbnailLoaded(YouTubeThumbnailView view, string videoId)
         {
+            var v = 3;
         }
+        
     }
 
 

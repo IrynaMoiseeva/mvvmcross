@@ -42,7 +42,11 @@ namespace MvvmCross_Application1.Core.ViewModels
             Channels = new List<Channel> {
                 new Channel(0,"PLyxLqRfXH_eOMYvGsYRYkrjaoZ8DG3Sxu", "Little Angel", "angel" ),
                 new Channel(1,"PLKtBoDIM5r2XqS3iqLrcySCqtSNSFjM7j" ,"Peppa Pig","peppa"),
-                new Channel(2,"PL8XvIF6dDmUt8MuEVKuv86uO96qMk0dk6" ,"Caillou","calilou")
+                new Channel(2,"PL8XvIF6dDmUt8MuEVKuv86uO96qMk0dk6" ,"Caillou","calilou"),
+                            new Channel(3,"PLdkj6XH8GYPRc1lmIqwbWkWdqsY17XsLo" ,"Super Simple Songs","shark")
+
+
+
             };
         }
         private IMvxAsyncCommand _navigateCommand;
