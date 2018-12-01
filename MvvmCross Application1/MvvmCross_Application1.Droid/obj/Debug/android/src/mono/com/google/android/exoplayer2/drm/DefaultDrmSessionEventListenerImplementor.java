@@ -16,7 +16,7 @@ public class DefaultDrmSessionEventListenerImplementor
 			"n_onDrmKeysRestored:()V:GetOnDrmKeysRestoredHandler:Com.Google.Android.Exoplayer2.Drm.IDefaultDrmSessionEventListenerInvoker, ExoPlayer.Core\n" +
 			"n_onDrmSessionManagerError:(Ljava/lang/Exception;)V:GetOnDrmSessionManagerError_Ljava_lang_Exception_Handler:Com.Google.Android.Exoplayer2.Drm.IDefaultDrmSessionEventListenerInvoker, ExoPlayer.Core\n" +
 			"";
-		mono.android.Runtime.register ("Com.Google.Android.Exoplayer2.Drm.IDefaultDrmSessionEventListenerImplementor, ExoPlayer.Core, Version=2.8.8.0, Culture=neutral, PublicKeyToken=null", DefaultDrmSessionEventListenerImplementor.class, __md_methods);
+		mono.android.Runtime.register ("Com.Google.Android.Exoplayer2.Drm.IDefaultDrmSessionEventListenerImplementor, ExoPlayer.Core", DefaultDrmSessionEventListenerImplementor.class, __md_methods);
 	}
 
 
@@ -24,7 +24,7 @@ public class DefaultDrmSessionEventListenerImplementor
 	{
 		super ();
 		if (getClass () == DefaultDrmSessionEventListenerImplementor.class)
-			mono.android.TypeManager.Activate ("Com.Google.Android.Exoplayer2.Drm.IDefaultDrmSessionEventListenerImplementor, ExoPlayer.Core, Version=2.8.8.0, Culture=neutral, PublicKeyToken=null", "", this, new java.lang.Object[] {  });
+			mono.android.TypeManager.Activate ("Com.Google.Android.Exoplayer2.Drm.IDefaultDrmSessionEventListenerImplementor, ExoPlayer.Core", "", this, new java.lang.Object[] {  });
 	}
 
 

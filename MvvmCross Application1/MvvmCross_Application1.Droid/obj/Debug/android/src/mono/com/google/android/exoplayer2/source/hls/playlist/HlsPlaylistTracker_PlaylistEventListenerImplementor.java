@@ -14,7 +14,7 @@ public class HlsPlaylistTracker_PlaylistEventListenerImplementor
 			"n_onPlaylistChanged:()V:GetOnPlaylistChangedHandler:Com.Google.Android.Exoplayer2.Source.Hls.Playlist.IHlsPlaylistTrackerPlaylistEventListenerInvoker, ExoPlayer.Hls\n" +
 			"n_onPlaylistError:(Lcom/google/android/exoplayer2/source/hls/playlist/HlsMasterPlaylist$HlsUrl;Z)Z:GetOnPlaylistError_Lcom_google_android_exoplayer2_source_hls_playlist_HlsMasterPlaylist_HlsUrl_ZHandler:Com.Google.Android.Exoplayer2.Source.Hls.Playlist.IHlsPlaylistTrackerPlaylistEventListenerInvoker, ExoPlayer.Hls\n" +
 			"";
-		mono.android.Runtime.register ("Com.Google.Android.Exoplayer2.Source.Hls.Playlist.IHlsPlaylistTrackerPlaylistEventListenerImplementor, ExoPlayer.Hls, Version=2.8.8.0, Culture=neutral, PublicKeyToken=null", HlsPlaylistTracker_PlaylistEventListenerImplementor.class, __md_methods);
+		mono.android.Runtime.register ("Com.Google.Android.Exoplayer2.Source.Hls.Playlist.IHlsPlaylistTrackerPlaylistEventListenerImplementor, ExoPlayer.Hls", HlsPlaylistTracker_PlaylistEventListenerImplementor.class, __md_methods);
 	}
 
 
@@ -22,7 +22,7 @@ public class HlsPlaylistTracker_PlaylistEventListenerImplementor
 	{
 		super ();
 		if (getClass () == HlsPlaylistTracker_PlaylistEventListenerImplementor.class)
-			mono.android.TypeManager.Activate ("Com.Google.Android.Exoplayer2.Source.Hls.Playlist.IHlsPlaylistTrackerPlaylistEventListenerImplementor, ExoPlayer.Hls, Version=2.8.8.0, Culture=neutral, PublicKeyToken=null", "", this, new java.lang.Object[] {  });
+			mono.android.TypeManager.Activate ("Com.Google.Android.Exoplayer2.Source.Hls.Playlist.IHlsPlaylistTrackerPlaylistEventListenerImplementor, ExoPlayer.Hls", "", this, new java.lang.Object[] {  });
 	}
 
 

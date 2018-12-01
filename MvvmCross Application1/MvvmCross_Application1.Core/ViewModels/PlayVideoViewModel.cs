@@ -3,6 +3,9 @@ using MvvmCross_Application1.Core.Model;
 using MvvmCross_Application1.Core.Services;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using SQLite;
+using SQLite.Net;
+using SQLite.Net.Interop;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,6 +13,8 @@ using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
+using SQLite;
+using MvvmCross_Application1.Core.DataBase;
 
 namespace MvvmCross_Application1.Core.ViewModels
 {
@@ -24,6 +29,7 @@ namespace MvvmCross_Application1.Core.ViewModels
     public class PlayVideoViewModel : MvxViewModel<string>,IMvxNotifyPropertyChanged
     {
         private MyObject myObject;
+        public static PlayVideoViewModel Instance = new PlayVideoViewModel();
         private List<Video> videos;
         private List<Channel> channels;
         public const string ApiKey = "AIzaSyAn95XgsxmK2c3fwrtyV0-pxOm6RhIr-cI";
@@ -46,14 +52,29 @@ namespace MvvmCross_Application1.Core.ViewModels
             //+ "Your_Videos_Id"
             + "&key="
             + ApiKey;
+
+        public Db Db
+        {
+            get
+            {
+                return (Db.Instance);
+            }
+        }
+
         public PlayVideoViewModel()
         {
+          Db.platform.GetConnection();
 
-         //   apiUrlForPlaylist = string.Format(apiUrlForPlaylist, listid);
+          //  var vv = MainViewModel.connectionfactory.ProduceConnection();
+
+
+
+            //   apiUrlForPlaylist = string.Format(apiUrlForPlaylist, listid);
         }
-        private IEnumerable <YoutubeItem> youtubeItems;
 
-        public IEnumerable<YoutubeItem> YoutubeItems
+        private  static List <YoutubeItem> youtubeItems = new List<YoutubeItem>();
+
+        public List<YoutubeItem> YoutubeItems
         {
             get { return youtubeItems; }
             set
@@ -63,6 +84,8 @@ namespace MvvmCross_Application1.Core.ViewModels
 
             }
         }
+
+
         public List<Video> Videos //{ get; set; }
         {
             get { return videos; }
@@ -100,10 +123,42 @@ namespace MvvmCross_Application1.Core.ViewModels
 
             await InitDataAsync();
         }
+        public List<string> FavoriteListid {get;set;}
+
 
         public async Task InitDataAsync()
         {
+            
+
+               //!!! var list = Db.platform.Select();
+
+           var sqlconection = MainViewModel.connectionfactory.ProduceConnection();
+            await sqlconection.CreateTablesAsync<Favor12, Channels>();
+
+            IRepository<Favor12> stockRepo = new Repository<Favor12>(sqlconection);
+            var list = await stockRepo.Get();
+
+            //var list = new DbOperations(sqlconection).Select();!!!
+
+
+            // var f = new DbOperations(vv);     
+            //  var list = f.Select(); 
+            // var str = Db.platform.DestinationPath;
+
+            // var con =  new SQLite.SQLiteConnection(str);
+            //  var data = con.Table<Favor12>().ToList();
+
+
+            FavoriteListid = new List<string>();
+            foreach (var item in list)
+            {
+                FavoriteListid.Add(item.VideoId);
+            }
+
             var videoIds = await GetVideosIdsFromPlayListAsync();
+
+
+
         }
 
         public async Task<List<string>> GetVideosIdsFromPlayListAsync()
@@ -139,7 +194,9 @@ namespace MvvmCross_Application1.Core.ViewModels
 
         private async Task<List<YoutubeItem>> GetVideosDetailsAsync(List<string> videoIds)
         {
-           // IPlatformService platformservice = null;
+            // IPlatformService platformservice = null;
+            //var favvideos = FavouritesViewModel.Instance.FavoritesVideos.ToArray();
+
             var videoIdsString = "";
             foreach (var s in videoIds)
             {
@@ -184,8 +241,9 @@ namespace MvvmCross_Application1.Core.ViewModels
 
                         Tags = (from tag in snippet?.Value<JArray>("tags") select tag.ToString())?.ToList(),
                     };
-
+                    youtubeItem.IsLiked = FavoriteListid.Contains(youtubeItem.VideoId);
                     youtubeItems.Add(youtubeItem);
+
                 }
 
                 return youtubeItems;

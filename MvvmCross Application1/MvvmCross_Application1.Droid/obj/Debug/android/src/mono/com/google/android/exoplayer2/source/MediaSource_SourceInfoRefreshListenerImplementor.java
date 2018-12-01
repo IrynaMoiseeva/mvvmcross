@@ -13,7 +13,7 @@ public class MediaSource_SourceInfoRefreshListenerImplementor
 		__md_methods = 
 			"n_onSourceInfoRefreshed:(Lcom/google/android/exoplayer2/source/MediaSource;Lcom/google/android/exoplayer2/Timeline;Ljava/lang/Object;)V:GetOnSourceInfoRefreshed_Lcom_google_android_exoplayer2_source_MediaSource_Lcom_google_android_exoplayer2_Timeline_Ljava_lang_Object_Handler:Com.Google.Android.Exoplayer2.Source.IMediaSourceSourceInfoRefreshListenerInvoker, ExoPlayer.Core\n" +
 			"";
-		mono.android.Runtime.register ("Com.Google.Android.Exoplayer2.Source.IMediaSourceSourceInfoRefreshListenerImplementor, ExoPlayer.Core, Version=2.8.8.0, Culture=neutral, PublicKeyToken=null", MediaSource_SourceInfoRefreshListenerImplementor.class, __md_methods);
+		mono.android.Runtime.register ("Com.Google.Android.Exoplayer2.Source.IMediaSourceSourceInfoRefreshListenerImplementor, ExoPlayer.Core", MediaSource_SourceInfoRefreshListenerImplementor.class, __md_methods);
 	}
 
 
@@ -21,7 +21,7 @@ public class MediaSource_SourceInfoRefreshListenerImplementor
 	{
 		super ();
 		if (getClass () == MediaSource_SourceInfoRefreshListenerImplementor.class)
-			mono.android.TypeManager.Activate ("Com.Google.Android.Exoplayer2.Source.IMediaSourceSourceInfoRefreshListenerImplementor, ExoPlayer.Core, Version=2.8.8.0, Culture=neutral, PublicKeyToken=null", "", this, new java.lang.Object[] {  });
+			mono.android.TypeManager.Activate ("Com.Google.Android.Exoplayer2.Source.IMediaSourceSourceInfoRefreshListenerImplementor, ExoPlayer.Core", "", this, new java.lang.Object[] {  });
 	}
 
 

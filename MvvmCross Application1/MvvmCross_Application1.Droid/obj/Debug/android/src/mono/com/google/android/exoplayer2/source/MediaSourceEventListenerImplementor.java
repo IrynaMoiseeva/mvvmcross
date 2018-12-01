@@ -21,7 +21,7 @@ public class MediaSourceEventListenerImplementor
 			"n_onReadingStarted:(ILcom/google/android/exoplayer2/source/MediaSource$MediaPeriodId;)V:GetOnReadingStarted_ILcom_google_android_exoplayer2_source_MediaSource_MediaPeriodId_Handler:Com.Google.Android.Exoplayer2.Source.IMediaSourceEventListenerInvoker, ExoPlayer.Core\n" +
 			"n_onUpstreamDiscarded:(ILcom/google/android/exoplayer2/source/MediaSource$MediaPeriodId;Lcom/google/android/exoplayer2/source/MediaSourceEventListener$MediaLoadData;)V:GetOnUpstreamDiscarded_ILcom_google_android_exoplayer2_source_MediaSource_MediaPeriodId_Lcom_google_android_exoplayer2_source_MediaSourceEventListener_MediaLoadData_Handler:Com.Google.Android.Exoplayer2.Source.IMediaSourceEventListenerInvoker, ExoPlayer.Core\n" +
 			"";
-		mono.android.Runtime.register ("Com.Google.Android.Exoplayer2.Source.IMediaSourceEventListenerImplementor, ExoPlayer.Core, Version=2.8.8.0, Culture=neutral, PublicKeyToken=null", MediaSourceEventListenerImplementor.class, __md_methods);
+		mono.android.Runtime.register ("Com.Google.Android.Exoplayer2.Source.IMediaSourceEventListenerImplementor, ExoPlayer.Core", MediaSourceEventListenerImplementor.class, __md_methods);
 	}
 
 
@@ -29,7 +29,7 @@ public class MediaSourceEventListenerImplementor
 	{
 		super ();
 		if (getClass () == MediaSourceEventListenerImplementor.class)
-			mono.android.TypeManager.Activate ("Com.Google.Android.Exoplayer2.Source.IMediaSourceEventListenerImplementor, ExoPlayer.Core, Version=2.8.8.0, Culture=neutral, PublicKeyToken=null", "", this, new java.lang.Object[] {  });
+			mono.android.TypeManager.Activate ("Com.Google.Android.Exoplayer2.Source.IMediaSourceEventListenerImplementor, ExoPlayer.Core", "", this, new java.lang.Object[] {  });
 	}
 
 

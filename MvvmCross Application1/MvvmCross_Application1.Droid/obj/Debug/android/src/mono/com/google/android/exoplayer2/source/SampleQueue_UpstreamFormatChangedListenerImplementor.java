@@ -13,7 +13,7 @@ public class SampleQueue_UpstreamFormatChangedListenerImplementor
 		__md_methods = 
 			"n_onUpstreamFormatChanged:(Lcom/google/android/exoplayer2/Format;)V:GetOnUpstreamFormatChanged_Lcom_google_android_exoplayer2_Format_Handler:Com.Google.Android.Exoplayer2.Source.SampleQueue/IUpstreamFormatChangedListenerInvoker, ExoPlayer.Core\n" +
 			"";
-		mono.android.Runtime.register ("Com.Google.Android.Exoplayer2.Source.SampleQueue+IUpstreamFormatChangedListenerImplementor, ExoPlayer.Core, Version=2.8.8.0, Culture=neutral, PublicKeyToken=null", SampleQueue_UpstreamFormatChangedListenerImplementor.class, __md_methods);
+		mono.android.Runtime.register ("Com.Google.Android.Exoplayer2.Source.SampleQueue+IUpstreamFormatChangedListenerImplementor, ExoPlayer.Core", SampleQueue_UpstreamFormatChangedListenerImplementor.class, __md_methods);
 	}
 
 
@@ -21,7 +21,7 @@ public class SampleQueue_UpstreamFormatChangedListenerImplementor
 	{
 		super ();
 		if (getClass () == SampleQueue_UpstreamFormatChangedListenerImplementor.class)
-			mono.android.TypeManager.Activate ("Com.Google.Android.Exoplayer2.Source.SampleQueue+IUpstreamFormatChangedListenerImplementor, ExoPlayer.Core, Version=2.8.8.0, Culture=neutral, PublicKeyToken=null", "", this, new java.lang.Object[] {  });
+			mono.android.TypeManager.Activate ("Com.Google.Android.Exoplayer2.Source.SampleQueue+IUpstreamFormatChangedListenerImplementor, ExoPlayer.Core", "", this, new java.lang.Object[] {  });
 	}
 
 

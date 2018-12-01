@@ -1,10 +1,17 @@
 ﻿using System;
+using MvvmCross_Application1.Core.DataBase;
+using SQLite.Net.Attributes;
+
 namespace MvvmCross_Application1.Core.Model
 {
-    public class Channels
+    [Table("Channels")]
+    public class Channels: BaseEntity
     {
-        public Channels()
-        {
-        }
+
+        public string PlayListId { get; set; }
+        public string Title { get; set; }
+        //public string Image { get; set; }
+
     }
-}
+    }
+

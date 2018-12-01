@@ -13,7 +13,7 @@ public class MvxScrollAwareGrowShrinkFABBehavior
 			"n_onStartNestedScroll:(Landroid/support/design/widget/CoordinatorLayout;Landroid/view/View;Landroid/view/View;Landroid/view/View;I)Z:GetOnStartNestedScroll_Landroid_support_design_widget_CoordinatorLayout_Landroid_view_View_Landroid_view_View_Landroid_view_View_IHandler\n" +
 			"n_onNestedScroll:(Landroid/support/design/widget/CoordinatorLayout;Landroid/view/View;Landroid/view/View;IIII)V:GetOnNestedScroll_Landroid_support_design_widget_CoordinatorLayout_Landroid_view_View_Landroid_view_View_IIIIHandler\n" +
 			"";
-		mono.android.Runtime.register ("MvvmCross.Droid.Support.Design.Behaviors.MvxScrollAwareGrowShrinkFABBehavior, MvvmCross.Droid.Support.Design, Version=5.7.0.0, Culture=neutral, PublicKeyToken=null", MvxScrollAwareGrowShrinkFABBehavior.class, __md_methods);
+		mono.android.Runtime.register ("MvvmCross.Droid.Support.Design.Behaviors.MvxScrollAwareGrowShrinkFABBehavior, MvvmCross.Droid.Support.Design", MvxScrollAwareGrowShrinkFABBehavior.class, __md_methods);
 	}
 
 
@@ -21,7 +21,7 @@ public class MvxScrollAwareGrowShrinkFABBehavior
 	{
 		super ();
 		if (getClass () == MvxScrollAwareGrowShrinkFABBehavior.class)
-			mono.android.TypeManager.Activate ("MvvmCross.Droid.Support.Design.Behaviors.MvxScrollAwareGrowShrinkFABBehavior, MvvmCross.Droid.Support.Design, Version=5.7.0.0, Culture=neutral, PublicKeyToken=null", "", this, new java.lang.Object[] {  });
+			mono.android.TypeManager.Activate ("MvvmCross.Droid.Support.Design.Behaviors.MvxScrollAwareGrowShrinkFABBehavior, MvvmCross.Droid.Support.Design", "", this, new java.lang.Object[] {  });
 	}
 
 
@@ -29,7 +29,7 @@ public class MvxScrollAwareGrowShrinkFABBehavior
 	{
 		super (p0, p1);
 		if (getClass () == MvxScrollAwareGrowShrinkFABBehavior.class)
-			mono.android.TypeManager.Activate ("MvvmCross.Droid.Support.Design.Behaviors.MvxScrollAwareGrowShrinkFABBehavior, MvvmCross.Droid.Support.Design, Version=5.7.0.0, Culture=neutral, PublicKeyToken=null", "Android.Content.Context, Mono.Android, Version=0.0.0.0, Culture=neutral, PublicKeyToken=84e04ff9cfb79065:Android.Util.IAttributeSet, Mono.Android, Version=0.0.0.0, Culture=neutral, PublicKeyToken=84e04ff9cfb79065", this, new java.lang.Object[] { p0, p1 });
+			mono.android.TypeManager.Activate ("MvvmCross.Droid.Support.Design.Behaviors.MvxScrollAwareGrowShrinkFABBehavior, MvvmCross.Droid.Support.Design", "Android.Content.Context, Mono.Android:Android.Util.IAttributeSet, Mono.Android", this, new java.lang.Object[] { p0, p1 });
 	}
 
 

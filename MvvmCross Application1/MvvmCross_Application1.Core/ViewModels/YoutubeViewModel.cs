@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Linq;
 using System.Net.Http;
@@ -13,7 +14,7 @@ using XamarinForms.Models;
 
 namespace XamarinForms.ViewModels
 {
-    public class YoutubeViewModel : MvxNotifyPropertyChanged
+ /*   public class YoutubeViewModel : MvxNotifyPropertyChanged
     // public class PlayVideoViewModel : 
     {
 
@@ -41,8 +42,14 @@ namespace XamarinForms.ViewModels
             //+ "Your_Videos_Id"
             + "&key="
             + ApiKey;
+        private static ObservableCollection<YoutubeItem> _youtubeItems = new ObservableCollection<YoutubeItem>();
+        public ObservableCollection<YoutubeItem> YoutubeItems
+        {
+            get { return _youtubeItems; }
+            set { _youtubeItems = value; RaisePropertyChanged(() => YoutubeItems); }
+        }
 
-        private List<YoutubeItem> _youtubeItems;
+      /*  private List<YoutubeItem> _youtubeItems;
 
         public List<YoutubeItem> YoutubeItems
         {
@@ -53,9 +60,9 @@ namespace XamarinForms.ViewModels
                 RaisePropertyChanged();
             }
         }
+        */
 
-        public ICommand SelectCommand
-        {
+    /*     {
             get { return new MvxCommand(Select); }
         }
 
@@ -202,5 +209,5 @@ namespace XamarinForms.ViewModels
                 PropertyChanged.Invoke(this, new PropertyChangedEventArgs(propertyName));
             }
         }
-    }
+    }*/
 }

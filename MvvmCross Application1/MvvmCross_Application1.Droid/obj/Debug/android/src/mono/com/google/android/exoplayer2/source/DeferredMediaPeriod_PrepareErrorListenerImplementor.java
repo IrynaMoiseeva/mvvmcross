@@ -13,7 +13,7 @@ public class DeferredMediaPeriod_PrepareErrorListenerImplementor
 		__md_methods = 
 			"n_onPrepareError:(Lcom/google/android/exoplayer2/source/MediaSource$MediaPeriodId;Ljava/io/IOException;)V:GetOnPrepareError_Lcom_google_android_exoplayer2_source_MediaSource_MediaPeriodId_Ljava_io_IOException_Handler:Com.Google.Android.Exoplayer2.Source.DeferredMediaPeriod/IPrepareErrorListenerInvoker, ExoPlayer.Core\n" +
 			"";
-		mono.android.Runtime.register ("Com.Google.Android.Exoplayer2.Source.DeferredMediaPeriod+IPrepareErrorListenerImplementor, ExoPlayer.Core, Version=2.8.8.0, Culture=neutral, PublicKeyToken=null", DeferredMediaPeriod_PrepareErrorListenerImplementor.class, __md_methods);
+		mono.android.Runtime.register ("Com.Google.Android.Exoplayer2.Source.DeferredMediaPeriod+IPrepareErrorListenerImplementor, ExoPlayer.Core", DeferredMediaPeriod_PrepareErrorListenerImplementor.class, __md_methods);
 	}
 
 
@@ -21,7 +21,7 @@ public class DeferredMediaPeriod_PrepareErrorListenerImplementor
 	{
 		super ();
 		if (getClass () == DeferredMediaPeriod_PrepareErrorListenerImplementor.class)
-			mono.android.TypeManager.Activate ("Com.Google.Android.Exoplayer2.Source.DeferredMediaPeriod+IPrepareErrorListenerImplementor, ExoPlayer.Core, Version=2.8.8.0, Culture=neutral, PublicKeyToken=null", "", this, new java.lang.Object[] {  });
+			mono.android.TypeManager.Activate ("Com.Google.Android.Exoplayer2.Source.DeferredMediaPeriod+IPrepareErrorListenerImplementor, ExoPlayer.Core", "", this, new java.lang.Object[] {  });
 	}
 
 

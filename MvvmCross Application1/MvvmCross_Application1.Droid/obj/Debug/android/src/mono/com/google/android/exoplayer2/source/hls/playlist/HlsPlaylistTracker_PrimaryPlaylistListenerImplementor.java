@@ -13,7 +13,7 @@ public class HlsPlaylistTracker_PrimaryPlaylistListenerImplementor
 		__md_methods = 
 			"n_onPrimaryPlaylistRefreshed:(Lcom/google/android/exoplayer2/source/hls/playlist/HlsMediaPlaylist;)V:GetOnPrimaryPlaylistRefreshed_Lcom_google_android_exoplayer2_source_hls_playlist_HlsMediaPlaylist_Handler:Com.Google.Android.Exoplayer2.Source.Hls.Playlist.IHlsPlaylistTrackerPrimaryPlaylistListenerInvoker, ExoPlayer.Hls\n" +
 			"";
-		mono.android.Runtime.register ("Com.Google.Android.Exoplayer2.Source.Hls.Playlist.IHlsPlaylistTrackerPrimaryPlaylistListenerImplementor, ExoPlayer.Hls, Version=2.8.8.0, Culture=neutral, PublicKeyToken=null", HlsPlaylistTracker_PrimaryPlaylistListenerImplementor.class, __md_methods);
+		mono.android.Runtime.register ("Com.Google.Android.Exoplayer2.Source.Hls.Playlist.IHlsPlaylistTrackerPrimaryPlaylistListenerImplementor, ExoPlayer.Hls", HlsPlaylistTracker_PrimaryPlaylistListenerImplementor.class, __md_methods);
 	}
 
 
@@ -21,7 +21,7 @@ public class HlsPlaylistTracker_PrimaryPlaylistListenerImplementor
 	{
 		super ();
 		if (getClass () == HlsPlaylistTracker_PrimaryPlaylistListenerImplementor.class)
-			mono.android.TypeManager.Activate ("Com.Google.Android.Exoplayer2.Source.Hls.Playlist.IHlsPlaylistTrackerPrimaryPlaylistListenerImplementor, ExoPlayer.Hls, Version=2.8.8.0, Culture=neutral, PublicKeyToken=null", "", this, new java.lang.Object[] {  });
+			mono.android.TypeManager.Activate ("Com.Google.Android.Exoplayer2.Source.Hls.Playlist.IHlsPlaylistTrackerPrimaryPlaylistListenerImplementor, ExoPlayer.Hls", "", this, new java.lang.Object[] {  });
 	}
 
 

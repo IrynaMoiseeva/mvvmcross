@@ -16,7 +16,7 @@ public class AdsLoader_EventListenerImplementor
 			"n_onAdPlaybackState:(Lcom/google/android/exoplayer2/source/ads/AdPlaybackState;)V:GetOnAdPlaybackState_Lcom_google_android_exoplayer2_source_ads_AdPlaybackState_Handler:Com.Google.Android.Exoplayer2.Source.Ads.IAdsLoaderEventListenerInvoker, ExoPlayer.Core\n" +
 			"n_onAdTapped:()V:GetOnAdTappedHandler:Com.Google.Android.Exoplayer2.Source.Ads.IAdsLoaderEventListenerInvoker, ExoPlayer.Core\n" +
 			"";
-		mono.android.Runtime.register ("Com.Google.Android.Exoplayer2.Source.Ads.IAdsLoaderEventListenerImplementor, ExoPlayer.Core, Version=2.8.8.0, Culture=neutral, PublicKeyToken=null", AdsLoader_EventListenerImplementor.class, __md_methods);
+		mono.android.Runtime.register ("Com.Google.Android.Exoplayer2.Source.Ads.IAdsLoaderEventListenerImplementor, ExoPlayer.Core", AdsLoader_EventListenerImplementor.class, __md_methods);
 	}
 
 
@@ -24,7 +24,7 @@ public class AdsLoader_EventListenerImplementor
 	{
 		super ();
 		if (getClass () == AdsLoader_EventListenerImplementor.class)
-			mono.android.TypeManager.Activate ("Com.Google.Android.Exoplayer2.Source.Ads.IAdsLoaderEventListenerImplementor, ExoPlayer.Core, Version=2.8.8.0, Culture=neutral, PublicKeyToken=null", "", this, new java.lang.Object[] {  });
+			mono.android.TypeManager.Activate ("Com.Google.Android.Exoplayer2.Source.Ads.IAdsLoaderEventListenerImplementor, ExoPlayer.Core", "", this, new java.lang.Object[] {  });
 	}
 
 

@@ -2,7 +2,7 @@ package mvvmcross.droid.support.v4;
 
 
 public class MvxFragmentActivity
-	extends md5e282a28907cd5b53d4385afa0f063890.MvxEventSourceFragmentActivity
+	extends md5e6399382982fd9af435fb936e99e7be5.MvxEventSourceFragmentActivity
 	implements
 		mono.android.IGCUserPeer
 {
@@ -19,7 +19,7 @@ public class MvxFragmentActivity
 			"n_onPause:()V:GetOnPauseHandler\n" +
 			"n_onStop:()V:GetOnStopHandler\n" +
 			"";
-		mono.android.Runtime.register ("MvvmCross.Droid.Support.V4.MvxFragmentActivity, MvvmCross.Droid.Support.Fragment, Version=5.7.0.0, Culture=neutral, PublicKeyToken=null", MvxFragmentActivity.class, __md_methods);
+		mono.android.Runtime.register ("MvvmCross.Droid.Support.V4.MvxFragmentActivity, MvvmCross.Droid.Support.Fragment", MvxFragmentActivity.class, __md_methods);
 	}
 
 
@@ -27,7 +27,7 @@ public class MvxFragmentActivity
 	{
 		super ();
 		if (getClass () == MvxFragmentActivity.class)
-			mono.android.TypeManager.Activate ("MvvmCross.Droid.Support.V4.MvxFragmentActivity, MvvmCross.Droid.Support.Fragment, Version=5.7.0.0, Culture=neutral, PublicKeyToken=null", "", this, new java.lang.Object[] {  });
+			mono.android.TypeManager.Activate ("MvvmCross.Droid.Support.V4.MvxFragmentActivity, MvvmCross.Droid.Support.Fragment", "", this, new java.lang.Object[] {  });
 	}
 
 

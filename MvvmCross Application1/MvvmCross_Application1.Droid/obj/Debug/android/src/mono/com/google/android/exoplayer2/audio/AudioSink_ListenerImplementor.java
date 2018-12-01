@@ -15,7 +15,7 @@ public class AudioSink_ListenerImplementor
 			"n_onPositionDiscontinuity:()V:GetOnPositionDiscontinuityHandler:Com.Google.Android.Exoplayer2.Audio.IAudioSinkListenerInvoker, ExoPlayer.Core\n" +
 			"n_onUnderrun:(IJJ)V:GetOnUnderrun_IJJHandler:Com.Google.Android.Exoplayer2.Audio.IAudioSinkListenerInvoker, ExoPlayer.Core\n" +
 			"";
-		mono.android.Runtime.register ("Com.Google.Android.Exoplayer2.Audio.IAudioSinkListenerImplementor, ExoPlayer.Core, Version=2.8.8.0, Culture=neutral, PublicKeyToken=null", AudioSink_ListenerImplementor.class, __md_methods);
+		mono.android.Runtime.register ("Com.Google.Android.Exoplayer2.Audio.IAudioSinkListenerImplementor, ExoPlayer.Core", AudioSink_ListenerImplementor.class, __md_methods);
 	}
 
 
@@ -23,7 +23,7 @@ public class AudioSink_ListenerImplementor
 	{
 		super ();
 		if (getClass () == AudioSink_ListenerImplementor.class)
-			mono.android.TypeManager.Activate ("Com.Google.Android.Exoplayer2.Audio.IAudioSinkListenerImplementor, ExoPlayer.Core, Version=2.8.8.0, Culture=neutral, PublicKeyToken=null", "", this, new java.lang.Object[] {  });
+			mono.android.TypeManager.Activate ("Com.Google.Android.Exoplayer2.Audio.IAudioSinkListenerImplementor, ExoPlayer.Core", "", this, new java.lang.Object[] {  });
 	}
 
 

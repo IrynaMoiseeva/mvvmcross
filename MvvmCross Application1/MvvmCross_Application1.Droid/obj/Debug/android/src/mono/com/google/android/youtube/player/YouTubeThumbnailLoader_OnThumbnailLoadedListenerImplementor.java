@@ -14,7 +14,7 @@ public class YouTubeThumbnailLoader_OnThumbnailLoadedListenerImplementor
 			"n_onThumbnailError:(Lcom/google/android/youtube/player/YouTubeThumbnailView;Lcom/google/android/youtube/player/YouTubeThumbnailLoader$ErrorReason;)V:GetOnThumbnailError_Lcom_google_android_youtube_player_YouTubeThumbnailView_Lcom_google_android_youtube_player_YouTubeThumbnailLoader_ErrorReason_Handler:Com.Google.Android.Youtube.Player.IYouTubeThumbnailLoaderOnThumbnailLoadedListenerInvoker, Naxam.YoutubePlayerApi.Droid\n" +
 			"n_onThumbnailLoaded:(Lcom/google/android/youtube/player/YouTubeThumbnailView;Ljava/lang/String;)V:GetOnThumbnailLoaded_Lcom_google_android_youtube_player_YouTubeThumbnailView_Ljava_lang_String_Handler:Com.Google.Android.Youtube.Player.IYouTubeThumbnailLoaderOnThumbnailLoadedListenerInvoker, Naxam.YoutubePlayerApi.Droid\n" +
 			"";
-		mono.android.Runtime.register ("Com.Google.Android.Youtube.Player.IYouTubeThumbnailLoaderOnThumbnailLoadedListenerImplementor, Naxam.YoutubePlayerApi.Droid, Version=1.2.2.1, Culture=neutral, PublicKeyToken=null", YouTubeThumbnailLoader_OnThumbnailLoadedListenerImplementor.class, __md_methods);
+		mono.android.Runtime.register ("Com.Google.Android.Youtube.Player.IYouTubeThumbnailLoaderOnThumbnailLoadedListenerImplementor, Naxam.YoutubePlayerApi.Droid", YouTubeThumbnailLoader_OnThumbnailLoadedListenerImplementor.class, __md_methods);
 	}
 
 
@@ -22,7 +22,7 @@ public class YouTubeThumbnailLoader_OnThumbnailLoadedListenerImplementor
 	{
 		super ();
 		if (getClass () == YouTubeThumbnailLoader_OnThumbnailLoadedListenerImplementor.class)
-			mono.android.TypeManager.Activate ("Com.Google.Android.Youtube.Player.IYouTubeThumbnailLoaderOnThumbnailLoadedListenerImplementor, Naxam.YoutubePlayerApi.Droid, Version=1.2.2.1, Culture=neutral, PublicKeyToken=null", "", this, new java.lang.Object[] {  });
+			mono.android.TypeManager.Activate ("Com.Google.Android.Youtube.Player.IYouTubeThumbnailLoaderOnThumbnailLoadedListenerImplementor, Naxam.YoutubePlayerApi.Droid", "", this, new java.lang.Object[] {  });
 	}
 
 

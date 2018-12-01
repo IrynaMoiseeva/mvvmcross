@@ -15,7 +15,7 @@ public class Cache_ListenerImplementor
 			"n_onSpanRemoved:(Lcom/google/android/exoplayer2/upstream/cache/Cache;Lcom/google/android/exoplayer2/upstream/cache/CacheSpan;)V:GetOnSpanRemoved_Lcom_google_android_exoplayer2_upstream_cache_Cache_Lcom_google_android_exoplayer2_upstream_cache_CacheSpan_Handler:Com.Google.Android.Exoplayer2.Upstream.Cache.ICacheListenerInvoker, ExoPlayer.Core\n" +
 			"n_onSpanTouched:(Lcom/google/android/exoplayer2/upstream/cache/Cache;Lcom/google/android/exoplayer2/upstream/cache/CacheSpan;Lcom/google/android/exoplayer2/upstream/cache/CacheSpan;)V:GetOnSpanTouched_Lcom_google_android_exoplayer2_upstream_cache_Cache_Lcom_google_android_exoplayer2_upstream_cache_CacheSpan_Lcom_google_android_exoplayer2_upstream_cache_CacheSpan_Handler:Com.Google.Android.Exoplayer2.Upstream.Cache.ICacheListenerInvoker, ExoPlayer.Core\n" +
 			"";
-		mono.android.Runtime.register ("Com.Google.Android.Exoplayer2.Upstream.Cache.ICacheListenerImplementor, ExoPlayer.Core, Version=2.8.8.0, Culture=neutral, PublicKeyToken=null", Cache_ListenerImplementor.class, __md_methods);
+		mono.android.Runtime.register ("Com.Google.Android.Exoplayer2.Upstream.Cache.ICacheListenerImplementor, ExoPlayer.Core", Cache_ListenerImplementor.class, __md_methods);
 	}
 
 
@@ -23,7 +23,7 @@ public class Cache_ListenerImplementor
 	{
 		super ();
 		if (getClass () == Cache_ListenerImplementor.class)
-			mono.android.TypeManager.Activate ("Com.Google.Android.Exoplayer2.Upstream.Cache.ICacheListenerImplementor, ExoPlayer.Core, Version=2.8.8.0, Culture=neutral, PublicKeyToken=null", "", this, new java.lang.Object[] {  });
+			mono.android.TypeManager.Activate ("Com.Google.Android.Exoplayer2.Upstream.Cache.ICacheListenerImplementor, ExoPlayer.Core", "", this, new java.lang.Object[] {  });
 	}
 
 

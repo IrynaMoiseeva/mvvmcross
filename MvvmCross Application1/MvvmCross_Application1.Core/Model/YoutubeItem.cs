@@ -1,6 +1,6 @@
 ﻿using MvvmCross.Core.ViewModels;
 using MvvmCross_Application1.Core.Data;
-
+using MvvmCross_Application1.Core.DataBase;
 using MvvmCross_Application1.Core.Services;
 using MvvmCross_Application1.Core.ViewModels;
 using System;
@@ -14,9 +14,7 @@ using System.Threading.Tasks;
 
 namespace MvvmCross_Application1.Core.Model
 {
-
-   
-    public class YoutubeItem: MvxNotifyPropertyChanged
+    public class YoutubeItem: MvxViewModel
     {
       
         public string VideoId { get; set; }
@@ -51,16 +49,22 @@ namespace MvvmCross_Application1.Core.Model
 
         public List<string> Tags { get; set; }
 
-        
+
+        public bool IsLiked { get; set; }
+
         public YoutubeItem()
         {
             
             CheckCommand = new MvxCommand(Check);
             UnCheckCommand = new MvxCommand(UnCheck);
             
-           // var t = f.GetPlatform();
-           // f.GetConnection();
+           
         }
+        // private readonly Lazy<PlayVideoViewModel> playvideoViewModel;
+
+
+
+        //public PlayVideoViewModel PlayVideoViewModel => playvideoViewModel.
 
         public IPlatformService platformservice;
         public MvxCommand CheckCommand { get; }
@@ -75,18 +79,15 @@ namespace MvvmCross_Application1.Core.Model
 
         public void Check()
         {
-            
+
             var v = VideoId;
-            
+            IsLiked = true;
+            var d = PlayVideoViewModel.Instance.YoutubeItems;
+
             Db.platform.GetConnection();
             Db.platform.Insert(VideoId);
-           /* var f = MainViewModel._platformService;
-            var t = f.GetPlatform();
-            f.GetConnection();*/
-           // f.InsertIntoTableFavourities(new Favorite(VideoId));
-
+                 
           
-            
 
         }
 
@@ -94,8 +95,8 @@ namespace MvvmCross_Application1.Core.Model
 
         public void UnCheck()
         {
-           // var f = MainViewModel._platformService;
-           
+
+            IsLiked = false;
             var v = VideoId;
             Db.platform.GetConnection();
             Db.platform.Remove(VideoId);
@@ -106,24 +107,23 @@ namespace MvvmCross_Application1.Core.Model
             //RaiseCollectionChanged(new NotifyCollectionChangedEventArgs(NotifyCollectionChangedAction.Reset));
 
         }
-      /*  public event NotifyCollectionChangedEventHandler CollectionChanged;
-        private void RaiseCollectionChanged(NotifyCollectionChangedEventArgs args)
-        {
-            var handler = CollectionChanged;
-            if (handler == null)
-                return;
-
-            handler(this, args);
-        }*/
+     
     }
     public class Db
 
     {
         public static Db Instance = new Db();
         public IPlatformService platform;
+       // public IConnectionFactory connectionfactory;
+       // var ff = new DbOperations(MainViewModel.connectionfactory.ProduceConnection());
+
         public Db()
         {
             platform = MainViewModel._platformService;
+            // var dbconection = MainViewModel.connectionfactory.
+         //   connectionfactory = MainViewModel.connectionfactory;
+            
+
         }
 
     }

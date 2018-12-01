@@ -18,7 +18,7 @@ public abstract class MvxCachingFragmentPagerAdapter
 			"n_saveState:()Landroid/os/Parcelable;:GetSaveStateHandler\n" +
 			"n_setPrimaryItem:(Landroid/view/ViewGroup;ILjava/lang/Object;)V:GetSetPrimaryItem_Landroid_view_ViewGroup_ILjava_lang_Object_Handler\n" +
 			"";
-		mono.android.Runtime.register ("MvvmCross.Droid.Support.V4.MvxCachingFragmentPagerAdapter, MvvmCross.Droid.Support.Fragment, Version=5.7.0.0, Culture=neutral, PublicKeyToken=null", MvxCachingFragmentPagerAdapter.class, __md_methods);
+		mono.android.Runtime.register ("MvvmCross.Droid.Support.V4.MvxCachingFragmentPagerAdapter, MvvmCross.Droid.Support.Fragment", MvxCachingFragmentPagerAdapter.class, __md_methods);
 	}
 
 
@@ -26,14 +26,14 @@ public abstract class MvxCachingFragmentPagerAdapter
 	{
 		super ();
 		if (getClass () == MvxCachingFragmentPagerAdapter.class)
-			mono.android.TypeManager.Activate ("MvvmCross.Droid.Support.V4.MvxCachingFragmentPagerAdapter, MvvmCross.Droid.Support.Fragment, Version=5.7.0.0, Culture=neutral, PublicKeyToken=null", "", this, new java.lang.Object[] {  });
+			mono.android.TypeManager.Activate ("MvvmCross.Droid.Support.V4.MvxCachingFragmentPagerAdapter, MvvmCross.Droid.Support.Fragment", "", this, new java.lang.Object[] {  });
 	}
 
 	public MvxCachingFragmentPagerAdapter (android.support.v4.app.FragmentManager p0)
 	{
 		super ();
 		if (getClass () == MvxCachingFragmentPagerAdapter.class)
-			mono.android.TypeManager.Activate ("MvvmCross.Droid.Support.V4.MvxCachingFragmentPagerAdapter, MvvmCross.Droid.Support.Fragment, Version=5.7.0.0, Culture=neutral, PublicKeyToken=null", "Android.Support.V4.App.FragmentManager, Xamarin.Android.Support.Fragment, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", this, new java.lang.Object[] { p0 });
+			mono.android.TypeManager.Activate ("MvvmCross.Droid.Support.V4.MvxCachingFragmentPagerAdapter, MvvmCross.Droid.Support.Fragment", "Android.Support.V4.App.FragmentManager, Xamarin.Android.Support.Fragment", this, new java.lang.Object[] { p0 });
 	}
 
 

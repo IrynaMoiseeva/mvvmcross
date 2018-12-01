@@ -14,7 +14,7 @@ public class YouTubePlayer_OnInitializedListenerImplementor
 			"n_onInitializationFailure:(Lcom/google/android/youtube/player/YouTubePlayer$Provider;Lcom/google/android/youtube/player/YouTubeInitializationResult;)V:GetOnInitializationFailure_Lcom_google_android_youtube_player_YouTubePlayer_Provider_Lcom_google_android_youtube_player_YouTubeInitializationResult_Handler:Com.Google.Android.Youtube.Player.IYouTubePlayerOnInitializedListenerInvoker, Naxam.YoutubePlayerApi.Droid\n" +
 			"n_onInitializationSuccess:(Lcom/google/android/youtube/player/YouTubePlayer$Provider;Lcom/google/android/youtube/player/YouTubePlayer;Z)V:GetOnInitializationSuccess_Lcom_google_android_youtube_player_YouTubePlayer_Provider_Lcom_google_android_youtube_player_YouTubePlayer_ZHandler:Com.Google.Android.Youtube.Player.IYouTubePlayerOnInitializedListenerInvoker, Naxam.YoutubePlayerApi.Droid\n" +
 			"";
-		mono.android.Runtime.register ("Com.Google.Android.Youtube.Player.IYouTubePlayerOnInitializedListenerImplementor, Naxam.YoutubePlayerApi.Droid, Version=1.2.2.1, Culture=neutral, PublicKeyToken=null", YouTubePlayer_OnInitializedListenerImplementor.class, __md_methods);
+		mono.android.Runtime.register ("Com.Google.Android.Youtube.Player.IYouTubePlayerOnInitializedListenerImplementor, Naxam.YoutubePlayerApi.Droid", YouTubePlayer_OnInitializedListenerImplementor.class, __md_methods);
 	}
 
 
@@ -22,7 +22,7 @@ public class YouTubePlayer_OnInitializedListenerImplementor
 	{
 		super ();
 		if (getClass () == YouTubePlayer_OnInitializedListenerImplementor.class)
-			mono.android.TypeManager.Activate ("Com.Google.Android.Youtube.Player.IYouTubePlayerOnInitializedListenerImplementor, Naxam.YoutubePlayerApi.Droid, Version=1.2.2.1, Culture=neutral, PublicKeyToken=null", "", this, new java.lang.Object[] {  });
+			mono.android.TypeManager.Activate ("Com.Google.Android.Youtube.Player.IYouTubePlayerOnInitializedListenerImplementor, Naxam.YoutubePlayerApi.Droid", "", this, new java.lang.Object[] {  });
 	}
 
 

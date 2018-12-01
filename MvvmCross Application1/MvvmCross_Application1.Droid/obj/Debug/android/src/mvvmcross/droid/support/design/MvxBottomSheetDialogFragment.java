@@ -2,7 +2,7 @@ package mvvmcross.droid.support.design;
 
 
 public abstract class MvxBottomSheetDialogFragment
-	extends md5b73bb52ca55520b226991146c493d26f.MvxEventSourceBottomSheetDialogFragment
+	extends md5c9f350ddc72c8c1b2b97254113b6fae1.MvxEventSourceBottomSheetDialogFragment
 	implements
 		mono.android.IGCUserPeer
 {
@@ -20,7 +20,7 @@ public abstract class MvxBottomSheetDialogFragment
 			"n_dismissAllowingStateLoss:()V:GetDismissAllowingStateLossHandler\n" +
 			"n_dismiss:()V:GetDismissHandler\n" +
 			"";
-		mono.android.Runtime.register ("MvvmCross.Droid.Support.Design.MvxBottomSheetDialogFragment, MvvmCross.Droid.Support.Design, Version=5.7.0.0, Culture=neutral, PublicKeyToken=null", MvxBottomSheetDialogFragment.class, __md_methods);
+		mono.android.Runtime.register ("MvvmCross.Droid.Support.Design.MvxBottomSheetDialogFragment, MvvmCross.Droid.Support.Design", MvxBottomSheetDialogFragment.class, __md_methods);
 	}
 
 
@@ -28,7 +28,7 @@ public abstract class MvxBottomSheetDialogFragment
 	{
 		super ();
 		if (getClass () == MvxBottomSheetDialogFragment.class)
-			mono.android.TypeManager.Activate ("MvvmCross.Droid.Support.Design.MvxBottomSheetDialogFragment, MvvmCross.Droid.Support.Design, Version=5.7.0.0, Culture=neutral, PublicKeyToken=null", "", this, new java.lang.Object[] {  });
+			mono.android.TypeManager.Activate ("MvvmCross.Droid.Support.Design.MvxBottomSheetDialogFragment, MvvmCross.Droid.Support.Design", "", this, new java.lang.Object[] {  });
 	}
 
 

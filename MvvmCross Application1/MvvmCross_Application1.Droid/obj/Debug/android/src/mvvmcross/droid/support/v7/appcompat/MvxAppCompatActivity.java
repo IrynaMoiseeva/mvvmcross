@@ -2,7 +2,7 @@ package mvvmcross.droid.support.v7.appcompat;
 
 
 public class MvxAppCompatActivity
-	extends md535be1fdfc54403626bdc010d77dba2b8.MvxEventSourceAppCompatActivity
+	extends md5c44e626e43e5b8d6d42d28410a243d52.MvxEventSourceAppCompatActivity
 	implements
 		mono.android.IGCUserPeer
 {
@@ -20,7 +20,7 @@ public class MvxAppCompatActivity
 			"n_onStop:()V:GetOnStopHandler\n" +
 			"n_onCreateView:(Landroid/view/View;Ljava/lang/String;Landroid/content/Context;Landroid/util/AttributeSet;)Landroid/view/View;:GetOnCreateView_Landroid_view_View_Ljava_lang_String_Landroid_content_Context_Landroid_util_AttributeSet_Handler\n" +
 			"";
-		mono.android.Runtime.register ("MvvmCross.Droid.Support.V7.AppCompat.MvxAppCompatActivity, MvvmCross.Droid.Support.V7.AppCompat, Version=5.7.0.0, Culture=neutral, PublicKeyToken=null", MvxAppCompatActivity.class, __md_methods);
+		mono.android.Runtime.register ("MvvmCross.Droid.Support.V7.AppCompat.MvxAppCompatActivity, MvvmCross.Droid.Support.V7.AppCompat", MvxAppCompatActivity.class, __md_methods);
 	}
 
 
@@ -28,7 +28,7 @@ public class MvxAppCompatActivity
 	{
 		super ();
 		if (getClass () == MvxAppCompatActivity.class)
-			mono.android.TypeManager.Activate ("MvvmCross.Droid.Support.V7.AppCompat.MvxAppCompatActivity, MvvmCross.Droid.Support.V7.AppCompat, Version=5.7.0.0, Culture=neutral, PublicKeyToken=null", "", this, new java.lang.Object[] {  });
+			mono.android.TypeManager.Activate ("MvvmCross.Droid.Support.V7.AppCompat.MvxAppCompatActivity, MvvmCross.Droid.Support.V7.AppCompat", "", this, new java.lang.Object[] {  });
 	}
 
 

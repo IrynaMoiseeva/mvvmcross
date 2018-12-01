@@ -18,7 +18,7 @@ public class YouTubePlayer_PlayerStateChangeListenerImplementor
 			"n_onVideoEnded:()V:GetOnVideoEndedHandler:Com.Google.Android.Youtube.Player.IYouTubePlayerPlayerStateChangeListenerInvoker, Naxam.YoutubePlayerApi.Droid\n" +
 			"n_onVideoStarted:()V:GetOnVideoStartedHandler:Com.Google.Android.Youtube.Player.IYouTubePlayerPlayerStateChangeListenerInvoker, Naxam.YoutubePlayerApi.Droid\n" +
 			"";
-		mono.android.Runtime.register ("Com.Google.Android.Youtube.Player.IYouTubePlayerPlayerStateChangeListenerImplementor, Naxam.YoutubePlayerApi.Droid, Version=1.2.2.1, Culture=neutral, PublicKeyToken=null", YouTubePlayer_PlayerStateChangeListenerImplementor.class, __md_methods);
+		mono.android.Runtime.register ("Com.Google.Android.Youtube.Player.IYouTubePlayerPlayerStateChangeListenerImplementor, Naxam.YoutubePlayerApi.Droid", YouTubePlayer_PlayerStateChangeListenerImplementor.class, __md_methods);
 	}
 
 
@@ -26,7 +26,7 @@ public class YouTubePlayer_PlayerStateChangeListenerImplementor
 	{
 		super ();
 		if (getClass () == YouTubePlayer_PlayerStateChangeListenerImplementor.class)
-			mono.android.TypeManager.Activate ("Com.Google.Android.Youtube.Player.IYouTubePlayerPlayerStateChangeListenerImplementor, Naxam.YoutubePlayerApi.Droid, Version=1.2.2.1, Culture=neutral, PublicKeyToken=null", "", this, new java.lang.Object[] {  });
+			mono.android.TypeManager.Activate ("Com.Google.Android.Youtube.Player.IYouTubePlayerPlayerStateChangeListenerImplementor, Naxam.YoutubePlayerApi.Droid", "", this, new java.lang.Object[] {  });
 	}
 
 

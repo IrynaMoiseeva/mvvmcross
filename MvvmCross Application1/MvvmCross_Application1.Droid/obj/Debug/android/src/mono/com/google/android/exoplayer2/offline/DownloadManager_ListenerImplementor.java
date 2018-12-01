@@ -15,7 +15,7 @@ public class DownloadManager_ListenerImplementor
 			"n_onInitialized:(Lcom/google/android/exoplayer2/offline/DownloadManager;)V:GetOnInitialized_Lcom_google_android_exoplayer2_offline_DownloadManager_Handler:Com.Google.Android.Exoplayer2.Offline.DownloadManager/IListenerInvoker, ExoPlayer.Core\n" +
 			"n_onTaskStateChanged:(Lcom/google/android/exoplayer2/offline/DownloadManager;Lcom/google/android/exoplayer2/offline/DownloadManager$TaskState;)V:GetOnTaskStateChanged_Lcom_google_android_exoplayer2_offline_DownloadManager_Lcom_google_android_exoplayer2_offline_DownloadManager_TaskState_Handler:Com.Google.Android.Exoplayer2.Offline.DownloadManager/IListenerInvoker, ExoPlayer.Core\n" +
 			"";
-		mono.android.Runtime.register ("Com.Google.Android.Exoplayer2.Offline.DownloadManager+IListenerImplementor, ExoPlayer.Core, Version=2.8.8.0, Culture=neutral, PublicKeyToken=null", DownloadManager_ListenerImplementor.class, __md_methods);
+		mono.android.Runtime.register ("Com.Google.Android.Exoplayer2.Offline.DownloadManager+IListenerImplementor, ExoPlayer.Core", DownloadManager_ListenerImplementor.class, __md_methods);
 	}
 
 
@@ -23,7 +23,7 @@ public class DownloadManager_ListenerImplementor
 	{
 		super ();
 		if (getClass () == DownloadManager_ListenerImplementor.class)
-			mono.android.TypeManager.Activate ("Com.Google.Android.Exoplayer2.Offline.DownloadManager+IListenerImplementor, ExoPlayer.Core, Version=2.8.8.0, Culture=neutral, PublicKeyToken=null", "", this, new java.lang.Object[] {  });
+			mono.android.TypeManager.Activate ("Com.Google.Android.Exoplayer2.Offline.DownloadManager+IListenerImplementor, ExoPlayer.Core", "", this, new java.lang.Object[] {  });
 	}
 
 

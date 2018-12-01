@@ -19,7 +19,7 @@ public class VideoRendererEventListenerImplementor
 			"n_onVideoInputFormatChanged:(Lcom/google/android/exoplayer2/Format;)V:GetOnVideoInputFormatChanged_Lcom_google_android_exoplayer2_Format_Handler:Com.Google.Android.Exoplayer2.Video.IVideoRendererEventListenerInvoker, ExoPlayer.Core\n" +
 			"n_onVideoSizeChanged:(IIIF)V:GetOnVideoSizeChanged_IIIFHandler:Com.Google.Android.Exoplayer2.Video.IVideoRendererEventListenerInvoker, ExoPlayer.Core\n" +
 			"";
-		mono.android.Runtime.register ("Com.Google.Android.Exoplayer2.Video.IVideoRendererEventListenerImplementor, ExoPlayer.Core, Version=2.8.8.0, Culture=neutral, PublicKeyToken=null", VideoRendererEventListenerImplementor.class, __md_methods);
+		mono.android.Runtime.register ("Com.Google.Android.Exoplayer2.Video.IVideoRendererEventListenerImplementor, ExoPlayer.Core", VideoRendererEventListenerImplementor.class, __md_methods);
 	}
 
 
@@ -27,7 +27,7 @@ public class VideoRendererEventListenerImplementor
 	{
 		super ();
 		if (getClass () == VideoRendererEventListenerImplementor.class)
-			mono.android.TypeManager.Activate ("Com.Google.Android.Exoplayer2.Video.IVideoRendererEventListenerImplementor, ExoPlayer.Core, Version=2.8.8.0, Culture=neutral, PublicKeyToken=null", "", this, new java.lang.Object[] {  });
+			mono.android.TypeManager.Activate ("Com.Google.Android.Exoplayer2.Video.IVideoRendererEventListenerImplementor, ExoPlayer.Core", "", this, new java.lang.Object[] {  });
 	}
 
 

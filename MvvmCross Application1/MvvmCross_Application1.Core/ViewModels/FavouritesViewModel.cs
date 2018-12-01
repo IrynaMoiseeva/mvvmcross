@@ -18,6 +18,7 @@ namespace MvvmCross_Application1.Core.ViewModels
                 return (Db.Instance);
             }
         }
+
         public static FavouritesViewModel Instance = new FavouritesViewModel();
         private static ObservableCollection<YoutubeItem> favoritesVideos = new ObservableCollection<YoutubeItem>();
         public ObservableCollection<YoutubeItem> FavoritesVideos
@@ -49,16 +50,7 @@ namespace MvvmCross_Application1.Core.ViewModels
             await InitDataAsync();
         }
 
-        public virtual void Start()
 
-        {
-            var f = 1;
-
-        }
-        public virtual void Prepare()
-        {
-            var f = 1;
-        }
         public async Task InitDataAsync()
         {
 

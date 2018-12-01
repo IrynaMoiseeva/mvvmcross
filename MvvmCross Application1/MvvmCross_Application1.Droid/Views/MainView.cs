@@ -3,9 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 
 using Android.App;
-using Android.Content;
-using Android.Graphics;
-using Android.Graphics.Drawables;
 using Android.OS;
 using Android.Views;
 using Android.Widget;
@@ -61,14 +58,13 @@ namespace MvvmCross_Application1.Droid.Views
             mDrawerlayout.AddDrawerListener(mtoogle);
             
             mtoogle.SyncState();
-            //int[] ids = new int[3] {Resource.Drawable.peppa, Resource.Drawable.peppa, Resource.Drawable.peppa };
             string[] ids = new string[] { "Resource.Drawable.peppa", "Resource.Drawable.peppa", "Resource.Drawable.peppa" };
-            // GetDrawable(Resource.Drawable.peppa);
             int id = Resources.GetIdentifier("peppa", "drawable", PackageName);
+
             navigationView = FindViewById<NavigationView>(Resource.Id.mNavigationView);
             var chan = ViewModel.Channels.ToList();
             
-        /*    for (int i = 0; i < chan.Count(); i++)
+        /*    for (int i = 0; i < chan.Count(); i++)ˆ
             {
                 var t=chan[i].Id;
                // var u = Int32.Parse(ids[i]);
@@ -155,15 +151,7 @@ namespace MvvmCross_Application1.Droid.Views
         public string MenuTitle { get; set; }
      //   public string MenuImage { get; set; }
     }
-    public class PhotoAlbum
-    {
-       /* static NavMenu[] menuitem =
-        {
-            new NavMenu() {mPhotoID = Resource.Drawable.Android1, mCaption = "Ahsan 1"},
-            new NavMenu() {mPhotoID = Resource.Drawable.Android2, mCaption = "Ahsan 2"},
-            new NavMenu() {mPhotoID = Resource.Drawable.Android3, mCaption = "Ahsan 3"},
-          */ 
-        };
+
     public class ChannelAdapter : RecyclerView.Adapter
     {
         public event EventHandler<int> ItemClick;
@@ -206,42 +194,10 @@ public class MenuItemViewHolder : RecyclerView.ViewHolder
         {
             Image = itemview.FindViewById<ImageView>(Resource.Id.image);
             Caption = itemview.FindViewById<TextView>(Resource.Id.textview);
-            itemview.Click += (sender, e) => listener(base.Position);
+            itemview.Click += (sender, e) => listener(Position);
         }
     }
 
-public class Converter
-    {
 
-
-
-        public static Drawable ConvertLayoutToImage(Context mContext, int count, int drawableId)
-        {
-            LayoutInflater inflater = LayoutInflater.From(mContext);
-            View view = inflater.Inflate(Resource.Layout.cart, null);
-            ImageView b = (ImageView)view.FindViewById(Resource.Id.icon_badge);
-            b.SetImageResource(drawableId);
-
-
-            TextView textView = (TextView)view.FindViewById(Resource.Id.badge_notification_1);
-            textView.Text = "12";//count.ToString();
-
-            view.Measure(View.MeasureSpec.MakeMeasureSpec(0, MeasureSpecMode.Unspecified),
-                      View.MeasureSpec.MakeMeasureSpec(0, MeasureSpecMode.Unspecified));
-            view.Layout(0, 0, view.MeasuredWidth, view.MeasuredHeight);
-
-            view.DrawingCacheEnabled = true;
-            view.DrawingCacheQuality = DrawingCacheQuality.High;//view.DrawingCacheEnabled=false;
-
-            //view.BuildDrawingCache();
-
-
-            Bitmap bitmap = Bitmap.CreateBitmap(view.GetDrawingCache(true));
-            Bitmap resized = Bitmap.CreateScaledBitmap(bitmap, (int)(bitmap.Width * 0.8), (int)(bitmap.Height * 0.8), false);
-
-
-            return new BitmapDrawable(mContext.Resources, resized);
-        }
-    }
 
 }

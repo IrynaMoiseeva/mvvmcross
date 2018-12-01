@@ -15,7 +15,7 @@ public class YouTubePlayer_PlaylistEventListenerImplementor
 			"n_onPlaylistEnded:()V:GetOnPlaylistEndedHandler:Com.Google.Android.Youtube.Player.IYouTubePlayerPlaylistEventListenerInvoker, Naxam.YoutubePlayerApi.Droid\n" +
 			"n_onPrevious:()V:GetOnPreviousHandler:Com.Google.Android.Youtube.Player.IYouTubePlayerPlaylistEventListenerInvoker, Naxam.YoutubePlayerApi.Droid\n" +
 			"";
-		mono.android.Runtime.register ("Com.Google.Android.Youtube.Player.IYouTubePlayerPlaylistEventListenerImplementor, Naxam.YoutubePlayerApi.Droid, Version=1.2.2.1, Culture=neutral, PublicKeyToken=null", YouTubePlayer_PlaylistEventListenerImplementor.class, __md_methods);
+		mono.android.Runtime.register ("Com.Google.Android.Youtube.Player.IYouTubePlayerPlaylistEventListenerImplementor, Naxam.YoutubePlayerApi.Droid", YouTubePlayer_PlaylistEventListenerImplementor.class, __md_methods);
 	}
 
 
@@ -23,7 +23,7 @@ public class YouTubePlayer_PlaylistEventListenerImplementor
 	{
 		super ();
 		if (getClass () == YouTubePlayer_PlaylistEventListenerImplementor.class)
-			mono.android.TypeManager.Activate ("Com.Google.Android.Youtube.Player.IYouTubePlayerPlaylistEventListenerImplementor, Naxam.YoutubePlayerApi.Droid, Version=1.2.2.1, Culture=neutral, PublicKeyToken=null", "", this, new java.lang.Object[] {  });
+			mono.android.TypeManager.Activate ("Com.Google.Android.Youtube.Player.IYouTubePlayerPlaylistEventListenerImplementor, Naxam.YoutubePlayerApi.Droid", "", this, new java.lang.Object[] {  });
 	}
 
 

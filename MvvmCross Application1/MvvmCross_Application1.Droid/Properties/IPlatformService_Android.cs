@@ -1,5 +1,4 @@
-﻿using Android.Content;
-using Android.Database.Sqlite;
+﻿using Android.Database.Sqlite;
 using MvvmCross_Application1.Core.Model;
 using MvvmCross_Application1.Core.Services;
 using SQLite;
@@ -7,16 +6,16 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MvvmCross_Application1.Droid.Properties
 {
 
+   
 
     public class PlatformService_Android : IPlatformService
     {
         public string GetPlatform() { return "android"; }
+        public string DestinationPath { get; set; }
         public SQLiteConnection con;
         public SQLiteDatabase db;
 
@@ -46,14 +45,17 @@ namespace MvvmCross_Application1.Droid.Properties
 
         }
 
-        public List<Favor12> Select()
+        //public  List<TEntity> Select<TEntity>(BaseEntity obj) where TEntity : IEntity
+        //   public abstract List<TEntity> Select<TEntity>(TEntity obj) where TEntity : IEntity;
+        //  public List<E> Select() 
+        //public string ABC<T>(T obj) where T : IDestination
+       /* public List<Favor12> Select()
         {
 
             var data = con.Table<Favor12>().ToList();
             return data;
 
-        }
-
+        }*/
 
         public void Remove(string VidId)
         {
@@ -76,6 +78,7 @@ namespace MvvmCross_Application1.Droid.Properties
             
             //string[] names = System.Reflection.Assembly.GetExecutingAssembly().GetManifestResourceNames();
             var destinationPath = Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal), "mydb.sqlite");
+            DestinationPath = destinationPath;
             using (Stream source = System.Reflection.Assembly.GetExecutingAssembly().GetManifestResourceStream("MvvmCross_Application1.Droid.Resources.raw.mydb.sqlite"))
             {
                 using (var destination = System.IO.File.Create(destinationPath))
@@ -101,7 +104,12 @@ namespace MvvmCross_Application1.Droid.Properties
             
         }
 
+        public List<Favor12> Select()
+        {
+            var data = con.Table<Favor12>().ToList();
+            return data;
 
+        }
     }
 
 }

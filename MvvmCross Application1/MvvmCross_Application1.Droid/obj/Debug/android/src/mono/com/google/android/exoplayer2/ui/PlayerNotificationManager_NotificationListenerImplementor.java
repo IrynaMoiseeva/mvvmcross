@@ -14,7 +14,7 @@ public class PlayerNotificationManager_NotificationListenerImplementor
 			"n_onNotificationCancelled:(I)V:GetOnNotificationCancelled_IHandler:Com.Google.Android.Exoplayer2.UI.PlayerNotificationManager/INotificationListenerInvoker, ExoPlayer.UI\n" +
 			"n_onNotificationStarted:(ILandroid/app/Notification;)V:GetOnNotificationStarted_ILandroid_app_Notification_Handler:Com.Google.Android.Exoplayer2.UI.PlayerNotificationManager/INotificationListenerInvoker, ExoPlayer.UI\n" +
 			"";
-		mono.android.Runtime.register ("Com.Google.Android.Exoplayer2.UI.PlayerNotificationManager+INotificationListenerImplementor, ExoPlayer.UI, Version=2.8.8.0, Culture=neutral, PublicKeyToken=null", PlayerNotificationManager_NotificationListenerImplementor.class, __md_methods);
+		mono.android.Runtime.register ("Com.Google.Android.Exoplayer2.UI.PlayerNotificationManager+INotificationListenerImplementor, ExoPlayer.UI", PlayerNotificationManager_NotificationListenerImplementor.class, __md_methods);
 	}
 
 
@@ -22,7 +22,7 @@ public class PlayerNotificationManager_NotificationListenerImplementor
 	{
 		super ();
 		if (getClass () == PlayerNotificationManager_NotificationListenerImplementor.class)
-			mono.android.TypeManager.Activate ("Com.Google.Android.Exoplayer2.UI.PlayerNotificationManager+INotificationListenerImplementor, ExoPlayer.UI, Version=2.8.8.0, Culture=neutral, PublicKeyToken=null", "", this, new java.lang.Object[] {  });
+			mono.android.TypeManager.Activate ("Com.Google.Android.Exoplayer2.UI.PlayerNotificationManager+INotificationListenerImplementor, ExoPlayer.UI", "", this, new java.lang.Object[] {  });
 	}
 
 

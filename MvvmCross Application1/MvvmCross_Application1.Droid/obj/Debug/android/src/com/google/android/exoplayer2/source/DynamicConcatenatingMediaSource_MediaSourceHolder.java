@@ -13,7 +13,7 @@ public class DynamicConcatenatingMediaSource_MediaSourceHolder
 		__md_methods = 
 			"n_compareTo:(Ljava/lang/Object;)I:GetCompareTo_Ljava_lang_Object_Handler:Java.Lang.IComparableInvoker, Mono.Android, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\n" +
 			"";
-		mono.android.Runtime.register ("Com.Google.Android.Exoplayer2.Source.DynamicConcatenatingMediaSource+MediaSourceHolder, ExoPlayer.Core, Version=2.8.8.0, Culture=neutral, PublicKeyToken=null", DynamicConcatenatingMediaSource_MediaSourceHolder.class, __md_methods);
+		mono.android.Runtime.register ("Com.Google.Android.Exoplayer2.Source.DynamicConcatenatingMediaSource+MediaSourceHolder, ExoPlayer.Core", DynamicConcatenatingMediaSource_MediaSourceHolder.class, __md_methods);
 	}
 
 
@@ -21,7 +21,7 @@ public class DynamicConcatenatingMediaSource_MediaSourceHolder
 	{
 		super ();
 		if (getClass () == DynamicConcatenatingMediaSource_MediaSourceHolder.class)
-			mono.android.TypeManager.Activate ("Com.Google.Android.Exoplayer2.Source.DynamicConcatenatingMediaSource+MediaSourceHolder, ExoPlayer.Core, Version=2.8.8.0, Culture=neutral, PublicKeyToken=null", "", this, new java.lang.Object[] {  });
+			mono.android.TypeManager.Activate ("Com.Google.Android.Exoplayer2.Source.DynamicConcatenatingMediaSource+MediaSourceHolder, ExoPlayer.Core", "", this, new java.lang.Object[] {  });
 	}
 
 

@@ -15,7 +15,7 @@ public class TransferListenerImplementor
 			"n_onTransferEnd:(Ljava/lang/Object;)V:GetOnTransferEnd_Ljava_lang_Object_Handler:Com.Google.Android.Exoplayer2.Upstream.ITransferListenerInvoker, ExoPlayer.Core\n" +
 			"n_onTransferStart:(Ljava/lang/Object;Lcom/google/android/exoplayer2/upstream/DataSpec;)V:GetOnTransferStart_Ljava_lang_Object_Lcom_google_android_exoplayer2_upstream_DataSpec_Handler:Com.Google.Android.Exoplayer2.Upstream.ITransferListenerInvoker, ExoPlayer.Core\n" +
 			"";
-		mono.android.Runtime.register ("Com.Google.Android.Exoplayer2.Upstream.ITransferListenerImplementor, ExoPlayer.Core, Version=2.8.8.0, Culture=neutral, PublicKeyToken=null", TransferListenerImplementor.class, __md_methods);
+		mono.android.Runtime.register ("Com.Google.Android.Exoplayer2.Upstream.ITransferListenerImplementor, ExoPlayer.Core", TransferListenerImplementor.class, __md_methods);
 	}
 
 
@@ -23,7 +23,7 @@ public class TransferListenerImplementor
 	{
 		super ();
 		if (getClass () == TransferListenerImplementor.class)
-			mono.android.TypeManager.Activate ("Com.Google.Android.Exoplayer2.Upstream.ITransferListenerImplementor, ExoPlayer.Core, Version=2.8.8.0, Culture=neutral, PublicKeyToken=null", "", this, new java.lang.Object[] {  });
+			mono.android.TypeManager.Activate ("Com.Google.Android.Exoplayer2.Upstream.ITransferListenerImplementor, ExoPlayer.Core", "", this, new java.lang.Object[] {  });
 	}
 
 

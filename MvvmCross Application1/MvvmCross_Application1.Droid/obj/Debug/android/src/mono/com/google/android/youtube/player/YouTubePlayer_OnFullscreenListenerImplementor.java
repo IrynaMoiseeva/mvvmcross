@@ -13,7 +13,7 @@ public class YouTubePlayer_OnFullscreenListenerImplementor
 		__md_methods = 
 			"n_onFullscreen:(Z)V:GetOnFullscreen_ZHandler:Com.Google.Android.Youtube.Player.IYouTubePlayerOnFullscreenListenerInvoker, Naxam.YoutubePlayerApi.Droid\n" +
 			"";
-		mono.android.Runtime.register ("Com.Google.Android.Youtube.Player.IYouTubePlayerOnFullscreenListenerImplementor, Naxam.YoutubePlayerApi.Droid, Version=1.2.2.1, Culture=neutral, PublicKeyToken=null", YouTubePlayer_OnFullscreenListenerImplementor.class, __md_methods);
+		mono.android.Runtime.register ("Com.Google.Android.Youtube.Player.IYouTubePlayerOnFullscreenListenerImplementor, Naxam.YoutubePlayerApi.Droid", YouTubePlayer_OnFullscreenListenerImplementor.class, __md_methods);
 	}
 
 
@@ -21,7 +21,7 @@ public class YouTubePlayer_OnFullscreenListenerImplementor
 	{
 		super ();
 		if (getClass () == YouTubePlayer_OnFullscreenListenerImplementor.class)
-			mono.android.TypeManager.Activate ("Com.Google.Android.Youtube.Player.IYouTubePlayerOnFullscreenListenerImplementor, Naxam.YoutubePlayerApi.Droid, Version=1.2.2.1, Culture=neutral, PublicKeyToken=null", "", this, new java.lang.Object[] {  });
+			mono.android.TypeManager.Activate ("Com.Google.Android.Youtube.Player.IYouTubePlayerOnFullscreenListenerImplementor, Naxam.YoutubePlayerApi.Droid", "", this, new java.lang.Object[] {  });
 	}
 
 

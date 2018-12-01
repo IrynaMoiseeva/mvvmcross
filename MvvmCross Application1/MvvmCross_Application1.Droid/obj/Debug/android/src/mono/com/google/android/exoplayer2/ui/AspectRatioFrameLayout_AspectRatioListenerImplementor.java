@@ -13,7 +13,7 @@ public class AspectRatioFrameLayout_AspectRatioListenerImplementor
 		__md_methods = 
 			"n_onAspectRatioUpdated:(FFZ)V:GetOnAspectRatioUpdated_FFZHandler:Com.Google.Android.Exoplayer2.UI.AspectRatioFrameLayout/IAspectRatioListenerInvoker, ExoPlayer.UI\n" +
 			"";
-		mono.android.Runtime.register ("Com.Google.Android.Exoplayer2.UI.AspectRatioFrameLayout+IAspectRatioListenerImplementor, ExoPlayer.UI, Version=2.8.8.0, Culture=neutral, PublicKeyToken=null", AspectRatioFrameLayout_AspectRatioListenerImplementor.class, __md_methods);
+		mono.android.Runtime.register ("Com.Google.Android.Exoplayer2.UI.AspectRatioFrameLayout+IAspectRatioListenerImplementor, ExoPlayer.UI", AspectRatioFrameLayout_AspectRatioListenerImplementor.class, __md_methods);
 	}
 
 
@@ -21,7 +21,7 @@ public class AspectRatioFrameLayout_AspectRatioListenerImplementor
 	{
 		super ();
 		if (getClass () == AspectRatioFrameLayout_AspectRatioListenerImplementor.class)
-			mono.android.TypeManager.Activate ("Com.Google.Android.Exoplayer2.UI.AspectRatioFrameLayout+IAspectRatioListenerImplementor, ExoPlayer.UI, Version=2.8.8.0, Culture=neutral, PublicKeyToken=null", "", this, new java.lang.Object[] {  });
+			mono.android.TypeManager.Activate ("Com.Google.Android.Exoplayer2.UI.AspectRatioFrameLayout+IAspectRatioListenerImplementor, ExoPlayer.UI", "", this, new java.lang.Object[] {  });
 	}
 
 

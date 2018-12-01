@@ -2,7 +2,7 @@ package mvvmcross.droid.support.v7.appcompat;
 
 
 public abstract class MvxAppCompatDialogFragment
-	extends md535be1fdfc54403626bdc010d77dba2b8.MvxEventSourceAppCompatDialogFragment
+	extends md5c44e626e43e5b8d6d42d28410a243d52.MvxEventSourceAppCompatDialogFragment
 	implements
 		mono.android.IGCUserPeer
 {
@@ -20,7 +20,7 @@ public abstract class MvxAppCompatDialogFragment
 			"n_dismissAllowingStateLoss:()V:GetDismissAllowingStateLossHandler\n" +
 			"n_dismiss:()V:GetDismissHandler\n" +
 			"";
-		mono.android.Runtime.register ("MvvmCross.Droid.Support.V7.AppCompat.MvxAppCompatDialogFragment, MvvmCross.Droid.Support.V7.AppCompat, Version=5.7.0.0, Culture=neutral, PublicKeyToken=null", MvxAppCompatDialogFragment.class, __md_methods);
+		mono.android.Runtime.register ("MvvmCross.Droid.Support.V7.AppCompat.MvxAppCompatDialogFragment, MvvmCross.Droid.Support.V7.AppCompat", MvxAppCompatDialogFragment.class, __md_methods);
 	}
 
 
@@ -28,7 +28,7 @@ public abstract class MvxAppCompatDialogFragment
 	{
 		super ();
 		if (getClass () == MvxAppCompatDialogFragment.class)
-			mono.android.TypeManager.Activate ("MvvmCross.Droid.Support.V7.AppCompat.MvxAppCompatDialogFragment, MvvmCross.Droid.Support.V7.AppCompat, Version=5.7.0.0, Culture=neutral, PublicKeyToken=null", "", this, new java.lang.Object[] {  });
+			mono.android.TypeManager.Activate ("MvvmCross.Droid.Support.V7.AppCompat.MvxAppCompatDialogFragment, MvvmCross.Droid.Support.V7.AppCompat", "", this, new java.lang.Object[] {  });
 	}
 
 

@@ -17,7 +17,7 @@ public class YouTubePlayer_PlaybackEventListenerImplementor
 			"n_onSeekTo:(I)V:GetOnSeekTo_IHandler:Com.Google.Android.Youtube.Player.IYouTubePlayerPlaybackEventListenerInvoker, Naxam.YoutubePlayerApi.Droid\n" +
 			"n_onStopped:()V:GetOnStoppedHandler:Com.Google.Android.Youtube.Player.IYouTubePlayerPlaybackEventListenerInvoker, Naxam.YoutubePlayerApi.Droid\n" +
 			"";
-		mono.android.Runtime.register ("Com.Google.Android.Youtube.Player.IYouTubePlayerPlaybackEventListenerImplementor, Naxam.YoutubePlayerApi.Droid, Version=1.2.2.1, Culture=neutral, PublicKeyToken=null", YouTubePlayer_PlaybackEventListenerImplementor.class, __md_methods);
+		mono.android.Runtime.register ("Com.Google.Android.Youtube.Player.IYouTubePlayerPlaybackEventListenerImplementor, Naxam.YoutubePlayerApi.Droid", YouTubePlayer_PlaybackEventListenerImplementor.class, __md_methods);
 	}
 
 
@@ -25,7 +25,7 @@ public class YouTubePlayer_PlaybackEventListenerImplementor
 	{
 		super ();
 		if (getClass () == YouTubePlayer_PlaybackEventListenerImplementor.class)
-			mono.android.TypeManager.Activate ("Com.Google.Android.Youtube.Player.IYouTubePlayerPlaybackEventListenerImplementor, Naxam.YoutubePlayerApi.Droid, Version=1.2.2.1, Culture=neutral, PublicKeyToken=null", "", this, new java.lang.Object[] {  });
+			mono.android.TypeManager.Activate ("Com.Google.Android.Youtube.Player.IYouTubePlayerPlaybackEventListenerImplementor, Naxam.YoutubePlayerApi.Droid", "", this, new java.lang.Object[] {  });
 	}
 
 

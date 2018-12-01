@@ -1,2 +1,0 @@
-android.app.Application
-MvvmCross_Application1.MvvmCross_Application1

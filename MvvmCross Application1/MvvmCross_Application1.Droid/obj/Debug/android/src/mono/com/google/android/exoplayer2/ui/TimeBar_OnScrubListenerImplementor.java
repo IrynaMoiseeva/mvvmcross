@@ -15,7 +15,7 @@ public class TimeBar_OnScrubListenerImplementor
 			"n_onScrubStart:(Lcom/google/android/exoplayer2/ui/TimeBar;J)V:GetOnScrubStart_Lcom_google_android_exoplayer2_ui_TimeBar_JHandler:Com.Google.Android.Exoplayer2.UI.ITimeBarOnScrubListenerInvoker, ExoPlayer.UI\n" +
 			"n_onScrubStop:(Lcom/google/android/exoplayer2/ui/TimeBar;JZ)V:GetOnScrubStop_Lcom_google_android_exoplayer2_ui_TimeBar_JZHandler:Com.Google.Android.Exoplayer2.UI.ITimeBarOnScrubListenerInvoker, ExoPlayer.UI\n" +
 			"";
-		mono.android.Runtime.register ("Com.Google.Android.Exoplayer2.UI.ITimeBarOnScrubListenerImplementor, ExoPlayer.UI, Version=2.8.8.0, Culture=neutral, PublicKeyToken=null", TimeBar_OnScrubListenerImplementor.class, __md_methods);
+		mono.android.Runtime.register ("Com.Google.Android.Exoplayer2.UI.ITimeBarOnScrubListenerImplementor, ExoPlayer.UI", TimeBar_OnScrubListenerImplementor.class, __md_methods);
 	}
 
 
@@ -23,7 +23,7 @@ public class TimeBar_OnScrubListenerImplementor
 	{
 		super ();
 		if (getClass () == TimeBar_OnScrubListenerImplementor.class)
-			mono.android.TypeManager.Activate ("Com.Google.Android.Exoplayer2.UI.ITimeBarOnScrubListenerImplementor, ExoPlayer.UI, Version=2.8.8.0, Culture=neutral, PublicKeyToken=null", "", this, new java.lang.Object[] {  });
+			mono.android.TypeManager.Activate ("Com.Google.Android.Exoplayer2.UI.ITimeBarOnScrubListenerImplementor, ExoPlayer.UI", "", this, new java.lang.Object[] {  });
 	}
 
 

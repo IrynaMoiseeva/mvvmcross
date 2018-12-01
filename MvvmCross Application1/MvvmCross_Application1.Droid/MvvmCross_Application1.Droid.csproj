@@ -29,10 +29,6 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <AndroidLinkMode>None</AndroidLinkMode>
-    <AotAssemblies>false</AotAssemblies>
-    <EnableLLVM>false</EnableLLVM>
-    <BundleAssemblies>false</BundleAssemblies>
-    <EnableProguard>false</EnableProguard>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -43,9 +39,6 @@
     <WarningLevel>4</WarningLevel>
     <AndroidManagedSymbols>true</AndroidManagedSymbols>
     <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
-    <AotAssemblies>false</AotAssemblies>
-    <EnableLLVM>false</EnableLLVM>
-    <BundleAssemblies>false</BundleAssemblies>
     <PlatformTarget>x86</PlatformTarget>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
@@ -239,6 +232,9 @@
     <Reference Include="Xamarin.Android.Support.Vector.Drawable, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Xamarin.Android.Support.Vector.Drawable.27.0.2.1\lib\MonoAndroid81\Xamarin.Android.Support.Vector.Drawable.dll</HintPath>
     </Reference>
+    <Reference Include="Lottie.Android">
+      <HintPath>..\..\packages\Com.Airbnb.Android.Lottie.2.5.4\lib\monoandroid81\Lottie.Android.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Adapters\" />
@@ -248,6 +244,8 @@
     <Folder Include="Resources\drawable-mdpi\" />
     <Folder Include="Resources\drawable-xhdpi\" />
     <Folder Include="Resources\drawable-xxhdpi\" />
+    <Folder Include="Controls\" />
+    <Folder Include="Adapters\" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\splash.png" />
@@ -270,6 +268,10 @@
     <AndroidResource Include="Resources\values-v21\styles.xml">
       <SubType>Designer</SubType>
     </AndroidResource>
+    <AndroidResource Include="Resources\layout\LottieFavoriteButton.axml" />
+    <AndroidResource Include="Resources\layout\favorite_list_item.axml" />
+    <AndroidResource Include="Resources\layout\settings_list.axml" />
+    <AndroidResource Include="Resources\layout\settings_list_item.axml" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
@@ -281,7 +283,6 @@
     <None Include="Resources\AboutResources.txt" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AdapterList.cs" />
     <Compile Include="Bootstrap\JsonPluginBootstrap.cs" />
     <Compile Include="Bootstrap\MessengerPluginBootstrap.cs" />
     <Compile Include="Converters\ImageConverter.cs" />
@@ -293,13 +294,18 @@
     <Compile Include="Views\CustomBinding.cs" />
     <Compile Include="Views\FavouritesFragment.cs" />
     <Compile Include="Views\VideoListDemoActivity.cs" />
-    <Compile Include="Views\CustomPagerAdapter.cs" />
     <Compile Include="Views\DeveloperKey.cs" />
     <Compile Include="Views\MainView.cs" />
     <Compile Include="Views\PlayVideoActivity .cs" />
+    <Compile Include="Controls\LottieFavoriteButton.cs" />
+    <Compile Include="Adapters\VideoListAdapter.cs" />
+    <Compile Include="Adapters\FavoriteListAdapter.cs" />
+    <Compile Include="Views\SettingsFragment.cs" />
+    <Compile Include="Adapters\ChannelListAdapter.cs" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\AboutAssets.txt" />
+    <AndroidAsset Include="Assets\favorite_black.json" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MvvmCross_Application1.Core\MvvmCross_Application1.Core.csproj">
@@ -373,25 +379,7 @@
     <AndroidResource Include="Resources\layout\app_bar_main.axml" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\layout\cart.axml" />
-  </ItemGroup>
-  <ItemGroup>
     <AndroidResource Include="Resources\layout\content_main.axml" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\layout\Details.axml" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\layout\FoodCart.axml" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\layout\FoodRecyclerView.axml" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\layout\ItemView.axml" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\layout\list_row2.axml" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\MainView.axml" />
@@ -441,7 +429,7 @@
     <AndroidResource Include="Resources\drawable\menu_options.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\layout\favourite_list.axml">
+    <AndroidResource Include="Resources\layout\favorite_list.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>

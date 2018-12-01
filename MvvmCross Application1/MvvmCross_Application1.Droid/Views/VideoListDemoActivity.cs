@@ -21,6 +21,7 @@ using Android.Support.V4.App;
 using MvvmCross.Droid.Views.Fragments;
 using MvvmCross.Core.ViewModels;
 using MvvmCross.Droid.Support.V7.RecyclerView;
+using MvvmCross_Application1.Droid.Adapters;
 
 namespace MvvmCross_Application1.Droid.Views
 {
@@ -74,15 +75,15 @@ namespace MvvmCross_Application1.Droid.Views
             // The request code when calling startActivityForResult to recover from an API service error.
             private const int RecoveryDialogRequest = 1;
             private const String PlaylistId = "PLFEgnf4tmQe_L3xlmtFwX8Qm5czqwCcVi";//"ECAE6B03CA849AD332";
-            private DrawerLayout mDrawerlayout;
+
             private TextView text;
             private View videoBox;
             private View closeButton;
-            private MvxListView listView;
+
             private bool isFullscreen;
             private readonly Dictionary<YouTubeThumbnailView, IYouTubeThumbnailLoader> thumbnailViewToLoaderMap;
 
-            private MyAdapter listadapter;
+            //private MyAdapter listadapter;
 
             private YouTubeThumbnailView thumbnail_channel;
             private IYouTubeThumbnailLoader thumbnailLoader;
@@ -93,9 +94,8 @@ namespace MvvmCross_Application1.Droid.Views
                 base.OnCreateView(inflater, container, savedInstanceState);
 
                 var view = this.BindingInflate(Resource.Layout.video_list_demo, null);
-                ToggleButton togglebutton = view.FindViewById<ToggleButton>(Resource.Id.FavoriteButton);
+               // ToggleButton togglebutton = view.FindViewById<ToggleButton>(Resource.Id.FavoriteButton);
 
-               // listView = view.FindViewById<MvxListView>(Resource.Id.VideoItems);
 
                 videoBox = view.FindViewById(Resource.Id.video_box);
                 closeButton = view.FindViewById(Resource.Id.close_button);
@@ -107,12 +107,8 @@ namespace MvvmCross_Application1.Droid.Views
                 thumbnail_channel = view.FindViewById<YouTubeThumbnailView>(Resource.Id.thumbnail_channel);
                 thumbnail_channel.Initialize(DeveloperKey.Key, this);
 
-                listadapter = new MyAdapter(view.Context, (IMvxAndroidBindingContext)BindingContext);
-                listadapter.ToogleIcon = Resource.Drawable.button_favorite;
-               // listView.Adapter = listadapter;
-                //--------------------------------------------
-                
-                var adapter=new recycleradapter((IMvxAndroidBindingContext)this.BindingContext);
+               
+                var adapter=new VideoListAdapter((IMvxAndroidBindingContext)this.BindingContext);
                 
                 MvxRecyclerView m = view.FindViewById<MvxRecyclerView>(Resource.Id.rvItems);
                 m.Adapter = adapter;
@@ -127,20 +123,16 @@ namespace MvvmCross_Application1.Droid.Views
 
                 //-------------------------------------------------------
 
-                var set = this.CreateBindingSet<PlayVideoFragment, PlayVideoViewModel>();
+               /* var set = this.CreateBindingSet<PlayVideoFragment, PlayVideoViewModel>();
 
                 set.Bind(this.listView).For(x => x.ItemsSource).To(x => x.YoutubeItems);
 
-                set.Apply();
+                set.Apply();*/
 
                 return view;
             }
             
-            private void listView_ItemClick(object sender, int e)
-            {
-                int photoNum = e;
-                // ViewModel.ChooseChannel(photoNum);
-            }
+
 
 
             void YouTubeThumbnailView.IOnInitializedListener.OnInitializationFailure(YouTubeThumbnailView view, YouTubeInitializationResult result)
@@ -199,7 +191,7 @@ namespace MvvmCross_Application1.Droid.Views
     }
 
 
-    public class MyAdapter : MvxAdapter,
+   /* public class MyAdapter : MvxAdapter,
     YouTubeThumbnailView.IOnInitializedListener,
     IYouTubeThumbnailLoaderOnThumbnailLoadedListener
     {
@@ -251,12 +243,12 @@ namespace MvvmCross_Application1.Droid.Views
             };
 
             //var imagebutton = convertView.FindViewById<ImageButton>(Resource.Id.mbutton);
-            var togglebutton = convertView.FindViewById<ToggleButton>(Resource.Id.FavoriteButton);
+           // var togglebutton = convertView.FindViewById<ToggleButton>(Resource.Id.FavoriteButton);
             //togglebutton.SetOnClickListener();
            // togglebutton.CheckedChange
-            togglebutton.SetBackgroundResource(ToogleIcon);
-            if (AllChecked)
-                togglebutton.Checked = true;
+         //   togglebutton.SetBackgroundResource(ToogleIcon);
+        /*    if (AllChecked)
+                //togglebutton.Checked = true;
             _saveButtonClickedHandler = (s, e) =>
             {
                 if (togglebutton.Checked)
@@ -273,11 +265,10 @@ namespace MvvmCross_Application1.Droid.Views
             };
 
                 togglebutton.Click += _saveButtonClickedHandler;
+*/
 
 
-
-
-            return convertView;
+        /*    return convertView;
         }
 
         public void Dispose()
@@ -317,5 +308,5 @@ namespace MvvmCross_Application1.Droid.Views
         void IYouTubeThumbnailLoaderOnThumbnailLoadedListener.OnThumbnailLoaded(YouTubeThumbnailView view, string videoId)
         {
         }
-    }
+    }*/
 }

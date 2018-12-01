@@ -6,8 +6,6 @@
     android:layout_height="match_parent"
     >
 
-  
-
   <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
                xmlns:local="http://schemas.android.com/apk/res-auto"
       android:id="@+id/container"
@@ -19,7 +17,7 @@
     <com.google.android.youtube.player.YouTubeThumbnailView
         android:id="@+id/thumbnail_channel"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="wrap_content"
         android:scaleType="fitXY"
        
       />
@@ -29,16 +27,10 @@
       android:layout_width="match_parent"
       android:layout_height="match_parent"
 	  local:MvxBind="ItemsSource YoutubeItems"
-      local:MvxItemTemplate="@layout/video_list_item"/>
+      local:MvxItemTemplate="@layout/video_list_item"
+        android:nestedScrollingEnabled="false"/>
 
-    <!--<MvxListView
-       android:id="@+id/VideoItems"
-       android:layout_width="match_parent"
-       android:layout_height="match_parent"
-       style="@style/dividedListStyle"
-       local:MvxBind="ItemsSource YoutubeItems"
-       local:MvxItemTemplate="@layout/video_list_item"
-      />-->
+    
 
     <LinearLayout
         android:id="@+id/video_box"

@@ -36,13 +36,9 @@ namespace MvvmCross_Application1.Droid.Views
         private const int StartStandalonePlayerRequest = 1;
         private const int ResolveServiceMissingRequest = 2;
         public const string ExtraUrlKey = "ExtraUrlKey";
-        private string VideoId;//="cdgQpa1pUUE";
-        private const string PlaylistId = "7E952A67F31C58A3";
-        private static readonly string[] VideoIds = { "cdgQpa1pUUE", "8aCYZ3gXfy8", "zMabEyrtPRg" };
+        private string VideoId;
         YouTubePlayerView player;
         private Button playVideoButton;
-        private Button playPlaylistButton;
-        private Button playVideoListButton;
 
         private EditText startIndexEditText;
         private EditText startTimeEditText;
@@ -69,13 +65,13 @@ namespace MvvmCross_Application1.Droid.Views
         public override bool OnKeyDown(Keycode keyCode, KeyEvent e)
         {
             
-            var i = 1;
             player1.SetFullscreen(false);
            
             FinishActivity(0);
-        Finish();
+            Finish();
             return true;
         }
+
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -86,47 +82,16 @@ namespace MvvmCross_Application1.Droid.Views
             SetContentView(Resource.Layout.activity_video_fullscreen);
              player= FindViewById<YouTubePlayerView>(Resource.Id.youtube_view);
             player.Initialize(DeveloperKey.Key,this);
-            
-//playVideoButton = FindViewById<Button>(Resource.Id.start_video_button);
-           // intent = YouTubeStandalonePlayer.CreateVideoIntent(this, DeveloperKey.Key, VideoId);
-            // StartActivityForResult(intent, StartStandalonePlayerRequest);
-           // StartActivity(intent);
-            //   var set = this.CreateBindingSet<PlayVideoActivity, PlayVideoViewModel>();
 
-            //  set.Bind(this).For(v => v.VideoUrl).To(vm => vm.VideoUrl).OneWay();
-
-            // set.Apply();
-            /*  playPlaylistButton = FindViewById<Button>(Resource.Id.start_playlist_button);
-              playVideoListButton = FindViewById<Button>(Resource.Id.start_video_list_button);
-              startIndexEditText = FindViewById<EditText>(Resource.Id.start_index_text);
-              startTimeEditText = FindViewById<EditText>(Resource.Id.start_time_text);
-              autoplayCheckBox = FindViewById<CheckBox>(Resource.Id.autoplay_checkbox);
-              lightboxModeCheckBox = FindViewById<CheckBox>(Resource.Id.lightbox_checkbox);*/
-
-            //playVideoButton.Click += OnClick;
-            //playPlaylistButton.Click += OnClick;
-            //playVideoListButton.Click += OnClick;
         }
 
         private void OnClick(object sender, EventArgs e)
         {
-            // int startIndex = ParseInt(startIndexEditText.Text, 0);
-            //int startTimeMillis = ParseInt(startTimeEditText.Text, 0) * 1000;
-            //bool autoplay = autoplayCheckBox.Checked;
-            //bool lightboxMode = lightboxModeCheckBox.Checked;
 
             Intent intent = null;
             if (sender == playVideoButton)
             {
                 intent = YouTubeStandalonePlayer.CreateVideoIntent(this, DeveloperKey.Key, VideoId,0,false,false);// startTimeMillis, autoplay, lightboxMode);
-            }
-            else if (sender == playPlaylistButton)
-            {
-                // intent = YouTubeStandalonePlayer.CreatePlaylistIntent(this, DeveloperKey.Key, PlaylistId, startIndex, startTimeMillis, autoplay, lightboxMode);
-            }
-            else if (sender == playVideoListButton)
-            {
-                //      intent = YouTubeStandalonePlayer.CreateVideosIntent(this, DeveloperKey.Key, VideoIds, startIndex, startTimeMillis, autoplay, lightboxMode);
             }
 
             if (intent != null)
@@ -161,8 +126,7 @@ namespace MvvmCross_Application1.Droid.Views
                     //Toast.MakeText(this, errorMessage, ToastLength.Long).Show();
                 }
             }
-          // FinishActivity(0);
-//Finish();
+          
             
         }
 

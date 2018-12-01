@@ -1,6 +1,7 @@
 ﻿using MvvmCross.Core.Navigation;
 using MvvmCross.Core.ViewModels;
 using MvvmCross.Platform;
+using MvvmCross_Application1.Core.DataBase;
 using MvvmCross_Application1.Core.Model;
 using MvvmCross_Application1.Core.Services;
 using System;
@@ -17,6 +18,7 @@ namespace MvvmCross_Application1.Core.ViewModels
         private readonly Lazy<PlayVideoViewModel> playvideoViewModel;
 
         public static IPlatformService _platformService;
+        public static IConnectionFactory connectionfactory;
 
         public PlayVideoViewModel PlayVideoViewModel => playvideoViewModel.Value;
 
@@ -32,10 +34,11 @@ namespace MvvmCross_Application1.Core.ViewModels
         }
 
 
-        public MainViewModel(IMvxNavigationService navigationService, IPlatformService platformService)
+        public MainViewModel(IMvxNavigationService navigationService, IPlatformService platformService, IConnectionFactory Connectionfactory)
         {
             _platformService = platformService;
-           
+            connectionfactory = Connectionfactory;
+
             //  _foodrecyclerViewModel = new Lazy<FoodRecyclerViewModel>(Mvx.IocConstruct<FoodRecyclerViewModel>);
             _navigationService = navigationService ?? throw new ArgumentNullException(nameof(navigationService));
 

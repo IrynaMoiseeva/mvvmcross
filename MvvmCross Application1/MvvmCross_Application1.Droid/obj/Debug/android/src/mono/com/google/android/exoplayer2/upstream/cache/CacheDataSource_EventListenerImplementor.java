@@ -14,7 +14,7 @@ public class CacheDataSource_EventListenerImplementor
 			"n_onCacheIgnored:(I)V:GetOnCacheIgnored_IHandler:Com.Google.Android.Exoplayer2.Upstream.Cache.CacheDataSource/IEventListenerInvoker, ExoPlayer.Core\n" +
 			"n_onCachedBytesRead:(JJ)V:GetOnCachedBytesRead_JJHandler:Com.Google.Android.Exoplayer2.Upstream.Cache.CacheDataSource/IEventListenerInvoker, ExoPlayer.Core\n" +
 			"";
-		mono.android.Runtime.register ("Com.Google.Android.Exoplayer2.Upstream.Cache.CacheDataSource+IEventListenerImplementor, ExoPlayer.Core, Version=2.8.8.0, Culture=neutral, PublicKeyToken=null", CacheDataSource_EventListenerImplementor.class, __md_methods);
+		mono.android.Runtime.register ("Com.Google.Android.Exoplayer2.Upstream.Cache.CacheDataSource+IEventListenerImplementor, ExoPlayer.Core", CacheDataSource_EventListenerImplementor.class, __md_methods);
 	}
 
 
@@ -22,7 +22,7 @@ public class CacheDataSource_EventListenerImplementor
 	{
 		super ();
 		if (getClass () == CacheDataSource_EventListenerImplementor.class)
-			mono.android.TypeManager.Activate ("Com.Google.Android.Exoplayer2.Upstream.Cache.CacheDataSource+IEventListenerImplementor, ExoPlayer.Core, Version=2.8.8.0, Culture=neutral, PublicKeyToken=null", "", this, new java.lang.Object[] {  });
+			mono.android.TypeManager.Activate ("Com.Google.Android.Exoplayer2.Upstream.Cache.CacheDataSource+IEventListenerImplementor, ExoPlayer.Core", "", this, new java.lang.Object[] {  });
 	}
 
 

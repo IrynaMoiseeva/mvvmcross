@@ -2,7 +2,7 @@ package mvvmcross.droid.support.v4;
 
 
 public abstract class MvxDialogFragment
-	extends md5e282a28907cd5b53d4385afa0f063890.MvxEventSourceDialogFragment
+	extends md5e6399382982fd9af435fb936e99e7be5.MvxEventSourceDialogFragment
 	implements
 		mono.android.IGCUserPeer
 {
@@ -20,7 +20,7 @@ public abstract class MvxDialogFragment
 			"n_dismissAllowingStateLoss:()V:GetDismissAllowingStateLossHandler\n" +
 			"n_dismiss:()V:GetDismissHandler\n" +
 			"";
-		mono.android.Runtime.register ("MvvmCross.Droid.Support.V4.MvxDialogFragment, MvvmCross.Droid.Support.Fragment, Version=5.7.0.0, Culture=neutral, PublicKeyToken=null", MvxDialogFragment.class, __md_methods);
+		mono.android.Runtime.register ("MvvmCross.Droid.Support.V4.MvxDialogFragment, MvvmCross.Droid.Support.Fragment", MvxDialogFragment.class, __md_methods);
 	}
 
 
@@ -28,7 +28,7 @@ public abstract class MvxDialogFragment
 	{
 		super ();
 		if (getClass () == MvxDialogFragment.class)
-			mono.android.TypeManager.Activate ("MvvmCross.Droid.Support.V4.MvxDialogFragment, MvvmCross.Droid.Support.Fragment, Version=5.7.0.0, Culture=neutral, PublicKeyToken=null", "", this, new java.lang.Object[] {  });
+			mono.android.TypeManager.Activate ("MvvmCross.Droid.Support.V4.MvxDialogFragment, MvvmCross.Droid.Support.Fragment", "", this, new java.lang.Object[] {  });
 	}
 
 

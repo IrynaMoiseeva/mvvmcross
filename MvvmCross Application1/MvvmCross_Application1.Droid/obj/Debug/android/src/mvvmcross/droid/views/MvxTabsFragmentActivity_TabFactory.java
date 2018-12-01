@@ -13,7 +13,7 @@ public class MvxTabsFragmentActivity_TabFactory
 		__md_methods = 
 			"n_createTabContent:(Ljava/lang/String;)Landroid/view/View;:GetCreateTabContent_Ljava_lang_String_Handler:Android.Widget.TabHost/ITabContentFactoryInvoker, Mono.Android, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\n" +
 			"";
-		mono.android.Runtime.register ("MvvmCross.Droid.Views.MvxTabsFragmentActivity+TabFactory, MvvmCross.Droid, Version=5.7.0.0, Culture=neutral, PublicKeyToken=null", MvxTabsFragmentActivity_TabFactory.class, __md_methods);
+		mono.android.Runtime.register ("MvvmCross.Droid.Views.MvxTabsFragmentActivity+TabFactory, MvvmCross.Droid", MvxTabsFragmentActivity_TabFactory.class, __md_methods);
 	}
 
 
@@ -21,14 +21,14 @@ public class MvxTabsFragmentActivity_TabFactory
 	{
 		super ();
 		if (getClass () == MvxTabsFragmentActivity_TabFactory.class)
-			mono.android.TypeManager.Activate ("MvvmCross.Droid.Views.MvxTabsFragmentActivity+TabFactory, MvvmCross.Droid, Version=5.7.0.0, Culture=neutral, PublicKeyToken=null", "", this, new java.lang.Object[] {  });
+			mono.android.TypeManager.Activate ("MvvmCross.Droid.Views.MvxTabsFragmentActivity+TabFactory, MvvmCross.Droid", "", this, new java.lang.Object[] {  });
 	}
 
 	public MvxTabsFragmentActivity_TabFactory (android.content.Context p0)
 	{
 		super ();
 		if (getClass () == MvxTabsFragmentActivity_TabFactory.class)
-			mono.android.TypeManager.Activate ("MvvmCross.Droid.Views.MvxTabsFragmentActivity+TabFactory, MvvmCross.Droid, Version=5.7.0.0, Culture=neutral, PublicKeyToken=null", "Android.Content.Context, Mono.Android, Version=0.0.0.0, Culture=neutral, PublicKeyToken=84e04ff9cfb79065", this, new java.lang.Object[] { p0 });
+			mono.android.TypeManager.Activate ("MvvmCross.Droid.Views.MvxTabsFragmentActivity+TabFactory, MvvmCross.Droid", "Android.Content.Context, Mono.Android", this, new java.lang.Object[] { p0 });
 	}
 
 

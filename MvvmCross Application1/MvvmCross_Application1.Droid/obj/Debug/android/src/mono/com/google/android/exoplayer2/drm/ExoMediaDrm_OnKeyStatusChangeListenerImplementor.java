@@ -13,7 +13,7 @@ public class ExoMediaDrm_OnKeyStatusChangeListenerImplementor
 		__md_methods = 
 			"n_onKeyStatusChange:(Lcom/google/android/exoplayer2/drm/ExoMediaDrm;[BLjava/util/List;Z)V:GetOnKeyStatusChange_Lcom_google_android_exoplayer2_drm_ExoMediaDrm_arrayBLjava_util_List_ZHandler:Com.Google.Android.Exoplayer2.Drm.IExoMediaDrmOnKeyStatusChangeListenerInvoker, ExoPlayer.Core\n" +
 			"";
-		mono.android.Runtime.register ("Com.Google.Android.Exoplayer2.Drm.IExoMediaDrmOnKeyStatusChangeListenerImplementor, ExoPlayer.Core, Version=2.8.8.0, Culture=neutral, PublicKeyToken=null", ExoMediaDrm_OnKeyStatusChangeListenerImplementor.class, __md_methods);
+		mono.android.Runtime.register ("Com.Google.Android.Exoplayer2.Drm.IExoMediaDrmOnKeyStatusChangeListenerImplementor, ExoPlayer.Core", ExoMediaDrm_OnKeyStatusChangeListenerImplementor.class, __md_methods);
 	}
 
 
@@ -21,7 +21,7 @@ public class ExoMediaDrm_OnKeyStatusChangeListenerImplementor
 	{
 		super ();
 		if (getClass () == ExoMediaDrm_OnKeyStatusChangeListenerImplementor.class)
-			mono.android.TypeManager.Activate ("Com.Google.Android.Exoplayer2.Drm.IExoMediaDrmOnKeyStatusChangeListenerImplementor, ExoPlayer.Core, Version=2.8.8.0, Culture=neutral, PublicKeyToken=null", "", this, new java.lang.Object[] {  });
+			mono.android.TypeManager.Activate ("Com.Google.Android.Exoplayer2.Drm.IExoMediaDrmOnKeyStatusChangeListenerImplementor, ExoPlayer.Core", "", this, new java.lang.Object[] {  });
 	}
 
 

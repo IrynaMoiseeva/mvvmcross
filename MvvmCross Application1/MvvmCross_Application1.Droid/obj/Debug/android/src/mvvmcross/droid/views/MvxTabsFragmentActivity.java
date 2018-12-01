@@ -16,7 +16,7 @@ public abstract class MvxTabsFragmentActivity
 			"n_onSaveInstanceState:(Landroid/os/Bundle;)V:GetOnSaveInstanceState_Landroid_os_Bundle_Handler\n" +
 			"n_onTabChanged:(Ljava/lang/String;)V:GetOnTabChanged_Ljava_lang_String_Handler:Android.Widget.TabHost/IOnTabChangeListenerInvoker, Mono.Android, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\n" +
 			"";
-		mono.android.Runtime.register ("MvvmCross.Droid.Views.MvxTabsFragmentActivity, MvvmCross.Droid, Version=5.7.0.0, Culture=neutral, PublicKeyToken=null", MvxTabsFragmentActivity.class, __md_methods);
+		mono.android.Runtime.register ("MvvmCross.Droid.Views.MvxTabsFragmentActivity, MvvmCross.Droid", MvxTabsFragmentActivity.class, __md_methods);
 	}
 
 
@@ -24,7 +24,7 @@ public abstract class MvxTabsFragmentActivity
 	{
 		super ();
 		if (getClass () == MvxTabsFragmentActivity.class)
-			mono.android.TypeManager.Activate ("MvvmCross.Droid.Views.MvxTabsFragmentActivity, MvvmCross.Droid, Version=5.7.0.0, Culture=neutral, PublicKeyToken=null", "", this, new java.lang.Object[] {  });
+			mono.android.TypeManager.Activate ("MvvmCross.Droid.Views.MvxTabsFragmentActivity, MvvmCross.Droid", "", this, new java.lang.Object[] {  });
 	}
 
 

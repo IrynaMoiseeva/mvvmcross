@@ -1,10 +1,11 @@
 ﻿using System;
+using SQLite;
+
 namespace MvvmCross_Application1.Core.DataBase
 {
-    public class IConnectionFactory
+    public interface IConnectionFactory
     {
-        public IConnectionFactory()
-        {
-        }
-    }
+       // SQLite.SQLiteConnection ProduceConnection();!!!
+        SQLiteAsyncConnection ProduceConnection();
+    } 
 }

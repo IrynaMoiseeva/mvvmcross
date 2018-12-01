@@ -17,20 +17,16 @@ using MvvmCross_Application1.Core.Model;
 using MvvmCross_Application1.Droid.Controls;
 using MvvmCross_Application1.Droid.Views;
 
-namespace MvvmCross_Application1.Droid
+namespace MvvmCross_Application1.Droid.Adapters
 {
-    public class VideoListAdapter : MvxRecyclerAdapter, YouTubeThumbnailView.IOnInitializedListener,
-    IYouTubeThumbnailLoaderOnThumbnailLoadedListener, ValueAnimator.IAnimatorUpdateListener
+    public class VideoListAdapter : MvxRecyclerAdapter
     {
-        private EventHandler animationButtonClickedHandler;
         public MvxViewModel ViewModel { get; set; }
         public Boolean AllChecked { get; set; } // for removed tooglebutton
         public Context mcon { get; set; }
         private readonly Dictionary<YouTubeThumbnailView, IYouTubeThumbnailLoader> thumbnailViewToLoaderMap;
         public View View;
-        private ValueAnimator animator;
         public int ToogleIcon { get; set; }
-        private ImageView imageView;
         public LottieAnimationView animationView;
 
         private LottieFavoriteButton likeButton;
@@ -53,7 +49,7 @@ namespace MvvmCross_Application1.Droid
              : base(bindingContext)
         {
 
-            thumbnailViewToLoaderMap = new Dictionary<YouTubeThumbnailView, IYouTubeThumbnailLoader>();
+          //  thumbnailViewToLoaderMap = new Dictionary<YouTubeThumbnailView, IYouTubeThumbnailLoader>();
         }
 
 
@@ -82,7 +78,7 @@ namespace MvvmCross_Application1.Droid
         }
 
 
-        public class MyViewHolder : MvxRecyclerViewHolder//RecyclerView.ViewHolder
+        public class MyViewHolder : MvxRecyclerViewHolder
         {
 
             public TextView title;
@@ -90,21 +86,22 @@ namespace MvvmCross_Application1.Droid
             public ImageView imageView;
             public LottieFavoriteButton likebutton;
 
-            public MyViewHolder(View itemView, IMvxAndroidBindingContext context):base(itemView,context)
+
+            public MyViewHolder(View itemView, IMvxAndroidBindingContext context) : base(itemView, context)
 
             {
-                title  = itemView.FindViewById<TextView>(Resource.Id.titletext);
-                published_date=itemView.FindViewById<TextView>(Resource.Id.published_date);
+                title = itemView.FindViewById<TextView>(Resource.Id.titletext);
+                published_date = itemView.FindViewById<TextView>(Resource.Id.published_date);
                 imageView = itemView.FindViewById<ImageView>(Resource.Id.thumbnail);
                 likebutton = itemView.FindViewById<LottieFavoriteButton>(Resource.Id.favorite);
             }
         }
-       
 
-        public  override void OnBindViewHolder(RecyclerView.ViewHolder holder, int position)
+
+        public override void OnBindViewHolder(RecyclerView.ViewHolder holder, int position)
         {
 
-            YoutubeItem video = (GetItem(position)) as YoutubeItem; 
+            YoutubeItem video = (GetItem(position)) as YoutubeItem;
 
             MyViewHolder myHolder = holder as MyViewHolder;
 
@@ -125,57 +122,17 @@ namespace MvvmCross_Application1.Droid
                 mcon.StartActivity(intent);
             };
 
-
-
             likeButton = View.FindViewById<LottieFavoriteButton>(Resource.Id.favorite);
-            likeButton.OnClickCommandLike = video.CheckCommand;
+
             likeButton.OnClickCommandDisLike = video.UnCheckCommand;
-           
+            likeButton.OnClickCommandLike = video.CheckCommand;
+
             if (video.IsLiked)
                 likeButton.LazyAnimationProgress = 0.8f;
             else
                 likeButton.LazyAnimationProgress = 0.0f;
-           
+
         }
-
-       /* public void startCheckAnimation()
-        {
-            animator.AddUpdateListener(new OnAnimationClickListener(animationView));
-
-
-            if (animationView.Progress == 0.0f)
-
-                animator.Start();
-            else
-            {
-                animationView.Progress = 0.0f;
-
-               
-                animator.Cancel();
-                animator.RemoveAllListeners();
-               
-            }
-           
-        }
-
-
-        public class OnAnimationClickListener : Java.Lang.Object, ValueAnimator.IAnimatorUpdateListener
-        {
-            private LottieAnimationView animationView;
-            public OnAnimationClickListener(LottieAnimationView animationView)
-            {
-                this.animationView = animationView;
-            }
-
-            public void OnAnimationUpdate(ValueAnimator animator)
-            {
-
-                animationView.Progress = (float)animator.AnimatedValue;
-            }
-        }
-*/
-
-
 
 
         protected override void OnItemsSourceCollectionChanged(object sender, NotifyCollectionChangedEventArgs e)
@@ -184,59 +141,6 @@ namespace MvvmCross_Application1.Droid
         }
 
 
-
-
-
-        protected override View InflateViewForHolder(ViewGroup parent, int viewType, IMvxAndroidBindingContext bindingContext)
-        {
-            var view = base.InflateViewForHolder(parent, viewType, bindingContext);
-
-            // var clickablePiece1 = view.FindViewById<View>(Resource.Id.clickable_piece1);
-            // var clickablePiece2 = view.FindViewById<View>(Resource.Id.clickable_piece2);
-
-            // clickablePiece1.SetOnClickListener(this);
-            // clickablePiece2.SetOnClickListener(this);
-
-            return view;
-        }
-        public void ReleaseLoaders()
-        {
-            foreach (IYouTubeThumbnailLoader loader in thumbnailViewToLoaderMap.Values)
-            {
-                loader.Release();
-            }
-        }
-        void YouTubeThumbnailView.IOnInitializedListener.OnInitializationFailure(YouTubeThumbnailView view, YouTubeInitializationResult result)
-        {
-            view.SetImageResource(Resource.Drawable.cart1);// no_thumbnail
-        }
-
-        void YouTubeThumbnailView.IOnInitializedListener.OnInitializationSuccess(YouTubeThumbnailView view, IYouTubeThumbnailLoader loader)
-        {
-            loader.SetOnThumbnailLoadedListener(this);
-
-            if (!thumbnailViewToLoaderMap.ContainsKey(view))
-                thumbnailViewToLoaderMap.Add(view, loader);
-
-            view.SetImageResource(Resource.Drawable.cart1);//loading_thumbnail
-                                                           // var videoId = (string)view.Tag;
-                                                           //loader.SetVideo(videoId);
-        }
-
-        void IYouTubeThumbnailLoaderOnThumbnailLoadedListener.OnThumbnailError(YouTubeThumbnailView view, YouTubeThumbnailLoaderErrorReason errorReason)
-        {
-            view.SetImageResource(Resource.Drawable.cart1);//no_thumbnail
-        }
-
-        void IYouTubeThumbnailLoaderOnThumbnailLoadedListener.OnThumbnailLoaded(YouTubeThumbnailView view, string videoId)
-        {
-
-        }
-
-        public void OnAnimationUpdate(ValueAnimator animation)
-        {
-            throw new NotImplementedException();
-        }
     }
 
 

@@ -1,123 +1,34 @@
-C:\Users\User\source\Repos\MvvmCross Application1\MvvmCross Application1\MvvmCross_Application1.Core\bin\Debug\MvvmCross_Application1.Core.dll.config
-C:\Users\User\source\Repos\MvvmCross Application1\MvvmCross Application1\MvvmCross_Application1.Core\bin\Debug\MvvmCross_Application1.Core.dll
-C:\Users\User\source\Repos\MvvmCross Application1\MvvmCross Application1\MvvmCross_Application1.Core\bin\Debug\MvvmCross_Application1.Core.pdb
-C:\Users\User\source\Repos\MvvmCross Application1\MvvmCross Application1\MvvmCross_Application1.Core\bin\Debug\MvvmCross.Binding.dll
-C:\Users\User\source\Repos\MvvmCross Application1\MvvmCross Application1\MvvmCross_Application1.Core\bin\Debug\MvvmCross.Core.dll
-C:\Users\User\source\Repos\MvvmCross Application1\MvvmCross Application1\MvvmCross_Application1.Core\bin\Debug\MvvmCross.Localization.dll
-C:\Users\User\source\Repos\MvvmCross Application1\MvvmCross Application1\MvvmCross_Application1.Core\bin\Debug\MvvmCross.Platform.dll
-C:\Users\User\source\Repos\MvvmCross Application1\MvvmCross Application1\MvvmCross_Application1.Core\bin\Debug\MvvmCross.Plugins.Messenger.dll
-C:\Users\User\source\Repos\MvvmCross Application1\MvvmCross Application1\MvvmCross_Application1.Core\bin\Debug\Newtonsoft.Json.dll
-C:\Users\User\source\Repos\MvvmCross Application1\MvvmCross Application1\MvvmCross_Application1.Core\bin\Debug\SQLite-net.dll
-C:\Users\User\source\Repos\MvvmCross Application1\MvvmCross Application1\MvvmCross_Application1.Core\bin\Debug\SQLitePCLRaw.batteries_green.dll
-C:\Users\User\source\Repos\MvvmCross Application1\MvvmCross Application1\MvvmCross_Application1.Core\bin\Debug\SQLitePCLRaw.batteries_v2.dll
-C:\Users\User\source\Repos\MvvmCross Application1\MvvmCross Application1\MvvmCross_Application1.Core\bin\Debug\SQLitePCLRaw.core.dll
-C:\Users\User\source\Repos\MvvmCross Application1\MvvmCross Application1\MvvmCross_Application1.Core\bin\Debug\System.Net.Http.Extensions.dll
-C:\Users\User\source\Repos\MvvmCross Application1\MvvmCross Application1\MvvmCross_Application1.Core\bin\Debug\System.Net.Http.Primitives.dll
-C:\Users\User\source\Repos\MvvmCross Application1\MvvmCross Application1\MvvmCross_Application1.Core\bin\Debug\MvvmCross.Binding.pdb
-C:\Users\User\source\Repos\MvvmCross Application1\MvvmCross Application1\MvvmCross_Application1.Core\bin\Debug\MvvmCross.Core.pdb
-C:\Users\User\source\Repos\MvvmCross Application1\MvvmCross Application1\MvvmCross_Application1.Core\bin\Debug\MvvmCross.Localization.pdb
-C:\Users\User\source\Repos\MvvmCross Application1\MvvmCross Application1\MvvmCross_Application1.Core\bin\Debug\MvvmCross.Platform.pdb
-C:\Users\User\source\Repos\MvvmCross Application1\MvvmCross Application1\MvvmCross_Application1.Core\bin\Debug\MvvmCross.Plugins.Messenger.pdb
-C:\Users\User\source\Repos\MvvmCross Application1\MvvmCross Application1\MvvmCross_Application1.Core\bin\Debug\Newtonsoft.Json.xml
-C:\Users\User\source\Repos\MvvmCross Application1\MvvmCross Application1\MvvmCross_Application1.Core\bin\Debug\SQLite-net.pdb
-C:\Users\User\source\Repos\MvvmCross Application1\MvvmCross Application1\MvvmCross_Application1.Core\bin\Debug\SQLite-net.xml
-C:\Users\User\source\Repos\MvvmCross Application1\MvvmCross Application1\MvvmCross_Application1.Core\bin\Debug\System.Net.Http.Extensions.xml
-C:\Users\User\source\Repos\MvvmCross Application1\MvvmCross Application1\MvvmCross_Application1.Core\bin\Debug\System.Net.Http.Primitives.xml
-C:\Users\User\source\Repos\MvvmCross Application1\MvvmCross Application1\MvvmCross_Application1.Core\obj\Debug\MvvmCross_Application1.Core.csproj.App.config
-C:\Users\User\source\Repos\MvvmCross Application1\MvvmCross Application1\MvvmCross_Application1.Core\obj\Debug\MvvmCross_Application1.Core.csprojResolveAssemblyReference.cache
-C:\Users\User\source\Repos\MvvmCross Application1\MvvmCross Application1\MvvmCross_Application1.Core\obj\Debug\MvvmCross_Application1.Core.csproj.CoreCompileInputs.cache
-C:\Users\User\source\Repos\MvvmCross Application1\MvvmCross Application1\MvvmCross_Application1.Core\obj\Debug\MvvmCross_Application1.Core.csproj.CopyComplete
-C:\Users\User\source\Repos\MvvmCross Application1\MvvmCross Application1\MvvmCross_Application1.Core\obj\Debug\MvvmCross_Application1.Core.dll
-C:\Users\User\source\Repos\MvvmCross Application1\MvvmCross Application1\MvvmCross_Application1.Core\obj\Debug\MvvmCross_Application1.Core.pdb
-C:\Users\User\mvvmcross_xamarin_android-master\mvvmcross_xamarin_android-master\MvvmCross Application1\MvvmCross_Application1.Core\obj\Debug\MvvmCross_Application1.Core.csproj.App.config
-C:\Users\User\mvvmcross_xamarin_android-master\mvvmcross_xamarin_android-master\MvvmCross Application1\MvvmCross_Application1.Core\obj\Debug\MvvmCross_Application1.Core.csprojAssemblyReference.cache
-C:\Users\User\mvvmcross_xamarin_android-master\mvvmcross_xamarin_android-master\MvvmCross Application1\MvvmCross_Application1.Core\obj\Debug\MvvmCross_Application1.Core.csproj.CoreCompileInputs.cache
-C:\Users\User\mvvmcross_xamarin_android-master\mvvmcross_xamarin_android-master\MvvmCross Application1\MvvmCross_Application1.Core\obj\Debug\MvvmCross_Application1.Core.dll
-C:\Users\User\mvvmcross_xamarin_android-master\mvvmcross_xamarin_android-master\MvvmCross Application1\MvvmCross_Application1.Core\obj\Debug\MvvmCross_Application1.Core.pdb
-C:\Users\User\mvvmcross_xamarin_android-master\mvvmcross_xamarin_android-master\MvvmCross Application1\MvvmCross_Application1.Core\bin\Debug\MvvmCross_Application1.Core.dll.config
-C:\Users\User\mvvmcross_xamarin_android-master\mvvmcross_xamarin_android-master\MvvmCross Application1\MvvmCross_Application1.Core\bin\Debug\MvvmCross_Application1.Core.dll
-C:\Users\User\mvvmcross_xamarin_android-master\mvvmcross_xamarin_android-master\MvvmCross Application1\MvvmCross_Application1.Core\bin\Debug\MvvmCross_Application1.Core.pdb
-C:\Users\User\mvvmcross_xamarin_android-master\mvvmcross_xamarin_android-master\MvvmCross Application1\MvvmCross_Application1.Core\bin\Debug\MvvmCross.Binding.dll
-C:\Users\User\mvvmcross_xamarin_android-master\mvvmcross_xamarin_android-master\MvvmCross Application1\MvvmCross_Application1.Core\bin\Debug\MvvmCross.Core.dll
-C:\Users\User\mvvmcross_xamarin_android-master\mvvmcross_xamarin_android-master\MvvmCross Application1\MvvmCross_Application1.Core\bin\Debug\MvvmCross.Localization.dll
-C:\Users\User\mvvmcross_xamarin_android-master\mvvmcross_xamarin_android-master\MvvmCross Application1\MvvmCross_Application1.Core\bin\Debug\MvvmCross.Platform.dll
-C:\Users\User\mvvmcross_xamarin_android-master\mvvmcross_xamarin_android-master\MvvmCross Application1\MvvmCross_Application1.Core\bin\Debug\MvvmCross.Plugins.Messenger.dll
-C:\Users\User\mvvmcross_xamarin_android-master\mvvmcross_xamarin_android-master\MvvmCross Application1\MvvmCross_Application1.Core\bin\Debug\Newtonsoft.Json.dll
-C:\Users\User\mvvmcross_xamarin_android-master\mvvmcross_xamarin_android-master\MvvmCross Application1\MvvmCross_Application1.Core\bin\Debug\SQLite-net.dll
-C:\Users\User\mvvmcross_xamarin_android-master\mvvmcross_xamarin_android-master\MvvmCross Application1\MvvmCross_Application1.Core\bin\Debug\SQLitePCLRaw.batteries_green.dll
-C:\Users\User\mvvmcross_xamarin_android-master\mvvmcross_xamarin_android-master\MvvmCross Application1\MvvmCross_Application1.Core\bin\Debug\SQLitePCLRaw.batteries_v2.dll
-C:\Users\User\mvvmcross_xamarin_android-master\mvvmcross_xamarin_android-master\MvvmCross Application1\MvvmCross_Application1.Core\bin\Debug\SQLitePCLRaw.core.dll
-C:\Users\User\mvvmcross_xamarin_android-master\mvvmcross_xamarin_android-master\MvvmCross Application1\MvvmCross_Application1.Core\bin\Debug\System.Net.Http.Extensions.dll
-C:\Users\User\mvvmcross_xamarin_android-master\mvvmcross_xamarin_android-master\MvvmCross Application1\MvvmCross_Application1.Core\bin\Debug\System.Net.Http.Primitives.dll
-C:\Users\User\mvvmcross_xamarin_android-master\mvvmcross_xamarin_android-master\MvvmCross Application1\MvvmCross_Application1.Core\bin\Debug\MvvmCross.Binding.pdb
-C:\Users\User\mvvmcross_xamarin_android-master\mvvmcross_xamarin_android-master\MvvmCross Application1\MvvmCross_Application1.Core\bin\Debug\MvvmCross.Core.pdb
-C:\Users\User\mvvmcross_xamarin_android-master\mvvmcross_xamarin_android-master\MvvmCross Application1\MvvmCross_Application1.Core\bin\Debug\MvvmCross.Localization.pdb
-C:\Users\User\mvvmcross_xamarin_android-master\mvvmcross_xamarin_android-master\MvvmCross Application1\MvvmCross_Application1.Core\bin\Debug\MvvmCross.Platform.pdb
-C:\Users\User\mvvmcross_xamarin_android-master\mvvmcross_xamarin_android-master\MvvmCross Application1\MvvmCross_Application1.Core\bin\Debug\MvvmCross.Plugins.Messenger.pdb
-C:\Users\User\mvvmcross_xamarin_android-master\mvvmcross_xamarin_android-master\MvvmCross Application1\MvvmCross_Application1.Core\bin\Debug\Newtonsoft.Json.xml
-C:\Users\User\mvvmcross_xamarin_android-master\mvvmcross_xamarin_android-master\MvvmCross Application1\MvvmCross_Application1.Core\bin\Debug\SQLite-net.pdb
-C:\Users\User\mvvmcross_xamarin_android-master\mvvmcross_xamarin_android-master\MvvmCross Application1\MvvmCross_Application1.Core\bin\Debug\SQLite-net.xml
-C:\Users\User\mvvmcross_xamarin_android-master\mvvmcross_xamarin_android-master\MvvmCross Application1\MvvmCross_Application1.Core\bin\Debug\System.Net.Http.Extensions.xml
-C:\Users\User\mvvmcross_xamarin_android-master\mvvmcross_xamarin_android-master\MvvmCross Application1\MvvmCross_Application1.Core\bin\Debug\System.Net.Http.Primitives.xml
-C:\Users\User\mvvmcross_xamarin_android-master\mvvmcross_xamarin_android-master\MvvmCross Application1\MvvmCross_Application1.Core\obj\Debug\MvvmCross_Application1.Core.csproj.CopyComplete
-C:\Users\User\mvvm\mvvmcross_xamarin_android-master\MvvmCross Application1\MvvmCross_Application1.Core\bin\Debug\MvvmCross_Application1.Core.dll.config
-C:\Users\User\mvvm\mvvmcross_xamarin_android-master\MvvmCross Application1\MvvmCross_Application1.Core\bin\Debug\MvvmCross_Application1.Core.dll
-C:\Users\User\mvvm\mvvmcross_xamarin_android-master\MvvmCross Application1\MvvmCross_Application1.Core\bin\Debug\MvvmCross_Application1.Core.pdb
-C:\Users\User\mvvm\mvvmcross_xamarin_android-master\MvvmCross Application1\MvvmCross_Application1.Core\bin\Debug\MvvmCross.Binding.dll
-C:\Users\User\mvvm\mvvmcross_xamarin_android-master\MvvmCross Application1\MvvmCross_Application1.Core\bin\Debug\MvvmCross.Core.dll
-C:\Users\User\mvvm\mvvmcross_xamarin_android-master\MvvmCross Application1\MvvmCross_Application1.Core\bin\Debug\MvvmCross.Localization.dll
-C:\Users\User\mvvm\mvvmcross_xamarin_android-master\MvvmCross Application1\MvvmCross_Application1.Core\bin\Debug\MvvmCross.Platform.dll
-C:\Users\User\mvvm\mvvmcross_xamarin_android-master\MvvmCross Application1\MvvmCross_Application1.Core\bin\Debug\MvvmCross.Plugins.Messenger.dll
-C:\Users\User\mvvm\mvvmcross_xamarin_android-master\MvvmCross Application1\MvvmCross_Application1.Core\bin\Debug\Newtonsoft.Json.dll
-C:\Users\User\mvvm\mvvmcross_xamarin_android-master\MvvmCross Application1\MvvmCross_Application1.Core\bin\Debug\SQLite-net.dll
-C:\Users\User\mvvm\mvvmcross_xamarin_android-master\MvvmCross Application1\MvvmCross_Application1.Core\bin\Debug\SQLitePCLRaw.batteries_green.dll
-C:\Users\User\mvvm\mvvmcross_xamarin_android-master\MvvmCross Application1\MvvmCross_Application1.Core\bin\Debug\SQLitePCLRaw.batteries_v2.dll
-C:\Users\User\mvvm\mvvmcross_xamarin_android-master\MvvmCross Application1\MvvmCross_Application1.Core\bin\Debug\SQLitePCLRaw.core.dll
-C:\Users\User\mvvm\mvvmcross_xamarin_android-master\MvvmCross Application1\MvvmCross_Application1.Core\bin\Debug\System.Net.Http.Extensions.dll
-C:\Users\User\mvvm\mvvmcross_xamarin_android-master\MvvmCross Application1\MvvmCross_Application1.Core\bin\Debug\System.Net.Http.Primitives.dll
-C:\Users\User\mvvm\mvvmcross_xamarin_android-master\MvvmCross Application1\MvvmCross_Application1.Core\bin\Debug\MvvmCross.Binding.pdb
-C:\Users\User\mvvm\mvvmcross_xamarin_android-master\MvvmCross Application1\MvvmCross_Application1.Core\bin\Debug\MvvmCross.Core.pdb
-C:\Users\User\mvvm\mvvmcross_xamarin_android-master\MvvmCross Application1\MvvmCross_Application1.Core\bin\Debug\MvvmCross.Localization.pdb
-C:\Users\User\mvvm\mvvmcross_xamarin_android-master\MvvmCross Application1\MvvmCross_Application1.Core\bin\Debug\MvvmCross.Platform.pdb
-C:\Users\User\mvvm\mvvmcross_xamarin_android-master\MvvmCross Application1\MvvmCross_Application1.Core\bin\Debug\MvvmCross.Plugins.Messenger.pdb
-C:\Users\User\mvvm\mvvmcross_xamarin_android-master\MvvmCross Application1\MvvmCross_Application1.Core\bin\Debug\Newtonsoft.Json.xml
-C:\Users\User\mvvm\mvvmcross_xamarin_android-master\MvvmCross Application1\MvvmCross_Application1.Core\bin\Debug\SQLite-net.pdb
-C:\Users\User\mvvm\mvvmcross_xamarin_android-master\MvvmCross Application1\MvvmCross_Application1.Core\bin\Debug\SQLite-net.xml
-C:\Users\User\mvvm\mvvmcross_xamarin_android-master\MvvmCross Application1\MvvmCross_Application1.Core\bin\Debug\System.Net.Http.Extensions.xml
-C:\Users\User\mvvm\mvvmcross_xamarin_android-master\MvvmCross Application1\MvvmCross_Application1.Core\bin\Debug\System.Net.Http.Primitives.xml
-C:\Users\User\mvvm\mvvmcross_xamarin_android-master\MvvmCross Application1\MvvmCross_Application1.Core\obj\Debug\MvvmCross_Application1.Core.csproj.App.config
-C:\Users\User\mvvm\mvvmcross_xamarin_android-master\MvvmCross Application1\MvvmCross_Application1.Core\obj\Debug\MvvmCross_Application1.Core.csprojAssemblyReference.cache
-C:\Users\User\mvvm\mvvmcross_xamarin_android-master\MvvmCross Application1\MvvmCross_Application1.Core\obj\Debug\MvvmCross_Application1.Core.csproj.CoreCompileInputs.cache
-C:\Users\User\mvvm\mvvmcross_xamarin_android-master\MvvmCross Application1\MvvmCross_Application1.Core\obj\Debug\MvvmCross_Application1.Core.csproj.CopyComplete
-C:\Users\User\mvvm\mvvmcross_xamarin_android-master\MvvmCross Application1\MvvmCross_Application1.Core\obj\Debug\MvvmCross_Application1.Core.dll
-C:\Users\User\mvvm\mvvmcross_xamarin_android-master\MvvmCross Application1\MvvmCross_Application1.Core\obj\Debug\MvvmCross_Application1.Core.pdb
-C:\Users\User\mvvm\mvvm\MvvmCross Application1\MvvmCross_Application1.Core\bin\Debug\MvvmCross_Application1.Core.dll.config
-C:\Users\User\mvvm\mvvm\MvvmCross Application1\MvvmCross_Application1.Core\bin\Debug\MvvmCross_Application1.Core.dll
-C:\Users\User\mvvm\mvvm\MvvmCross Application1\MvvmCross_Application1.Core\bin\Debug\MvvmCross_Application1.Core.pdb
-C:\Users\User\mvvm\mvvm\MvvmCross Application1\MvvmCross_Application1.Core\bin\Debug\Autofac.dll
-C:\Users\User\mvvm\mvvm\MvvmCross Application1\MvvmCross_Application1.Core\bin\Debug\Autofac.Extras.MvvmCross.dll
-C:\Users\User\mvvm\mvvm\MvvmCross Application1\MvvmCross_Application1.Core\bin\Debug\MvvmCross.Binding.dll
-C:\Users\User\mvvm\mvvm\MvvmCross Application1\MvvmCross_Application1.Core\bin\Debug\MvvmCross.Core.dll
-C:\Users\User\mvvm\mvvm\MvvmCross Application1\MvvmCross_Application1.Core\bin\Debug\MvvmCross.Localization.dll
-C:\Users\User\mvvm\mvvm\MvvmCross Application1\MvvmCross_Application1.Core\bin\Debug\MvvmCross.Platform.dll
-C:\Users\User\mvvm\mvvm\MvvmCross Application1\MvvmCross_Application1.Core\bin\Debug\MvvmCross.Plugins.Messenger.dll
-C:\Users\User\mvvm\mvvm\MvvmCross Application1\MvvmCross_Application1.Core\bin\Debug\Newtonsoft.Json.dll
-C:\Users\User\mvvm\mvvm\MvvmCross Application1\MvvmCross_Application1.Core\bin\Debug\SQLite.Net.dll
-C:\Users\User\mvvm\mvvm\MvvmCross Application1\MvvmCross_Application1.Core\bin\Debug\System.Net.Http.Extensions.dll
-C:\Users\User\mvvm\mvvm\MvvmCross Application1\MvvmCross_Application1.Core\bin\Debug\System.Net.Http.Primitives.dll
-C:\Users\User\mvvm\mvvm\MvvmCross Application1\MvvmCross_Application1.Core\bin\Debug\Autofac.xml
-C:\Users\User\mvvm\mvvm\MvvmCross Application1\MvvmCross_Application1.Core\bin\Debug\Autofac.Extras.MvvmCross.xml
-C:\Users\User\mvvm\mvvm\MvvmCross Application1\MvvmCross_Application1.Core\bin\Debug\MvvmCross.Binding.pdb
-C:\Users\User\mvvm\mvvm\MvvmCross Application1\MvvmCross_Application1.Core\bin\Debug\MvvmCross.Core.pdb
-C:\Users\User\mvvm\mvvm\MvvmCross Application1\MvvmCross_Application1.Core\bin\Debug\MvvmCross.Localization.pdb
-C:\Users\User\mvvm\mvvm\MvvmCross Application1\MvvmCross_Application1.Core\bin\Debug\MvvmCross.Platform.pdb
-C:\Users\User\mvvm\mvvm\MvvmCross Application1\MvvmCross_Application1.Core\bin\Debug\MvvmCross.Plugins.Messenger.pdb
-C:\Users\User\mvvm\mvvm\MvvmCross Application1\MvvmCross_Application1.Core\bin\Debug\Newtonsoft.Json.xml
-C:\Users\User\mvvm\mvvm\MvvmCross Application1\MvvmCross_Application1.Core\bin\Debug\System.Net.Http.Extensions.xml
-C:\Users\User\mvvm\mvvm\MvvmCross Application1\MvvmCross_Application1.Core\bin\Debug\System.Net.Http.Primitives.xml
-C:\Users\User\mvvm\mvvm\MvvmCross Application1\MvvmCross_Application1.Core\obj\Debug\MvvmCross_Application1.Core.csproj.App.config
-C:\Users\User\mvvm\mvvm\MvvmCross Application1\MvvmCross_Application1.Core\obj\Debug\MvvmCross_Application1.Core.csprojAssemblyReference.cache
-C:\Users\User\mvvm\mvvm\MvvmCross Application1\MvvmCross_Application1.Core\obj\Debug\MvvmCross_Application1.Core.csproj.CoreCompileInputs.cache
-C:\Users\User\mvvm\mvvm\MvvmCross Application1\MvvmCross_Application1.Core\obj\Debug\MvvmCross_Application1.Core.csproj.CopyComplete
-C:\Users\User\mvvm\mvvm\MvvmCross Application1\MvvmCross_Application1.Core\obj\Debug\MvvmCross_Application1.Core.dll
-C:\Users\User\mvvm\mvvm\MvvmCross Application1\MvvmCross_Application1.Core\obj\Debug\MvvmCross_Application1.Core.pdb
+/Users/irina/Documents/mvvmcross/MvvmCross Application1/MvvmCross_Application1.Core/bin/Debug/MvvmCross_Application1.Core.dll.config
+/Users/irina/Documents/mvvmcross/MvvmCross Application1/MvvmCross_Application1.Core/bin/Debug/MvvmCross_Application1.Core.dll
+/Users/irina/Documents/mvvmcross/MvvmCross Application1/MvvmCross_Application1.Core/bin/Debug/MvvmCross_Application1.Core.pdb
+/Users/irina/Documents/mvvmcross/MvvmCross Application1/MvvmCross_Application1.Core/bin/Debug/Autofac.dll
+/Users/irina/Documents/mvvmcross/MvvmCross Application1/MvvmCross_Application1.Core/bin/Debug/Autofac.Extras.MvvmCross.dll
+/Users/irina/Documents/mvvmcross/MvvmCross Application1/MvvmCross_Application1.Core/bin/Debug/MvvmCross.Binding.dll
+/Users/irina/Documents/mvvmcross/MvvmCross Application1/MvvmCross_Application1.Core/bin/Debug/MvvmCross.Core.dll
+/Users/irina/Documents/mvvmcross/MvvmCross Application1/MvvmCross_Application1.Core/bin/Debug/MvvmCross.Localization.dll
+/Users/irina/Documents/mvvmcross/MvvmCross Application1/MvvmCross_Application1.Core/bin/Debug/MvvmCross.Platform.dll
+/Users/irina/Documents/mvvmcross/MvvmCross Application1/MvvmCross_Application1.Core/bin/Debug/MvvmCross.Plugins.Messenger.dll
+/Users/irina/Documents/mvvmcross/MvvmCross Application1/MvvmCross_Application1.Core/bin/Debug/Newtonsoft.Json.dll
+/Users/irina/Documents/mvvmcross/MvvmCross Application1/MvvmCross_Application1.Core/bin/Debug/SQLite-net.dll
+/Users/irina/Documents/mvvmcross/MvvmCross Application1/MvvmCross_Application1.Core/bin/Debug/SQLite.Net.dll
+/Users/irina/Documents/mvvmcross/MvvmCross Application1/MvvmCross_Application1.Core/bin/Debug/SQLitePCLRaw.batteries_green.dll
+/Users/irina/Documents/mvvmcross/MvvmCross Application1/MvvmCross_Application1.Core/bin/Debug/SQLitePCLRaw.batteries_v2.dll
+/Users/irina/Documents/mvvmcross/MvvmCross Application1/MvvmCross_Application1.Core/bin/Debug/SQLitePCLRaw.core.dll
+/Users/irina/Documents/mvvmcross/MvvmCross Application1/MvvmCross_Application1.Core/bin/Debug/System.Net.Http.Extensions.dll
+/Users/irina/Documents/mvvmcross/MvvmCross Application1/MvvmCross_Application1.Core/bin/Debug/System.Net.Http.Primitives.dll
+/Users/irina/Documents/mvvmcross/MvvmCross Application1/MvvmCross_Application1.Core/bin/Debug/Autofac.xml
+/Users/irina/Documents/mvvmcross/MvvmCross Application1/MvvmCross_Application1.Core/bin/Debug/Autofac.Extras.MvvmCross.xml
+/Users/irina/Documents/mvvmcross/MvvmCross Application1/MvvmCross_Application1.Core/bin/Debug/MvvmCross.Binding.pdb
+/Users/irina/Documents/mvvmcross/MvvmCross Application1/MvvmCross_Application1.Core/bin/Debug/MvvmCross.Core.pdb
+/Users/irina/Documents/mvvmcross/MvvmCross Application1/MvvmCross_Application1.Core/bin/Debug/MvvmCross.Localization.pdb
+/Users/irina/Documents/mvvmcross/MvvmCross Application1/MvvmCross_Application1.Core/bin/Debug/MvvmCross.Platform.pdb
+/Users/irina/Documents/mvvmcross/MvvmCross Application1/MvvmCross_Application1.Core/bin/Debug/MvvmCross.Plugins.Messenger.pdb
+/Users/irina/Documents/mvvmcross/MvvmCross Application1/MvvmCross_Application1.Core/bin/Debug/Newtonsoft.Json.xml
+/Users/irina/Documents/mvvmcross/MvvmCross Application1/MvvmCross_Application1.Core/bin/Debug/System.Net.Http.Extensions.xml
+/Users/irina/Documents/mvvmcross/MvvmCross Application1/MvvmCross_Application1.Core/bin/Debug/System.Net.Http.Primitives.xml
+/Users/irina/Documents/mvvmcross/MvvmCross Application1/MvvmCross_Application1.Core/bin/Debug/SQLite-net.xml
+/Users/irina/Documents/mvvmcross/MvvmCross Application1/MvvmCross_Application1.Core/obj/Debug/MvvmCross_Application1.Core.csproj.App.config
+/Users/irina/Documents/mvvmcross/MvvmCross Application1/MvvmCross_Application1.Core/obj/Debug/MvvmCross_Application1.Core.csproj.CoreCompileInputs.cache
+/Users/irina/Documents/mvvmcross/MvvmCross Application1/MvvmCross_Application1.Core/obj/Debug/MvvmCross_Application1.Core.csproj.CopyComplete
+/Users/irina/Documents/mvvmcross/MvvmCross Application1/MvvmCross_Application1.Core/obj/Debug/MvvmCross_Application1.Core.dll
+/Users/irina/Documents/mvvmcross/MvvmCross Application1/MvvmCross_Application1.Core/obj/Debug/MvvmCross_Application1.Core.pdb

@@ -14,7 +14,7 @@ public class RequirementsWatcher_ListenerImplementor
 			"n_requirementsMet:(Lcom/google/android/exoplayer2/scheduler/RequirementsWatcher;)V:GetRequirementsMet_Lcom_google_android_exoplayer2_scheduler_RequirementsWatcher_Handler:Com.Google.Android.Exoplayer2.Scheduler.RequirementsWatcher/IListenerInvoker, ExoPlayer.Core\n" +
 			"n_requirementsNotMet:(Lcom/google/android/exoplayer2/scheduler/RequirementsWatcher;)V:GetRequirementsNotMet_Lcom_google_android_exoplayer2_scheduler_RequirementsWatcher_Handler:Com.Google.Android.Exoplayer2.Scheduler.RequirementsWatcher/IListenerInvoker, ExoPlayer.Core\n" +
 			"";
-		mono.android.Runtime.register ("Com.Google.Android.Exoplayer2.Scheduler.RequirementsWatcher+IListenerImplementor, ExoPlayer.Core, Version=2.8.8.0, Culture=neutral, PublicKeyToken=null", RequirementsWatcher_ListenerImplementor.class, __md_methods);
+		mono.android.Runtime.register ("Com.Google.Android.Exoplayer2.Scheduler.RequirementsWatcher+IListenerImplementor, ExoPlayer.Core", RequirementsWatcher_ListenerImplementor.class, __md_methods);
 	}
 
 
@@ -22,7 +22,7 @@ public class RequirementsWatcher_ListenerImplementor
 	{
 		super ();
 		if (getClass () == RequirementsWatcher_ListenerImplementor.class)
-			mono.android.TypeManager.Activate ("Com.Google.Android.Exoplayer2.Scheduler.RequirementsWatcher+IListenerImplementor, ExoPlayer.Core, Version=2.8.8.0, Culture=neutral, PublicKeyToken=null", "", this, new java.lang.Object[] {  });
+			mono.android.TypeManager.Activate ("Com.Google.Android.Exoplayer2.Scheduler.RequirementsWatcher+IListenerImplementor, ExoPlayer.Core", "", this, new java.lang.Object[] {  });
 	}
 
 

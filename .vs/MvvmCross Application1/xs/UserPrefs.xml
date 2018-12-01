@@ -1,0 +1,53 @@
+﻿<Properties StartupConfiguration="{C5459290-27DD-41FD-A12A-3C5E43ACF35C}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="MvvmCross Application1/MvvmCross_Application1.Core/DataBase/IConnectionFactory.cs">
+    <Files>
+      <File FileName="MvvmCross Application1/MvvmCross_Application1.Core/DataBase/DbOperations.cs" Line="107" Column="54" />
+      <File FileName="MvvmCross Application1/MvvmCross_Application1.Core/DataBase/IConnectionFactory.cs" Line="12" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="MvvmCross Application1" expanded="True">
+            <Node name="MvvmCross_Application1.Core" expanded="True">
+              <Node name="References" expanded="True" />
+              <Node name="Data" expanded="True" />
+              <Node name="DataBase" expanded="True">
+                <Node name="IConnectionFactory.cs" selected="True" />
+              </Node>
+              <Node name="Enums" expanded="True" />
+              <Node name="Model" expanded="True" />
+              <Node name="Models" expanded="True" />
+              <Node name="Module" expanded="True" />
+              <Node name="Properties" expanded="True" />
+              <Node name="Repositories" expanded="True" />
+              <Node name="Resources" expanded="True" />
+              <Node name="Services" expanded="True" />
+              <Node name="ViewModels" expanded="True" />
+            </Node>
+            <Node name="MvvmCross_Application1.Droid" expanded="True">
+              <Node name="Adapters" expanded="True" />
+              <Node name="Assets" expanded="True" />
+              <Node name="Controls" expanded="True" />
+              <Node name="Properties" expanded="True" />
+              <Node name="Resources" expanded="True">
+                <Node name="layout" expanded="True" />
+              </Node>
+              <Node name="Views" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.MvvmCross__Application1.Droid AndroidDesignerPreferredTheme="MyTheme" AndroidDesignerPreferredDevice="Nexus 5" PreferredExecutionTarget="Android.Android_Accelerated_Oreo" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches>
+    <Watch file="../../../MvvmCross Application1/MvvmCross_Application1.Core/DataBase/Repository.cs" line="41" offsetX="447" offsetY="600" expression="list" liveUpdate="False" />
+  </MonoDevelop.Ide.DebuggingService.PinnedWatches>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Users/irina/Documents/mvvmcross/MvvmCross Application1/MvvmCross_Application1.Core/Services/IPlatformService.cs" relfile="MvvmCross Application1/MvvmCross_Application1.Core/Services/IPlatformService.cs" line="36" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

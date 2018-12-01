@@ -1,10 +1,11 @@
 ﻿using System;
+using SQLite.Net.Attributes;
+
 namespace MvvmCross_Application1.Core.DataBase
 {
-    public class BaseEntity
+    public abstract class BaseEntity : IEntity
     {
-        public BaseEntity()
-        {
-        }
+        [PrimaryKey, AutoIncrement]
+        public virtual int Id { get; set; }
     }
 }
