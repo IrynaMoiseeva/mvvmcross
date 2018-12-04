@@ -67,7 +67,7 @@ namespace MvvmCross_Application1.Core.Model
         //public PlayVideoViewModel PlayVideoViewModel => playvideoViewModel.
 
         public IPlatformService platformservice;
-        public MvxCommand CheckCommand { get; }
+
         public Db Db
         {
             get
@@ -77,6 +77,7 @@ namespace MvvmCross_Application1.Core.Model
         }
 
 
+        public MvxCommand CheckCommand { get; }
         public void Check()
         {
 

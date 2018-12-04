@@ -133,8 +133,13 @@ namespace MvvmCross_Application1.Droid.Views
             if (item.ItemId== Resource.Id.favourites)
                     {
                         ViewModel.ChooseFavourites();
-                    }
-            
+            }
+
+            if (item.ItemId == Resource.Id.settings )
+            {
+                ViewModel.ChooseSettings();
+            }
+
             return base.OnOptionsItemSelected(item);
         }
 

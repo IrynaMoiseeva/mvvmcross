@@ -15,7 +15,15 @@ namespace MvvmCross_Application1.Droid.Properties
     public class PlatformService_Android : IPlatformService
     {
         public string GetPlatform() { return "android"; }
-        public string DestinationPath { get; set; }
+
+        public string DestinationPath
+        {
+            get { return Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal), "mydb.sqlite"); }
+        }
+       
+
+
+
         public SQLiteConnection con;
         public SQLiteDatabase db;
 
@@ -49,13 +57,30 @@ namespace MvvmCross_Application1.Droid.Properties
         //   public abstract List<TEntity> Select<TEntity>(TEntity obj) where TEntity : IEntity;
         //  public List<E> Select() 
         //public string ABC<T>(T obj) where T : IDestination
-       /* public List<Favor12> Select()
+        /* public List<Favor12> Select()
+         {
+
+             var data = con.Table<Favor12>().ToList();
+             return data;
+
+         }*/
+
+     /*   public void RemoveTable ()
         {
+            try
+            {
+                int f = con.DropTable<Channels>();
+                var f1 = con.CreateTable<Channels>(SQLite.CreateFlags.ImplicitPK | SQLite.CreateFlags.AutoIncPK);
+            }
 
-            var data = con.Table<Favor12>().ToList();
-            return data;
+            catch (Exception ex)
+            {
 
-        }*/
+                con.Dispose();
+            }
+        }
+        */
+
 
         public void Remove(string VidId)
         {
@@ -76,10 +101,10 @@ namespace MvvmCross_Application1.Droid.Properties
         public void GetConnection()
         {
             
-            //string[] names = System.Reflection.Assembly.GetExecutingAssembly().GetManifestResourceNames();
+            string[] names = System.Reflection.Assembly.GetExecutingAssembly().GetManifestResourceNames();
             var destinationPath = Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal), "mydb.sqlite");
-            DestinationPath = destinationPath;
-            using (Stream source = System.Reflection.Assembly.GetExecutingAssembly().GetManifestResourceStream("MvvmCross_Application1.Droid.Resources.raw.mydb.sqlite"))
+            //DestinationPath = destinationPath;
+           /* using (Stream source = System.Reflection.Assembly.GetExecutingAssembly().GetManifestResourceStream("MvvmCross_Application1.Droid.Resources.raw.mydb.sqlite"))
             {
                 using (var destination = System.IO.File.Create(destinationPath))
                 {
@@ -100,7 +125,7 @@ namespace MvvmCross_Application1.Droid.Properties
 
                 con.Dispose();
             }
-
+*/
             
         }
 

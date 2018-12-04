@@ -23,7 +23,7 @@
          android:src="@drawable/calilou"
          android:gravity="center_vertical"/>
   <TextView
-     android:id="@+id/textview"
+     android:id="@+id/title"
      android:layout_width="247dp"
      android:layout_height="30dp"
 
@@ -34,14 +34,14 @@
               
            
    <Button       
-                 android:id="@+id/RemoveButton"
-                android:layout_width="20dp"
-                android:layout_height="23dp"
-                android:layout_alignParentRight="true"
-                android:layout_marginEnd="20dp"
-                android:background="@drawable/icons8_trash_50"
-                android:layout_centerVertical="true"
-              
+        android:id="@+id/RemoveButton"  
+        android:background="@drawable/icons8_trash_50"
+        android:layout_width="20dp"
+        android:layout_height="20dp" 
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:paddingBottom="5dip"
+        android:paddingRight="20dp"/>
             />          
   
     

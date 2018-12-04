@@ -79,7 +79,9 @@
     <Compile Include="ViewModels\Item.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
     <Compile Include="ViewModels\PlayVideoViewModel.cs" />
-    <Compile Include="ViewModels\SettingsViewModel.cs" />
+    <Compile Include="ViewModels\SettingsViewModel.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
     <Compile Include="Model\Channels.cs" />
     <Compile Include="DataBase\IEntity.cs" />
     <Compile Include="DataBase\BaseEntity.cs" />

@@ -272,6 +272,9 @@
     <AndroidResource Include="Resources\layout\favorite_list_item.axml" />
     <AndroidResource Include="Resources\layout\settings_list.axml" />
     <AndroidResource Include="Resources\layout\settings_list_item.axml" />
+    <AndroidResource Include="Resources\drawable\mikky_welcome.jpeg" />
+    <AndroidResource Include="Resources\drawable\mikkym.png" />
+    <AndroidResource Include="Resources\drawable\main.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

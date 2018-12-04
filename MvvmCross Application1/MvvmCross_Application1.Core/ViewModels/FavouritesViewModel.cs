@@ -1,4 +1,5 @@
 ﻿using MvvmCross.Core.ViewModels;
+using MvvmCross_Application1.Core.DataBase;
 using MvvmCross_Application1.Core.Model;
 using System;
 using System.Collections.Generic;
@@ -39,7 +40,7 @@ namespace MvvmCross_Application1.Core.ViewModels
         public FavouritesViewModel()
         {
            
-          Db.platform.GetConnection();
+          //Db.platform.GetConnection();
         }
 
         public override async Task Initialize()
@@ -53,8 +54,11 @@ namespace MvvmCross_Application1.Core.ViewModels
 
         public async Task InitDataAsync()
         {
-
-            var list = Db.platform.Select();
+            var sqlconection = MainViewModel.connectionfactory.ProduceConnection();
+            IRepository<Favor12> stockRepo = new Repository<Favor12>(sqlconection);
+           
+            var list = await stockRepo.Get();
+           // var list = Db.platform.Select();
             List<string> listid = new List<string>();
             foreach (var item in list)
             {

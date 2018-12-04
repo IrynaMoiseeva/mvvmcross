@@ -63,7 +63,7 @@ namespace MvvmCross_Application1.Core.ViewModels
 
         public PlayVideoViewModel()
         {
-          Db.platform.GetConnection();
+         // Db.platform.GetConnection();
 
           //  var vv = MainViewModel.connectionfactory.ProduceConnection();
 
@@ -133,7 +133,7 @@ namespace MvvmCross_Application1.Core.ViewModels
                //!!! var list = Db.platform.Select();
 
            var sqlconection = MainViewModel.connectionfactory.ProduceConnection();
-            await sqlconection.CreateTablesAsync<Favor12, Channels>();
+           //await sqlconection.CreateTablesAsync<Favor12, Channels>();
 
             IRepository<Favor12> stockRepo = new Repository<Favor12>(sqlconection);
             var list = await stockRepo.Get();

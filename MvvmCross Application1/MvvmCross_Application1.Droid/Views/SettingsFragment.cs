@@ -8,7 +8,7 @@ using MvvmCross.Droid.Views.Attributes;
 using MvvmCross.Droid.Views.Fragments;
 using MvvmCross_Application1.Core.ViewModels;
 using MvvmCross_Application1.Droid.Adapters;
-
+using Android.Support.Design.Widget;
 
 namespace MvvmCross_Application1.Droid.Views
 {
@@ -18,16 +18,15 @@ namespace MvvmCross_Application1.Droid.Views
     [Register("MvvmCross_Application1.Droid.Views.SettingsFragment")]
     public class SettingsFragment: MvxFragment<SettingsViewModel>
     {
-        public SettingsFragment()
-        {
-
-        }
-
-        // public FavoriteListAdapter adapter;
+        public ChannelListAdapter adapter;
         public SettingsViewModel ViewModel
         {
             get { return base.ViewModel; }
             set { base.ViewModel = value; }
+        }
+        public override void OnResume()
+        {
+            base.OnResume();
         }
 
 
@@ -38,14 +37,20 @@ namespace MvvmCross_Application1.Droid.Views
             var view = this.BindingInflate(Resource.Layout.settings_list, null);
 
 
-           /* adapter = new FavoriteListAdapter((IMvxAndroidBindingContext)this.BindingContext);
+            adapter = new ChannelListAdapter((IMvxAndroidBindingContext)this.BindingContext);
             MvxRecyclerView m = view.FindViewById<MvxRecyclerView>(Resource.Id.rvItems);
             adapter.NotifyDataSetChanged();
             m.Adapter = adapter;
-
-            adapter.mcon = Context;
             adapter.ViewModel = ViewModel;
-            */
+
+            FloatingActionButton AddButton = view.FindViewById<FloatingActionButton>(Resource.Id.Add);
+            AddButton.Click += (s, e) =>
+            {
+                // move to new form to input url and title forchannel
+            };
+
+
+
 
             return view;
         }

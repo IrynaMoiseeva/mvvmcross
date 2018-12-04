@@ -38,7 +38,7 @@ namespace MvvmCross_Application1.Core.ViewModels
         {
             _platformService = platformService;
             connectionfactory = Connectionfactory;
-
+           // _platformService.GetConnection(); 
             //  _foodrecyclerViewModel = new Lazy<FoodRecyclerViewModel>(Mvx.IocConstruct<FoodRecyclerViewModel>);
             _navigationService = navigationService ?? throw new ArgumentNullException(nameof(navigationService));
 
@@ -79,6 +79,13 @@ namespace MvvmCross_Application1.Core.ViewModels
             await _navigationService.Navigate<FavouritesViewModel>();
 
         }
+        public async Task ChooseSettings()
+        {
+
+            await _navigationService.Navigate<SettingsViewModel>();
+
+        }
+
 
 
 

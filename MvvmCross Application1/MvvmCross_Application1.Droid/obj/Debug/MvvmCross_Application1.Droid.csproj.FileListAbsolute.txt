@@ -1,3 +1,4 @@
+/Users/irina/Documents/mvvmcross/MvvmCross Application1/MvvmCross_Application1.Droid/bin/Debug/ViewModels/SettingsViewModel.cs
 /Users/irina/Documents/mvvmcross/MvvmCross Application1/MvvmCross_Application1.Droid/bin/Debug/MvvmCross_Application1.Droid.dll.config
 /Users/irina/Documents/mvvmcross/MvvmCross Application1/MvvmCross_Application1.Droid/bin/Debug/MvvmCross_Application1.Droid.dll
 /Users/irina/Documents/mvvmcross/MvvmCross Application1/MvvmCross_Application1.Droid/bin/Debug/MvvmCross_Application1.Droid.pdb
@@ -135,6 +136,9 @@
 /Users/irina/Documents/mvvmcross/MvvmCross Application1/MvvmCross_Application1.Droid/obj/Debug/res/layout/favorite_list_item.xml
 /Users/irina/Documents/mvvmcross/MvvmCross Application1/MvvmCross_Application1.Droid/obj/Debug/res/layout/settings_list.xml
 /Users/irina/Documents/mvvmcross/MvvmCross Application1/MvvmCross_Application1.Droid/obj/Debug/res/layout/settings_list_item.xml
+/Users/irina/Documents/mvvmcross/MvvmCross Application1/MvvmCross_Application1.Droid/obj/Debug/res/drawable/mikky_welcome.jpeg
+/Users/irina/Documents/mvvmcross/MvvmCross Application1/MvvmCross_Application1.Droid/obj/Debug/res/drawable/mikkym.png
+/Users/irina/Documents/mvvmcross/MvvmCross Application1/MvvmCross_Application1.Droid/obj/Debug/res/drawable/main.png
 /Users/irina/Documents/mvvmcross/MvvmCross Application1/MvvmCross_Application1.Droid/obj/Debug/res/drawable/apple.jpg
 /Users/irina/Documents/mvvmcross/MvvmCross Application1/MvvmCross_Application1.Droid/obj/Debug/res/drawable/badge_item_count.xml
 /Users/irina/Documents/mvvmcross/MvvmCross Application1/MvvmCross_Application1.Droid/obj/Debug/res/drawable/cart1.png

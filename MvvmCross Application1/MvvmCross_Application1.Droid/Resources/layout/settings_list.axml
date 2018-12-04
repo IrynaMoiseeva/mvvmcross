@@ -1,26 +1,34 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" 
+<android.support.design.widget.CoordinatorLayout 
+               xmlns:android="http://schemas.android.com/apk/res/android" 
               xmlns:app="http://schemas.android.com/apk/res-auto"
               xmlns:local="http://schemas.android.com/apk/res-auto"
-              android:orientation="vertical" 
+              
               android:layout_width="match_parent" 
               android:layout_height="match_parent">
 
-
+              <RelativeLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
     <MvvmCross.Droid.Support.V7.RecyclerView.MvxRecyclerView
-      android:id="@+id/RecyclerViewItems"
+      android:id="@+id/rvItems"
       android:layout_width="match_parent"
-      android:layout_height="match_parent"
+      android:layout_height="wrap_content"
       local:MvxBind="ItemsSource Channels"
       local:MvxItemTemplate="@layout/settings_list_item"
       android:nestedScrollingEnabled="false"/>
+    </RelativeLayout>
     
 <android.support.design.widget.FloatingActionButton
         android:id="@+id/Add"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
-        android:layout_margin="20dp"
-        app:elevation="4dp" />
+        app:fabSize="mini"
+        android:layout_margin="16dp"
+        app:layout_anchor="@id/container"
+        app:layout_anchorGravity="bottom|end"
+        android:src="@drawable/ic_plus"
+         />
 
-</LinearLayout>
+</android.support.design.widget.CoordinatorLayout>

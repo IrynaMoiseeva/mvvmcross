@@ -62,10 +62,10 @@
         android:id="@+id/favorite"
         android:layout_width="50dp"
         android:layout_height="50dp" 
-            android:layout_alignParentBottom="true"
-                android:layout_alignParentRight="true"
-            android:paddingBottom="5dip"
-                android:paddingRight="15dp"/>
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:paddingBottom="5dip"
+        android:paddingRight="15dp"/>
 
   
     

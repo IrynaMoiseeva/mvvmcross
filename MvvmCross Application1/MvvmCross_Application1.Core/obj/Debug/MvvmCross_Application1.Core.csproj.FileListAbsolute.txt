@@ -1,3 +1,4 @@
+/Users/irina/Documents/mvvmcross/MvvmCross Application1/MvvmCross_Application1.Core/bin/Debug/ViewModels/SettingsViewModel.cs
 /Users/irina/Documents/mvvmcross/MvvmCross Application1/MvvmCross_Application1.Core/bin/Debug/MvvmCross_Application1.Core.dll.config
 /Users/irina/Documents/mvvmcross/MvvmCross Application1/MvvmCross_Application1.Core/bin/Debug/MvvmCross_Application1.Core.dll
 /Users/irina/Documents/mvvmcross/MvvmCross Application1/MvvmCross_Application1.Core/bin/Debug/MvvmCross_Application1.Core.pdb

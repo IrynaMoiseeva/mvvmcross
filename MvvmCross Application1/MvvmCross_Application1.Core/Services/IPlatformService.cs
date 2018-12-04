@@ -10,12 +10,13 @@ namespace MvvmCross_Application1.Core.Services
 {
     public interface IPlatformService
     {
-        string DestinationPath { get; set; }
+        string DestinationPath { get; }
        string GetPlatform();
 
         void GetConnection();
         void Insert(string VidId);
         void Remove(string VidId);
+       // void RemoveTable();
        
     List<Favor12> Select();
 
@@ -23,7 +24,7 @@ namespace MvvmCross_Application1.Core.Services
 
     public abstract class PlatformService : IPlatformService
     {
-        string IPlatformService.DestinationPath { get; set; }
+        string IPlatformService.DestinationPath { get; }
 
         public abstract string GetPlatform();// { return "dddd"; }
 
@@ -32,6 +33,11 @@ namespace MvvmCross_Application1.Core.Services
         void IPlatformService.GetConnection() { }
         //  public abstract List<TEntity> Select<TEntity>(TEntity obj) where TEntity :  IEntity;
         public abstract List<Favor12> Select();
+
+     //   public abstract void RemoveTable();
+
+
+       
         /*{
             var b = "kuku";
             return null;

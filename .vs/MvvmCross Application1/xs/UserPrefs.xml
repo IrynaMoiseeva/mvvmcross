@@ -1,43 +1,37 @@
 ﻿<Properties StartupConfiguration="{C5459290-27DD-41FD-A12A-3C5E43ACF35C}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="MvvmCross Application1/MvvmCross_Application1.Core/DataBase/IConnectionFactory.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="MvvmCross Application1/MvvmCross_Application1.Droid/Views/SettingsFragment.cs">
     <Files>
+      <File FileName="MvvmCross Application1/MvvmCross_Application1.Core/ViewModels/MainViewModel.cs" Line="43" Column="38" />
+      <File FileName="MvvmCross Application1/MvvmCross_Application1.Core/ViewModels/PlayVideoViewModel.cs" Line="152" Column="1" />
+      <File FileName="MvvmCross Application1/MvvmCross_Application1.Core/ViewModels/FavouritesViewModel.cs" Line="57" Column="1" />
+      <File FileName="MvvmCross Application1/MvvmCross_Application1.Droid/Properties/IPlatformService_Android.cs" Line="104" Column="1" />
+      <File FileName="MvvmCross Application1/MvvmCross_Application1.Droid/Views/SettingsFragment.cs" Line="46" Column="13" />
+      <File FileName="MvvmCross Application1/MvvmCross_Application1.Droid/Adapters/ChannelListAdapter.cs" Line="131" Column="15" />
+      <File FileName="MvvmCross Application1/MvvmCross_Application1.Core/DataBase/SingletonConnectionFactory.cs" Line="88" Column="1" />
+      <File FileName="MvvmCross Application1/MvvmCross_Application1.Core/ViewModels/SettingsViewModel.cs" Line="86" Column="13" />
+      <File FileName="MvvmCross Application1/MvvmCross_Application1.Droid/Views/MainView.cs" Line="104" Column="1" />
+      <File FileName="MvvmCross Application1/MvvmCross_Application1.Core/DataBase/IConnectionFactory.cs" Line="9" Column="31" />
+      <File FileName="MvvmCross Application1/MvvmCross_Application1.Core/DataBase/DataBaseConnection.cs" Line="11" Column="62" />
+      <File FileName="../../sorces/KnowIt/Deloitte.Mobile.Gam/Deloitte.Mobile.Plugin.DataBase/IConnectionFactory.cs" Line="8" Column="1" />
+      <File FileName="../../sorces/KnowIt/Deloitte.Mobile.Gam/Deloitte.Mobile.Plugin.DataBase/DataBaseException.cs" Line="1" Column="1" />
+      <File FileName="../../sorces/KnowIt/Deloitte.Mobile.Gam/Deloitte.Mobile.Plugin.DataBase/DataBaseConnectionAsync.cs" Line="29" Column="13" />
+      <File FileName="../../sorces/KnowIt/Deloitte.Mobile.Gam/Deloitte.Mobile.Plugin.DataBase/ILocalRepositoryAsync.cs" Line="91" Column="9" />
+      <File FileName="../../sorces/KnowIt/Deloitte.Mobile.Gam/Deloitte.Mobile.Plugin.DataBase/LocalRepositoryAsyncBase.cs" Line="9" Column="61" />
+      <File FileName="../../sorces/KnowIt/Deloitte.Mobile.Gam/Deloitte.Mobile.Plugin.DataBase/DataBaseConnectionException.cs" Line="1" Column="1" />
+      <File FileName="../../sorces/KnowIt/Deloitte.Mobile.Gam/Deloitte.Mobile.Plugin.DataBase/Maintenance/MaintenanceBase.cs" Line="6" Column="42" />
+      <File FileName="../../sorces/KnowIt/Deloitte.Mobile.Gam/Deloitte.Mobile.Plugin.DataBase/Deloitte.Mobile.Plugin.DataBase.csproj" Line="49" Column="23" />
       <File FileName="MvvmCross Application1/MvvmCross_Application1.Core/DataBase/DbOperations.cs" Line="107" Column="54" />
-      <File FileName="MvvmCross Application1/MvvmCross_Application1.Core/DataBase/IConnectionFactory.cs" Line="12" Column="1" />
+      <File FileName="../../sorces/KnowIt/Deloitte.Mobile.Gam/Deloitte.Mobile.Plugin.DataBase/CannotCreateTableException.cs" Line="1" Column="1" />
+      <File FileName="../../sorces/KnowIt/Deloitte.Mobile.Gam/Deloitte.Mobile.Plugin.DataBase/CannotDropTableException.cs" Line="1" Column="1" />
+      <File FileName="../../sorces/KnowIt/Deloitte.Mobile.Gam/Gamification/AppSetup/ApplicationSetupDataBase.cs" Line="70" Column="21" />
+      <File FileName="../../sorces/KnowIt/Deloitte.Mobile.Gam/Deloitte.Mobile.Plugin.DataBase.MvvmCross/SqliteConnectionWrapperAsync.cs" Line="109" Column="77" />
+      <File FileName="MvvmCross Application1/MvvmCross_Application1.Core/DataBase/Repository.cs" Line="32" Column="1" />
+      <File FileName="MvvmCross Application1/MvvmCross_Application1.Droid/Views/VideoListDemoActivity.cs" Line="120" Column="1" />
+      <File FileName="MvvmCross Application1/MvvmCross_Application1.Core/Services/IPlatformService.cs" Line="11" Column="22" />
+      <File FileName="Source Not Available" />
+      <File FileName="MvvmCross Application1/MvvmCross_Application1.Droid/Adapters/FavoriteListAdapter.cs" Line="133" Column="1" />
+      <File FileName="MvvmCross Application1/MvvmCross_Application1.Droid/Views/FavouritesFragment.cs" Line="30" Column="10" />
     </Files>
-    <Pads>
-      <Pad Id="ProjectPad">
-        <State name="__root__">
-          <Node name="MvvmCross Application1" expanded="True">
-            <Node name="MvvmCross_Application1.Core" expanded="True">
-              <Node name="References" expanded="True" />
-              <Node name="Data" expanded="True" />
-              <Node name="DataBase" expanded="True">
-                <Node name="IConnectionFactory.cs" selected="True" />
-              </Node>
-              <Node name="Enums" expanded="True" />
-              <Node name="Model" expanded="True" />
-              <Node name="Models" expanded="True" />
-              <Node name="Module" expanded="True" />
-              <Node name="Properties" expanded="True" />
-              <Node name="Repositories" expanded="True" />
-              <Node name="Resources" expanded="True" />
-              <Node name="Services" expanded="True" />
-              <Node name="ViewModels" expanded="True" />
-            </Node>
-            <Node name="MvvmCross_Application1.Droid" expanded="True">
-              <Node name="Adapters" expanded="True" />
-              <Node name="Assets" expanded="True" />
-              <Node name="Controls" expanded="True" />
-              <Node name="Properties" expanded="True" />
-              <Node name="Resources" expanded="True">
-                <Node name="layout" expanded="True" />
-              </Node>
-              <Node name="Views" expanded="True" />
-            </Node>
-          </Node>
-        </State>
-      </Pad>
-    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.ItemProperties.MvvmCross__Application1.Droid AndroidDesignerPreferredTheme="MyTheme" AndroidDesignerPreferredDevice="Nexus 5" PreferredExecutionTarget="Android.Android_Accelerated_Oreo" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches>
@@ -46,7 +40,18 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
-      <Breakpoint file="/Users/irina/Documents/mvvmcross/MvvmCross Application1/MvvmCross_Application1.Core/Services/IPlatformService.cs" relfile="MvvmCross Application1/MvvmCross_Application1.Core/Services/IPlatformService.cs" line="36" column="1" />
+      <Breakpoint file="/Users/irina/Documents/mvvmcross/MvvmCross Application1/MvvmCross_Application1.Core/Services/IPlatformService.cs" relfile="MvvmCross Application1/MvvmCross_Application1.Core/Services/IPlatformService.cs" line="42" column="1" />
+      <Breakpoint file="/Users/irina/Documents/mvvmcross/MvvmCross Application1/MvvmCross_Application1.Droid/Adapters/ChannelListAdapter.cs" relfile="MvvmCross Application1/MvvmCross_Application1.Droid/Adapters/ChannelListAdapter.cs" line="127" column="1" />
+      <Breakpoint file="/Users/irina/Documents/mvvmcross/MvvmCross Application1/MvvmCross_Application1.Droid/Adapters/FavoriteListAdapter.cs" relfile="MvvmCross Application1/MvvmCross_Application1.Droid/Adapters/FavoriteListAdapter.cs" line="129" column="1" />
+      <Breakpoint file="/Users/irina/Documents/mvvmcross/MvvmCross Application1/MvvmCross_Application1.Core/ViewModels/SettingsViewModel.cs" relfile="MvvmCross Application1/MvvmCross_Application1.Core/ViewModels/SettingsViewModel.cs" line="66" column="1" />
+      <Breakpoint file="/Users/irina/Documents/mvvmcross/MvvmCross Application1/MvvmCross_Application1.Core/ViewModels/SettingsViewModel.cs" relfile="MvvmCross Application1/MvvmCross_Application1.Core/ViewModels/SettingsViewModel.cs" line="35" column="1" />
+      <Breakpoint file="/Users/irina/Documents/mvvmcross/MvvmCross Application1/MvvmCross_Application1.Droid/Views/MainView.cs" relfile="MvvmCross Application1/MvvmCross_Application1.Droid/Views/MainView.cs" line="148" column="1" />
+      <Breakpoint file="/Users/irina/Documents/mvvmcross/MvvmCross Application1/MvvmCross_Application1.Core/ViewModels/SettingsViewModel.cs" relfile="MvvmCross Application1/MvvmCross_Application1.Core/ViewModels/SettingsViewModel.cs" line="79" column="1" />
+      <Breakpoint file="/Users/irina/Documents/mvvmcross/MvvmCross Application1/MvvmCross_Application1.Droid/Adapters/ChannelListAdapter.cs" relfile="MvvmCross Application1/MvvmCross_Application1.Droid/Adapters/ChannelListAdapter.cs" line="101" column="1" />
+      <Breakpoint file="/Users/irina/Documents/mvvmcross/MvvmCross Application1/MvvmCross_Application1.Core/ViewModels/MainViewModel.cs" relfile="MvvmCross Application1/MvvmCross_Application1.Core/ViewModels/MainViewModel.cs" line="40" column="1" />
+      <Breakpoint file="/Users/irina/Documents/mvvmcross/MvvmCross Application1/MvvmCross_Application1.Core/ViewModels/FavouritesViewModel.cs" relfile="MvvmCross Application1/MvvmCross_Application1.Core/ViewModels/FavouritesViewModel.cs" line="57" column="13" />
+      <Breakpoint file="/Users/irina/Documents/mvvmcross/MvvmCross Application1/MvvmCross_Application1.Droid/Properties/IPlatformService_Android.cs" relfile="MvvmCross Application1/MvvmCross_Application1.Droid/Properties/IPlatformService_Android.cs" line="104" column="1" />
+      <Breakpoint file="/Users/irina/Documents/mvvmcross/MvvmCross Application1/MvvmCross_Application1.Droid/Properties/IPlatformService_Android.cs" relfile="MvvmCross Application1/MvvmCross_Application1.Droid/Properties/IPlatformService_Android.cs" line="24" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />

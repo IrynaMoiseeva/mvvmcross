@@ -4,6 +4,7 @@ using MvvmCross.Core.ViewModels;
 using MvvmCross_Application1.Core.Model;
 using System.Threading.Tasks;
 using System.Collections.Generic;
+using MvvmCross_Application1.Core.DataBase;
 
 namespace MvvmCross_Application1.Core.ViewModels
 {
@@ -19,16 +20,24 @@ namespace MvvmCross_Application1.Core.ViewModels
         }
 
         public static SettingsViewModel Instance = new SettingsViewModel();
-        private static ObservableCollection<Channel> channels = new ObservableCollection<Channel>();
-        public ObservableCollection<Channel> Channels
+        public IRepository<Channels> channelRepo;
+        private static ObservableCollection<Channels> channels = new ObservableCollection<Channels>();
+        public ObservableCollection<Channels> Channels
         {
             get { return channels; }
             set { channels = value; RaisePropertyChanged(() => Channels); }
         }
 
         public SettingsViewModel()
+
         {
-            Db.platform.GetConnection();
+          //  RemoveCommand = new MvxAsyncCommand(Remove);
+           // Db.platform.GetConnection();
+          //  Db.platform.RemoveTable();
+           
+
+
+
         }
 
 
@@ -41,8 +50,46 @@ namespace MvvmCross_Application1.Core.ViewModels
         }
 
 
+        private MvxAsyncCommand removeCommand;
+        public MvxAsyncCommand RemoveCommand
+        {
+            get
+            {
+                removeCommand =  new MvxAsyncCommand(() => Remove(null));
+                return removeCommand;
+            }
+        }
+      //  public MvxAsyncCommand RemoveCommand { get; }
+        public async Task Remove(Channels entity)
+        {
+
+
+           var result = await channelRepo.Delete(entity);
+            /* IsLiked = true;
+             var d = PlayVideoViewModel.Instance.YoutubeItems;
+
+             Db.platform.GetConnection();
+             Db.platform.Insert(VideoId);*/
+
+
+
+        }
         public async Task InitDataAsync()
         {
+            var sqlconection = MainViewModel.connectionfactory.ProduceConnection();
+           //await sqlconection.DropTableAsync<Channels>();
+           // await sqlconection.CreateTablesAsync<Favor12, Channels>();
+
+            //!!await sqlconection.CreateTablesAsync<Favor12, Channels>(SQLite.CreateFlags.ImplicitPK | SQLite.CreateFlags.AutoIncPK);
+
+           
+
+            channelRepo = new Repository<Channels>(sqlconection);
+           //!! await channelRepo.Insert((new Channels() { PlayListId = "PLyxLqRfXH_eOMYvGsYRYkrjaoZ8DG3Sxu", Title = "Little Angel" }));
+            List<Channels> list =await channelRepo.Get();
+            channels= new ObservableCollection<Channels>(list);
+
+            /*var list = await stockRepo.Get();
 
             var list = Db.platform.Select();
             List<string> listid = new List<string>();
@@ -54,6 +101,8 @@ namespace MvvmCross_Application1.Core.ViewModels
             var info = new InfoFromYoutube();
             var FavoritesVideos1 = await info.GetVideosDetailsAsync(listid);
            // FavoritesVideos = new ObservableCollection<YoutubeItem>(FavoritesVideos1);
+
+*/
 
         }
     }
