@@ -139,6 +139,7 @@
 /Users/irina/Documents/mvvmcross/MvvmCross Application1/MvvmCross_Application1.Droid/obj/Debug/res/drawable/mikky_welcome.jpeg
 /Users/irina/Documents/mvvmcross/MvvmCross Application1/MvvmCross_Application1.Droid/obj/Debug/res/drawable/mikkym.png
 /Users/irina/Documents/mvvmcross/MvvmCross Application1/MvvmCross_Application1.Droid/obj/Debug/res/drawable/main.png
+/Users/irina/Documents/mvvmcross/MvvmCross Application1/MvvmCross_Application1.Droid/obj/Debug/res/layout/newchannel.xml
 /Users/irina/Documents/mvvmcross/MvvmCross Application1/MvvmCross_Application1.Droid/obj/Debug/res/drawable/apple.jpg
 /Users/irina/Documents/mvvmcross/MvvmCross Application1/MvvmCross_Application1.Droid/obj/Debug/res/drawable/badge_item_count.xml
 /Users/irina/Documents/mvvmcross/MvvmCross Application1/MvvmCross_Application1.Droid/obj/Debug/res/drawable/cart1.png
@@ -182,6 +183,7 @@
 /Users/irina/Documents/mvvmcross/MvvmCross Application1/MvvmCross_Application1.Droid/obj/Debug/R.cs.flag
 /Users/irina/Documents/mvvmcross/MvvmCross Application1/MvvmCross_Application1.Droid/obj/Debug/R.txt
 /Users/irina/Documents/mvvmcross/MvvmCross Application1/MvvmCross_Application1.Droid/obj/Debug/uploadflags.txt
+/Users/irina/Documents/mvvmcross/MvvmCross Application1/MvvmCross_Application1.Droid/obj/Debug/res/drawable/remove_icon.jpeg
 /Users/irina/Documents/mvvmcross/MvvmCross Application1/MvvmCross_Application1.Droid/bin/Debug/Mono.Android.pdb
 /Users/irina/Documents/mvvmcross/MvvmCross Application1/MvvmCross_Application1.Droid/bin/Debug/Mono.Android.Export.pdb
 /Users/irina/Documents/mvvmcross/MvvmCross Application1/MvvmCross_Application1.Droid/obj/Debug/linksrc/MvvmCross_Application1.Droid.pdb

@@ -14,6 +14,7 @@ using MvvmCross.Binding.Droid.BindingContext;
 using MvvmCross.Core.ViewModels;
 using MvvmCross.Droid.Support.V7.RecyclerView;
 using MvvmCross_Application1.Core.Model;
+using MvvmCross_Application1.Core.ViewModels;
 using MvvmCross_Application1.Droid.Controls;
 using MvvmCross_Application1.Droid.Views;
 
@@ -124,9 +125,11 @@ namespace MvvmCross_Application1.Droid.Adapters
 
             likeButton = View.FindViewById<LottieFavoriteButton>(Resource.Id.favorite);
 
-            likeButton.OnClickCommandDisLike = video.UnCheckCommand;
-            likeButton.OnClickCommandLike = video.CheckCommand;
+            likeButton.OnClickCommandDisLike = new MvxAsyncCommand(() =>(ViewModel as PlayVideoViewModel).RemoveFromFavorities(video));
 
+            //video.UnCheckCommand;
+            // likeButton.OnClickCommandLike = video.CheckCommand;
+            likeButton.OnClickCommandLike = new MvxAsyncCommand(() => (ViewModel as PlayVideoViewModel).AddToFavourites(video));
             if (video.IsLiked)
                 likeButton.LazyAnimationProgress = 0.8f;
             else

@@ -92,12 +92,16 @@ namespace MvvmCross_Application1.Core.Model
 
         }
 
+
         public MvxCommand UnCheckCommand { get; }
 
         public void UnCheck()
         {
 
             IsLiked = false;
+
+
+
             var v = VideoId;
             Db.platform.GetConnection();
             Db.platform.Remove(VideoId);

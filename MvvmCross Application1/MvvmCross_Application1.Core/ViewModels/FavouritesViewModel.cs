@@ -19,7 +19,8 @@ namespace MvvmCross_Application1.Core.ViewModels
                 return (Db.Instance);
             }
         }
-
+        public SQLite.SQLiteAsyncConnection sqlconection;
+        public IRepository<Favor12> favorRepo;
         public static FavouritesViewModel Instance = new FavouritesViewModel();
         private static ObservableCollection<YoutubeItem> favoritesVideos = new ObservableCollection<YoutubeItem>();
         public ObservableCollection<YoutubeItem> FavoritesVideos
@@ -27,23 +28,32 @@ namespace MvvmCross_Application1.Core.ViewModels
             get { return favoritesVideos; }
             set { favoritesVideos = value; RaisePropertyChanged(() => FavoritesVideos); }
         }
-     /*  private List<YoutubeItem> favoritesVideos;
-        public List<YoutubeItem> FavoritesVideos 
-        {
-            get { return favoritesVideos; }
-            set
-            {
-                favoritesVideos = value;
-                RaisePropertyChanged(() => FavoritesVideos);
-            }
-        }*/
+     
         public FavouritesViewModel()
         {
-           
-          //Db.platform.GetConnection();
+
+            sqlconection = MainViewModel.connectionfactory.ProduceConnection();
+
         }
 
-        public override async Task Initialize()
+        public async Task Remove(YoutubeItem entity)
+        {
+            var v = 2;
+
+            IRepository<Favor12> stockRepo = new Repository<Favor12>(sqlconection);
+            var list = await stockRepo.Get();
+
+            var entitytoremove = list.Where(x => x.VideoId==entity.VideoId);
+            var d = entitytoremove.FirstOrDefault();
+            var result = await stockRepo.Delete(d);
+
+           var  l=FavoritesVideos.Where(x => x.VideoId != entity.VideoId);
+            FavoritesVideos = new ObservableCollection<YoutubeItem>(l);
+
+          
+        }
+
+    public override async Task Initialize()
         {
             await base.Initialize();
 
@@ -54,11 +64,11 @@ namespace MvvmCross_Application1.Core.ViewModels
 
         public async Task InitDataAsync()
         {
-            var sqlconection = MainViewModel.connectionfactory.ProduceConnection();
+
+            await sqlconection.CreateTablesAsync<Favor12, Channels>(SQLite.CreateFlags.ImplicitPK | SQLite.CreateFlags.AutoIncPK);
             IRepository<Favor12> stockRepo = new Repository<Favor12>(sqlconection);
            
             var list = await stockRepo.Get();
-           // var list = Db.platform.Select();
             List<string> listid = new List<string>();
             foreach (var item in list)
             {
@@ -68,7 +78,6 @@ namespace MvvmCross_Application1.Core.ViewModels
             var info = new InfoFromYoutube();
             var FavoritesVideos1 = await info.GetVideosDetailsAsync(listid);
             FavoritesVideos =new ObservableCollection<YoutubeItem>(FavoritesVideos1);
-
                 }
     }
 }

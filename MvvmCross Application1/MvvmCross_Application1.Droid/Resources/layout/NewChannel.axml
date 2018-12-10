@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android" 
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" 
+    android:paddingTop="20dp"
+    android:layout_width="match_parent" 
+    android:layout_height="match_parent">
+    
+   <EditText
+     android:id="@+id/title"
+     android:layout_width="247dp"
+     android:layout_height="wrap_content"
+     android:gravity="center_vertical" 
+     android:text="my_channel" 
+     local:MvxBind="Text Channel.Title"/> 
+    
+    <EditText
+     android:id="@+id/youtubelink"
+     android:layout_width="247dp"
+     android:layout_height="wrap_content"
+     android:gravity="center_vertical" 
+     android:text="my_channel" 
+     android:editable="true"
+     local:MvxBind="Text Channel.PlayListId" /> 
+    
+    <Button
+        android:id="@+id/Add"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add"
+        android:layout_alignParentBottom="true"
+        local:MvxBind="Click AddCommand" />
+
+</LinearLayout>

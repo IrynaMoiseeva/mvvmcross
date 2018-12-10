@@ -1,8 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
                xmlns:local="http://schemas.android.com/apk/res-auto"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="95dp"
+    android:layout_height="50dp"
     android:orientation="horizontal"
     android:layout_marginTop="5dp"
     android:layout_marginBottom="5dp"
@@ -15,7 +16,7 @@
       android:layout_width="wrap_content"
       android:layout_height="match_parent"
       android:adjustViewBounds="true"
-      android:scaleType="centerInside"/>
+      android:scaleType="fitStart"/>
        
    
 
@@ -31,9 +32,9 @@
             android:layout_weight="2"
 
             android:paddingTop="5dp"
-            android:paddingLeft="15dp"
+            android:paddingLeft="10dp"
             android:textColor="#040404"
-            android:textSize="10dip"
+            android:textSize="6sp"
             android:typeface="sans"
             />
         <RelativeLayout
@@ -56,16 +57,14 @@
     
     <Button
          android:id="@+id/RemoveButton"
-                android:layout_width="20dp"
-                android:layout_height="23dp"
+                android:layout_width="25dp"
+             android:layout_height="25dp"
                 android:layout_alignParentBottom="true"
-                android:layout_alignParentRight="true"
-                android:layout_marginEnd="20dp"
-                android:background="@drawable/icons8_trash_50"
-                android:checked="false"
-                android:layout_centerVertical="true"
-                android:textOff=""
-                android:textOn=""
+        android:layout_alignParentRight="true"
+        android:paddingBottom="5dip"
+        android:paddingRight="15dp"
+                android:background="@drawable/ic_trash"
+                
                 
             />
 </RelativeLayout>

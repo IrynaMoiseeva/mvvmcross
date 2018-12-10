@@ -71,14 +71,19 @@ namespace MvvmCross_Application1.Core.DataBase
         public async Task<T> Get(Expression<Func<T, bool>> predicate) =>
             await db.FindAsync<T>(predicate);
 
+      
         public async Task<int> Insert(T entity) =>
              await db.InsertAsync(entity);
 
         public async Task<int> Update(T entity) =>
              await db.UpdateAsync(entity);
+       
 
-        public async Task<int> Delete(T entity) =>
-             await db.DeleteAsync(entity);
+
+        public async Task<int> Delete(T entity)
+        {
+            return await db.DeleteAsync(entity);
+        }
     }
 }
 

@@ -36,11 +36,14 @@
       <include layout="@layout/nav_header"/>
     
 
-      <android.support.v7.widget.RecyclerView
-       android:id="@+id/menuitems"
+      
+            <MvvmCross.Droid.Support.V7.RecyclerView.MvxRecyclerView
+      android:id="@+id/menuitems"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
-     />
+      local:MvxBind="ItemsSource Channels;ItemClick ChannelSelectedCommand "
+      local:MvxItemTemplate="@layout/menuitemview"
+        android:nestedScrollingEnabled="false"/>
       
   
       

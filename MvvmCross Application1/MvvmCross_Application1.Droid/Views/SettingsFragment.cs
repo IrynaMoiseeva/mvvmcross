@@ -46,6 +46,7 @@ namespace MvvmCross_Application1.Droid.Views
             FloatingActionButton AddButton = view.FindViewById<FloatingActionButton>(Resource.Id.Add);
             AddButton.Click += (s, e) =>
             {
+                 ViewModel.AddNewChannel();
                 // move to new form to input url and title forchannel
             };
 

@@ -14,6 +14,7 @@ using MvvmCross.Binding.Droid.BindingContext;
 using MvvmCross.Core.ViewModels;
 using MvvmCross.Droid.Support.V7.RecyclerView;
 using MvvmCross_Application1.Core.Model;
+using MvvmCross_Application1.Core.ViewModels;
 using MvvmCross_Application1.Droid.Controls;
 using MvvmCross_Application1.Droid.Views;
 
@@ -126,7 +127,13 @@ namespace MvvmCross_Application1.Droid.Adapters
 
             myHolder.removeButton.Click += (s, e) =>
             {
-                video.UnCheck();
+                var result =  ((FavouritesViewModel)ViewModel).Remove(video);
+                    // channel.Remove();
+                    //if (ViewModel != null)
+                    //    ViewModel.Initialize(); // to refresh page  
+
+
+               // video.UnCheck();
                 if (ViewModel != null)
                     ViewModel.Initialize(); // to refresh page  
             };
