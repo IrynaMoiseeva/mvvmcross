@@ -1,8 +1,12 @@
 ﻿using System;
+using SQLite.Net.Attributes;
+
 namespace MvvmCross_Application1.Core.DataBase
 {
     public interface IEntity
     {
-        int Id { get; set; }
+        [PrimaryKey, AutoIncrement]
+         int? Id { get; set; }
+
     }
 }

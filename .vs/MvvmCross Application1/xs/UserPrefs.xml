@@ -1,10 +1,46 @@
 ﻿<Properties StartupConfiguration="{C5459290-27DD-41FD-A12A-3C5E43ACF35C}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="MvvmCross Application1/MvvmCross_Application1.Core/ViewModels/NewChannelViewModel.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="MvvmCross Application1/MvvmCross_Application1.Droid/Setup.cs">
     <Files>
-      <File FileName="MvvmCross Application1/MvvmCross_Application1.Core/ViewModels/NewChannelViewModel.cs" Line="48" Column="1" />
+      <File FileName="MvvmCross Application1/MvvmCross_Application1.Core/DataBase/DataBaseConnection.cs" Line="28" Column="13" />
+      <File FileName="MvvmCross Application1/MvvmCross_Application1.Core/DataBase/BaseEntity.cs" Line="8" Column="29" />
+      <File FileName="MvvmCross Application1/MvvmCross_Application1.Core/DataBase/IDbConnection.cs" Line="7" Column="22" />
+      <File FileName="MvvmCross Application1/MvvmCross_Application1.Core/ViewModels/MainViewModel.cs" Line="19" Column="1" />
+      <File FileName="MvvmCross Application1/MvvmCross_Application1.Core/Repositories/FavorRepository.cs" Line="15" Column="52" />
+      <File FileName="MvvmCross Application1/MvvmCross_Application1.Core/DataBase/LocalRepositoryOperations.cs" Line="10" Column="27" />
+      <File FileName="MvvmCross Application1/MvvmCross_Application1.Core/Repositories/ChannelRepository.cs" Line="11" Column="57" />
+      <File FileName="MvvmCross Application1/MvvmCross_Application1.Core/App.cs" Line="46" Column="61" />
+      <File FileName="MvvmCross Application1/MvvmCross_Application1.Core/DataBase/IEntity.cs" Line="1" Column="1" />
+      <File FileName="MvvmCross Application1/MvvmCross_Application1.Core/DataBase/ ILocalRepositoryOperations.cs" Line="1" Column="1" />
+      <File FileName="MvvmCross Application1/MvvmCross_Application1.Core/DataBase/IOperationsAsync.cs" Line="9" Column="38" />
+      <File FileName="MvvmCross Application1/MvvmCross_Application1.Core/DataBase/SqliteConnectionOperationsAsync.cs" Line="11" Column="61" />
+      <File FileName="MvvmCross Application1/MvvmCross_Application1.Core/DataBase/DbConnectionManager.cs" Line="31" Column="29" />
+      <File FileName="MvvmCross Application1/MvvmCross_Application1.Core/Services/DataService.cs" Line="16" Column="60" />
+      <File FileName="MvvmCross Application1/MvvmCross_Application1.Core/Model/YoutubeItem.cs" Line="55" Column="8" />
+      <File FileName="MvvmCross Application1/MvvmCross_Application1.Core/Model/Video.cs" Line="62" Column="7" />
+      <File FileName="MvvmCross Application1/MvvmCross_Application1.Core/ViewModels/PlayVideoViewModel.cs" Line="30" Column="11" />
+      <File FileName="MvvmCross Application1/MvvmCross_Application1.Core/Repositories/IChannelRepository.cs" Line="9" Column="22" />
+      <File FileName="MvvmCross Application1/MvvmCross_Application1.Core/Repositories/IFavorRepository.cs" Line="1" Column="1" />
+      <File FileName="MvvmCross Application1/MvvmCross_Application1.Core/ViewModels/FavouritesViewModel.cs" Line="13" Column="1" />
+      <File FileName="MvvmCross Application1/MvvmCross_Application1.Core/ViewModels/InfoFromYoutube.cs" Line="1" Column="1" />
+      <File FileName="MvvmCross Application1/MvvmCross_Application1.Core/ViewModels/NewChannelViewModel.cs" Line="16" Column="1" />
+      <File FileName="MvvmCross Application1/MvvmCross_Application1.Core/ViewModels/SettingsViewModel.cs" Line="20" Column="1" />
+      <File FileName="MvvmCross Application1/MvvmCross_Application1.Droid/Adapters/ChannelListAdapter.cs" Line="96" Column="1" />
+      <File FileName="MvvmCross Application1/MvvmCross_Application1.Droid/Adapters/FavoriteListAdapter.cs" Line="1" Column="1" />
+      <File FileName="MvvmCross Application1/MvvmCross_Application1.Droid/Adapters/VideoListAdapter.cs" Line="127" Column="1" />
+      <File FileName="MvvmCross Application1/MvvmCross_Application1.Droid/Controls/LottieFavoriteButton.cs" Line="86" Column="17" />
+      <File FileName="MvvmCross Application1/MvvmCross_Application1.Droid/Views/VideoListDemoActivity.cs" Line="175" Column="17" />
+      <File FileName="MvvmCross Application1/MvvmCross_Application1.Droid/Views/SettingsFragment.cs" Line="50" Column="24" />
+      <File FileName="MvvmCross Application1/MvvmCross_Application1.Droid/Views/PlayVideoActivity .cs" Line="125" Column="21" />
+      <File FileName="MvvmCross Application1/MvvmCross_Application1.Droid/Views/NewChannelFragment.cs" Line="1" Column="1" />
+      <File FileName="MvvmCross Application1/MvvmCross_Application1.Droid/Views/MainView.cs" Line="81" Column="1" />
+      <File FileName="MvvmCross Application1/MvvmCross_Application1.Droid/Views/FavouritesFragment.cs" Line="1" Column="1" />
+      <File FileName="MvvmCross Application1/MvvmCross_Application1.Droid/Views/DeveloperKey.cs" Line="1" Column="1" />
+      <File FileName="MvvmCross Application1/MvvmCross_Application1.Droid/Views/CustomBinding.cs" Line="1" Column="1" />
+      <File FileName="MvvmCross Application1/MvvmCross_Application1.Droid/Views/CustomActionBarDrawerToggle.cs" Line="11" Column="1" />
+      <File FileName="MvvmCross Application1/MvvmCross_Application1.Droid/Setup.cs" Line="37" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.ItemProperties.MvvmCross__Application1.Droid AndroidDesignerPreferredTheme="MyTheme" AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.00c179734cbea4d3" />
+  <MonoDevelop.Ide.ItemProperties.MvvmCross__Application1.Droid AndroidDesignerPreferredTheme="MyTheme" AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.Android_Accelerated_Oreo" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches>
     <Watch file="../../../MvvmCross Application1/MvvmCross_Application1.Core/DataBase/Repository.cs" line="41" offsetX="447" offsetY="600" expression="list" liveUpdate="False" />
   </MonoDevelop.Ide.DebuggingService.PinnedWatches>
@@ -14,9 +50,11 @@
       <Breakpoint file="/Users/irina/Documents/mvvmcross/MvvmCross Application1/MvvmCross_Application1.Core/Services/IPlatformService.cs" relfile="MvvmCross Application1/MvvmCross_Application1.Core/Services/IPlatformService.cs" line="42" column="1" />
       <Breakpoint file="/Users/irina/Documents/mvvmcross/MvvmCross Application1/MvvmCross_Application1.Droid/Properties/IPlatformService_Android.cs" relfile="MvvmCross Application1/MvvmCross_Application1.Droid/Properties/IPlatformService_Android.cs" line="104" column="1" />
       <Breakpoint file="/Users/irina/Documents/mvvmcross/MvvmCross Application1/MvvmCross_Application1.Droid/Properties/IPlatformService_Android.cs" relfile="MvvmCross Application1/MvvmCross_Application1.Droid/Properties/IPlatformService_Android.cs" line="24" column="1" />
-      <Breakpoint file="/Users/irina/Documents/mvvmcross/MvvmCross Application1/MvvmCross_Application1.Core/ViewModels/PlayVideoViewModel.cs" relfile="MvvmCross Application1/MvvmCross_Application1.Core/ViewModels/PlayVideoViewModel.cs" line="58" column="1" />
-      <Breakpoint file="/Users/irina/Documents/mvvmcross/MvvmCross Application1/MvvmCross_Application1.Core/Model/YoutubeItem.cs" relfile="MvvmCross Application1/MvvmCross_Application1.Core/Model/YoutubeItem.cs" line="85" column="1" />
-      <Breakpoint file="/Users/irina/Documents/mvvmcross/MvvmCross Application1/MvvmCross_Application1.Core/Model/YoutubeItem.cs" relfile="MvvmCross Application1/MvvmCross_Application1.Core/Model/YoutubeItem.cs" line="84" column="1" />
+      <Breakpoint file="/Users/irina/Documents/mvvmcross/MvvmCross Application1/MvvmCross_Application1.Core/DataBase/Repository.cs" relfile="MvvmCross Application1/MvvmCross_Application1.Core/DataBase/Repository.cs" line="35" column="1" />
+      <Breakpoint file="/Users/irina/Documents/mvvmcross/MvvmCross Application1/MvvmCross_Application1.Core/Repositories/FavorRepository.cs" relfile="MvvmCross Application1/MvvmCross_Application1.Core/Repositories/FavorRepository.cs" line="37" column="1" />
+      <Breakpoint file="/Users/irina/Documents/mvvmcross/MvvmCross Application1/MvvmCross_Application1.Droid/Controls/LottieFavoriteButton.cs" relfile="MvvmCross Application1/MvvmCross_Application1.Droid/Controls/LottieFavoriteButton.cs" line="41" column="1" />
+      <Breakpoint file="/Users/irina/Documents/mvvmcross/MvvmCross Application1/MvvmCross_Application1.Droid/Controls/LottieFavoriteButton.cs" relfile="MvvmCross Application1/MvvmCross_Application1.Droid/Controls/LottieFavoriteButton.cs" line="82" column="1" />
+      <Breakpoint file="/Users/irina/Documents/mvvmcross/MvvmCross Application1/MvvmCross_Application1.Droid/Controls/LottieFavoriteButton.cs" relfile="MvvmCross Application1/MvvmCross_Application1.Droid/Controls/LottieFavoriteButton.cs" line="28" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />

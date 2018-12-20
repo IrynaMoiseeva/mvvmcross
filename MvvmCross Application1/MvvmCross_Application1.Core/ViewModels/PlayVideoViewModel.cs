@@ -9,6 +9,7 @@ using System.Net.Http;
 using System.Threading.Tasks;
 using MvvmCross_Application1.Core.DataBase;
 using System.Collections.ObjectModel;
+using MvvmCross_Application1.Core.Repositories;
 
 namespace MvvmCross_Application1.Core.ViewModels
 {
@@ -23,26 +24,23 @@ namespace MvvmCross_Application1.Core.ViewModels
     public class PlayVideoViewModel : MvxViewModel<string>,IMvxNotifyPropertyChanged
     {
         //public static FavouritesViewModel Instance = new FavouritesViewModel();
-
-        SQLite.SQLiteAsyncConnection sqlconection;
-        private MyObject myObject;
+        public IFavorRepository localFavorsRepository;
+       
         public static PlayVideoViewModel Instance = new PlayVideoViewModel();
-        private List<Video> videos;
-        private List<Channel> channels;
+        //private List<Video> videos;
         public const string ApiKey = "AIzaSyAn95XgsxmK2c3fwrtyV0-pxOm6RhIr-cI";
         public const string Key = "AIzaSyAqB61v3YI6H7Q-jhx3HVSPNBDvX-dr_yY";
-        private  string apiUrlForContent = "https://www.googleapis.com/youtube/v3/playlistItems?part=contentDetails&maxResults=5&playlistId="
+        private  string apiUrlForContent = "https://www.googleapis.com/youtube/v3/playlistItems?part=contentDetails&maxResults=3&playlistId="
             + Key + "&key=" + ApiKey;
 
         //+""+"&key="+Deleliper.key
-        private string listid = "PL8XvIF6dDmUs4bjs3qMbX7coPsqCCcGHu";
-        public static string apiUrlForPlaylist = "https://www.googleapis.com/youtube/v3/playlistItems?part=contentDetails&maxResults=5&playlistId="
+        public static string apiUrlForPlaylist = "https://www.googleapis.com/youtube/v3/playlistItems?part=contentDetails&maxResults=3&playlistId="
        + "{0}"
        //+ "Your_PlaylistId"
        + "&key="
        + ApiKey;
+        public string apiUrlPlaylist;
 
-        // doc : https://developers.google.com/apis-explorer/#p/youtube/v3/youtube.search.list
         private string apiUrlForVideosDetails = "https://www.googleapis.com/youtube/v3/videos?part=snippet,statistics&id="
             + "{0}"
             //+ "0ce22qhacyo,j8GU5hG-34I,_0aQJHoI1e8"
@@ -50,23 +48,33 @@ namespace MvvmCross_Application1.Core.ViewModels
             + "&key="
             + ApiKey;
 
-        public ObservableCollection<Favor12> FavoriteList;
-        public Db Db
-        {
-            get
-            {
-                return (Db.Instance);
-            }
-        }
-
+        public ObservableCollection<FavoriteVideos> FavoriteList;
+        /* public Db Db
+         {
+             get
+             {
+                 return (Db.Instance);
+             }
+         }*/
         public PlayVideoViewModel()
         {
-            sqlconection = MainViewModel.connectionfactory.ProduceConnection();
+
+        }
+        public async Task Init()
+        {
+            await  InitDataAsync();
+           this.RaisePropertyChanged(() => this.YoutubeItems);
         }
 
-        private  static List <YoutubeItem> youtubeItems = new List<YoutubeItem>();
+        public PlayVideoViewModel(IFavorRepository localFavorsRepository)
+        {
+            this.localFavorsRepository = localFavorsRepository;
+           
+        }
 
-        public List<YoutubeItem> YoutubeItems
+        private  static ObservableCollection<YoutubeItem> youtubeItems = new ObservableCollection<YoutubeItem>();
+
+        public ObservableCollection<YoutubeItem> YoutubeItems
         {
             get { return youtubeItems; }
             set
@@ -78,7 +86,7 @@ namespace MvvmCross_Application1.Core.ViewModels
         }
 
 
-        public List<Video> Videos //{ get; set; }
+       /* public List<Video> Videos 
         {
             get { return videos; }
             set
@@ -86,7 +94,7 @@ namespace MvvmCross_Application1.Core.ViewModels
                 videos = value;
                 RaisePropertyChanged(() => Videos);
             }
-        }
+        }*/
 
        
         public string VideoUrl { get; private set; }
@@ -96,19 +104,11 @@ namespace MvvmCross_Application1.Core.ViewModels
             private set { RaisePropertyChanged(() => PlayListUrl); }
         }
 
-        public void SomeMethod1()
-        {
-            var r = 1; //remove it
-        }
+
         public override void Prepare(string param)
         {
 
-            // myObject = param;
-            //int r = (int)param.channel;
-
-
-
-           apiUrlForPlaylist =string.Format(apiUrlForPlaylist, param);
+           apiUrlPlaylist =string.Format(apiUrlForPlaylist, param);
 
         }
 
@@ -122,15 +122,12 @@ namespace MvvmCross_Application1.Core.ViewModels
             }
         }
        
-
+       
         public async Task AddToFavourites(YoutubeItem entity)
         {
-            IRepository<Favor12> stockRepo = new Repository<Favor12>(sqlconection);
-            var list = await stockRepo.Get();
-            Favor12 add = new Favor12{ VideoId = entity.VideoId };
-            var result=await stockRepo.Insert(add);
-        
-
+           
+          var entitytoadd = new FavoriteVideos { VideoId = entity.VideoId };
+          var result = await localFavorsRepository.InsertAsync(entitytoadd);
 
         }
 
@@ -147,56 +144,49 @@ namespace MvvmCross_Application1.Core.ViewModels
 
         public async Task RemoveFromFavorities(YoutubeItem entity)
         {
+           var list = await localFavorsRepository.ReadAll();
+            var entitytoremove = list.Where(x => x.VideoId == entity.VideoId).FirstOrDefault();
+
+          var v=  await localFavorsRepository.Delete(entitytoremove);
+
+           // var entitytoremove = FavoriteList.Where(x => x.VideoId == entity.VideoId).FirstOrDefault();
+            // var result = await localFavorsRepository.Delete(entitytoremove);
            
-            IRepository<Favor12> stockRepo = new Repository<Favor12>(sqlconection);
-            var list = await stockRepo.Get();
-            var entitytoremove = list.Where(x => x.VideoId == entity.VideoId);
-
-            var d = entitytoremove.FirstOrDefault();
-            var result = await stockRepo.Delete(d);
-
-
         }
 
-        public override async Task Initialize()
+      /*  public override async Task Initialize()
         {
             await base.Initialize();
 
 
             await InitDataAsync();
-        }
+        }*/
+
         public List<string> FavoriteListid {get;set;}
 
 
         public async Task InitDataAsync()
         {
+            IEnumerable<FavoriteVideos> list = await localFavorsRepository.ReadAll();
            
-            await sqlconection.CreateTablesAsync<Favor12, Channels>(SQLite.CreateFlags.ImplicitPK | SQLite.CreateFlags.AutoIncPK);
-
-            IRepository<Favor12> stockRepo = new Repository<Favor12>(sqlconection);
-            var list = await stockRepo.Get();
-
-
-             FavoriteList = new ObservableCollection<Favor12>();
-            foreach (var item in list)
-            {
-                FavoriteList.Add(item);
-            }
+               FavoriteList = new ObservableCollection<FavoriteVideos>();
+              foreach (var item in list)
+              {
+                  FavoriteList.Add(item);
+              }
 
             var videoIds = await GetVideosIdsFromPlayListAsync();
-
-
 
         }
 
         public async Task<List<string>> GetVideosIdsFromPlayListAsync()
         {
-            //var api_key = "03e8168ffbb8cafb6b8b6679c528ec97";
+        
 
             var httpClient = new HttpClient();
 
-            var json = await httpClient.GetStringAsync(apiUrlForPlaylist);
-           // var f = new List<string>();
+            var json = await httpClient.GetStringAsync(apiUrlPlaylist);
+           
             var videoIds = new List<string>();
 
             try
@@ -212,6 +202,7 @@ namespace MvvmCross_Application1.Core.ViewModels
 
                 YoutubeItems = await GetVideosDetailsAsync(videoIds);
 
+
             }
             catch (Exception exception)
             {
@@ -220,10 +211,8 @@ namespace MvvmCross_Application1.Core.ViewModels
             return videoIds;
         }
 
-        private async Task<List<YoutubeItem>> GetVideosDetailsAsync(List<string> videoIds)
+        private async Task<ObservableCollection<YoutubeItem>> GetVideosDetailsAsync(List<string> videoIds)
         {
-            // IPlatformService platformservice = null;
-            //var favvideos = FavouritesViewModel.Instance.FavoritesVideos.ToArray();
 
             var videoIdsString = "";
             foreach (var s in videoIds)
@@ -235,7 +224,7 @@ namespace MvvmCross_Application1.Core.ViewModels
 
             var json = await httpClient.GetStringAsync(string.Format(apiUrlForVideosDetails, videoIdsString));
 
-            var youtubeItems = new List<YoutubeItem>();
+            var youtubeItems = new ObservableCollection<YoutubeItem>();
 
             try
             {
@@ -272,7 +261,7 @@ namespace MvvmCross_Application1.Core.ViewModels
 
                     var f = FavoriteList.Where(x => x.VideoId == youtubeItem.VideoId);
 
-                    youtubeItem.IsLiked = f.Count()>0; //FavoriteList.Where(x => x.VideoId == youtubeItem.VideoId);//Contains(youtubeItem.VideoId);
+                    youtubeItem.IsLiked = f.Count()>0; 
                     youtubeItems.Add(youtubeItem);
 
                 }

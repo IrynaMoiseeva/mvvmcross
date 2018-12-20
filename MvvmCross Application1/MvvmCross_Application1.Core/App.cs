@@ -1,13 +1,23 @@
+﻿using System.Threading.Tasks;
 using MvvmCross.Platform;
 using MvvmCross.Platform.IoC;
 using MvvmCross_Application1.Core.DataBase;
-
-
+using MvvmCross_Application1.Core.Model;
+using MvvmCross_Application1.Core.Repositories;
+using SQLite;
 
 namespace MvvmCross_Application1.Core
 {
     public class App : MvvmCross.Core.ViewModels.MvxApplication
     {
+        public App()
+        {
+           // var d = connection.GetConnection();
+
+            //var f=d.CreateTablesAsync<FavoriteVideos, Channels>(SQLite.CreateFlags.ImplicitPK | SQLite.CreateFlags.AutoIncPK); 
+        }
+
+
         public override void Initialize()
         {
             CreatableTypes()
@@ -26,10 +36,28 @@ namespace MvvmCross_Application1.Core
                 */
             
             // RegisterAppStart<MvvmCross.Core.ViewModels.FoodsViewModel>();
-            Mvx.RegisterType<IConnectionFactory, SingletonConnectionFactory>();
-            
-          //  RegisterAppStart<ViewModels.FoodRecyclerViewModel>();
+            Mvx.RegisterType<IDbConnectionManager, DbConnectionManager>();
+
+            Mvx.LazyConstructAndRegisterSingleton<IFavorRepository, FavorRepository>();
+            Mvx.LazyConstructAndRegisterSingleton<IChannelRepository, ChannelRepository>();
+            //RegisterSingleton<ILocalUserRepository, LocalUserRepository>();
+
+
+            var container = Mvx.Resolve<IDbConnectionManager>();
+            var f=container.GetConnection();
+           
+            f.CreateTableAsync <FavoriteVideos>();
+            f.CreateTableAsync <Channels>();
+            // var d = container.GetConnection();
+
+            // d.CreateTablesAsync<FavoriteVideos, Channels>(SQLite.CreateFlags.ImplicitPK | SQLite.CreateFlags.AutoIncPK); ;
+            //  RegisterAppStart<ViewModels.FoodRecyclerViewModel>();
         }
+       // private async Task DBDeployment(IConnectionFactory connection)
+        //{
+
+
+       // }
     }
     
 }

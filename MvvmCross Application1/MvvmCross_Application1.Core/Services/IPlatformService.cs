@@ -18,7 +18,7 @@ namespace MvvmCross_Application1.Core.Services
         void Remove(string VidId);
        // void RemoveTable();
        
-    List<Favor12> Select();
+    List<FavoriteVideos> Select();
 
     }
 
@@ -32,7 +32,7 @@ namespace MvvmCross_Application1.Core.Services
         void IPlatformService.Remove(string VidId) { }
         void IPlatformService.GetConnection() { }
         //  public abstract List<TEntity> Select<TEntity>(TEntity obj) where TEntity :  IEntity;
-        public abstract List<Favor12> Select();
+        public abstract List<FavoriteVideos> Select();
 
      //   public abstract void RemoveTable();
 

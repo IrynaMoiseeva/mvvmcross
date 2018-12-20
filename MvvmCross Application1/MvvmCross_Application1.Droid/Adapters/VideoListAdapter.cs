@@ -1,16 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Collections.Specialized;
+﻿using System.Collections.Specialized;
 using System.Net;
-using Android.Animation;
 using Android.Content;
 using Android.Graphics;
 using Android.Support.V7.Widget;
 using Android.Views;
 using Android.Widget;
 using Com.Airbnb.Lottie;
-using Com.Google.Android.Youtube.Player;
 using MvvmCross.Binding.Droid.BindingContext;
+using MvvmCross.Binding.ExtensionMethods;
 using MvvmCross.Core.ViewModels;
 using MvvmCross.Droid.Support.V7.RecyclerView;
 using MvvmCross_Application1.Core.Model;
@@ -23,42 +20,24 @@ namespace MvvmCross_Application1.Droid.Adapters
     public class VideoListAdapter : MvxRecyclerAdapter
     {
         public MvxViewModel ViewModel { get; set; }
-        public Boolean AllChecked { get; set; } // for removed tooglebutton
+        public bool AllChecked { get; set; } // for removed tooglebutton
         public Context mcon { get; set; }
-        private readonly Dictionary<YouTubeThumbnailView, IYouTubeThumbnailLoader> thumbnailViewToLoaderMap;
         public View View;
         public int ToogleIcon { get; set; }
         public LottieAnimationView animationView;
 
         private LottieFavoriteButton likeButton;
 
-        public bool? isLiked;
-        public bool? IsLiked
-        {
-            get { return isLiked; }
-            set
-            {
-                isLiked = value;
-
-                likeButton.LazyAnimationProgress = (value.HasValue && value.Value)
-                            ? LottieFavoriteButton.AnimationProgressEndFrame
-                    : LottieFavoriteButton.AnimationProgressStartFrame;
-            }
-        }
-
         public VideoListAdapter(IMvxAndroidBindingContext bindingContext)
              : base(bindingContext)
         {
-
-          //  thumbnailViewToLoaderMap = new Dictionary<YouTubeThumbnailView, IYouTubeThumbnailLoader>();
+          
         }
-
-
 
         public override Android.Support.V7.Widget.RecyclerView.ViewHolder OnCreateViewHolder(ViewGroup parent, int viewType)
         {
             var itemBindingContext = new MvxAndroidBindingContext(parent.Context, this.BindingContext.LayoutInflaterHolder);
-
+     
 
             View = this.InflateViewForHolder(parent, viewType, itemBindingContext);
 
@@ -87,10 +66,10 @@ namespace MvvmCross_Application1.Droid.Adapters
             public ImageView imageView;
             public LottieFavoriteButton likebutton;
 
-
             public MyViewHolder(View itemView, IMvxAndroidBindingContext context) : base(itemView, context)
 
             {
+                var d=context.DataContext;
                 title = itemView.FindViewById<TextView>(Resource.Id.titletext);
                 published_date = itemView.FindViewById<TextView>(Resource.Id.published_date);
                 imageView = itemView.FindViewById<ImageView>(Resource.Id.thumbnail);
@@ -98,12 +77,15 @@ namespace MvvmCross_Application1.Droid.Adapters
             }
         }
 
+        protected object GetElementAt(int position)
+        {
+            return ItemsSource.ElementAt(position);
+        }
 
         public override void OnBindViewHolder(RecyclerView.ViewHolder holder, int position)
         {
-
-            YoutubeItem video = (GetItem(position)) as YoutubeItem;
-
+            var video = ItemsSource.ElementAt(position) as YoutubeItem;
+           
             MyViewHolder myHolder = holder as MyViewHolder;
 
             myHolder.title.Text = video.Title;
@@ -123,31 +105,27 @@ namespace MvvmCross_Application1.Droid.Adapters
                 mcon.StartActivity(intent);
             };
 
-            likeButton = View.FindViewById<LottieFavoriteButton>(Resource.Id.favorite);
+            likeButton = myHolder.likebutton;
 
             likeButton.OnClickCommandDisLike = new MvxAsyncCommand(() =>(ViewModel as PlayVideoViewModel).RemoveFromFavorities(video));
 
-            //video.UnCheckCommand;
-            // likeButton.OnClickCommandLike = video.CheckCommand;
             likeButton.OnClickCommandLike = new MvxAsyncCommand(() => (ViewModel as PlayVideoViewModel).AddToFavourites(video));
+
             if (video.IsLiked)
                 likeButton.LazyAnimationProgress = 0.8f;
             else
                 likeButton.LazyAnimationProgress = 0.0f;
 
-        }
 
+
+        }
 
         protected override void OnItemsSourceCollectionChanged(object sender, NotifyCollectionChangedEventArgs e)
         {
 
         }
 
-
     }
-
-
-
 
 }
 

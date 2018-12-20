@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 namespace MvvmCross_Application1.Core.Model
 {
   
-    public class Video : MvxViewModel
+   /* public class Video : MvxViewModel
     {
        
         public string VideoId { get; set; }
@@ -37,7 +37,7 @@ namespace MvvmCross_Application1.Core.Model
     {
         
         public int Id { get; set; }
-        public string PlayListId { get; set; }
+       * public string PlayListId { get; set; }
         public string Title { get; set; }
         public string Image { get; set; }
 
@@ -59,5 +59,5 @@ namespace MvvmCross_Application1.Core.Model
             Image = image;
 
         }
-    }
+    }*/
 }

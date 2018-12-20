@@ -22,7 +22,6 @@ namespace MvvmCross_Application1.Core.ViewModels
 
         public async Task<List<YoutubeItem>> GetVideosDetailsAsync(List<string> videoIds)
         {
-            // IPlatformService platformservice = null;
             var videoIdsString = "";
             foreach (var s in videoIds)
             {

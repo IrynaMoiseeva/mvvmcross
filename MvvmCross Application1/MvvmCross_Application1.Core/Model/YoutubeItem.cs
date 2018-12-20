@@ -14,9 +14,9 @@ using System.Threading.Tasks;
 
 namespace MvvmCross_Application1.Core.Model
 {
-    public class YoutubeItem: MvxViewModel
+    public class YoutubeItem : MvxViewModel
     {
-      
+
         public string VideoId { get; set; }
 
         public string Title { get; set; }
@@ -52,84 +52,6 @@ namespace MvvmCross_Application1.Core.Model
 
         public bool IsLiked { get; set; }
 
-        public YoutubeItem()
-        {
-            
-            CheckCommand = new MvxCommand(Check);
-            UnCheckCommand = new MvxCommand(UnCheck);
-            
-           
-        }
-        // private readonly Lazy<PlayVideoViewModel> playvideoViewModel;
-
-
-
-        //public PlayVideoViewModel PlayVideoViewModel => playvideoViewModel.
-
-        public IPlatformService platformservice;
-
-        public Db Db
-        {
-            get
-            {
-                return (Db.Instance);
-            }
-        }
-
-
-        public MvxCommand CheckCommand { get; }
-        public void Check()
-        {
-
-            var v = VideoId;
-            IsLiked = true;
-            var d = PlayVideoViewModel.Instance.YoutubeItems;
-
-            Db.platform.GetConnection();
-            Db.platform.Insert(VideoId);
-                 
-          
-
-        }
-
-
-        public MvxCommand UnCheckCommand { get; }
-
-        public void UnCheck()
-        {
-
-            IsLiked = false;
-
-
-
-            var v = VideoId;
-            Db.platform.GetConnection();
-            Db.platform.Remove(VideoId);
-            var dd=Db.platform.Select();
-            var favvideos = FavouritesViewModel.Instance.FavoritesVideos.ToArray();
-            var FavvideosExcludeDel = favvideos.Where(x => x.VideoId != v).ToList();
-            FavouritesViewModel.Instance.FavoritesVideos = new ObservableCollection<YoutubeItem> (FavvideosExcludeDel);
-            //RaiseCollectionChanged(new NotifyCollectionChangedEventArgs(NotifyCollectionChangedAction.Reset));
-
-        }
-     
-    }
-    public class Db
-
-    {
-        public static Db Instance = new Db();
-        public IPlatformService platform;
-       // public IConnectionFactory connectionfactory;
-       // var ff = new DbOperations(MainViewModel.connectionfactory.ProduceConnection());
-
-        public Db()
-        {
-            platform = MainViewModel._platformService;
-            // var dbconection = MainViewModel.connectionfactory.
-         //   connectionfactory = MainViewModel.connectionfactory;
-            
-
-        }
-
+       
     }
 }

@@ -6,33 +6,33 @@ using System.Threading.Tasks;
 using System.Collections.Generic;
 using MvvmCross_Application1.Core.DataBase;
 using MvvmCross.Core.Navigation;
+using MvvmCross_Application1.Core.Repositories;
+using static MvvmCross_Application1.Core.ViewModels.SettingsViewModel;
 
 namespace MvvmCross_Application1.Core.ViewModels
 {
     public class SettingsViewModel : MvxViewModel
     {
-
-        public Db Db
-        {
-            get
-            {
-                return (Db.Instance);
-            }
-        }
-
-       // public static SettingsViewModel Instance = new SettingsViewModel();
-        public IRepository<Channels> channelRepo;
+        public Channels entity;
+        private readonly IChannelRepository localSettingsRepository;
+        private readonly IMvxNavigationService navigationService;
+        public static SettingsViewModel Instance = new SettingsViewModel();
         private static ObservableCollection<Channels> channels = new ObservableCollection<Channels>();
-        public ObservableCollection<Channels> Channels
+        public  ObservableCollection<Channels> Channels
         {
             get { return channels; }
             set { channels = value; RaisePropertyChanged(() => Channels); }
         }
+        public SettingsViewModel()
+        {
 
-        public SettingsViewModel(IMvxNavigationService navigationService)
+        }
+
+        public SettingsViewModel(IMvxNavigationService navigationService,IChannelRepository localSettingsRepository)
 
         {
-            _navigationService = navigationService ?? throw new ArgumentNullException(nameof(navigationService));
+            this.navigationService = navigationService ?? throw new ArgumentNullException(nameof(navigationService));
+            this.localSettingsRepository = localSettingsRepository;
 
         }
 
@@ -41,74 +41,57 @@ namespace MvvmCross_Application1.Core.ViewModels
         {
             await base.Initialize();
 
-
             await InitDataAsync();
         }
-        private IMvxAsyncCommand _navigateCommand;
-        private readonly IMvxNavigationService _navigationService;
 
         private MvxAsyncCommand removeCommand;
         public MvxAsyncCommand RemoveCommand
         {
             get
             {
-                removeCommand =  new MvxAsyncCommand(() => Remove(null));
+                removeCommand = new MvxAsyncCommand(() => Remove(entity));
                 return removeCommand;
             }
         }
-      //  public MvxAsyncCommand RemoveCommand { get; }
+
         public async Task Remove(Channels entity)
         {
-
-
-           var result = await channelRepo.Delete(entity);
-            List<Channels> list = await channelRepo.Get();
+            var result= await localSettingsRepository.Delete(entity);
+            IEnumerable<Channels> list = await localSettingsRepository.ReadAll();
             Channels = new ObservableCollection<Channels>(list);
-            /* IsLiked = true;
-             var d = PlayVideoViewModel.Instance.YoutubeItems;
-
-             Db.platform.GetConnection();
-             Db.platform.Insert(VideoId);*/
-
-
 
         }
+
         public async Task InitDataAsync()
         {
-            var sqlconection = MainViewModel.connectionfactory.ProduceConnection();
-       //!!    await sqlconection.DropTableAsync<Channels>();
-           //await sqlconection.CreateTablesAsync<Favor12, Channels>();
-
-            await sqlconection.CreateTablesAsync<Favor12, Channels>(SQLite.CreateFlags.ImplicitPK | SQLite.CreateFlags.AutoIncPK);
-
-           
-
-            channelRepo = new Repository<Channels>(sqlconection);
-          //!!  await channelRepo.Insert((new Channels() { PlayListId = "PLyxLqRfXH_eOMYvGsYRYkrjaoZ8DG3Sxu", Title = "Little Angel" }));
-            List<Channels> list =await channelRepo.Get();
-            Channels= new ObservableCollection<Channels>(list);
-
-            /*var list = await stockRepo.Get();
-
-            var list = Db.platform.Select();
-            List<string> listid = new List<string>();
-            foreach (var item in list)
-            {
-                listid.Add(item.VideoId);
-            }
-
-            var info = new InfoFromYoutube();
-            var FavoritesVideos1 = await info.GetVideosDetailsAsync(listid);
-           // FavoritesVideos = new ObservableCollection<YoutubeItem>(FavoritesVideos1);
-
-*/
+            // await localSettingsRepository.DropTable();
+           // await localSettingsRepository.CreateTable();
+        //    await localSettingsRepository.UpdateOrCreate(new Channels { PlayListId = "34343434", Title="ggggg" });*/
+            IEnumerable<Channels> list = await localSettingsRepository.ReadAll();
+            Channels = new ObservableCollection<Channels>(list);
 
         }
+       
+
         public async Task AddNewChannel()
         {
 
-            await _navigationService.Navigate<NewChannelViewModel>();
-
+            MyReturnObject result = await navigationService.Navigate<NewChannelViewModel, MyObject, MyReturnObject>(new MyObject(1));
+            IEnumerable<Channels> list = await localSettingsRepository.ReadAll();
+            Channels = new ObservableCollection<Channels>(list);
+            this.RaisePropertyChanged(() => this.Channels); // update data on the view 
+          
         }
+
+
+        public class MyReturnObject
+        {
+            public int channel;
+            public MyReturnObject(int channel)
+            {
+                this.channel = channel;
+            }
+        }
+
     }
 }

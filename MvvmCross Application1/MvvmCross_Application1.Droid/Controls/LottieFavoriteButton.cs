@@ -31,17 +31,7 @@ namespace MvvmCross_Application1.Droid.Controls
 
             public override void OnAnimationEnd(Animator animation)
             {
-              /*  if (lottieAnimationView.Progress == 0.0f)
-
-                    animation.Start();
-                else
-                {
-                    lottieAnimationView.Progress = 0.0f;
-                }
-*/
-                  //  animation.Cancel();
-                 //   animation.RemoveAllListeners();
-
+              
                     lottieAnimationView.RemoveAnimatorListener(this);
                     onAnimationEnd(animation);
             }
@@ -85,45 +75,15 @@ namespace MvvmCross_Application1.Droid.Controls
         public ICommand OnClickCommandLike{ get; set; }
         public ICommand OnClickCommandDisLike { get; set; }
         public bool IsLike { get; set; }
-       /*{
-            get { return IsLike; }
-            set
-            {
-                IsLike = value;
 
-                if (1==1)
-                    animationView.Progress = 0.8f;
-                else
-                    animationView.Progress = 0.0f;
-            }
-        }
-
-       /* public bool? IsLiked
-        {
-            get { return isLiked; }
-            set
-            {
-                isLiked = value;
-
-                likeButton.LazyAnimationProgress = (value.HasValue && value.Value)
-                            ? LottieLikeButton.AnimationProgressEndFrame
-                            : LottieLikeButton.AnimationProgressStartFrame;
-            }
-        }*/
 
         public float LazyAnimationProgress
         {
             get { return animationView.Progress; }
             set
             {
-               /* if (animationView.IsAnimating == true)
-                {
-                    animationProgressForCallBack = value;
-                }
-                else
-                {*/
-                    animationView.Progress = value;
-                //}
+                animationView.Progress = value;
+
             }
         }
 
@@ -134,8 +94,9 @@ namespace MvvmCross_Application1.Droid.Controls
 
             animationView = view.FindViewById<LottieAnimationView>(Resource.Id.lottie_favorite_button_image);
             animationView.SetAnimation("favorite_black.json");
+            animationView.Progress = AnimationProgressStartFrame;
 
-         
+
             FindViewById(Resource.Id.lottie_favorite_button).Click += delegate
               {
                   
@@ -172,13 +133,14 @@ namespace MvvmCross_Application1.Droid.Controls
         }
         private void OnAnimationCompleted(Animator animator)
         {
-           // animationView.Progress = 0.8f;//animationProgressForCallBack;
+           
             if (animationView.Progress >= 0.0f)
                 animationView.Progress = 0.8f;
-                   // animation.Start();
+                   
                 else
                 {
-                animationView.Progress = 0.0f;;
+                animationView.Progress = 0.0f;
+
                 }
         }
 

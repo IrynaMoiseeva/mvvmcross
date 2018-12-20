@@ -49,10 +49,6 @@ namespace MvvmCross_Application1.Droid.Views
                  ViewModel.AddNewChannel();
                 // move to new form to input url and title forchannel
             };
-
-
-
-
             return view;
         }
     }

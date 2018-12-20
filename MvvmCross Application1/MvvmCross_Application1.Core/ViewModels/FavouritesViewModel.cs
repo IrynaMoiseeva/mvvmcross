@@ -1,62 +1,64 @@
 ﻿using MvvmCross.Core.ViewModels;
-using MvvmCross_Application1.Core.DataBase;
 using MvvmCross_Application1.Core.Model;
-using System;
+using MvvmCross_Application1.Core.Repositories;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace MvvmCross_Application1.Core.ViewModels
 {
-  public  class FavouritesViewModel: MvxViewModel
+    public class FavouritesViewModel: MvxViewModel
     {
-        public Db Db
-        {
-            get
-            {
-                return (Db.Instance);
-            }
-        }
-        public SQLite.SQLiteAsyncConnection sqlconection;
-        public IRepository<Favor12> favorRepo;
+        public IFavorRepository localFavorsRepository;
+        public YoutubeItem entity;
         public static FavouritesViewModel Instance = new FavouritesViewModel();
-        private static ObservableCollection<YoutubeItem> favoritesVideos = new ObservableCollection<YoutubeItem>();
+        private MvxAsyncCommand removeFromFavoritiesCommand;
+        public MvxAsyncCommand RemoveFromFavoritiesCommand
+        {
+            get { 
+            
+            removeFromFavoritiesCommand = new MvxAsyncCommand(() => Remove(entity));
+                return removeFromFavoritiesCommand;
+            }
+
+    }
+
+        private ObservableCollection<YoutubeItem> favoritesVideos;//= new ObservableCollection<YoutubeItem>();
         public ObservableCollection<YoutubeItem> FavoritesVideos
         {
             get { return favoritesVideos; }
             set { favoritesVideos = value; RaisePropertyChanged(() => FavoritesVideos); }
         }
-     
+
         public FavouritesViewModel()
         {
 
-            sqlconection = MainViewModel.connectionfactory.ProduceConnection();
+        }
+
+        public FavouritesViewModel(IFavorRepository localFavorsRepository)
+        {
+            this.localFavorsRepository = localFavorsRepository;
 
         }
 
+
         public async Task Remove(YoutubeItem entity)
         {
-            var v = 2;
+            var list = await localFavorsRepository.ReadAll();
+            var entitytoremove = list.Where(x => x.VideoId == entity.VideoId).FirstOrDefault();
 
-            IRepository<Favor12> stockRepo = new Repository<Favor12>(sqlconection);
-            var list = await stockRepo.Get();
-
-            var entitytoremove = list.Where(x => x.VideoId==entity.VideoId);
-            var d = entitytoremove.FirstOrDefault();
-            var result = await stockRepo.Delete(d);
-
-           var  l=FavoritesVideos.Where(x => x.VideoId != entity.VideoId);
+            await localFavorsRepository.Delete (entitytoremove);
+            var l = FavoritesVideos.Where(x => x.VideoId != entity.VideoId);
             FavoritesVideos = new ObservableCollection<YoutubeItem>(l);
 
-          
+            this.RaisePropertyChanged(() => this.FavoritesVideos);
+
         }
 
     public override async Task Initialize()
         {
             await base.Initialize();
-
 
             await InitDataAsync();
         }
@@ -64,20 +66,22 @@ namespace MvvmCross_Application1.Core.ViewModels
 
         public async Task InitDataAsync()
         {
-
-            await sqlconection.CreateTablesAsync<Favor12, Channels>(SQLite.CreateFlags.ImplicitPK | SQLite.CreateFlags.AutoIncPK);
-            IRepository<Favor12> stockRepo = new Repository<Favor12>(sqlconection);
+           // await localFavorsRepository.DropTable();
+         //  await localFavorsRepository.CreateTable();
+            FavoritesVideos = new ObservableCollection<YoutubeItem>();
+            IEnumerable<FavoriteVideos> list = await localFavorsRepository.ReadAll();
            
-            var list = await stockRepo.Get();
-            List<string> listid = new List<string>();
-            foreach (var item in list)
-            {
-                listid.Add(item.VideoId);
-            }
+              List<string> listid = new List<string>();
+              foreach (var item in list)
+              {
+                  listid.Add(item.VideoId);
+              }
 
-            var info = new InfoFromYoutube();
-            var FavoritesVideos1 = await info.GetVideosDetailsAsync(listid);
-            FavoritesVideos =new ObservableCollection<YoutubeItem>(FavoritesVideos1);
-                }
+              var info = new InfoFromYoutube();
+              var favoritesVideos1 = await info.GetVideosDetailsAsync(listid);
+              favoritesVideos =new ObservableCollection<YoutubeItem>(favoritesVideos1);
+           this.RaisePropertyChanged(() => this.FavoritesVideos);
+
+        }
     }
 }

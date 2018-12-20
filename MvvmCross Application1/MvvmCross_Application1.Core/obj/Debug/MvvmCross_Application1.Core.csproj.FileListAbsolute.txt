@@ -33,3 +33,4 @@
 /Users/irina/Documents/mvvmcross/MvvmCross Application1/MvvmCross_Application1.Core/obj/Debug/MvvmCross_Application1.Core.csproj.CopyComplete
 /Users/irina/Documents/mvvmcross/MvvmCross Application1/MvvmCross_Application1.Core/obj/Debug/MvvmCross_Application1.Core.dll
 /Users/irina/Documents/mvvmcross/MvvmCross Application1/MvvmCross_Application1.Core/obj/Debug/MvvmCross_Application1.Core.pdb
+/Users/irina/Documents/mvvmcross/MvvmCross Application1/MvvmCross_Application1.Core/obj/Debug/MvvmCross_Application1.Core.csprojAssemblyReference.cache

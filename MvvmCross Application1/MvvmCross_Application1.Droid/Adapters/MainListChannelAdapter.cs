@@ -18,14 +18,13 @@ namespace MvvmCross_Application1.Droid.Adapters
     public class MainListChannelAdapter : MvxRecyclerAdapter
     {
         public event EventHandler<string> ItemClick;
-        //public List<Core.Model.Channels> mchannel;
         public MvxViewModel ViewModel { get; set; }
 
         public View View;
         public MainListChannelAdapter(IMvxAndroidBindingContext bindingContext)
              : base(bindingContext)
         {
-            var f = 0;
+
         }
 
 
@@ -45,24 +44,17 @@ namespace MvvmCross_Application1.Droid.Adapters
         }
 
 
-
-
-
         public class MenuItemViewHolder : MvxRecyclerViewHolder
-    {
-
-        public ImageView Image { get; set; }
-        public TextView Caption { get; set; }
-
-        public MenuItemViewHolder(View itemview, IMvxAndroidBindingContext context, Action<string> listener) : base(itemview, context)
-
         {
-            Image = itemview.FindViewById<ImageView>(Resource.Id.image);
+
+            public ImageView Image { get; set; }
+            public TextView Caption { get; set; }
+
+            public MenuItemViewHolder(View itemview, IMvxAndroidBindingContext context, Action<string> listener) : base(itemview, context)
+
+            {
+                Image = itemview.FindViewById<ImageView>(Resource.Id.image);
                 Caption = itemview.FindViewById<TextView>(Resource.Id.textview);
-                //itemview.Click += (sender, e) => listener(Position);
-                //itemview.SetOnClickListener
-              //  itemview.Click += (sender, e) => listener("dff");
-                //  itemview.Click += (sender, e) => listener(Position);
 
             }
 
@@ -77,61 +69,13 @@ namespace MvvmCross_Application1.Droid.Adapters
             Channels mchannel = (GetItem(position)) as Channels;
             vh.Caption.Text = mchannel.Title;
 
-            vh.Caption.Click +=(s, e) => 
-            { 
-                (ViewModel as MainViewModel).ChooseChannel (mchannel.PlayListId); 
-                OnClick(mchannel.PlayListId); 
-            };
-
-
-            //vh.Click=
-
-            //!! var  id = (int)typeof(Resource.Drawable).GetField(mchannel[position].Image.ToString()).GetValue(null);
-
-
-            //!!  vh.Image.SetImageResource(id) ;//Resource.Drawable.peppa);//(mchannel[position].Id);
+            vh.Caption.Click += (s, e) =>
+             {
+                 (ViewModel as MainViewModel).ChooseChannel(mchannel.PlayListId);
+                 OnClick(mchannel.PlayListId);
+             };
 
         }
-
-        /*  public override void OnBindViewHolder(RecyclerView.ViewHolder holder, int position)
-
-      {
-              MenuItemViewHolder vh = holder as MenuItemViewHolder;
-              var packageName = Application.Context.PackageName.ToString();
-              Channels mchannel = (GetItem(position)) as Channels;
-              YoutubeItem video = (GetItem(position)) as YoutubeItem;
-
-              MenuItemViewHolder myHolder = holder as MyViewHolder;
-
-          myHolder.title.Text = video.Title;
-          myHolder.published_date.Text = video.PublishedAt.ToString();
-
-
-          Bitmap bbb = GetBitmapFromUrl(video.MediumThumbnailUrl);
-          myHolder.imageView.SetImageBitmap(bbb);
-
-          myHolder.imageView.Click += (sender, args) =>
-          {
-              var intent = new Intent(mcon, typeof(PlayVideoActivity));
-              intent.AddFlags(ActivityFlags.NewTask);
-
-              intent.PutExtra(PlayVideoActivity.ExtraUrlKey, video.VideoId);
-
-              mcon.StartActivity(intent);
-          };
-
-
-
-          myHolder.removeButton.Click += (s, e) =>
-          {
-              video.UnCheck();
-              if (ViewModel != null)
-                  ViewModel.Initialize(); // to refresh page  
-          };
-
-      }*/
-
-
 
     }
 }

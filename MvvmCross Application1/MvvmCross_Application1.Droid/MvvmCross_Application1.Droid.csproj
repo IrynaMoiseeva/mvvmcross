@@ -275,6 +275,8 @@
     <AndroidResource Include="Resources\drawable\main.png" />
     <AndroidResource Include="Resources\layout\NewChannel.axml" />
     <AndroidResource Include="Resources\drawable\remove_icon.jpeg" />
+    <AndroidResource Include="Resources\drawable\fill.png" />
+    <AndroidResource Include="Resources\drawable\empty.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

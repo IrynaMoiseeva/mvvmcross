@@ -19,6 +19,10 @@ using Autofac.Extras.MvvmCross;
 using System;
 using MvvmCross_Application1.Droid.Properties;
 using MvvmCross_Application1.Core.Services;
+using System.Threading.Tasks;
+using MvvmCross_Application1.Core.DataBase;
+using MvvmCross_Application1.Core.Model;
+using Autofac.Core;
 
 namespace MvvmCross_Application1.Droid
 {
@@ -30,8 +34,15 @@ namespace MvvmCross_Application1.Droid
 
         protected override IMvxApplication CreateApp()
         {
+            var container = Mvx.Resolve<IPlatformService>();
             return new App();
+
         }
+
+
+
+
+
         protected override IEnumerable<Assembly> AndroidViewAssemblies => new List<Assembly>(base.AndroidViewAssemblies)
         {
             typeof(Android.Support.V7.Widget.Toolbar).Assembly,
@@ -41,6 +52,7 @@ namespace MvvmCross_Application1.Droid
 
 
     };
+
 
         // add more abbreviations here
 
@@ -67,9 +79,11 @@ namespace MvvmCross_Application1.Droid
             Dictionary<Type, Type> mappedtypes = new Dictionary<Type, Type>();
             mappedtypes.Add(typeof(PlatformService_Android), typeof(IPlatformService));
             Bootstarpper bootstarpper = new Bootstarpper();
-            var container = bootstarpper.Build(mappedtypes);
+             var container = bootstarpper.Build(mappedtypes);
             return new AutofacMvxIocProvider(container);
         }
+
+
     }
 }
 

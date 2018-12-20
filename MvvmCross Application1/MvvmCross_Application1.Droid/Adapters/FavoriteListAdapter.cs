@@ -49,7 +49,7 @@ namespace MvvmCross_Application1.Droid.Adapters
         public FavoriteListAdapter(IMvxAndroidBindingContext bindingContext)
              : base(bindingContext)
         {
-
+            var f = bindingContext.DataContext;
            // thumbnailViewToLoaderMap = new Dictionary<YouTubeThumbnailView, IYouTubeThumbnailLoader>();
         }
 
@@ -103,7 +103,7 @@ namespace MvvmCross_Application1.Droid.Adapters
         {
 
             YoutubeItem video = (GetItem(position)) as YoutubeItem;
-
+            
             MyViewHolder myHolder = holder as MyViewHolder;
 
             myHolder.title.Text = video.Title;
@@ -125,21 +125,15 @@ namespace MvvmCross_Application1.Droid.Adapters
 
 
 
-            myHolder.removeButton.Click += (s, e) =>
+            myHolder.removeButton.Click += delegate 
             {
-                var result =  ((FavouritesViewModel)ViewModel).Remove(video);
-                    // channel.Remove();
-                    //if (ViewModel != null)
-                    //    ViewModel.Initialize(); // to refresh page  
+                ((FavouritesViewModel)ViewModel).entity = video;
 
+                ((FavouritesViewModel)ViewModel).RemoveFromFavoritiesCommand.Execute();
 
-               // video.UnCheck();
-                if (ViewModel != null)
-                    ViewModel.Initialize(); // to refresh page  
             };
 
         }
-
 
         protected override void OnItemsSourceCollectionChanged(object sender, NotifyCollectionChangedEventArgs e)
         {

@@ -8,7 +8,6 @@ using MvvmCross.Core.ViewModels;
 namespace MvvmCross_Application1.Droid.Views
 {
 
-
     public class ActionBarDrawerEventArgs : EventArgs
     {
         public View DrawerView { get; set; }

@@ -29,27 +29,27 @@ namespace MvvmCross_Application1.Droid.Properties
 
         public void Insert(string VidId)
         {
-            var f = con.GetTableInfo("Favor12");
-            var before = con.Table<Favor12>().ToArray();
+            var f = con.GetTableInfo("FavoriteVideos");
+            var before = con.Table<FavoriteVideos>().ToArray();
 
             var data1 = before.Where(x => x.VideoId == VidId).FirstOrDefault();
 
             /* if table is empty */
             if (before == null) 
             {
-                con.Insert(new Favor12() { VideoId = VidId });
+                con.Insert(new FavoriteVideos() { VideoId = VidId });
                 con.Commit();
             }
 
             /* check wether videoid is already added */
             else if (data1 == null)
             {
-                con.Insert(new Favor12() { VideoId = VidId });
+                con.Insert(new FavoriteVideos() { VideoId = VidId });
                 con.Commit();
             }
 
-            var t = con.GetMapping<Favor12>().HasAutoIncPK.ToString();
-             before = con.Table<Favor12>().ToArray();
+            var t = con.GetMapping<FavoriteVideos>().HasAutoIncPK.ToString();
+             before = con.Table<FavoriteVideos>().ToArray();
 
         }
 
@@ -57,10 +57,10 @@ namespace MvvmCross_Application1.Droid.Properties
         //   public abstract List<TEntity> Select<TEntity>(TEntity obj) where TEntity : IEntity;
         //  public List<E> Select() 
         //public string ABC<T>(T obj) where T : IDestination
-        /* public List<Favor12> Select()
+        /* public List<FavoriteVideos> Select()
          {
 
-             var data = con.Table<Favor12>().ToList();
+             var data = con.Table<FavoriteVideos>().ToList();
              return data;
 
          }*/
@@ -84,14 +84,14 @@ namespace MvvmCross_Application1.Droid.Properties
 
         public void Remove(string VidId)
         {
-            var before = con.Table<Favor12>().ToArray();
+            var before = con.Table<FavoriteVideos>().ToArray();
 
             var data1 = before.Where(x => x.VideoId == VidId).FirstOrDefault();
 
             if (data1 != null)
 
             {
-                con.Delete<Favor12>(data1.Id);
+                con.Delete<FavoriteVideos>(data1.Id);
 
                 con.Commit();
             }
@@ -117,7 +117,7 @@ namespace MvvmCross_Application1.Droid.Properties
                  con = new SQLiteConnection(destinationPath);
 
 
-                con.CreateTable<Favor12>(SQLite.CreateFlags.ImplicitPK | SQLite.CreateFlags.AutoIncPK);
+                con.CreateTable<FavoriteVideos>(SQLite.CreateFlags.ImplicitPK | SQLite.CreateFlags.AutoIncPK);
 
             }
             catch (Exception ex)
@@ -129,9 +129,9 @@ namespace MvvmCross_Application1.Droid.Properties
             
         }
 
-        public List<Favor12> Select()
+        public List<FavoriteVideos> Select()
         {
-            var data = con.Table<Favor12>().ToList();
+            var data = con.Table<FavoriteVideos>().ToList();
             return data;
 
         }

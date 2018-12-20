@@ -63,6 +63,7 @@
         android:layout_alignParentRight="true"
         android:paddingBottom="5dip"
         android:paddingRight="15dp"
+                 
                 android:background="@drawable/ic_trash"
                 
                 

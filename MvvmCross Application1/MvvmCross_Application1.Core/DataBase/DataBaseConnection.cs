@@ -1,33 +1,32 @@
 ﻿using System;
-using SQLite;
+
 
 namespace MvvmCross_Application1.Core.DataBase
 {
     public abstract class DataBaseConnection : IDisposable
     {
-        private readonly IConnectionFactory factory;
+        private readonly IDbConnectionManager dbmanager;
 
 
-        protected /*SQLite.SQLiteConnection*/ SQLiteAsyncConnection DbConnection
+        protected IOperationsAsync DbConnection
         {
             get
             {
                 try
                 {
-                    return factory.ProduceConnection();
+                    return dbmanager.GetConnection();
                 }
                 catch (Exception e)
                 {
-                    throw new Exception("Cannot create connection to database.", e);
+                    throw new Exception("Cannot connect to database.", e);
                 }
             }   
         }
 
-        protected DataBaseConnection(IConnectionFactory factory)
+        protected DataBaseConnection(IDbConnectionManager dbmanager)
         {
-            //factory.ThrowIfNull(nameof(factory));
 
-            this.factory = factory;
+            this.dbmanager = dbmanager;
         }
 
         public virtual void Dispose() { }

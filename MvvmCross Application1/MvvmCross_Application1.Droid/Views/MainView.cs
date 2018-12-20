@@ -70,25 +70,13 @@ namespace MvvmCross_Application1.Droid.Views
             mRecycleView.Adapter = mAdapter;
             mAdapter.ViewModel = ViewModel;
 
-            //  navigationView.SetNavigationItemSelectedListener(this);
-            // mtoogle.ToolbarNavigationClickListener(new NavClickListener()); 
-
-
-
-
         }
 
     
-        // public class NavClickListener:
-
-
         private void MAdapter_ItemClick(object sender, string e)
         {
 
             mDrawerlayout.CloseDrawer(GravityCompat.Start);
-
-
-
 
         }
        

@@ -19,32 +19,12 @@ namespace MvvmCross_Application1.Droid.Adapters
         public MvxViewModel ViewModel { get; set; }
         public Boolean AllChecked { get; set; } // for removed tooglebutton
         public Context mcon { get; set; }
-       // private readonly Dictionary<YouTubeThumbnailView, IYouTubeThumbnailLoader> thumbnailViewToLoaderMap;
         public View View;
-       // public int ToogleIcon { get; set; }
-      /*  public LottieAnimationView animationView;
-
-        private LottieFavoriteButton likeButton;
-
-        public bool? isLiked;
-        public bool? IsLiked
-        {
-            get { return isLiked; }
-            set
-            {
-                isLiked = value;
-
-                likeButton.LazyAnimationProgress = (value.HasValue && value.Value)
-                            ? LottieFavoriteButton.AnimationProgressEndFrame
-                    : LottieFavoriteButton.AnimationProgressStartFrame;
-            }
-        }*/
 
         public ChannelListAdapter(IMvxAndroidBindingContext bindingContext)
              : base(bindingContext)
         {
 
-            // thumbnailViewToLoaderMap = new Dictionary<YouTubeThumbnailView, IYouTubeThumbnailLoader>();
         }
 
 
@@ -77,8 +57,7 @@ namespace MvvmCross_Application1.Droid.Adapters
         {
 
             public TextView title;
-            //public TextView published_date;
-           // public ImageView imageView;
+           
             public Button removeButton;
 
             public MyViewHolder(View itemView, IMvxAndroidBindingContext context) : base(itemView, context)
@@ -103,38 +82,16 @@ namespace MvvmCross_Application1.Droid.Adapters
             MyViewHolder myHolder = holder as MyViewHolder;
 
             myHolder.title.Text = channel.Title;
-            //myHolder.published_date.Text = video.PublishedAt.ToString();
 
-
-           /* Bitmap bbb = GetBitmapFromUrl(video.MediumThumbnailUrl);
-            myHolder.imageView.SetImageBitmap(bbb);
-
-            myHolder.imageView.Click += (sender, args) =>
+            myHolder.removeButton.Click += delegate
             {
-                var intent = new Intent(mcon, typeof(PlayVideoActivity));
-                intent.AddFlags(ActivityFlags.NewTask);
+                ((SettingsViewModel)ViewModel).entity = channel;
 
-                intent.PutExtra(PlayVideoActivity.ExtraUrlKey, video.VideoId);
+                ((SettingsViewModel)ViewModel).RemoveCommand.Execute();
 
-                mcon.StartActivity(intent);
             };
-            */
-
-
-
-           myHolder.removeButton.Click += (s, e) =>
-            {
-                  var result = ((SettingsViewModel)ViewModel).Remove(channel);
-               // channel.Remove();
-               //if (ViewModel != null)
-                //    ViewModel.Initialize(); // to refresh page  
-            };
-
 
         }
-
-
-
 
     }
 }

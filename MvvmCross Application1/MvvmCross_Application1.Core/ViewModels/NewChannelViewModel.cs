@@ -1,19 +1,19 @@
 ﻿using System;
-using System.Collections.ObjectModel;
 using System.Net.Http;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 using MvvmCross.Core.ViewModels;
 using MvvmCross_Application1.Core.DataBase;
 using MvvmCross_Application1.Core.Model;
+using MvvmCross_Application1.Core.Repositories;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using static MvvmCross_Application1.Core.ViewModels.SettingsViewModel;
 
 namespace MvvmCross_Application1.Core.ViewModels
 {
-    public class NewChannelViewModel:MvxViewModel
+    public class NewChannelViewModel: MvxViewModel<MyObject, MyReturnObject>
     {
-        public IRepository<Channels> channelRepo;
+        private readonly IChannelRepository localSettingsRepository;
         private static Channels channel = new Channels();
         public Channels Channel
         {
@@ -23,30 +23,36 @@ namespace MvvmCross_Application1.Core.ViewModels
 
         public MvxCommand AddCommand { get; }
 
-        public NewChannelViewModel()
+        public NewChannelViewModel(IChannelRepository localSettingsRepository)
         {
-            AddCommand = new MvxCommand(Add); 
+            AddCommand = new MvxCommand(Add);
+            Channel.PlayListId = null;
+            Channel.Title = null;
+            this.localSettingsRepository = localSettingsRepository;
         }
 
         public string Error { get; private set; }
 
 
 
-        public async  void Add()
+        public async void Add()
         {
             string playlistid;
             this.Error = null;
 
             if (string.IsNullOrEmpty(Channel.PlayListId))
             {
-                this.Error = "Playlist is empty";
+                this.Error = "Playlist or/and Title can not be empty";
             }
 
             if (string.IsNullOrEmpty(this.Error))// no error, save settings...
             {
                 var apiUrl = PlayVideoViewModel.apiUrlForPlaylist;
-                string url = Channel.PlayListId;//"https://www.youtube.com/watch?v=xOpU3U3cgjA&list=PLOso76FsKY3WiSUm-qEeSkMb90pr4JKQH";
+
+                string url = Channel.PlayListId; // format of link user should input "https://www.youtube.com/watch?v=xOpU3U3cgjA&list=PLOso76FsKY3WiSUm-qEeSkMb90pr4JKQH";
+
                 Regex regexPattern = new Regex("(?<=(list=)|,)[^(,|&)]*");
+
                 Match matchResults = regexPattern.Match(url);
 
 
@@ -60,11 +66,9 @@ namespace MvvmCross_Application1.Core.ViewModels
                     try
                     {
                         JObject response = JsonConvert.DeserializeObject<dynamic>(json);
-
-                        var sqlconection = MainViewModel.connectionfactory.ProduceConnection();
-                        IRepository<Channels> stockRepo = new Repository<Channels>(sqlconection);
                         Channel.PlayListId = playlistid;
-                        var list = await stockRepo.Insert(Channel);
+                        var f= await localSettingsRepository.InsertAsync(Channel);
+
 
                     }
 
@@ -73,13 +77,24 @@ namespace MvvmCross_Application1.Core.ViewModels
 
                     }
                 }
+                else
+                    this.Error = "Link is invalid. Please use another one.";
             }
-            else
+
+
+            if (!string.IsNullOrEmpty(this.Error))
             {
                 this.RaisePropertyChanged(() => this.Error);
             }
 
+            else
+                    Close(this);
 
+
+        }
+
+        public override void Prepare(MyObject parameter)
+        {
 
         }
     }

@@ -122,8 +122,7 @@ namespace MvvmCross_Application1.Droid.Views
                 }
                 else
                 {
-                    //  var errorMessage = string.Format(GetString("fffff"), errorReason);
-                    //Toast.MakeText(this, errorMessage, ToastLength.Long).Show();
+
                 }
             }
           
