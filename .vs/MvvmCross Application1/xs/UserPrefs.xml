@@ -1,15 +1,5 @@
 ﻿<Properties StartupConfiguration="{C5459290-27DD-41FD-A12A-3C5E43ACF35C}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="MvvmCross Application1/MvvmCross_Application1.Core/DataBase/IDbConnection.cs">
-    <Files>
-      <File FileName="MvvmCross Application1/MvvmCross_Application1.Core/Model/YoutubeItem.cs" Line="41" Column="1" />
-      <File FileName="MvvmCross Application1/MvvmCross_Application1.Core/ViewModels/NewChannelViewModel.cs" Line="5" Column="1" />
-      <File FileName="MvvmCross Application1/MvvmCross_Application1.Core/ViewModels/MainViewModel.cs" Line="35" Column="1" />
-      <File FileName="MvvmCross Application1/MvvmCross_Application1.Core/ViewModels/InfoFromYoutube.cs" Line="1" Column="1" />
-      <File FileName="MvvmCross Application1/MvvmCross_Application1.Core/ViewModels/SettingsViewModel.cs" Line="6" Column="17" />
-      <File FileName="MvvmCross Application1/MvvmCross_Application1.Core/ViewModels/PlayVideoViewModel.cs" Line="30" Column="11" />
-      <File FileName="MvvmCross Application1/MvvmCross_Application1.Core/DataBase/IDbConnection.cs" Line="11" Column="1" />
-    </Files>
-  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench />
   <MonoDevelop.Ide.ItemProperties.MvvmCross__Application1.Droid AndroidDesignerPreferredTheme="MyTheme" AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.Android_Accelerated_Oreo" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches>
     <Watch file="../../../MvvmCross Application1/MvvmCross_Application1.Core/DataBase/Repository.cs" line="41" offsetX="447" offsetY="600" expression="list" liveUpdate="False" />
