@@ -29,10 +29,9 @@ namespace MvvmCross_Application1.Core.ViewModels
         }
 
 
-        public MainViewModel(IMvxNavigationService navigationService, IDbConnectionManager DbConnection, IChannelRepository localSettingsRepository)
+        public MainViewModel(IMvxNavigationService navigationService, IChannelRepository localSettingsRepository)
         {
           
-            dbConnection = DbConnection;
             _navigationService = navigationService ?? throw new ArgumentNullException(nameof(navigationService));
             this.localSettingsRepository = localSettingsRepository;
 

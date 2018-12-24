@@ -4,10 +4,8 @@ using MvvmCross.Core.ViewModels;
 using MvvmCross_Application1.Core.Model;
 using System.Threading.Tasks;
 using System.Collections.Generic;
-using MvvmCross_Application1.Core.DataBase;
 using MvvmCross.Core.Navigation;
 using MvvmCross_Application1.Core.Repositories;
-using static MvvmCross_Application1.Core.ViewModels.SettingsViewModel;
 
 namespace MvvmCross_Application1.Core.ViewModels
 {
@@ -82,7 +80,6 @@ namespace MvvmCross_Application1.Core.ViewModels
             this.RaisePropertyChanged(() => this.Channels); // update data on the view 
           
         }
-
 
         public class MyReturnObject
         {

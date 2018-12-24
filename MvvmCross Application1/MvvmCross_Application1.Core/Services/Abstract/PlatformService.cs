@@ -1,10 +1,10 @@
-﻿using System;
+﻿
 namespace MvvmCross_Application1.Core.Services.Abstract
 {
-    public class PlatformService
+    public abstract class PlatformService : IPlatformService
     {
-        public PlatformService()
-        {
-        }
+        string IPlatformService.DestinationPath { get; }
+
     }
+
 }

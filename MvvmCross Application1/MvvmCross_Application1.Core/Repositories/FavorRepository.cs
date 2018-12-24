@@ -1,21 +1,18 @@
-﻿using MvvmCross_Application1.Core.DataBase;
-using MvvmCross_Application1.Core.Model;
-
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
+using MvvmCross_Application1.Core.DataBase;
+using MvvmCross_Application1.Core.Model;
 
 namespace MvvmCross_Application1.Core.Repositories
 {
 
- public class FavorRepository: LocalRepositoryAsyncBase<FavoriteVideos>, IFavorRepository 
+    public class FavorRepository: LocalRepositoryAsyncBase<FavoriteVideos>, IFavorRepository 
     {
         public FavorRepository(IDbConnectionManager connectionFactory)
             : base(connectionFactory)
         {
-           var f= connectionFactory.GetConnection();
+          
         }
 
         public Task<List<FavoriteVideos>> Get()

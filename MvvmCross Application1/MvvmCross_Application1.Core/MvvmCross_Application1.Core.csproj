@@ -56,15 +56,11 @@
   <ItemGroup>
     <Compile Include="App.cs" />
     <Compile Include="Data\ISqlLite.cs" />
-    <Compile Include="Enums\TabPageTypes.cs" />
-    <Compile Include="Messages\AddFoodMessage.cs" />
     <Compile Include="Model\Favorite.cs" />
-    <Compile Include="Model\Video.cs" />
     <Compile Include="Model\YoutubeItem.cs" />
     <Compile Include="Module\MyModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\FavorRepository.cs" />
-    <Compile Include="Services\DataService.cs" />
     <Compile Include="Services\IPlatformService.cs" />
     <Compile Include="ViewModels\FavouritesViewModel.cs" />
     <Compile Include="ViewModels\InfoFromYoutube.cs" />
@@ -88,6 +84,7 @@
     <Compile Include="Repositories\IChannelRepository.cs" />
     <Compile Include="Repositories\ChannelRepository.cs" />
     <Compile Include="DataBase\IDbConnection.cs" />
+    <Compile Include="Services\Abstract\PlatformService.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Autofac, Version=4.0.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
@@ -140,14 +137,13 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Resources\apple.jpg" />
-    <Content Include="Resources\cookies.jpg" />
-    <Content Include="Resources\Milk.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <Folder Include="Views\" />
     <Folder Include="DataBase\" />
     <Folder Include="Contracts\" />
+    <Folder Include="Enums\" />
+    <Folder Include="Messages\" />
+    <Folder Include="Services\Abstract\" />
+    <Folder Include="Resources\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Import Project="..\..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets" Condition="Exists('..\..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" />

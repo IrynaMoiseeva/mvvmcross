@@ -1,16 +1,6 @@
-﻿using MvvmCross.Core.ViewModels;
-using MvvmCross_Application1.Core.Data;
-using MvvmCross_Application1.Core.DataBase;
-using MvvmCross_Application1.Core.Services;
-using MvvmCross_Application1.Core.ViewModels;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Collections.Specialized;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+using MvvmCross.Core.ViewModels;
 
 namespace MvvmCross_Application1.Core.Model
 {
@@ -48,7 +38,6 @@ namespace MvvmCross_Application1.Core.Model
         public int? CommentCount { get; set; }
 
         public List<string> Tags { get; set; }
-
 
         public bool IsLiked { get; set; }
 

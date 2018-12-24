@@ -1,11 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Autofac;
 
 using MvvmCross_Application1.Core.Services;
+using MvvmCross_Application1.Core.Services.Abstract;
 
 namespace MvvmCross_Application1.Core.Module
 {

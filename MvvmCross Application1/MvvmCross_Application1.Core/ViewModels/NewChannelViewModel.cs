@@ -2,7 +2,6 @@
 using System.Net.Http;
 using System.Text.RegularExpressions;
 using MvvmCross.Core.ViewModels;
-using MvvmCross_Application1.Core.DataBase;
 using MvvmCross_Application1.Core.Model;
 using MvvmCross_Application1.Core.Repositories;
 using Newtonsoft.Json;

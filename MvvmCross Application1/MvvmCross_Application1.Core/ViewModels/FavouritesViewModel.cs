@@ -24,7 +24,7 @@ namespace MvvmCross_Application1.Core.ViewModels
 
     }
 
-        private ObservableCollection<YoutubeItem> favoritesVideos;//= new ObservableCollection<YoutubeItem>();
+        private ObservableCollection<YoutubeItem> favoritesVideos;
         public ObservableCollection<YoutubeItem> FavoritesVideos
         {
             get { return favoritesVideos; }

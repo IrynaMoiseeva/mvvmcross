@@ -11,7 +11,6 @@ namespace MvvmCross_Application1.Core.Repositories
         Task<List<FavoriteVideos>> Get();
         Task<FavoriteVideos> Get(int id);
         Task UpdateFavor(FavoriteVideos favor);
-        //Task<IEnumerable<FavoriteVideos>> ReadData();
 
     }
 }

@@ -1,10 +1,8 @@
-﻿using System.Threading.Tasks;
-using MvvmCross.Platform;
+﻿using MvvmCross.Platform;
 using MvvmCross.Platform.IoC;
 using MvvmCross_Application1.Core.DataBase;
 using MvvmCross_Application1.Core.Model;
 using MvvmCross_Application1.Core.Repositories;
-using SQLite;
 
 namespace MvvmCross_Application1.Core
 {
@@ -12,9 +10,7 @@ namespace MvvmCross_Application1.Core
     {
         public App()
         {
-           // var d = connection.GetConnection();
-
-            //var f=d.CreateTablesAsync<FavoriteVideos, Channels>(SQLite.CreateFlags.ImplicitPK | SQLite.CreateFlags.AutoIncPK); 
+           
         }
 
 
